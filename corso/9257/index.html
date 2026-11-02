@@ -2,26 +2,26 @@
 (function () {
   function refresh() {
     const today = new Date().toLocaleDateString("sv", {timeZone: "Europe/Rome"});
-    const days = (el) => (Date.parse(el.dataset.giorno) - Date.parse(today)) / 864e5;
+    const days = (el) => (Date.parse(el.dataset.iso) - Date.parse(today)) / 864e5;
     const inDays = (n) => (n === 0 ? "oggi" : n === 1 ? "domani" : `tra ${n} giorni`);
-    const cells = document.querySelectorAll(".month li[data-giorno]");
-    cells.forEach((li) => li.classList.toggle("today", li.dataset.giorno === today));
-    // Cambiato il mese, l'indirizzo del calendario apre ancora quello dell'ultima esportazione.
-    if (location.pathname.endsWith("/calendario/") && cells.length
-        && !document.querySelector(`.month li[data-giorno="${today}"]`)) location.replace(today.slice(0, 7) + "/");
-    document.querySelectorAll("h2[data-giorno]").forEach((h) => {
+    const cells = document.querySelectorAll(".month li[data-iso]");
+    cells.forEach((li) => li.classList.toggle("today", li.dataset.iso === today));
+    // Cambiato il mese, l'indirizzo della griglia apre ancora quello dell'ultima esportazione.
+    if (/\/(calendario|esami)\/$/.test(location.pathname) && cells.length
+        && cells[0].dataset.iso.slice(0, 7) < today.slice(0, 7)) location.replace(today.slice(0, 7) + "/");
+    document.querySelectorAll("h2[data-iso]").forEach((h) => {
       const n = days(h);
       h.textContent = n === 0 ? "Oggi" : n === -1 ? "Ieri" : h.dataset.testo;
     });
-    document.querySelectorAll(".countdown[data-giorno]").forEach((row) => {
+    document.querySelectorAll(".countdown[data-iso]").forEach((row) => {
       const n = days(row), big = row.querySelector(".big");
       row.classList.toggle("passato", n < 0);
       big.firstChild.textContent = n === 0 ? "oggi" : n === 1 ? "domani" : n;
       big.querySelector("small").textContent = n > 1 ? "giorni" : "";
     });
-    document.querySelectorAll(".quando[data-giorno]").forEach((el) => {
+    document.querySelectorAll(".quando[data-iso]").forEach((el) => {
       const n = days(el);
-      el.hidden = n < 0;
+      el.closest(".lede").hidden = n < 0;
       el.textContent = ", " + inDays(n);
     });
   }
