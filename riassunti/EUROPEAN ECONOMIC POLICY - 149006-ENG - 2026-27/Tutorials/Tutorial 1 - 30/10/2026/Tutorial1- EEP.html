@@ -1,0 +1,956 @@
+<!doctype html><html lang="it"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>Riassunto · Tutorial1- EEP.pdf</title><link rel="icon" href="data:,">
+<style>html,body{margin:0;height:100%}body{display:flex;flex-direction:column}iframe{flex:1;border:0;width:100%}</style>
+</head><body><nav style="font:14px/1.4 system-ui,sans-serif;padding:6px 12px;text-align:right"><a href="../../../../../../riassunti/EUROPEAN%20ECONOMIC%20POLICY%20-%20149006-ENG%20-%202026-27/Tutorials/Tutorial%201%20-%2030/10/2026/Tutorial1-%20EEP.en.html" style="color:inherit;margin-right:.8em;">English</a><a href="../../../../../../riassunti/EUROPEAN%20ECONOMIC%20POLICY%20-%20149006-ENG%20-%202026-27/Tutorials/Tutorial%201%20-%2030/10/2026/Tutorial1-%20EEP.html" style="color:inherit;margin-right:.8em;font-weight:700">Italiano</a></nav><iframe sandbox="allow-scripts allow-popups allow-popups-to-escape-sandbox" title="Riassunto · Tutorial1- EEP.pdf"
+srcdoc="&lt;!doctype html&gt;
+&lt;html lang=&quot;it&quot;&gt;
+&lt;head&gt;&lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src &#x27;none&#x27;; script-src &#x27;unsafe-inline&#x27;; style-src &#x27;unsafe-inline&#x27;; font-src &#x27;self&#x27;; img-src data:; form-action &#x27;none&#x27;; base-uri &#x27;none&#x27;&quot;&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+&lt;title&gt;Exchange rate and competitiveness: canvas di studio, Tutoring 1, European Economic Policy&lt;/title&gt;
+&lt;style&gt;
+@font-face{font-family:&quot;Newsreader&quot;;src:url(&quot;../../../../../../static/fonts/newsreader-latin-wght-normal.woff2&quot;) format(&quot;woff2&quot;);font-weight:200 800;font-style:normal;font-display:swap}
+@font-face{font-family:&quot;IBM Plex Sans&quot;;src:url(&quot;../../../../../../static/fonts/ibm-plex-sans-latin-wght-normal.woff2&quot;) format(&quot;woff2&quot;);font-weight:100 700;font-style:normal;font-display:swap}
+
+:root{
+  color-scheme:light dark;
+  --paper:oklch(97% .012 80);--ink:oklch(21% .014 60);--ink2:oklch(42% .014 60);--rule:oklch(86% .014 75);
+  --accent:oklch(50% .15 35);--card:oklch(99% .006 80);
+  --loss:oklch(50% .15 25);--gain:oklch(46% .1 150);
+  --serif:&quot;Newsreader&quot;,Georgia,&quot;Times New Roman&quot;,serif;--sans:&quot;IBM Plex Sans&quot;,system-ui,-apple-system,&quot;Segoe UI&quot;,sans-serif;
+}
+:root,.hs,.ho,.ha,.hm{--tint:oklch(94% .028 var(--h));--deep:oklch(40% .1 var(--h));--mid:oklch(62% .11 var(--h))}
+:root{--h:35}.hs{--h:150}.ho{--h:85}.ha{--h:250}.hm{--h:25}
+@media (prefers-color-scheme:dark){
+  :root{--paper:oklch(20% .012 60);--ink:oklch(93% .012 80);--ink2:oklch(76% .014 75);--rule:oklch(35% .014 75);
+    --accent:oklch(74% .13 35);--card:oklch(24% .012 60);--loss:oklch(70% .14 25);--gain:oklch(74% .11 150)}
+  :root,.hs,.ho,.ha,.hm{--tint:oklch(28% .035 var(--h));--deep:oklch(83% .09 var(--h));--mid:oklch(66% .11 var(--h))}
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1.0625rem/1.62 var(--sans);overflow-wrap:break-word}
+.wrap{max-width:50rem;margin:0 auto;padding:0 1.25rem}
+a{color:var(--accent);text-underline-offset:.15em}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:3px}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.12;margin:0;text-wrap:balance}
+p{margin:0 0 1em}
+ul,ol{padding-left:1.25em;margin:0 0 1em}
+li{margin-bottom:.35em}
+sub,sup{font-size:.68em;line-height:0}
+b.t{font-weight:600;color:var(--deep)}
+
+/* apertura */
+.hero{padding:clamp(2.5rem,8vw,5.5rem) 0 2rem;border-bottom:1px solid var(--rule)}
+.kick{font-size:.82rem;letter-spacing:.09em;text-transform:uppercase;color:var(--accent);font-weight:500;margin-bottom:1rem}
+h1{font-size:clamp(2.7rem,9vw,5.2rem);font-weight:300;letter-spacing:-.02em;line-height:1.02}
+h1 em{color:var(--accent);font-weight:300}
+.dek{font:300 clamp(1.2rem,3vw,1.55rem)/1.35 var(--serif);max-width:38rem;margin:1.25rem 0 1rem}
+.meta{font-size:.88rem;color:var(--ink2);margin:0}
+.legend{display:flex;flex-wrap:wrap;gap:.5rem 1.1rem;font-size:.86rem;color:var(--ink2);margin:1.5rem 0 0;padding:0;list-style:none}
+.legend li{margin:0}
+
+/* navigazione */
+.bar{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--rule)}
+.bar ul{display:flex;gap:.3rem;list-style:none;margin:0 auto;padding:.5rem 1.25rem;max-width:50rem;overflow-x:auto;scrollbar-width:none}
+.bar li{margin:0;flex:none}
+.bar a{display:block;padding:.28rem .7rem;border-radius:99px;font-size:.84rem;color:var(--ink2);text-decoration:none;white-space:nowrap}
+.bar a:hover{color:var(--ink)}
+.bar a[aria-current]{background:var(--tint);color:var(--deep);font-weight:500}
+
+/* mappa */
+.mapbox{margin:2.5rem 0 1rem}
+.mapbox h2{font-size:1.65rem;margin-bottom:.35rem}
+.mapbox&gt;p{color:var(--ink2);margin-bottom:1rem}
+svg{display:block;width:100%;height:auto}
+svg text{font-family:var(--sans);font-size:14px;fill:var(--ink)}
+svg .ser{font-family:var(--serif);font-size:18px}
+svg .sm{font-size:13px;fill:var(--ink2)}
+svg .ln{stroke:var(--ink2);stroke-width:1.5;fill:none}
+svg .ax{stroke:var(--rule);stroke-width:1.5;fill:none}
+svg .dash{stroke-dasharray:5 5}
+.map a{cursor:pointer}
+.map rect.n{fill:var(--tint);stroke:var(--deep);stroke-width:1.2;transition:stroke-width .15s}
+.map a:hover rect.n,.map a:focus rect.n{stroke-width:2.6}
+.map a:focus{outline:none}
+.map .ttl{fill:var(--deep)}
+.map-tall{display:none;max-width:24rem;margin:0 auto}
+@media (max-width:640px){.map-wide{display:none}.map-tall{display:block}}
+
+/* sezioni */
+.part{padding:3.5rem 0 3rem;border-bottom:1px solid var(--rule);scroll-margin-top:3rem}
+.partno{display:inline-block;background:var(--tint);color:var(--deep);font-size:.8rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;padding:.16rem .65rem;border-radius:99px;margin-bottom:.8rem}
+h2{font-size:clamp(2rem,5.5vw,3rem);font-weight:300;letter-spacing:-.012em}
+.lead{font:300 1.3rem/1.42 var(--serif);margin:.9rem 0 1.6rem}
+h3{font-size:1.5rem;margin:2.4rem 0 .7rem;color:var(--deep);scroll-margin-top:3.6rem}
+h4{font:600 1rem/1.3 var(--sans);margin:1.2rem 0 .3rem}
+
+/* etichette di provenienza */
+[tabindex=&quot;-1&quot;]:focus{outline:none}
+.map-wide .ser{font-size:16px}
+.tag{display:inline-block;font:500 .72rem/1.5 var(--sans);letter-spacing:0;text-transform:none;padding:0 .42rem;border-radius:4px;border:1px solid var(--rule);color:var(--ink2);white-space:nowrap;vertical-align:.1em;text-decoration:none}
+.tag.i{border-style:dashed}
+.tag.x{border-color:var(--accent);color:var(--accent)}
+a.tag.x:hover{background:var(--accent);color:var(--paper)}
+
+/* blocchi */
+.fm{font:italic 400 1.42rem/1.5 var(--serif);background:var(--tint);border-left:3px solid var(--deep);padding:.8rem 1.1rem;margin:1.1rem 0;overflow-x:auto;border-radius:0 8px 8px 0}
+.fm small{display:block;font:400 .86rem/1.4 var(--sans);color:var(--ink2);margin-top:.3rem}
+.fm .big{font-size:1.2em}
+.frac{display:inline-flex;flex-direction:column;vertical-align:middle;text-align:center;line-height:1.2;margin:0 .15em}
+.frac&gt;span:first-child{border-bottom:1px solid currentColor;padding:0 .25em}
+.frac&gt;span:last-child{padding:0 .25em}
+.defs{display:grid;grid-template-columns:repeat(auto-fit,minmax(14.5rem,1fr));gap:.8rem;margin:1.1rem 0}
+.def{background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:.85rem 1rem;font-size:.97rem}
+.def strong{display:block;font:500 1.14rem/1.2 var(--serif);color:var(--deep);margin-bottom:.25rem}
+.note{border:1px dashed var(--rule);border-radius:8px;padding:.85rem 1rem;margin:1.1rem 0;font-size:.97rem}
+.note&gt;:last-child{margin-bottom:0}
+.warn{border:1px solid var(--accent);border-left-width:4px;border-radius:8px;padding:.85rem 1rem;margin:1.2rem 0;font-size:.97rem}
+.warn&gt;:last-child{margin-bottom:0}
+.lbl{display:block;font-size:.76rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--ink2);margin-bottom:.25rem}
+.warn .lbl{color:var(--accent)}
+.fig{margin:1.3rem 0;background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:1rem}
+.fig svg{max-width:34rem;margin:0 auto}
+figcaption{font-size:.87rem;color:var(--ink2);margin-top:.6rem}
+.tw{overflow-x:auto;margin:1rem 0}
+table{border-collapse:collapse;width:100%;font-size:.95rem}
+th,td{text-align:left;padding:.5rem .65rem;border-bottom:1px solid var(--rule);vertical-align:top}
+th{font-weight:600;font-size:.84rem;color:var(--ink2)}
+
+/* controlli */
+.ctrl{display:grid;grid-template-columns:minmax(7rem,10rem) 1fr 4.2rem;gap:.7rem;align-items:center;font-size:.92rem;margin:.5rem 0}
+.ctrl input{width:100%;accent-color:var(--deep);margin:0;height:1.6rem}
+.ctrl output{text-align:right;font-weight:600;font-variant-numeric:tabular-nums}
+.readout{background:var(--tint);border-radius:8px;padding:.7rem .95rem;margin-top:.8rem;font-size:.97rem}
+.btn,.presets button,.stepnav button{font:500 .88rem/1.2 var(--sans);color:var(--deep);background:transparent;border:1px solid var(--deep);border-radius:99px;padding:.38rem .85rem;cursor:pointer}
+.presets{display:flex;flex-wrap:wrap;gap:.45rem;margin:.2rem 0 .7rem}
+.presets button:hover,.stepnav button:hover:not(:disabled){background:var(--tint)}
+
+/* linguette */
+.tablist{display:flex;flex-wrap:wrap;gap:.25rem;border-bottom:1px solid var(--rule);margin-top:1.2rem}
+.tablist button{font:500 .93rem/1.25 var(--sans);background:none;border:0;border-bottom:3px solid transparent;color:var(--ink2);padding:.5rem .7rem;margin-bottom:-1px;cursor:pointer}
+.tablist button[aria-selected=true]{color:var(--deep);border-bottom-color:var(--deep)}
+.panel{padding:1rem 0 .2rem}
+.panel&gt;:last-child{margin-bottom:0}
+.panel[hidden]{display:none}
+html:not(.js) .tablist{display:none}
+
+/* passi */
+.stepper{border:1px solid var(--rule);background:var(--card);border-radius:10px;padding:1rem 1.1rem;margin:1.2rem 0}
+.stepper&gt;ol{list-style:none;padding:0;margin:0}
+.stepper&gt;ol&gt;li{margin:0 0 .9rem}
+.stepper&gt;ol&gt;li&gt;:last-child{margin-bottom:0}
+.js .stepper&gt;ol&gt;li{display:none;margin:0}
+.js .stepper&gt;ol&gt;li.on{display:block;min-height:6.5rem}
+.stepper .st{font:500 1.18rem/1.25 var(--serif);color:var(--deep);display:block;margin-bottom:.35rem}
+.stepnav{display:none;align-items:center;justify-content:space-between;gap:.5rem;margin-top:.9rem;padding-top:.7rem;border-top:1px solid var(--rule)}
+.js .stepnav{display:flex}
+.stepnav button:disabled{opacity:.35;cursor:default}
+.count{font-size:.85rem;color:var(--ink2);text-align:center}
+
+/* schede */
+details.acc{border-bottom:1px solid var(--rule)}
+details.acc:first-of-type{border-top:1px solid var(--rule)}
+details.acc summary{cursor:pointer;padding:.65rem .1rem;font-weight:500}
+details.acc[open] summary{color:var(--deep)}
+details.acc&gt;div{padding:0 .1rem .7rem;font-size:.97rem}
+details.acc&gt;div&gt;:last-child{margin-bottom:0}
+
+/* autoverifica */
+.quiz{background:var(--tint);border-radius:12px;padding:1.2rem 1.25rem;margin-top:2.4rem}
+.quiz h3{margin:0 0 .8rem;font-size:1.35rem}
+.q{padding:.65rem 0;border-top:1px solid var(--rule)}
+.q p{margin:0 0 .35rem;font-weight:500}
+.q summary{cursor:pointer;color:var(--deep);font-size:.9rem;font-weight:500}
+.q details&gt;div{padding-top:.4rem;font-size:.97rem}
+.q details&gt;div&gt;:last-child{margin-bottom:0}
+
+/* per approfondire */
+.cards{display:grid;gap:.9rem;margin:1rem 0}
+.card{background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:1rem 1.1rem;font-size:.97rem}
+.card h4{font:500 1.22rem/1.2 var(--serif);margin:0 0 .15rem}
+.card .who{font-size:.86rem;color:var(--ink2);margin-bottom:.5rem}
+.card&gt;:last-child{margin-bottom:0}
+footer{padding:2rem 0 3rem;font-size:.92rem;color:var(--ink2)}
+
+@media (max-width:640px){
+  body{font-size:1rem}
+  .wrap{padding:0 1rem}
+  .fig{padding:.55rem}
+  .ctrl{grid-template-columns:1fr 4.2rem;gap:.1rem .6rem}
+  .ctrl&gt;span{grid-column:1/-1}
+  .fm{font-size:1.2rem;padding:.7rem .8rem}
+  .stepper{padding:.85rem}
+  .quiz{padding:1rem}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+@media print{.bar,.stepnav,.tablist{display:none}.js .stepper&gt;ol&gt;li{display:block!important;margin-bottom:.8rem}.panel[hidden]{display:block}}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;header class=&quot;wrap hero&quot;&gt;
+  &lt;p class=&quot;kick&quot;&gt;Tutoring 1 · European Economic Policy · 30 ottobre 2026&lt;/p&gt;
+  &lt;h1&gt;Exchange rate &lt;em&gt;and&lt;/em&gt; competitiveness&lt;/h1&gt;
+  &lt;p class=&quot;dek&quot;&gt;Dal prezzo di un Big Mac a una misura di quanto l&#x27;eurozona è competitiva rispetto agli Stati Uniti, in livelli e in tassi di variazione.&lt;/p&gt;
+  &lt;p class=&quot;meta&quot;&gt;Canvas di studio dalle 11 slide di Costanza Marconi (tutor del corso), con le annotazioni a mano incluse.&lt;/p&gt;
+  &lt;ul class=&quot;legend&quot; aria-label=&quot;Legenda della provenienza dei contenuti&quot;&gt;
+    &lt;li&gt;&lt;span class=&quot;tag&quot;&gt;slide 4&lt;/span&gt; dalla slide indicata&lt;/li&gt;
+    &lt;li&gt;&lt;span class=&quot;tag i&quot;&gt;integrazione&lt;/span&gt; spiegazione aggiunta, assente dalle slide&lt;/li&gt;
+    &lt;li&gt;&lt;span class=&quot;tag x&quot;&gt;fonte esterna&lt;/span&gt; dal web, con link&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/header&gt;
+
+&lt;nav class=&quot;bar&quot; aria-label=&quot;Sezioni&quot;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;#top-map&quot;&gt;Mappa&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#p1&quot;&gt;1 · E&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#p2&quot;&gt;2 · PPP&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#p3&quot;&gt;3 · E&lt;sub&gt;R&lt;/sub&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#p4&quot;&gt;4 · Rates&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#p5&quot;&gt;5 · Esercizi&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#more&quot;&gt;Per approfondire&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;main class=&quot;wrap&quot;&gt;
+&lt;section class=&quot;mapbox&quot; id=&quot;top-map&quot; data-spy style=&quot;scroll-margin-top:3.4rem&quot;&gt;
+  &lt;h2&gt;La mappa della lezione&lt;/h2&gt;
+  &lt;p&gt;Un unico ragionamento in otto tappe. Clicca una tappa per saltare alla spiegazione.&lt;/p&gt;
+
+  &lt;svg class=&quot;map map-wide&quot; viewBox=&quot;0 0 760 352&quot; role=&quot;group&quot; aria-label=&quot;Mappa concettuale della lezione&quot;&gt;
+    &lt;defs&gt;&lt;marker id=&quot;ah&quot; viewBox=&quot;0 0 10 10&quot; refX=&quot;9&quot; refY=&quot;5&quot; markerWidth=&quot;7&quot; markerHeight=&quot;7&quot; orient=&quot;auto-start-reverse&quot;&gt;&lt;path d=&quot;M0 0L10 5L0 10z&quot; fill=&quot;currentColor&quot;/&gt;&lt;/marker&gt;&lt;/defs&gt;
+    &lt;g style=&quot;color:var(--ink2)&quot;&gt;
+      &lt;path class=&quot;ln&quot; d=&quot;M165 90H206&quot; marker-end=&quot;url(#ah)&quot;/&gt;
+      &lt;path class=&quot;ln&quot; d=&quot;M358 90H399&quot; marker-end=&quot;url(#ah)&quot;/&gt;
+      &lt;path class=&quot;ln&quot; d=&quot;M551 90H593&quot; marker-end=&quot;url(#ah)&quot;/&gt;
+      &lt;path class=&quot;ln&quot; d=&quot;M670 130V218&quot; marker-end=&quot;url(#ah)&quot;/&gt;
+      &lt;path class=&quot;ln&quot; d=&quot;M595 260H553&quot; marker-end=&quot;url(#ah)&quot;/&gt;
+      &lt;path class=&quot;ln&quot; d=&quot;M401 260H360&quot; marker-end=&quot;url(#ah)&quot;/&gt;
+      &lt;path class=&quot;ln&quot; d=&quot;M208 260H167&quot; marker-end=&quot;url(#ah)&quot;/&gt;
+      &lt;path class=&quot;ln dash&quot; d=&quot;M90 130C95 180 230 170 278 218&quot; marker-end=&quot;url(#ah)&quot;/&gt;
+    &lt;/g&gt;
+    &lt;text class=&quot;sm&quot; x=&quot;186&quot; y=&quot;40&quot; text-anchor=&quot;middle&quot;&gt;confronto i prezzi&lt;/text&gt;
+    &lt;text class=&quot;sm&quot; x=&quot;380&quot; y=&quot;40&quot; text-anchor=&quot;middle&quot;&gt;tutti i beni del basket&lt;/text&gt;
+    &lt;text class=&quot;sm&quot; x=&quot;573&quot; y=&quot;40&quot; text-anchor=&quot;middle&quot;&gt;lo provo sui dati&lt;/text&gt;
+    &lt;text class=&quot;sm&quot; x=&quot;660&quot; y=&quot;178&quot; text-anchor=&quot;end&quot;&gt;la PPP non regge: misuro la deviazione&lt;/text&gt;
+    &lt;text class=&quot;sm&quot; x=&quot;573&quot; y=&quot;212&quot; text-anchor=&quot;middle&quot;&gt;&amp;gt; 1 o &amp;lt; 1?&lt;/text&gt;
+    &lt;text class=&quot;sm&quot; x=&quot;380&quot; y=&quot;212&quot; text-anchor=&quot;middle&quot;&gt;come cambia nel tempo&lt;/text&gt;
+    &lt;text class=&quot;sm&quot; x=&quot;150&quot; y=&quot;212&quot; text-anchor=&quot;middle&quot;&gt;lo calcolo&lt;/text&gt;
+    &lt;text class=&quot;sm&quot; x=&quot;20&quot; y=&quot;188&quot;&gt;E entra in ΔE&lt;/text&gt;
+    &lt;a href=&quot;#p1&quot; class=&quot;hs&quot;&gt;&lt;rect class=&quot;n&quot; x=&quot;15&quot; y=&quot;50&quot; width=&quot;150&quot; height=&quot;80&quot; rx=&quot;10&quot;/&gt;&lt;text class=&quot;ser ttl&quot; x=&quot;90&quot; y=&quot;84&quot; text-anchor=&quot;middle&quot;&gt;Exchange rate E&lt;/text&gt;&lt;text class=&quot;sm&quot; x=&quot;90&quot; y=&quot;108&quot; text-anchor=&quot;middle&quot;&gt;nominale, bilaterale&lt;/text&gt;&lt;/a&gt;
+    &lt;a href=&quot;#loop&quot; class=&quot;ho&quot;&gt;&lt;rect class=&quot;n&quot; x=&quot;208&quot; y=&quot;50&quot; width=&quot;150&quot; height=&quot;80&quot; rx=&quot;10&quot;/&gt;&lt;text class=&quot;ser ttl&quot; x=&quot;283&quot; y=&quot;84&quot; text-anchor=&quot;middle&quot;&gt;Law of one price&lt;/text&gt;&lt;text class=&quot;sm&quot; x=&quot;283&quot; y=&quot;108&quot; text-anchor=&quot;middle&quot;&gt;un bene, un prezzo&lt;/text&gt;&lt;/a&gt;
+    &lt;a href=&quot;#ppp&quot; class=&quot;ho&quot;&gt;&lt;rect class=&quot;n&quot; x=&quot;401&quot; y=&quot;50&quot; width=&quot;150&quot; height=&quot;80&quot; rx=&quot;10&quot;/&gt;&lt;text class=&quot;ser ttl&quot; x=&quot;476&quot; y=&quot;84&quot; text-anchor=&quot;middle&quot;&gt;PPP&lt;/text&gt;&lt;text class=&quot;sm&quot; x=&quot;476&quot; y=&quot;108&quot; text-anchor=&quot;middle&quot;&gt;price levels uguali&lt;/text&gt;&lt;/a&gt;
+    &lt;a href=&quot;#bigmac&quot; class=&quot;ho&quot;&gt;&lt;rect class=&quot;n&quot; x=&quot;595&quot; y=&quot;50&quot; width=&quot;150&quot; height=&quot;80&quot; rx=&quot;10&quot;/&gt;&lt;text class=&quot;ser ttl&quot; x=&quot;670&quot; y=&quot;84&quot; text-anchor=&quot;middle&quot;&gt;Big Mac Index&lt;/text&gt;&lt;text class=&quot;sm&quot; x=&quot;670&quot; y=&quot;108&quot; text-anchor=&quot;middle&quot;&gt;1,18 contro 1,32&lt;/text&gt;&lt;/a&gt;
+    &lt;a href=&quot;#p3&quot; class=&quot;ha&quot;&gt;&lt;rect class=&quot;n&quot; x=&quot;595&quot; y=&quot;220&quot; width=&quot;150&quot; height=&quot;80&quot; rx=&quot;10&quot;/&gt;&lt;text class=&quot;ser ttl&quot; x=&quot;670&quot; y=&quot;254&quot; text-anchor=&quot;middle&quot;&gt;Real exchange rate&lt;/text&gt;&lt;text class=&quot;sm&quot; x=&quot;670&quot; y=&quot;278&quot; text-anchor=&quot;middle&quot;&gt;E&lt;tspan dy=&quot;3&quot; font-size=&quot;10&quot;&gt;R&lt;/tspan&gt;&lt;tspan dy=&quot;-3&quot;&gt; = P&lt;/tspan&gt;&lt;tspan dy=&quot;3&quot; font-size=&quot;10&quot;&gt;EZ&lt;/tspan&gt;&lt;tspan dy=&quot;-3&quot;&gt; · E / P&lt;/tspan&gt;&lt;tspan dy=&quot;3&quot; font-size=&quot;10&quot;&gt;US&lt;/tspan&gt;&lt;/text&gt;&lt;/a&gt;
+    &lt;a href=&quot;#comp&quot; class=&quot;ha&quot;&gt;&lt;rect class=&quot;n&quot; x=&quot;401&quot; y=&quot;220&quot; width=&quot;150&quot; height=&quot;80&quot; rx=&quot;10&quot;/&gt;&lt;text class=&quot;ser ttl&quot; x=&quot;476&quot; y=&quot;254&quot; text-anchor=&quot;middle&quot;&gt;Competitiveness&lt;/text&gt;&lt;text class=&quot;sm&quot; x=&quot;476&quot; y=&quot;278&quot; text-anchor=&quot;middle&quot;&gt;chi costa di più?&lt;/text&gt;&lt;/a&gt;
+    &lt;a href=&quot;#p4&quot; class=&quot;hm&quot;&gt;&lt;rect class=&quot;n&quot; x=&quot;208&quot; y=&quot;220&quot; width=&quot;150&quot; height=&quot;80&quot; rx=&quot;10&quot;/&gt;&lt;text class=&quot;ser ttl&quot; x=&quot;283&quot; y=&quot;254&quot; text-anchor=&quot;middle&quot;&gt;Rate of change&lt;/text&gt;&lt;text class=&quot;sm&quot; x=&quot;283&quot; y=&quot;278&quot; text-anchor=&quot;middle&quot;&gt;ΔE + π&lt;tspan dy=&quot;3&quot; font-size=&quot;10&quot;&gt;EZ&lt;/tspan&gt;&lt;tspan dy=&quot;-3&quot;&gt; − π&lt;/tspan&gt;&lt;tspan dy=&quot;3&quot; font-size=&quot;10&quot;&gt;US&lt;/tspan&gt;&lt;/text&gt;&lt;/a&gt;
+    &lt;a href=&quot;#p5&quot;&gt;&lt;rect class=&quot;n&quot; x=&quot;15&quot; y=&quot;220&quot; width=&quot;150&quot; height=&quot;80&quot; rx=&quot;10&quot;/&gt;&lt;text class=&quot;ser ttl&quot; x=&quot;90&quot; y=&quot;254&quot; text-anchor=&quot;middle&quot;&gt;Esercizi A e B&lt;/text&gt;&lt;text class=&quot;sm&quot; x=&quot;90&quot; y=&quot;278&quot; text-anchor=&quot;middle&quot;&gt;levels contro log&lt;/text&gt;&lt;/a&gt;
+    &lt;a href=&quot;#more&quot;&gt;&lt;text x=&quot;745&quot; y=&quot;336&quot; text-anchor=&quot;end&quot; style=&quot;fill:var(--accent)&quot;&gt;Per approfondire: le fonti esterne →&lt;/text&gt;&lt;/a&gt;
+  &lt;/svg&gt;
+
+  &lt;svg class=&quot;map map-tall&quot; viewBox=&quot;0 0 340 708&quot; role=&quot;group&quot; aria-label=&quot;Mappa concettuale della lezione, versione verticale&quot;&gt;
+    &lt;defs&gt;&lt;marker id=&quot;ah2&quot; viewBox=&quot;0 0 10 10&quot; refX=&quot;9&quot; refY=&quot;5&quot; markerWidth=&quot;7&quot; markerHeight=&quot;7&quot; orient=&quot;auto-start-reverse&quot;&gt;&lt;path d=&quot;M0 0L10 5L0 10z&quot; fill=&quot;currentColor&quot;/&gt;&lt;/marker&gt;&lt;/defs&gt;
+    &lt;g style=&quot;color:var(--ink2)&quot;&gt;
+      &lt;path class=&quot;ln&quot; d=&quot;M170 72V96&quot; marker-end=&quot;url(#ah2)&quot;/&gt;&lt;path class=&quot;ln&quot; d=&quot;M170 152V176&quot; marker-end=&quot;url(#ah2)&quot;/&gt;
+      &lt;path class=&quot;ln&quot; d=&quot;M170 232V256&quot; marker-end=&quot;url(#ah2)&quot;/&gt;&lt;path class=&quot;ln&quot; d=&quot;M170 312V336&quot; marker-end=&quot;url(#ah2)&quot;/&gt;
+      &lt;path class=&quot;ln&quot; d=&quot;M170 392V416&quot; marker-end=&quot;url(#ah2)&quot;/&gt;&lt;path class=&quot;ln&quot; d=&quot;M170 472V496&quot; marker-end=&quot;url(#ah2)&quot;/&gt;
+      &lt;path class=&quot;ln&quot; d=&quot;M170 552V576&quot; marker-end=&quot;url(#ah2)&quot;/&gt;
+    &lt;/g&gt;
+    &lt;text class=&quot;sm&quot; x=&quot;180&quot; y=&quot;329&quot;&gt;la PPP non regge&lt;/text&gt;
+    &lt;a href=&quot;#p1&quot; class=&quot;hs&quot;&gt;&lt;rect class=&quot;n&quot; x=&quot;15&quot; y=&quot;16&quot; width=&quot;310&quot; height=&quot;56&quot; rx=&quot;10&quot;/&gt;&lt;text class=&quot;ser ttl&quot; x=&quot;30&quot; y=&quot;40&quot;&gt;Exchange rate E&lt;/text&gt;&lt;text class=&quot;sm&quot; x=&quot;30&quot; y=&quot;60&quot;&gt;nominale, bilaterale&lt;/text&gt;&lt;/a&gt;
+    &lt;a href=&quot;#loop&quot; class=&quot;ho&quot;&gt;&lt;rect class=&quot;n&quot; x=&quot;15&quot; y=&quot;96&quot; width=&quot;310&quot; height=&quot;56&quot; rx=&quot;10&quot;/&gt;&lt;text class=&quot;ser ttl&quot; x=&quot;30&quot; y=&quot;120&quot;&gt;Law of one price&lt;/text&gt;&lt;text class=&quot;sm&quot; x=&quot;30&quot; y=&quot;140&quot;&gt;un bene, un prezzo&lt;/text&gt;&lt;/a&gt;
+    &lt;a href=&quot;#ppp&quot; class=&quot;ho&quot;&gt;&lt;rect class=&quot;n&quot; x=&quot;15&quot; y=&quot;176&quot; width=&quot;310&quot; height=&quot;56&quot; rx=&quot;10&quot;/&gt;&lt;text class=&quot;ser ttl&quot; x=&quot;30&quot; y=&quot;200&quot;&gt;PPP&lt;/text&gt;&lt;text class=&quot;sm&quot; x=&quot;30&quot; y=&quot;220&quot;&gt;price levels uguali&lt;/text&gt;&lt;/a&gt;
+    &lt;a href=&quot;#bigmac&quot; class=&quot;ho&quot;&gt;&lt;rect class=&quot;n&quot; x=&quot;15&quot; y=&quot;256&quot; width=&quot;310&quot; height=&quot;56&quot; rx=&quot;10&quot;/&gt;&lt;text class=&quot;ser ttl&quot; x=&quot;30&quot; y=&quot;280&quot;&gt;Big Mac Index&lt;/text&gt;&lt;text class=&quot;sm&quot; x=&quot;30&quot; y=&quot;300&quot;&gt;1,18 contro 1,32&lt;/text&gt;&lt;/a&gt;
+    &lt;a href=&quot;#p3&quot; class=&quot;ha&quot;&gt;&lt;rect class=&quot;n&quot; x=&quot;15&quot; y=&quot;336&quot; width=&quot;310&quot; height=&quot;56&quot; rx=&quot;10&quot;/&gt;&lt;text class=&quot;ser ttl&quot; x=&quot;30&quot; y=&quot;360&quot;&gt;Real exchange rate&lt;/text&gt;&lt;text class=&quot;sm&quot; x=&quot;30&quot; y=&quot;380&quot;&gt;E&lt;tspan dy=&quot;3&quot; font-size=&quot;10&quot;&gt;R&lt;/tspan&gt;&lt;tspan dy=&quot;-3&quot;&gt; = P&lt;/tspan&gt;&lt;tspan dy=&quot;3&quot; font-size=&quot;10&quot;&gt;EZ&lt;/tspan&gt;&lt;tspan dy=&quot;-3&quot;&gt; · E / P&lt;/tspan&gt;&lt;tspan dy=&quot;3&quot; font-size=&quot;10&quot;&gt;US&lt;/tspan&gt;&lt;/text&gt;&lt;/a&gt;
+    &lt;a href=&quot;#comp&quot; class=&quot;ha&quot;&gt;&lt;rect class=&quot;n&quot; x=&quot;15&quot; y=&quot;416&quot; width=&quot;310&quot; height=&quot;56&quot; rx=&quot;10&quot;/&gt;&lt;text class=&quot;ser ttl&quot; x=&quot;30&quot; y=&quot;440&quot;&gt;Competitiveness&lt;/text&gt;&lt;text class=&quot;sm&quot; x=&quot;30&quot; y=&quot;460&quot;&gt;chi costa di più?&lt;/text&gt;&lt;/a&gt;
+    &lt;a href=&quot;#p4&quot; class=&quot;hm&quot;&gt;&lt;rect class=&quot;n&quot; x=&quot;15&quot; y=&quot;496&quot; width=&quot;310&quot; height=&quot;56&quot; rx=&quot;10&quot;/&gt;&lt;text class=&quot;ser ttl&quot; x=&quot;30&quot; y=&quot;520&quot;&gt;Rate of change&lt;/text&gt;&lt;text class=&quot;sm&quot; x=&quot;30&quot; y=&quot;540&quot;&gt;ΔE + π&lt;tspan dy=&quot;3&quot; font-size=&quot;10&quot;&gt;EZ&lt;/tspan&gt;&lt;tspan dy=&quot;-3&quot;&gt; − π&lt;/tspan&gt;&lt;tspan dy=&quot;3&quot; font-size=&quot;10&quot;&gt;US&lt;/tspan&gt;&lt;/text&gt;&lt;/a&gt;
+    &lt;a href=&quot;#p5&quot;&gt;&lt;rect class=&quot;n&quot; x=&quot;15&quot; y=&quot;576&quot; width=&quot;310&quot; height=&quot;56&quot; rx=&quot;10&quot;/&gt;&lt;text class=&quot;ser ttl&quot; x=&quot;30&quot; y=&quot;600&quot;&gt;Esercizi A e B&lt;/text&gt;&lt;text class=&quot;sm&quot; x=&quot;30&quot; y=&quot;620&quot;&gt;levels contro log&lt;/text&gt;&lt;/a&gt;
+    &lt;a href=&quot;#more&quot;&gt;&lt;text x=&quot;170&quot; y=&quot;672&quot; text-anchor=&quot;middle&quot; style=&quot;fill:var(--accent)&quot;&gt;Per approfondire: le fonti esterne →&lt;/text&gt;&lt;/a&gt;
+  &lt;/svg&gt;
+
+  &lt;div class=&quot;note&quot;&gt;
+    &lt;span class=&quot;lbl&quot;&gt;Il filo in tre righe&lt;/span&gt;
+    &lt;p&gt;Per confrontare i prezzi di due paesi serve la stessa valuta, quindi serve &lt;em&gt;E&lt;/em&gt;. Se i prezzi convertiti fossero uguali ovunque varrebbe la PPP, ma nella realtà non è così. La distanza dalla PPP si misura con il real exchange rate &lt;em&gt;E&lt;sub&gt;R&lt;/sub&gt;&lt;/em&gt;: quando sale, l&#x27;eurozona perde competitiveness, e la sua variazione si scompone in variazione del cambio più inflation differential.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section class=&quot;part hs&quot; id=&quot;p1&quot; data-spy&gt;
+  &lt;span class=&quot;partno&quot;&gt;Parte 1&lt;/span&gt;
+  &lt;h2&gt;Il nominal exchange rate&lt;/h2&gt;
+  &lt;p class=&quot;lead&quot;&gt;Un prezzo in euro e uno in dollari non si possono confrontare direttamente. Il cambio è il traduttore che li porta nella stessa unità di misura.&lt;/p&gt;
+
+  &lt;div class=&quot;defs&quot;&gt;
+    &lt;div class=&quot;def&quot;&gt;&lt;strong&gt;E: nominal bilateral exchange rate&lt;/strong&gt;È il tasso di cambio &lt;em&gt;nominal&lt;/em&gt; (espresso in moneta, senza tenere conto dei prezzi dei beni) e &lt;em&gt;bilateral&lt;/em&gt; (tra due sole valute). &lt;span class=&quot;tag&quot;&gt;slide 2&lt;/span&gt;&lt;/div&gt;
+    &lt;div class=&quot;def&quot;&gt;&lt;strong&gt;Quotazione usata nel corso&lt;/strong&gt;Quante unità di valuta estera si ottengono con 1 unità di valuta nazionale. Con l&#x27;eurozona (EZ) come &quot;casa&quot;, E = 1,18 USD/EUR significa 1 € = 1,18 $. &lt;span class=&quot;tag&quot;&gt;slide 2, 4&lt;/span&gt;&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;warn&quot;&gt;
+    &lt;span class=&quot;lbl&quot;&gt;Occhio alla frase della slide&lt;/span&gt;
+    &lt;p&gt;La slide dice &quot;the price of a foreign currency in terms of 1 unit of national currency&quot;. Letta alla lettera sembra il prezzo del dollaro, ma gli esercizi usano USD/EUR: E è il numero di dollari per 1 euro, cioè il prezzo dell&#x27;&lt;em&gt;euro&lt;/em&gt; espresso in dollari. Conviene ragionare sempre sulle unità di misura. &lt;span class=&quot;tag i&quot;&gt;integrazione&lt;/span&gt;&lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;h3&gt;A che cosa serve: confrontare lo stesso bene&lt;/h3&gt;
+  &lt;p&gt;Si usa E per confrontare il prezzo dello stesso bene &lt;em&gt;i&lt;/em&gt; venduto in due paesi. La conversione si può fare in due direzioni, e il risultato del confronto non cambia. &lt;span class=&quot;tag&quot;&gt;slide 2&lt;/span&gt;&lt;/p&gt;
+
+  &lt;div class=&quot;tabs&quot;&gt;
+    &lt;div class=&quot;tablist&quot;&gt;&lt;button&gt;Tutto in dollari&lt;/button&gt;&lt;button&gt;Tutto in euro&lt;/button&gt;&lt;/div&gt;
+    &lt;div class=&quot;panel&quot;&gt;
+      &lt;div class=&quot;fm&quot;&gt;P&lt;sup&gt;i&lt;/sup&gt;&lt;sub&gt;US&lt;/sub&gt; vs. P&lt;sup&gt;i&lt;/sup&gt;&lt;sub&gt;EZ&lt;/sub&gt; · E&lt;small&gt;Il prezzo in euro, moltiplicato per i dollari per euro, diventa un prezzo in dollari: (€) × ($/€) = $.&lt;/small&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;panel&quot;&gt;
+      &lt;div class=&quot;fm&quot;&gt;P&lt;sup&gt;i&lt;/sup&gt;&lt;sub&gt;EZ&lt;/sub&gt; vs. P&lt;sup&gt;i&lt;/sup&gt;&lt;sub&gt;US&lt;/sub&gt; / E&lt;small&gt;Il prezzo in dollari, diviso per i dollari per euro, diventa un prezzo in euro: ($) / ($/€) = €.&lt;/small&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;figure class=&quot;fig&quot;&gt;
+    &lt;svg viewBox=&quot;0 0 400 126&quot; role=&quot;img&quot; aria-label=&quot;Schema: dal prezzo in euro si passa al prezzo in dollari moltiplicando per E, e si torna indietro dividendo per E&quot;&gt;
+      &lt;rect x=&quot;10&quot; y=&quot;38&quot; width=&quot;100&quot; height=&quot;50&quot; rx=&quot;8&quot; style=&quot;fill:var(--tint);stroke:var(--deep)&quot;/&gt;
+      &lt;text class=&quot;ser&quot; x=&quot;60&quot; y=&quot;69&quot; text-anchor=&quot;middle&quot;&gt;P in €&lt;/text&gt;
+      &lt;rect x=&quot;290&quot; y=&quot;38&quot; width=&quot;100&quot; height=&quot;50&quot; rx=&quot;8&quot; style=&quot;fill:var(--tint);stroke:var(--deep)&quot;/&gt;
+      &lt;text class=&quot;ser&quot; x=&quot;340&quot; y=&quot;69&quot; text-anchor=&quot;middle&quot;&gt;P in $&lt;/text&gt;
+      &lt;path d=&quot;M115 52H282&quot; fill=&quot;none&quot; stroke=&quot;var(--deep)&quot; stroke-width=&quot;2&quot;/&gt;&lt;path d=&quot;M282 47l8 5-8 5z&quot; style=&quot;fill:var(--deep)&quot;/&gt;
+      &lt;path d=&quot;M285 76H118&quot; fill=&quot;none&quot; stroke=&quot;var(--deep)&quot; stroke-width=&quot;2&quot;/&gt;&lt;path d=&quot;M118 71l-8 5 8 5z&quot; style=&quot;fill:var(--deep)&quot;/&gt;
+      &lt;text x=&quot;200&quot; y=&quot;40&quot; text-anchor=&quot;middle&quot; style=&quot;font-weight:600&quot;&gt;× E&lt;/text&gt;
+      &lt;text x=&quot;200&quot; y=&quot;100&quot; text-anchor=&quot;middle&quot; style=&quot;font-weight:600&quot;&gt;÷ E&lt;/text&gt;
+    &lt;/svg&gt;
+    &lt;figcaption&gt;Moltiplicare o dividere dipende solo dalla direzione: le unità di misura dicono quale operazione serve.&lt;/figcaption&gt;
+  &lt;/figure&gt;
+
+  &lt;h3&gt;Prova il cambio&lt;/h3&gt;
+  &lt;div class=&quot;fig&quot; id=&quot;sim-e&quot;&gt;
+    &lt;svg viewBox=&quot;0 0 400 160&quot; role=&quot;img&quot; aria-label=&quot;Barre: quanti dollari valgono 100 euro e quanti euro valgono 100 dollari al cambio scelto&quot;&gt;&lt;/svg&gt;
+    &lt;label class=&quot;ctrl&quot;&gt;&lt;span&gt;E (USD/EUR)&lt;/span&gt;&lt;input type=&quot;range&quot; data-k=&quot;E&quot; data-d=&quot;2&quot; min=&quot;0.8&quot; max=&quot;1.6&quot; step=&quot;0.01&quot; value=&quot;1.18&quot;&gt;&lt;output data-o=&quot;E&quot;&gt;&lt;/output&gt;&lt;/label&gt;
+    &lt;div class=&quot;readout&quot; aria-live=&quot;polite&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;p&gt;Con questa quotazione, &lt;b class=&quot;t&quot;&gt;E che sale = euro che si apprezza&lt;/b&gt;. Con la quotazione inversa (EUR/USD) il verso si ribalta, ed è la fonte di errore più comune. &lt;span class=&quot;tag i&quot;&gt;integrazione&lt;/span&gt;&lt;/p&gt;
+
+  &lt;div class=&quot;quiz&quot;&gt;
+    &lt;h3&gt;Autoverifica&lt;/h3&gt;
+    &lt;div class=&quot;q&quot;&gt;&lt;p&gt;Con E = 1,25 USD/EUR, un bene che costa €80 nell&#x27;EZ quanto costa in dollari?&lt;/p&gt;&lt;details&gt;&lt;summary&gt;Scopri la risposta&lt;/summary&gt;&lt;div&gt;&lt;p&gt;80 × 1,25 = $100. Dal prezzo in euro al prezzo in dollari si moltiplica per E.&lt;/p&gt;&lt;/div&gt;&lt;/details&gt;&lt;/div&gt;
+    &lt;div class=&quot;q&quot;&gt;&lt;p&gt;E passa da 1,10 a 1,20 USD/EUR. L&#x27;euro si apprezza o si deprezza?&lt;/p&gt;&lt;details&gt;&lt;summary&gt;Scopri la risposta&lt;/summary&gt;&lt;div&gt;&lt;p&gt;Si apprezza: un euro compra più dollari. Di conseguenza i beni EZ, a parità di prezzo in euro, costano di più a un compratore americano.&lt;/p&gt;&lt;/div&gt;&lt;/details&gt;&lt;/div&gt;
+    &lt;div class=&quot;q&quot;&gt;&lt;p&gt;Un bene costa $60 negli USA e E = 1,20. Quanto costa in euro?&lt;/p&gt;&lt;details&gt;&lt;summary&gt;Scopri la risposta&lt;/summary&gt;&lt;div&gt;&lt;p&gt;60 / 1,20 = €50. Dal prezzo in dollari al prezzo in euro si divide per E.&lt;/p&gt;&lt;/div&gt;&lt;/details&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section class=&quot;part ho&quot; id=&quot;p2&quot; data-spy&gt;
+  &lt;span class=&quot;partno&quot;&gt;Parte 2&lt;/span&gt;
+  &lt;h2&gt;Law of one price, PPP e Big Mac&lt;/h2&gt;
+  &lt;p class=&quot;lead&quot;&gt;Se i mercati fossero perfettamente integrati, lo stesso bene dovrebbe costare lo stesso ovunque. Da questa idea si ricava un cambio &quot;teorico&quot; da confrontare con quello vero.&lt;/p&gt;
+
+  &lt;h3 id=&quot;loop&quot;&gt;Law of one price&lt;/h3&gt;
+  &lt;p&gt;La &lt;b class=&quot;t&quot;&gt;law of one price&lt;/b&gt; (legge del prezzo unico) dice che un singolo bene &lt;em&gt;i&lt;/em&gt;, una volta convertito nella stessa valuta, ha lo stesso prezzo in entrambi i paesi. Le tre scritture si equivalgono. &lt;span class=&quot;tag&quot;&gt;slide 3&lt;/span&gt;&lt;/p&gt;
+  &lt;div class=&quot;fm&quot;&gt;P&lt;sup&gt;i&lt;/sup&gt;&lt;sub&gt;EZ&lt;/sub&gt; · E = P&lt;sup&gt;i&lt;/sup&gt;&lt;sub&gt;US&lt;/sub&gt; &amp;nbsp;⇔&amp;nbsp; P&lt;sup&gt;i&lt;/sup&gt;&lt;sub&gt;US&lt;/sub&gt; / E = P&lt;sup&gt;i&lt;/sup&gt;&lt;sub&gt;EZ&lt;/sub&gt; &amp;nbsp;⇔&amp;nbsp; E = &lt;span class=&quot;frac&quot;&gt;&lt;span&gt;P&lt;sup&gt;i&lt;/sup&gt;&lt;sub&gt;US&lt;/sub&gt;&lt;/span&gt;&lt;span&gt;P&lt;sup&gt;i&lt;/sup&gt;&lt;sub&gt;EZ&lt;/sub&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;small&gt;L&#x27;ultima forma è annotata a mano sulla slide, dove &quot;EZ&quot; è scritto &quot;EU&quot;: nelle annotazioni i due pedici indicano la stessa area.&lt;/small&gt;&lt;/div&gt;
+
+  &lt;p&gt;Le slide non spiegano &lt;em&gt;perché&lt;/em&gt; dovrebbe valere. Il meccanismo è l&#x27;&lt;b class=&quot;t&quot;&gt;arbitrage&lt;/b&gt;: comprare dove un bene costa meno e rivenderlo dove costa di più. &lt;span class=&quot;tag i&quot;&gt;integrazione&lt;/span&gt;&lt;/p&gt;
+  &lt;figure class=&quot;fig&quot;&gt;&lt;svg data-arb viewBox=&quot;0 0 400 160&quot; role=&quot;img&quot; aria-label=&quot;Barre: prezzo in dollari del bene nell&#x27;EZ e negli USA, che si avvicinano passo dopo passo&quot;&gt;&lt;/svg&gt;
+  &lt;figcaption&gt;Numeri inventati per illustrare il meccanismo.&lt;/figcaption&gt;&lt;/figure&gt;
+  &lt;div class=&quot;stepper&quot;&gt;
+    &lt;ol aria-live=&quot;polite&quot;&gt;
+      &lt;li data-a=&quot;118&quot; data-b=&quot;130&quot;&gt;&lt;span class=&quot;st&quot;&gt;Il prezzo è diverso&lt;/span&gt;Il bene costa €100 nell&#x27;EZ, cioè $118 con E = 1,18. Negli USA costa $130.&lt;/li&gt;
+      &lt;li data-a=&quot;118&quot; data-b=&quot;130&quot;&gt;&lt;span class=&quot;st&quot;&gt;Scatta l&#x27;arbitrage&lt;/span&gt;Conviene comprare nell&#x27;EZ e rivendere negli USA, con $12 di margine per unità.&lt;/li&gt;
+      &lt;li data-a=&quot;122&quot; data-b=&quot;126&quot;&gt;&lt;span class=&quot;st&quot;&gt;I prezzi si muovono&lt;/span&gt;La domanda spinge su il prezzo nell&#x27;EZ e l&#x27;offerta extra spinge giù quello USA. Anche la domanda di euro può spingere su E.&lt;/li&gt;
+      &lt;li data-a=&quot;124&quot; data-b=&quot;124&quot;&gt;&lt;span class=&quot;st&quot;&gt;Il margine sparisce&lt;/span&gt;Quando i prezzi convertiti coincidono non c&#x27;è più guadagno e l&#x27;arbitrage si ferma: la law of one price vale.&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;div class=&quot;stepnav&quot;&gt;&lt;button class=&quot;prev&quot; type=&quot;button&quot;&gt;← Indietro&lt;/button&gt;&lt;span class=&quot;count&quot;&gt;&lt;/span&gt;&lt;button class=&quot;next&quot; type=&quot;button&quot;&gt;Avanti →&lt;/button&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;p&gt;Il meccanismo funziona solo a certe condizioni, e ognuna è un motivo per cui nella realtà può fallire. &lt;span class=&quot;tag i&quot;&gt;integrazione&lt;/span&gt;&lt;/p&gt;
+  &lt;details class=&quot;acc&quot;&gt;&lt;summary&gt;Il bene è davvero identico?&lt;/summary&gt;&lt;div&gt;&lt;p&gt;Marca, qualità e servizio post-vendita rendono due prodotti simili non perfettamente sostituibili.&lt;/p&gt;&lt;/div&gt;&lt;/details&gt;
+  &lt;details class=&quot;acc&quot;&gt;&lt;summary&gt;Si può trasportare a costo zero?&lt;/summary&gt;&lt;div&gt;&lt;p&gt;I transport costs creano una fascia in cui la differenza di prezzo non basta a pagare la spedizione, e quindi resta.&lt;/p&gt;&lt;/div&gt;&lt;/details&gt;
+  &lt;details class=&quot;acc&quot;&gt;&lt;summary&gt;Ci sono barriere al commercio?&lt;/summary&gt;&lt;div&gt;&lt;p&gt;Dazi (tariffs), quote e standard tecnici separano i mercati. Anche le imposte sui consumi come l&#x27;IVA spostano i prezzi al dettaglio.&lt;/p&gt;&lt;/div&gt;&lt;/details&gt;
+  &lt;details class=&quot;acc&quot;&gt;&lt;summary&gt;È un bene tradable?&lt;/summary&gt;&lt;div&gt;&lt;p&gt;Un taglio di capelli o un affitto sono non-tradable: non si possono comprare a Bergamo e rivendere a Boston, quindi l&#x27;arbitrage non è possibile.&lt;/p&gt;&lt;/div&gt;&lt;/details&gt;
+
+  &lt;h3 id=&quot;ppp&quot;&gt;Purchasing Power Parity (PPP)&lt;/h3&gt;
+  &lt;p&gt;Se la law of one price vale per &lt;em&gt;tutti&lt;/em&gt; i beni di un dato &lt;b class=&quot;t&quot;&gt;basket&lt;/b&gt; (paniere di beni rappresentativo), allora vale la &lt;b class=&quot;t&quot;&gt;Purchasing Power Parity&lt;/b&gt; (parità del potere d&#x27;acquisto): i &lt;b class=&quot;t&quot;&gt;price levels&lt;/b&gt; (livelli generali dei prezzi, cioè il costo del basket) di tutti i paesi sono uguali se misurati nella stessa valuta. Con la stessa somma compro la stessa cosa in entrambi i paesi. &lt;span class=&quot;tag&quot;&gt;slide 3&lt;/span&gt;&lt;/p&gt;
+  &lt;figure class=&quot;fig&quot;&gt;
+    &lt;svg viewBox=&quot;0 0 400 112&quot; role=&quot;img&quot; aria-label=&quot;Schema: dal singolo bene al basket, dal basket al price level e alla PPP&quot;&gt;
+      &lt;g style=&quot;fill:var(--tint);stroke:var(--deep)&quot;&gt;&lt;rect x=&quot;5&quot; y=&quot;22&quot; width=&quot;110&quot; height=&quot;64&quot; rx=&quot;8&quot;/&gt;&lt;rect x=&quot;145&quot; y=&quot;22&quot; width=&quot;110&quot; height=&quot;64&quot; rx=&quot;8&quot;/&gt;&lt;rect x=&quot;285&quot; y=&quot;22&quot; width=&quot;110&quot; height=&quot;64&quot; rx=&quot;8&quot;/&gt;&lt;/g&gt;
+      &lt;text class=&quot;ser&quot; x=&quot;60&quot; y=&quot;50&quot; text-anchor=&quot;middle&quot;&gt;P&lt;tspan dy=&quot;-6&quot; font-size=&quot;12&quot;&gt;i&lt;/tspan&gt;&lt;/text&gt;&lt;text class=&quot;sm&quot; x=&quot;60&quot; y=&quot;72&quot; text-anchor=&quot;middle&quot;&gt;un bene&lt;/text&gt;
+      &lt;text class=&quot;ser&quot; x=&quot;200&quot; y=&quot;50&quot; text-anchor=&quot;middle&quot;&gt;P&lt;/text&gt;&lt;text class=&quot;sm&quot; x=&quot;200&quot; y=&quot;72&quot; text-anchor=&quot;middle&quot;&gt;tutto il basket&lt;/text&gt;
+      &lt;text class=&quot;ser&quot; x=&quot;340&quot; y=&quot;50&quot; text-anchor=&quot;middle&quot;&gt;PPP&lt;/text&gt;&lt;text class=&quot;sm&quot; x=&quot;340&quot; y=&quot;72&quot; text-anchor=&quot;middle&quot;&gt;E = P&lt;tspan dy=&quot;3&quot; font-size=&quot;10&quot;&gt;US&lt;/tspan&gt;&lt;tspan dy=&quot;-3&quot;&gt; / P&lt;/tspan&gt;&lt;tspan dy=&quot;3&quot; font-size=&quot;10&quot;&gt;EZ&lt;/tspan&gt;&lt;/text&gt;
+      &lt;path class=&quot;ln&quot; d=&quot;M117 54H140M257 54H280&quot;/&gt;&lt;path d=&quot;M140 49l5 5-5 5zM280 49l5 5-5 5z&quot; style=&quot;fill:var(--ink2)&quot;/&gt;
+    &lt;/svg&gt;
+    &lt;figcaption&gt;Stessa logica, scala diversa: la law of one price riguarda un bene &lt;em&gt;i&lt;/em&gt;, la PPP l&#x27;intero basket. Per questo P perde l&#x27;apice &lt;em&gt;i&lt;/em&gt;.&lt;/figcaption&gt;
+  &lt;/figure&gt;
+  &lt;div class=&quot;tabs&quot;&gt;
+    &lt;div class=&quot;tablist&quot;&gt;&lt;button&gt;Absolute PPP&lt;/button&gt;&lt;button&gt;Relative PPP&lt;/button&gt;&lt;/div&gt;
+    &lt;div class=&quot;panel&quot;&gt;
+      &lt;p&gt;È la versione delle slide, sui &lt;em&gt;livelli&lt;/em&gt; dei prezzi. &lt;span class=&quot;tag&quot;&gt;slide 3, 5&lt;/span&gt;&lt;/p&gt;
+      &lt;div class=&quot;fm&quot;&gt;E = P&lt;sub&gt;US&lt;/sub&gt; / P&lt;sub&gt;EZ&lt;/sub&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;panel&quot;&gt;
+      &lt;p&gt;Le slide non usano questo nome, ma la formula arriva dalla Parte 4: chiede solo che il cambio compensi la differenza di inflation (la crescita dei prezzi), anche se i livelli dei prezzi restano diversi. &lt;span class=&quot;tag i&quot;&gt;integrazione&lt;/span&gt;&lt;/p&gt;
+      &lt;div class=&quot;fm&quot;&gt;ΔE = π&lt;sub&gt;US&lt;/sub&gt; − π&lt;sub&gt;EZ&lt;/sub&gt;&lt;small&gt;Se l&#x27;inflazione USA supera quella EZ di 2 punti, il dollaro si deprezza del 2% circa ed E sale del 2%.&lt;/small&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;h3 id=&quot;bigmac&quot;&gt;Il test: Big Mac Index&lt;/h3&gt;
+  &lt;p&gt;Il &lt;b class=&quot;t&quot;&gt;Big Mac Index&lt;/b&gt; applica la PPP a un solo prodotto, standardizzato e venduto in molti paesi. Lo pubblica The Economist dal 1986 come misura informale della PPP. &lt;a class=&quot;tag x&quot; href=&quot;https://en.wikipedia.org/wiki/Big_Mac_Index&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;fonte esterna&lt;/a&gt;&lt;/p&gt;
+  &lt;div class=&quot;tw&quot;&gt;&lt;table&gt;
+    &lt;tr&gt;&lt;th&gt;Dati, luglio 2021 &lt;span class=&quot;tag&quot;&gt;slide 4&lt;/span&gt;&lt;/th&gt;&lt;th&gt;Valore&lt;/th&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Prezzo del Big Mac nell&#x27;EZ&lt;/td&gt;&lt;td&gt;€4,27&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Prezzo del Big Mac negli USA&lt;/td&gt;&lt;td&gt;$5,65&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;&lt;b class=&quot;t&quot;&gt;Market exchange rate&lt;/b&gt; (il cambio effettivo sul mercato)&lt;/td&gt;&lt;td&gt;1,18 USD/EUR&lt;/td&gt;&lt;/tr&gt;
+  &lt;/table&gt;&lt;/div&gt;
+  &lt;div class=&quot;stepper&quot;&gt;
+    &lt;ol aria-live=&quot;polite&quot;&gt;
+      &lt;li&gt;&lt;span class=&quot;st&quot;&gt;Quale cambio servirebbe per la PPP?&lt;/span&gt;&lt;div class=&quot;fm&quot;&gt;E = 5,65 / 4,27 = 1,32&lt;/div&gt;È il cambio implicito nei due prezzi. &lt;span class=&quot;tag&quot;&gt;slide 4&lt;/span&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;st&quot;&gt;È uguale al cambio di mercato?&lt;/span&gt;No: 1,18 &amp;lt; 1,32. Il mercato dà meno dollari per euro di quanti ne servirebbero. &lt;span class=&quot;tag&quot;&gt;slide 4&lt;/span&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;st&quot;&gt;Confronto in dollari&lt;/span&gt;&lt;div class=&quot;fm&quot;&gt;$5,65 vs. 4,27 × 1,18 = $5,04&lt;/div&gt;Con il cambio di mercato il Big Mac EZ costa meno. &lt;span class=&quot;tag&quot;&gt;slide 4&lt;/span&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;st&quot;&gt;Confronto in euro&lt;/span&gt;&lt;div class=&quot;fm&quot;&gt;€4,27 vs. 5,65 / 1,18 = €4,79&lt;/div&gt;Stessa conclusione nell&#x27;altra valuta. &lt;span class=&quot;tag&quot;&gt;slide 4&lt;/span&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;st&quot;&gt;Quali sono le implicazioni?&lt;/span&gt;La slide pone la domanda senza scrivere la risposta. Il Big Mac costa circa il 10,8% in meno nell&#x27;EZ (5,04 / 5,65 − 1). L&#x27;euro risulta quindi &lt;b class=&quot;t&quot;&gt;undervalued&lt;/b&gt; (sottovalutato) rispetto alla PPP e, su questo prodotto, l&#x27;EZ è più competitiva. La PPP non vale. &lt;span class=&quot;tag i&quot;&gt;integrazione&lt;/span&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;div class=&quot;stepnav&quot;&gt;&lt;button class=&quot;prev&quot; type=&quot;button&quot;&gt;← Indietro&lt;/button&gt;&lt;span class=&quot;count&quot;&gt;&lt;/span&gt;&lt;button class=&quot;next&quot; type=&quot;button&quot;&gt;Avanti →&lt;/button&gt;&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;h4&gt;Sposta i cursori&lt;/h4&gt;
+  &lt;div class=&quot;fig&quot; id=&quot;sim-mac&quot;&gt;
+    &lt;div class=&quot;presets&quot;&gt;&lt;button type=&quot;button&quot; data-preset=&#x27;{&quot;pe&quot;:4.27,&quot;pu&quot;:5.65,&quot;E&quot;:1.18}&#x27;&gt;Dati della slide&lt;/button&gt;&lt;button type=&quot;button&quot; data-preset=&#x27;{&quot;pe&quot;:4.27,&quot;pu&quot;:5.65,&quot;E&quot;:1.32}&#x27;&gt;E di PPP&lt;/button&gt;&lt;/div&gt;
+    &lt;svg viewBox=&quot;0 0 400 204&quot; role=&quot;img&quot; aria-label=&quot;Barre del prezzo del Big Mac in dollari e linea con il cambio di mercato e quello di PPP&quot;&gt;&lt;/svg&gt;
+    &lt;label class=&quot;ctrl&quot;&gt;&lt;span&gt;Prezzo EZ (€)&lt;/span&gt;&lt;input type=&quot;range&quot; data-k=&quot;pe&quot; data-d=&quot;2&quot; data-p=&quot;€&quot; min=&quot;3.5&quot; max=&quot;6&quot; step=&quot;0.01&quot; value=&quot;4.27&quot;&gt;&lt;output data-o=&quot;pe&quot;&gt;&lt;/output&gt;&lt;/label&gt;
+    &lt;label class=&quot;ctrl&quot;&gt;&lt;span&gt;Prezzo USA ($)&lt;/span&gt;&lt;input type=&quot;range&quot; data-k=&quot;pu&quot; data-d=&quot;2&quot; data-p=&quot;$&quot; min=&quot;4&quot; max=&quot;7.5&quot; step=&quot;0.01&quot; value=&quot;5.65&quot;&gt;&lt;output data-o=&quot;pu&quot;&gt;&lt;/output&gt;&lt;/label&gt;
+    &lt;label class=&quot;ctrl&quot;&gt;&lt;span&gt;E di mercato&lt;/span&gt;&lt;input type=&quot;range&quot; data-k=&quot;E&quot; data-d=&quot;2&quot; min=&quot;0.9&quot; max=&quot;1.6&quot; step=&quot;0.01&quot; value=&quot;1.18&quot;&gt;&lt;output data-o=&quot;E&quot;&gt;&lt;/output&gt;&lt;/label&gt;
+    &lt;div class=&quot;readout&quot; aria-live=&quot;polite&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;h4&gt;Perché un Big Mac non basta &lt;span class=&quot;tag i&quot;&gt;integrazione&lt;/span&gt;&lt;/h4&gt;
+  &lt;details class=&quot;acc&quot;&gt;&lt;summary&gt;Dentro un Big Mac c&#x27;è molto non-tradable&lt;/summary&gt;&lt;div&gt;&lt;p&gt;Affitto del locale e lavoro locale pesano sul prezzo e non si possono arbitrare. Nessuno spedisce hamburger da Milano a New York per guadagnare la differenza.&lt;/p&gt;&lt;/div&gt;&lt;/details&gt;
+  &lt;details class=&quot;acc&quot;&gt;&lt;summary&gt;Tasse e concorrenza locale&lt;/summary&gt;&lt;div&gt;&lt;p&gt;L&#x27;IVA e il diverso potere di mercato di McDonald&#x27;s nei vari paesi spostano il prezzo indipendentemente dal cambio.&lt;/p&gt;&lt;/div&gt;&lt;/details&gt;
+  &lt;details class=&quot;acc&quot;&gt;&lt;summary&gt;Un solo bene non è un basket&lt;/summary&gt;&lt;div&gt;&lt;p&gt;A rigore il Big Mac prova la law of one price su un prodotto. Lo si usa come indicatore semplice della PPP, ma resta una semplificazione. Secondo Pakko e Pollard funziona quasi quanto misure più ampie. &lt;a class=&quot;tag x&quot; href=&quot;https://ideas.repec.org/a/fip/fedlrv/y2003inovp9-28nv.85no.6.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;fonte esterna&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;/details&gt;
+
+  &lt;div class=&quot;quiz&quot;&gt;
+    &lt;h3&gt;Autoverifica&lt;/h3&gt;
+    &lt;div class=&quot;q&quot;&gt;&lt;p&gt;Che differenza c&#x27;è tra law of one price e PPP?&lt;/p&gt;&lt;details&gt;&lt;summary&gt;Scopri la risposta&lt;/summary&gt;&lt;div&gt;&lt;p&gt;La law of one price riguarda un singolo bene; la PPP si ottiene quando vale per tutti i beni di un basket e riguarda quindi i price levels.&lt;/p&gt;&lt;/div&gt;&lt;/details&gt;&lt;/div&gt;
+    &lt;div class=&quot;q&quot;&gt;&lt;p&gt;Big Mac a €5 nell&#x27;EZ e $6 negli USA. Qual è il cambio di PPP?&lt;/p&gt;&lt;details&gt;&lt;summary&gt;Scopri la risposta&lt;/summary&gt;&lt;div&gt;&lt;p&gt;E = 6 / 5 = 1,20 USD/EUR.&lt;/p&gt;&lt;/div&gt;&lt;/details&gt;&lt;/div&gt;
+    &lt;div class=&quot;q&quot;&gt;&lt;p&gt;Con gli stessi prezzi il cambio di mercato è 1,30. L&#x27;euro è overvalued o undervalued?&lt;/p&gt;&lt;details&gt;&lt;summary&gt;Scopri la risposta&lt;/summary&gt;&lt;div&gt;&lt;p&gt;Overvalued, perché 1,30 &amp;gt; 1,20. In dollari il Big Mac EZ costa 5 × 1,30 = $6,50, più dei $6 americani. Lo scarto è 1,30 / 1,20 − 1 ≈ +8,3%.&lt;/p&gt;&lt;/div&gt;&lt;/details&gt;&lt;/div&gt;
+    &lt;div class=&quot;q&quot;&gt;&lt;p&gt;Perché la PPP regge peggio per i servizi che per le materie prime?&lt;/p&gt;&lt;details&gt;&lt;summary&gt;Scopri la risposta&lt;/summary&gt;&lt;div&gt;&lt;p&gt;Molti servizi sono non-tradable: non potendoli comprare in un paese e rivendere nell&#x27;altro, manca l&#x27;arbitrage che dovrebbe allineare i prezzi.&lt;/p&gt;&lt;/div&gt;&lt;/details&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section class=&quot;part ha&quot; id=&quot;p3&quot; data-spy&gt;
+  &lt;span class=&quot;partno&quot;&gt;Parte 3&lt;/span&gt;
+  &lt;h2&gt;Real exchange rate e competitiveness&lt;/h2&gt;
+  &lt;p class=&quot;lead&quot;&gt;Dato che la PPP non regge, la si usa come metro: quanto i prezzi si allontanano dalla parità dice chi è caro e chi è conveniente.&lt;/p&gt;
+
+  &lt;h3&gt;Dalla PPP al real exchange rate&lt;/h3&gt;
+  &lt;p&gt;Se la PPP vale, E = P&lt;sub&gt;US&lt;/sub&gt; / P&lt;sub&gt;EZ&lt;/sub&gt;, e riordinando P&lt;sub&gt;EZ&lt;/sub&gt; · E / P&lt;sub&gt;US&lt;/sub&gt; = 1. Ma la PPP &quot;performs poorly in the real world&quot;, cioè funziona male nella realtà, e le deviazioni descrivono il cambio effettivo. Quel rapporto, che sotto PPP sarebbe 1, diventa allora una misura. &lt;span class=&quot;tag&quot;&gt;slide 5&lt;/span&gt;&lt;/p&gt;
+  &lt;div class=&quot;fm&quot;&gt;&lt;span class=&quot;big&quot;&gt;E&lt;sub&gt;R&lt;/sub&gt; = &lt;span class=&quot;frac&quot;&gt;&lt;span&gt;P&lt;sub&gt;EZ&lt;/sub&gt; · E&lt;/span&gt;&lt;span&gt;P&lt;sub&gt;US&lt;/sub&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;small&gt;Real exchange rate: il prezzo del basket EZ convertito in dollari, diviso il prezzo del basket USA.&lt;/small&gt;&lt;/div&gt;
+  &lt;div class=&quot;note&quot;&gt;
+    &lt;span class=&quot;lbl&quot;&gt;Che cosa misura davvero &lt;span class=&quot;tag i&quot;&gt;integrazione&lt;/span&gt;&lt;/span&gt;
+    &lt;p&gt;Facendo le unità di misura: (€/basket EZ) × ($/€) / ($/basket USA) = basket USA per basket EZ. I soldi si semplificano, e resta quanti basket americani &quot;vale&quot; un basket europeo. Per questo si chiama &lt;em&gt;real&lt;/em&gt;: confronta beni con beni, non monete con monete.&lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;h3 id=&quot;comp&quot;&gt;Che cosa significa per la competitiveness&lt;/h3&gt;
+  &lt;p&gt;La slide si chiude con questa domanda. La &lt;b class=&quot;t&quot;&gt;competitiveness&lt;/b&gt; di cui si parla è la competitività di prezzo: quanto i beni di un paese sono convenienti rispetto a quelli di un altro. &lt;span class=&quot;tag&quot;&gt;slide 6&lt;/span&gt;&lt;/p&gt;
+  &lt;div class=&quot;tabs&quot;&gt;
+    &lt;div class=&quot;tablist&quot;&gt;&lt;button&gt;E&lt;sub&gt;R&lt;/sub&gt; &amp;gt; 1&lt;/button&gt;&lt;button&gt;E&lt;sub&gt;R&lt;/sub&gt; = 1&lt;/button&gt;&lt;button&gt;E&lt;sub&gt;R&lt;/sub&gt; &amp;lt; 1&lt;/button&gt;&lt;/div&gt;
+    &lt;div class=&quot;panel&quot;&gt;&lt;p&gt;&lt;strong&gt;I beni EZ costano più di quelli USA.&lt;/strong&gt; &lt;span class=&quot;tag&quot;&gt;slide 6&lt;/span&gt; L&#x27;EZ è meno competitiva: a parità di altre condizioni le sue esportazioni tendono a soffrire e le importazioni dagli USA ad attirare. &lt;span class=&quot;tag i&quot;&gt;integrazione&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;
+    &lt;div class=&quot;panel&quot;&gt;&lt;p&gt;&lt;strong&gt;La PPP vale.&lt;/strong&gt; &lt;span class=&quot;tag&quot;&gt;slide 6&lt;/span&gt; Il basket costa lo stesso nelle due aree: nessuna delle due ha un vantaggio di prezzo.&lt;/p&gt;&lt;/div&gt;
+    &lt;div class=&quot;panel&quot;&gt;&lt;p&gt;&lt;strong&gt;I beni EZ costano meno di quelli USA.&lt;/strong&gt; &lt;span class=&quot;tag&quot;&gt;slide 6&lt;/span&gt; L&#x27;EZ è più competitiva: a parità di altre condizioni le sue esportazioni sono favorite. È il caso del Big Mac: E&lt;sub&gt;R&lt;/sub&gt; = 4,27 × 1,18 / 5,65 ≈ 0,89. &lt;span class=&quot;tag i&quot;&gt;integrazione&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;fig&quot; id=&quot;sim-er&quot;&gt;
+    &lt;div class=&quot;presets&quot;&gt;&lt;button type=&quot;button&quot; data-preset=&#x27;{&quot;E&quot;:1.1,&quot;pe&quot;:100,&quot;pu&quot;:110}&#x27;&gt;Metti E&lt;sub&gt;R&lt;/sub&gt; = 1&lt;/button&gt;&lt;button type=&quot;button&quot; data-preset=&#x27;{&quot;E&quot;:1.3,&quot;pe&quot;:100,&quot;pu&quot;:100}&#x27;&gt;EZ cara&lt;/button&gt;&lt;button type=&quot;button&quot; data-preset=&#x27;{&quot;E&quot;:0.95,&quot;pe&quot;:100,&quot;pu&quot;:110}&#x27;&gt;EZ economica&lt;/button&gt;&lt;/div&gt;
+    &lt;svg viewBox=&quot;0 0 400 122&quot; role=&quot;img&quot; aria-label=&quot;Scala del real exchange rate con 1 al centro: a sinistra EZ più economica, a destra EZ più cara&quot;&gt;&lt;/svg&gt;
+    &lt;label class=&quot;ctrl&quot;&gt;&lt;span&gt;E (USD/EUR)&lt;/span&gt;&lt;input type=&quot;range&quot; data-k=&quot;E&quot; data-d=&quot;2&quot; min=&quot;0.9&quot; max=&quot;1.4&quot; step=&quot;0.01&quot; value=&quot;1.18&quot;&gt;&lt;output data-o=&quot;E&quot;&gt;&lt;/output&gt;&lt;/label&gt;
+    &lt;label class=&quot;ctrl&quot;&gt;&lt;span&gt;P&lt;sub&gt;EZ&lt;/sub&gt; (€)&lt;/span&gt;&lt;input type=&quot;range&quot; data-k=&quot;pe&quot; data-d=&quot;0&quot; min=&quot;90&quot; max=&quot;115&quot; step=&quot;1&quot; value=&quot;100&quot;&gt;&lt;output data-o=&quot;pe&quot;&gt;&lt;/output&gt;&lt;/label&gt;
+    &lt;label class=&quot;ctrl&quot;&gt;&lt;span&gt;P&lt;sub&gt;US&lt;/sub&gt; ($)&lt;/span&gt;&lt;input type=&quot;range&quot; data-k=&quot;pu&quot; data-d=&quot;0&quot; min=&quot;90&quot; max=&quot;115&quot; step=&quot;1&quot; value=&quot;110&quot;&gt;&lt;output data-o=&quot;pu&quot;&gt;&lt;/output&gt;&lt;/label&gt;
+    &lt;div class=&quot;readout&quot; aria-live=&quot;polite&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;h3&gt;Le tre leve&lt;/h3&gt;
+  &lt;figure class=&quot;fig&quot;&gt;
+    &lt;svg viewBox=&quot;0 0 400 176&quot; role=&quot;img&quot; aria-label=&quot;Schema: E che sale e P EZ che sale fanno salire E R; P US che sale lo fa scendere&quot;&gt;
+      &lt;g style=&quot;fill:var(--tint);stroke:var(--deep)&quot;&gt;&lt;rect x=&quot;5&quot; y=&quot;10&quot; width=&quot;125&quot; height=&quot;42&quot; rx=&quot;8&quot;/&gt;&lt;rect x=&quot;5&quot; y=&quot;66&quot; width=&quot;125&quot; height=&quot;42&quot; rx=&quot;8&quot;/&gt;&lt;rect x=&quot;5&quot; y=&quot;122&quot; width=&quot;125&quot; height=&quot;42&quot; rx=&quot;8&quot;/&gt;&lt;rect x=&quot;255&quot; y=&quot;55&quot; width=&quot;140&quot; height=&quot;68&quot; rx=&quot;10&quot;/&gt;&lt;/g&gt;
+      &lt;text x=&quot;67&quot; y=&quot;36&quot; text-anchor=&quot;middle&quot;&gt;E sale&lt;/text&gt;&lt;text x=&quot;67&quot; y=&quot;92&quot; text-anchor=&quot;middle&quot;&gt;P&lt;tspan dy=&quot;3&quot; font-size=&quot;10&quot;&gt;EZ&lt;/tspan&gt;&lt;tspan dy=&quot;-3&quot;&gt; sale&lt;/tspan&gt;&lt;/text&gt;&lt;text x=&quot;67&quot; y=&quot;148&quot; text-anchor=&quot;middle&quot;&gt;P&lt;tspan dy=&quot;3&quot; font-size=&quot;10&quot;&gt;US&lt;/tspan&gt;&lt;tspan dy=&quot;-3&quot;&gt; sale&lt;/tspan&gt;&lt;/text&gt;
+      &lt;text class=&quot;ser&quot; x=&quot;325&quot; y=&quot;85&quot; text-anchor=&quot;middle&quot;&gt;E&lt;tspan dy=&quot;4&quot; font-size=&quot;12&quot;&gt;R&lt;/tspan&gt;&lt;/text&gt;&lt;text class=&quot;sm&quot; x=&quot;325&quot; y=&quot;107&quot; text-anchor=&quot;middle&quot;&gt;competitiveness&lt;/text&gt;
+      &lt;path d=&quot;M132 31L250 76&quot; fill=&quot;none&quot; stroke=&quot;var(--loss)&quot; stroke-width=&quot;2.5&quot;/&gt;&lt;path d=&quot;M132 87L250 89&quot; fill=&quot;none&quot; stroke=&quot;var(--loss)&quot; stroke-width=&quot;2.5&quot;/&gt;&lt;path d=&quot;M132 143L250 102&quot; fill=&quot;none&quot; stroke=&quot;var(--gain)&quot; stroke-width=&quot;2.5&quot;/&gt;
+      &lt;text x=&quot;190&quot; y=&quot;40&quot; style=&quot;fill:var(--loss);font-weight:600&quot;&gt;+&lt;/text&gt;&lt;text x=&quot;190&quot; y=&quot;82&quot; style=&quot;fill:var(--loss);font-weight:600&quot;&gt;+&lt;/text&gt;&lt;text x=&quot;190&quot; y=&quot;140&quot; style=&quot;fill:var(--gain);font-weight:600&quot;&gt;−&lt;/text&gt;
+    &lt;/svg&gt;
+    &lt;figcaption&gt;In rosso le leve che alzano E&lt;sub&gt;R&lt;/sub&gt; e tolgono competitiveness all&#x27;EZ; in verde quella che la restituisce.&lt;/figcaption&gt;
+  &lt;/figure&gt;
+  &lt;div class=&quot;tw&quot;&gt;&lt;table&gt;
+    &lt;tr&gt;&lt;th&gt;E&lt;sub&gt;R&lt;/sub&gt; nel tempo&lt;/th&gt;&lt;th&gt;Nome&lt;/th&gt;&lt;th&gt;Effetto per l&#x27;EZ&lt;/th&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;sale&lt;/td&gt;&lt;td&gt;&lt;b class=&quot;t&quot;&gt;real appreciation&lt;/b&gt; (apprezzamento reale)&lt;/td&gt;&lt;td&gt;perde competitiveness&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;scende&lt;/td&gt;&lt;td&gt;&lt;b class=&quot;t&quot;&gt;real depreciation&lt;/b&gt; (deprezzamento reale)&lt;/td&gt;&lt;td&gt;guadagna competitiveness&lt;/td&gt;&lt;/tr&gt;
+  &lt;/table&gt;&lt;/div&gt;
+  &lt;p&gt;I nomi della tabella non compaiono nelle slide ma sono quelli standard. &lt;span class=&quot;tag i&quot;&gt;integrazione&lt;/span&gt; Anche la BCE usa lo stesso verso per i suoi indicatori: una variazione positiva indica meno competitiveness di prezzo. &lt;a class=&quot;tag x&quot; href=&quot;https://data.ecb.europa.eu/key-figures/ecb-interest-rates-and-exchange-rates/harmonised-competitiveness-indicators&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;fonte esterna&lt;/a&gt;&lt;/p&gt;
+  &lt;details class=&quot;acc&quot;&gt;&lt;summary&gt;Che cosa E&lt;sub&gt;R&lt;/sub&gt; non dice&lt;/summary&gt;&lt;div&gt;
+    &lt;p&gt;&lt;span class=&quot;tag i&quot;&gt;integrazione&lt;/span&gt; È un rapporto bilaterale: guarda solo gli USA, mentre l&#x27;EZ commercia con molti partner. La versione con tutti i partner, pesati per il commercio, è il real effective exchange rate. Inoltre misura solo i prezzi: qualità, innovazione e produttività entrano solo in modo indiretto.&lt;/p&gt;
+  &lt;/div&gt;&lt;/details&gt;
+
+  &lt;div class=&quot;quiz&quot;&gt;
+    &lt;h3&gt;Autoverifica&lt;/h3&gt;
+    &lt;div class=&quot;q&quot;&gt;&lt;p&gt;P&lt;sub&gt;EZ&lt;/sub&gt; = 100, P&lt;sub&gt;US&lt;/sub&gt; = 120, E = 1,08. Quanto vale E&lt;sub&gt;R&lt;/sub&gt;? Che cosa significa?&lt;/p&gt;&lt;details&gt;&lt;summary&gt;Scopri la risposta&lt;/summary&gt;&lt;div&gt;&lt;p&gt;E&lt;sub&gt;R&lt;/sub&gt; = 100 × 1,08 / 120 = 0,90. Il basket EZ costa il 10% in meno di quello USA, quindi l&#x27;EZ è più competitiva sui prezzi.&lt;/p&gt;&lt;/div&gt;&lt;/details&gt;&lt;/div&gt;
+    &lt;div class=&quot;q&quot;&gt;&lt;p&gt;Se l&#x27;inflazione EZ sale e il resto non cambia, che cosa succede alla competitiveness dell&#x27;EZ?&lt;/p&gt;&lt;details&gt;&lt;summary&gt;Scopri la risposta&lt;/summary&gt;&lt;div&gt;&lt;p&gt;P&lt;sub&gt;EZ&lt;/sub&gt; cresce, quindi E&lt;sub&gt;R&lt;/sub&gt; sale: real appreciation e perdita di competitiveness.&lt;/p&gt;&lt;/div&gt;&lt;/details&gt;&lt;/div&gt;
+    &lt;div class=&quot;q&quot;&gt;&lt;p&gt;Perché un E&lt;sub&gt;R&lt;/sub&gt; pari a 1 è il riferimento naturale?&lt;/p&gt;&lt;details&gt;&lt;summary&gt;Scopri la risposta&lt;/summary&gt;&lt;div&gt;&lt;p&gt;Perché è il valore che si avrebbe se valesse la PPP: i price levels, nella stessa valuta, coincidono.&lt;/p&gt;&lt;/div&gt;&lt;/details&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section class=&quot;part hm&quot; id=&quot;p4&quot; data-spy&gt;
+  &lt;span class=&quot;partno&quot;&gt;Parte 4&lt;/span&gt;
+  &lt;h2&gt;Competitiveness rate of change&lt;/h2&gt;
+  &lt;p class=&quot;lead&quot;&gt;Di solito interessa meno il livello e più la direzione: l&#x27;EZ sta guadagnando o perdendo terreno? Per rispondere si passa dai levels ai growth rates.&lt;/p&gt;
+
+  &lt;p&gt;Il &lt;b class=&quot;t&quot;&gt;rate of change&lt;/b&gt; (tasso di variazione) di E&lt;sub&gt;R&lt;/sub&gt; tra il periodo precedente &lt;em&gt;t−1&lt;/em&gt; e quello attuale &lt;em&gt;t&lt;/em&gt; si definisce così: &lt;span class=&quot;tag&quot;&gt;slide 7&lt;/span&gt;&lt;/p&gt;
+  &lt;div class=&quot;fm&quot;&gt;ΔE&lt;sub&gt;R&lt;/sub&gt; = &lt;span class=&quot;frac&quot;&gt;&lt;span&gt;E&lt;sub&gt;R,t&lt;/sub&gt; − E&lt;sub&gt;R,t−1&lt;/sub&gt;&lt;/span&gt;&lt;span&gt;E&lt;sub&gt;R,t−1&lt;/sub&gt;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;
+  &lt;p&gt;Nel corso Δ indica questo tasso, non la semplice differenza. Il punto che si vede in ṗ&lt;sup&gt;EZ&lt;/sup&gt; e ṗ&lt;sup&gt;US&lt;/sup&gt; sulle slide degli esercizi indica lo stesso concetto per i prezzi, cioè l&#x27;&lt;b class=&quot;t&quot;&gt;inflation&lt;/b&gt; (qui la scrivo anche π). &lt;span class=&quot;tag&quot;&gt;slide 7, 8&lt;/span&gt;&lt;/p&gt;
+
+  &lt;div class=&quot;warn&quot;&gt;
+    &lt;span class=&quot;lbl&quot;&gt;Una formula da non usare&lt;/span&gt;
+    &lt;p&gt;Sulla slide 7 compare a mano ΔE&lt;sub&gt;R&lt;/sub&gt; = ΔE · ΔP&lt;sub&gt;EU&lt;/sub&gt; / ΔP&lt;sub&gt;US&lt;/sub&gt;, subito prima del passaggio ai log. Il tasso di un prodotto &lt;em&gt;non&lt;/em&gt; è il prodotto dei tassi. Con i dati dell&#x27;Esercizio A darebbe 5,14 × 2 / 2,9 ≈ 3,5%, mentre il valore corretto è 4,22%. La leggo come il tentativo ingenuo che i log correggono, ma è una mia interpretazione: chiedi conferma al tutor. &lt;span class=&quot;tag i&quot;&gt;integrazione&lt;/span&gt;&lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;h3&gt;La derivazione, passo per passo&lt;/h3&gt;
+  &lt;div class=&quot;stepper&quot;&gt;
+    &lt;ol aria-live=&quot;polite&quot;&gt;
+      &lt;li&gt;&lt;span class=&quot;st&quot;&gt;Si parte dal livello&lt;/span&gt;&lt;div class=&quot;fm&quot;&gt;E&lt;sub&gt;R&lt;/sub&gt; = E · P&lt;sub&gt;EU&lt;/sub&gt; / P&lt;sub&gt;US&lt;/sub&gt;&lt;/div&gt;Un prodotto e un rapporto: scomodi da far variare nel tempo. &lt;span class=&quot;tag&quot;&gt;slide 7&lt;/span&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;st&quot;&gt;Si prende il log&lt;/span&gt;&lt;div class=&quot;fm&quot;&gt;log(E&lt;sub&gt;R&lt;/sub&gt;) = log(E) + log(P&lt;sub&gt;EU&lt;/sub&gt;) − log(P&lt;sub&gt;US&lt;/sub&gt;)&lt;/div&gt;I log trasformano i prodotti in somme e i rapporti in differenze: log(a·b) = log a + log b. &lt;span class=&quot;tag&quot;&gt;slide 7&lt;/span&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;st&quot;&gt;Si usa la proprietà chiave&lt;/span&gt;&lt;div class=&quot;fm&quot;&gt;Δx = ∂log(x) / ∂t&lt;/div&gt;La derivata nel tempo del log di una variabile è il suo tasso di crescita, perché ∂log(x)/∂t = (∂x/∂t) / x. &lt;span class=&quot;tag&quot;&gt;slide 7&lt;/span&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;st&quot;&gt;Si deriva ogni termine&lt;/span&gt;&lt;div class=&quot;fm&quot;&gt;∂log(E&lt;sub&gt;R&lt;/sub&gt;)/∂t = ∂log(E)/∂t + [∂log(P&lt;sub&gt;EU&lt;/sub&gt;)/∂t − ∂log(P&lt;sub&gt;US&lt;/sub&gt;)/∂t]&lt;/div&gt;Sulla slide manca per svista il ∂ nell&#x27;ultimo termine. &lt;span class=&quot;tag&quot;&gt;slide 7&lt;/span&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;st&quot;&gt;Si leggono i pezzi&lt;/span&gt;&lt;div class=&quot;fm&quot;&gt;ΔE&lt;sub&gt;R&lt;/sub&gt; = ΔE + (π&lt;sub&gt;EZ&lt;/sub&gt; − π&lt;sub&gt;US&lt;/sub&gt;)&lt;/div&gt;Variazione del cambio nominale più &lt;b class=&quot;t&quot;&gt;inflation differential&lt;/b&gt; (differenziale di inflazione tra le due aree). &lt;span class=&quot;tag&quot;&gt;slide 7, 10&lt;/span&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;div class=&quot;stepnav&quot;&gt;&lt;button class=&quot;prev&quot; type=&quot;button&quot;&gt;← Indietro&lt;/button&gt;&lt;span class=&quot;count&quot;&gt;&lt;/span&gt;&lt;button class=&quot;next&quot; type=&quot;button&quot;&gt;Avanti →&lt;/button&gt;&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;h3&gt;Scomponi la variazione&lt;/h3&gt;
+  &lt;div class=&quot;fig&quot; id=&quot;sim-wf&quot;&gt;
+    &lt;div class=&quot;presets&quot;&gt;&lt;button type=&quot;button&quot; data-preset=&#x27;{&quot;dE&quot;:5.14,&quot;a&quot;:2,&quot;b&quot;:2.9}&#x27;&gt;Esercizio A&lt;/button&gt;&lt;button type=&quot;button&quot; data-preset=&#x27;{&quot;dE&quot;:-8.33,&quot;a&quot;:1,&quot;b&quot;:4}&#x27;&gt;Esercizio B&lt;/button&gt;&lt;button type=&quot;button&quot; data-preset=&#x27;{&quot;dE&quot;:0.9,&quot;a&quot;:2,&quot;b&quot;:2.9}&#x27;&gt;Relative PPP&lt;/button&gt;&lt;/div&gt;
+    &lt;svg viewBox=&quot;0 0 400 232&quot; role=&quot;img&quot; aria-label=&quot;Grafico a cascata: variazione del cambio più inflazione EZ meno inflazione USA uguale variazione del real exchange rate&quot;&gt;&lt;/svg&gt;
+    &lt;label class=&quot;ctrl&quot;&gt;&lt;span&gt;ΔE&lt;/span&gt;&lt;input type=&quot;range&quot; data-k=&quot;dE&quot; data-d=&quot;2&quot; data-u=&quot;%&quot; min=&quot;-12&quot; max=&quot;12&quot; step=&quot;0.01&quot; value=&quot;5.14&quot;&gt;&lt;output data-o=&quot;dE&quot;&gt;&lt;/output&gt;&lt;/label&gt;
+    &lt;label class=&quot;ctrl&quot;&gt;&lt;span&gt;π&lt;sub&gt;EZ&lt;/sub&gt;&lt;/span&gt;&lt;input type=&quot;range&quot; data-k=&quot;a&quot; data-d=&quot;1&quot; data-u=&quot;%&quot; min=&quot;0&quot; max=&quot;8&quot; step=&quot;0.1&quot; value=&quot;2&quot;&gt;&lt;output data-o=&quot;a&quot;&gt;&lt;/output&gt;&lt;/label&gt;
+    &lt;label class=&quot;ctrl&quot;&gt;&lt;span&gt;π&lt;sub&gt;US&lt;/sub&gt;&lt;/span&gt;&lt;input type=&quot;range&quot; data-k=&quot;b&quot; data-d=&quot;1&quot; data-u=&quot;%&quot; min=&quot;0&quot; max=&quot;8&quot; step=&quot;0.1&quot; value=&quot;2.9&quot;&gt;&lt;output data-o=&quot;b&quot;&gt;&lt;/output&gt;&lt;/label&gt;
+    &lt;div class=&quot;readout&quot; aria-live=&quot;polite&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;p&gt;Il pulsante &quot;Relative PPP&quot; mostra il caso in cui il cambio compensa esattamente l&#x27;inflation differential: ΔE&lt;sub&gt;R&lt;/sub&gt; = 0. &lt;span class=&quot;tag i&quot;&gt;integrazione&lt;/span&gt;&lt;/p&gt;
+
+  &lt;h3&gt;Perché è un&#x27;approssimazione&lt;/h3&gt;
+  &lt;p&gt;La formula con i log è esatta per variazioni infinitesime. Con dati annuali usiamo tassi discreti, e log(1 + x) ≈ x vale bene solo se x è piccolo. La formula esatta è (1 + ΔE&lt;sub&gt;R&lt;/sub&gt;) = (1 + ΔE)(1 + π&lt;sub&gt;EZ&lt;/sub&gt;) / (1 + π&lt;sub&gt;US&lt;/sub&gt;). &lt;span class=&quot;tag i&quot;&gt;integrazione&lt;/span&gt;&lt;/p&gt;
+  &lt;div class=&quot;fig&quot; id=&quot;sim-log&quot;&gt;
+    &lt;svg viewBox=&quot;0 0 400 225&quot; role=&quot;img&quot; aria-label=&quot;Curva del logaritmo di 1 più x confrontata con la retta x&quot;&gt;&lt;/svg&gt;
+    &lt;label class=&quot;ctrl&quot;&gt;&lt;span&gt;Tasso x&lt;/span&gt;&lt;input type=&quot;range&quot; data-k=&quot;x&quot; data-d=&quot;1&quot; data-u=&quot;%&quot; min=&quot;-30&quot; max=&quot;30&quot; step=&quot;0.5&quot; value=&quot;5&quot;&gt;&lt;output data-o=&quot;x&quot;&gt;&lt;/output&gt;&lt;/label&gt;
+    &lt;div class=&quot;readout&quot; aria-live=&quot;polite&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;h3&gt;Perché conta in European Economic Policy &lt;span class=&quot;tag i&quot;&gt;integrazione&lt;/span&gt;&lt;/h3&gt;
+  &lt;div class=&quot;tabs&quot;&gt;
+    &lt;div class=&quot;tablist&quot;&gt;&lt;button&gt;EZ contro USA&lt;/button&gt;&lt;button&gt;Dentro l&#x27;eurozona&lt;/button&gt;&lt;/div&gt;
+    &lt;div class=&quot;panel&quot;&gt;&lt;p&gt;Il cambio è libero di muoversi, quindi la competitiveness può cambiare per due vie: ΔE e inflation differential. In pratica ΔE spesso domina, perché il cambio si muove più dei prezzi nel breve periodo.&lt;/p&gt;&lt;/div&gt;
+    &lt;div class=&quot;panel&quot;&gt;
+      &lt;p&gt;Tra Italia e Germania non esiste un cambio: E è fissa, quindi ΔE = 0 e resta solo&lt;/p&gt;
+      &lt;div class=&quot;fm&quot;&gt;ΔE&lt;sub&gt;R&lt;/sub&gt; = π&lt;sub&gt;IT&lt;/sub&gt; − π&lt;sub&gt;DE&lt;/sub&gt;&lt;/div&gt;
+      &lt;p&gt;Con il 3% in Italia e l&#x27;1% in Germania, l&#x27;Italia perde circa 2 punti di competitiveness l&#x27;anno, e la perdita si accumula. Davanti a un &lt;b class=&quot;t&quot;&gt;asymmetric shock&lt;/b&gt; (shock che colpisce un paese più degli altri) un paese dell&#x27;euro non può svalutare: deve aggiustarsi tramite prezzi e salari. È uno dei temi della teoria dell&#x27;&lt;b class=&quot;t&quot;&gt;optimum currency area&lt;/b&gt; (le condizioni per cui conviene condividere una moneta).&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;quiz&quot;&gt;
+    &lt;h3&gt;Autoverifica&lt;/h3&gt;
+    &lt;div class=&quot;q&quot;&gt;&lt;p&gt;ΔE = +3%, π&lt;sub&gt;EZ&lt;/sub&gt; = 2%, π&lt;sub&gt;US&lt;/sub&gt; = 4%. Quanto vale ΔE&lt;sub&gt;R&lt;/sub&gt;, e che cosa significa?&lt;/p&gt;&lt;details&gt;&lt;summary&gt;Scopri la risposta&lt;/summary&gt;&lt;div&gt;&lt;p&gt;3 + 2 − 4 = +1%. E&lt;sub&gt;R&lt;/sub&gt; sale: l&#x27;EZ perde circa l&#x27;1% di competitiveness. Il vantaggio di inflazione non compensa l&#x27;apprezzamento nominale.&lt;/p&gt;&lt;/div&gt;&lt;/details&gt;&lt;/div&gt;
+    &lt;div class=&quot;q&quot;&gt;&lt;p&gt;Perché per passare ai tassi si usano i log?&lt;/p&gt;&lt;details&gt;&lt;summary&gt;Scopri la risposta&lt;/summary&gt;&lt;div&gt;&lt;p&gt;Perché trasformano prodotti e rapporti in somme e differenze, e la derivata del log è il tasso di crescita. La formula diventa additiva.&lt;/p&gt;&lt;/div&gt;&lt;/details&gt;&lt;/div&gt;
+    &lt;div class=&quot;q&quot;&gt;&lt;p&gt;Quando l&#x27;approssimazione additiva è meno affidabile?&lt;/p&gt;&lt;details&gt;&lt;summary&gt;Scopri la risposta&lt;/summary&gt;&lt;div&gt;&lt;p&gt;Con variazioni grandi: lo scarto cresce circa come il quadrato di x. Nell&#x27;Esercizio B, con ΔE di circa −8%, è molto più ampio che nell&#x27;Esercizio A.&lt;/p&gt;&lt;/div&gt;&lt;/details&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section class=&quot;part&quot; id=&quot;p5&quot; data-spy&gt;
+  &lt;span class=&quot;partno&quot;&gt;Parte 5&lt;/span&gt;
+  &lt;h2&gt;Esercizi A e B&lt;/h2&gt;
+  &lt;p class=&quot;lead&quot;&gt;La richiesta è la stessa per entrambi: commentare la variazione della competitiveness bilaterale EZ-USA calcolando i real exchange rate (1) in levels e (2) con l&#x27;approssimazione log / growth rate. &lt;span class=&quot;tag&quot;&gt;slide 9&lt;/span&gt;&lt;/p&gt;
+
+  &lt;div class=&quot;tabs&quot;&gt;
+    &lt;div class=&quot;tablist&quot;&gt;&lt;button&gt;Esercizio A&lt;/button&gt;&lt;button&gt;Esercizio B&lt;/button&gt;&lt;button&gt;Prova tu&lt;/button&gt;&lt;/div&gt;
+
+    &lt;div class=&quot;panel&quot;&gt;
+      &lt;div class=&quot;tw&quot;&gt;&lt;table&gt;
+        &lt;tr&gt;&lt;th&gt;Dati &lt;span class=&quot;tag&quot;&gt;slide 8&lt;/span&gt;&lt;/th&gt;&lt;th&gt;t−1 (set 2024)&lt;/th&gt;&lt;th&gt;t (set 2025)&lt;/th&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;E (USD/EUR)&lt;/td&gt;&lt;td&gt;1,11618&lt;/td&gt;&lt;td&gt;1,1736&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;P&lt;sub&gt;EZ&lt;/sub&gt;, inflazione 2,0%&lt;/td&gt;&lt;td&gt;100&lt;/td&gt;&lt;td&gt;da calcolare&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;P&lt;sub&gt;US&lt;/sub&gt;, inflazione 2,9%&lt;/td&gt;&lt;td&gt;100&lt;/td&gt;&lt;td&gt;da calcolare&lt;/td&gt;&lt;/tr&gt;
+      &lt;/table&gt;&lt;/div&gt;
+      &lt;div class=&quot;stepper&quot;&gt;
+        &lt;ol aria-live=&quot;polite&quot;&gt;
+          &lt;li&gt;&lt;span class=&quot;st&quot;&gt;1 · Ricava la regola per i prezzi&lt;/span&gt;Dalla definizione ΔP = (P&lt;sub&gt;t&lt;/sub&gt; − P&lt;sub&gt;t−1&lt;/sub&gt;) / P&lt;sub&gt;t−1&lt;/sub&gt; si isola P&lt;sub&gt;t&lt;/sub&gt;:&lt;div class=&quot;fm&quot;&gt;P&lt;sub&gt;t&lt;/sub&gt; = P&lt;sub&gt;t−1&lt;/sub&gt; (1 + ΔP)&lt;/div&gt;&lt;span class=&quot;tag&quot;&gt;slide 8&lt;/span&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;span class=&quot;st&quot;&gt;2 · Calcola i prezzi in t&lt;/span&gt;&lt;div class=&quot;fm&quot;&gt;P&lt;sub&gt;EZ,t&lt;/sub&gt; = 100 × 1,02 = 102&lt;br&gt;P&lt;sub&gt;US,t&lt;/sub&gt; = 100 × 1,029 = 102,9&lt;/div&gt;&lt;span class=&quot;tag&quot;&gt;slide 8&lt;/span&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;span class=&quot;st&quot;&gt;3 · Levels: E&lt;sub&gt;R&lt;/sub&gt; in t−1&lt;/span&gt;&lt;div class=&quot;fm&quot;&gt;E&lt;sub&gt;R,t−1&lt;/sub&gt; = 1,11618 × 100 / 100 = 1,11618&lt;/div&gt;&lt;span class=&quot;tag&quot;&gt;slide 10&lt;/span&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;span class=&quot;st&quot;&gt;4 · Levels: E&lt;sub&gt;R&lt;/sub&gt; in t&lt;/span&gt;&lt;div class=&quot;fm&quot;&gt;E&lt;sub&gt;R,t&lt;/sub&gt; = 1,1736 × 102 / 102,9 = 1,1633&lt;/div&gt;&lt;span class=&quot;tag&quot;&gt;slide 10&lt;/span&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;span class=&quot;st&quot;&gt;5 · Levels: la variazione&lt;/span&gt;&lt;div class=&quot;fm&quot;&gt;ΔE&lt;sub&gt;R&lt;/sub&gt; = (1,1633 − 1,11618) / 1,11618 = 0,0422 = 4,22%&lt;/div&gt;&lt;span class=&quot;tag&quot;&gt;slide 10&lt;/span&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;span class=&quot;st&quot;&gt;6 · Rates: la scomposizione&lt;/span&gt;&lt;div class=&quot;fm&quot;&gt;ΔE = (1,1736 − 1,11618) / 1,11618 = 5,14%&lt;br&gt;ΔE&lt;sub&gt;R&lt;/sub&gt; = 5,14 + 2 − 2,9 = 4,24%&lt;/div&gt;Le due vie differiscono di 0,02 punti. &lt;span class=&quot;tag&quot;&gt;slide 10&lt;/span&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;span class=&quot;st&quot;&gt;7 · Il commento&lt;/span&gt;E&lt;sub&gt;R&lt;/sub&gt; sale di circa il 4,2%: &lt;b class=&quot;t&quot;&gt;l&#x27;EZ perde competitiveness&lt;/b&gt; rispetto agli USA. L&#x27;apprezzamento nominale dell&#x27;euro (+5,14%) pesa più del vantaggio dato dalla minore inflazione EZ (0,9 punti). Le slide non scrivono il commento: questa è la mia lettura dei numeri. &lt;span class=&quot;tag i&quot;&gt;integrazione&lt;/span&gt;&lt;/li&gt;
+        &lt;/ol&gt;
+        &lt;div class=&quot;stepnav&quot;&gt;&lt;button class=&quot;prev&quot; type=&quot;button&quot;&gt;← Indietro&lt;/button&gt;&lt;span class=&quot;count&quot;&gt;&lt;/span&gt;&lt;button class=&quot;next&quot; type=&quot;button&quot;&gt;Avanti →&lt;/button&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;figure class=&quot;fig&quot;&gt;&lt;svg data-wf=&quot;5.14,2,2.9&quot; viewBox=&quot;0 0 400 232&quot; role=&quot;img&quot; aria-label=&quot;Esercizio A: più 5,14 più 2 meno 2,9 uguale più 4,24&quot;&gt;&lt;/svg&gt;
+      &lt;figcaption&gt;Esercizio A in punti percentuali: rosso spinge E&lt;sub&gt;R&lt;/sub&gt; in su (perdita di competitiveness), verde in giù.&lt;/figcaption&gt;&lt;/figure&gt;
+      &lt;div class=&quot;warn&quot;&gt;
+        &lt;span class=&quot;lbl&quot;&gt;Tre dettagli che le slide danno per scontati &lt;span class=&quot;tag i&quot;&gt;integrazione&lt;/span&gt;&lt;/span&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;strong&gt;Con gli indici conta la variazione, non il livello.&lt;/strong&gt; I prezzi base = 100 sono una convenzione, non costi effettivi. E&lt;sub&gt;R,t−1&lt;/sub&gt; = 1,116 &lt;em&gt;non&lt;/em&gt; vuol dire che l&#x27;EZ costi l&#x27;11,6% in più: la frase &quot;E&lt;sub&gt;R&lt;/sub&gt; &amp;gt; 1 = EZ più cara&quot; richiede prezzi veri, come per il Big Mac.&lt;/li&gt;
+          &lt;li&gt;&lt;strong&gt;Le date non coincidono del tutto.&lt;/strong&gt; I cambi sono di settembre, l&#x27;inflazione è sui 12 mesi ad agosto 2025. Per un esercizio è un&#x27;approssimazione accettabile.&lt;/li&gt;
+          &lt;li&gt;&lt;strong&gt;I valori sono realistici.&lt;/strong&gt; Eurostat riporta il 2,0% per l&#x27;eurozona e il BLS il 2,9% per gli USA ad agosto 2025 (vedi &lt;a href=&quot;#more&quot;&gt;Per approfondire&lt;/a&gt;). &lt;a class=&quot;tag x&quot; href=&quot;https://www.bls.gov/opub/ted/2025/consumer-prices-up-2-9-percent-from-august-2024-to-august-2025.htm&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;fonte esterna&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;panel&quot;&gt;
+      &lt;div class=&quot;tw&quot;&gt;&lt;table&gt;
+        &lt;tr&gt;&lt;th&gt;Dati &lt;span class=&quot;tag&quot;&gt;slide 11&lt;/span&gt;&lt;/th&gt;&lt;th&gt;t−1&lt;/th&gt;&lt;th&gt;t&lt;/th&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;E (USD/EUR)&lt;/td&gt;&lt;td&gt;1,20&lt;/td&gt;&lt;td&gt;1,10&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;P&lt;sub&gt;EZ&lt;/sub&gt;, inflazione 1%&lt;/td&gt;&lt;td&gt;100&lt;/td&gt;&lt;td&gt;da calcolare&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;P&lt;sub&gt;US&lt;/sub&gt;, inflazione 4%&lt;/td&gt;&lt;td&gt;110&lt;/td&gt;&lt;td&gt;da calcolare&lt;/td&gt;&lt;/tr&gt;
+      &lt;/table&gt;&lt;/div&gt;
+      &lt;p&gt;La slide riporta solo il risultato: ΔE&lt;sub&gt;R&lt;/sub&gt; = −11,3%. Prova prima senza aiuti e poi controlla: i passaggi qui sotto sono miei. &lt;span class=&quot;tag i&quot;&gt;integrazione&lt;/span&gt;&lt;/p&gt;
+      &lt;div class=&quot;stepper&quot;&gt;
+        &lt;ol aria-live=&quot;polite&quot;&gt;
+          &lt;li&gt;&lt;span class=&quot;st&quot;&gt;1 · Rates, il metodo rapido&lt;/span&gt;&lt;div class=&quot;fm&quot;&gt;ΔE = (1,10 − 1,20) / 1,20 = −8,33%&lt;br&gt;ΔE&lt;sub&gt;R&lt;/sub&gt; = −8,33 + 1 − 4 = −11,33%&lt;/div&gt;È il −11,3% della slide. &lt;span class=&quot;tag&quot;&gt;slide 11&lt;/span&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;span class=&quot;st&quot;&gt;2 · Levels: i prezzi in t&lt;/span&gt;&lt;div class=&quot;fm&quot;&gt;P&lt;sub&gt;EZ,t&lt;/sub&gt; = 100 × 1,01 = 101&lt;br&gt;P&lt;sub&gt;US,t&lt;/sub&gt; = 110 × 1,04 = 114,4&lt;/div&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;span class=&quot;st&quot;&gt;3 · Levels: E&lt;sub&gt;R&lt;/sub&gt;&lt;/span&gt;&lt;div class=&quot;fm&quot;&gt;E&lt;sub&gt;R,t−1&lt;/sub&gt; = 1,20 × 100 / 110 = 1,0909&lt;br&gt;E&lt;sub&gt;R,t&lt;/sub&gt; = 1,10 × 101 / 114,4 = 0,9711&lt;/div&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;span class=&quot;st&quot;&gt;4 · Levels: la variazione&lt;/span&gt;&lt;div class=&quot;fm&quot;&gt;ΔE&lt;sub&gt;R&lt;/sub&gt; = (0,9711 − 1,0909) / 1,0909 = −10,98%&lt;/div&gt;Lo scarto con il metodo rapido è di 0,35 punti, molto più che nell&#x27;Esercizio A, perché ΔE è grande.&lt;/li&gt;
+          &lt;li&gt;&lt;span class=&quot;st&quot;&gt;5 · Il commento&lt;/span&gt;E&lt;sub&gt;R&lt;/sub&gt; scende di circa l&#x27;11%: &lt;b class=&quot;t&quot;&gt;l&#x27;EZ guadagna competitiveness&lt;/b&gt;. Questa volta i due canali vanno nella stessa direzione: l&#x27;euro si deprezza (−8,33%) e l&#x27;inflazione EZ è più bassa di 3 punti. La base 110 di P&lt;sub&gt;US&lt;/sub&gt; non influisce sul risultato.&lt;/li&gt;
+        &lt;/ol&gt;
+        &lt;div class=&quot;stepnav&quot;&gt;&lt;button class=&quot;prev&quot; type=&quot;button&quot;&gt;← Indietro&lt;/button&gt;&lt;span class=&quot;count&quot;&gt;&lt;/span&gt;&lt;button class=&quot;next&quot; type=&quot;button&quot;&gt;Avanti →&lt;/button&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;figure class=&quot;fig&quot;&gt;&lt;svg data-wf=&quot;-8.33,1,4&quot; viewBox=&quot;0 0 400 232&quot; role=&quot;img&quot; aria-label=&quot;Esercizio B: meno 8,33 più 1 meno 4 uguale meno 11,33&quot;&gt;&lt;/svg&gt;
+      &lt;figcaption&gt;Esercizio B in punti percentuali.&lt;/figcaption&gt;&lt;/figure&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;panel&quot;&gt;
+      &lt;p&gt;Esercizio inventato per allenarti, non presente nelle slide. &lt;span class=&quot;tag i&quot;&gt;integrazione&lt;/span&gt;&lt;/p&gt;
+      &lt;div class=&quot;tw&quot;&gt;&lt;table&gt;
+        &lt;tr&gt;&lt;th&gt;Dati&lt;/th&gt;&lt;th&gt;t−1&lt;/th&gt;&lt;th&gt;t&lt;/th&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;E (USD/EUR)&lt;/td&gt;&lt;td&gt;1,30&lt;/td&gt;&lt;td&gt;1,25&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;P&lt;sub&gt;EZ&lt;/sub&gt;, inflazione 3%&lt;/td&gt;&lt;td&gt;100&lt;/td&gt;&lt;td&gt;da calcolare&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;P&lt;sub&gt;US&lt;/sub&gt;, inflazione 1%&lt;/td&gt;&lt;td&gt;100&lt;/td&gt;&lt;td&gt;da calcolare&lt;/td&gt;&lt;/tr&gt;
+      &lt;/table&gt;&lt;/div&gt;
+      &lt;details class=&quot;acc&quot;&gt;&lt;summary&gt;Soluzione in levels&lt;/summary&gt;&lt;div&gt;&lt;p&gt;P&lt;sub&gt;EZ,t&lt;/sub&gt; = 103 e P&lt;sub&gt;US,t&lt;/sub&gt; = 101. E&lt;sub&gt;R,t−1&lt;/sub&gt; = 1,30 e E&lt;sub&gt;R,t&lt;/sub&gt; = 1,25 × 103 / 101 = 1,2748. ΔE&lt;sub&gt;R&lt;/sub&gt; = (1,2748 − 1,30) / 1,30 = −1,94%.&lt;/p&gt;&lt;/div&gt;&lt;/details&gt;
+      &lt;details class=&quot;acc&quot;&gt;&lt;summary&gt;Soluzione con i rates&lt;/summary&gt;&lt;div&gt;&lt;p&gt;ΔE = −3,85%. ΔE&lt;sub&gt;R&lt;/sub&gt; = −3,85 + 3 − 1 = −1,85%.&lt;/p&gt;&lt;/div&gt;&lt;/details&gt;
+      &lt;details class=&quot;acc&quot;&gt;&lt;summary&gt;Commento&lt;/summary&gt;&lt;div&gt;&lt;p&gt;L&#x27;EZ guadagna un po&#x27; di competitiveness: il deprezzamento nominale è in parte eroso dalla maggiore inflazione EZ.&lt;/p&gt;&lt;/div&gt;&lt;/details&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;h3&gt;Il foglio riassuntivo&lt;/h3&gt;
+  &lt;div class=&quot;tw&quot;&gt;&lt;table&gt;
+    &lt;tr&gt;&lt;th&gt;Concetto&lt;/th&gt;&lt;th&gt;Formula&lt;/th&gt;&lt;th&gt;Da ricordare&lt;/th&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Conversione&lt;/td&gt;&lt;td&gt;P&lt;sub&gt;EZ&lt;/sub&gt; · E oppure P&lt;sub&gt;US&lt;/sub&gt; / E&lt;/td&gt;&lt;td&gt;E in USD/EUR: sale = euro più forte&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Law of one price&lt;/td&gt;&lt;td&gt;P&lt;sup&gt;i&lt;/sup&gt;&lt;sub&gt;EZ&lt;/sub&gt; · E = P&lt;sup&gt;i&lt;/sup&gt;&lt;sub&gt;US&lt;/sub&gt;&lt;/td&gt;&lt;td&gt;un bene&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;PPP&lt;/td&gt;&lt;td&gt;E = P&lt;sub&gt;US&lt;/sub&gt; / P&lt;sub&gt;EZ&lt;/sub&gt;&lt;/td&gt;&lt;td&gt;tutto il basket&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Real exchange rate&lt;/td&gt;&lt;td&gt;E&lt;sub&gt;R&lt;/sub&gt; = P&lt;sub&gt;EZ&lt;/sub&gt; · E / P&lt;sub&gt;US&lt;/sub&gt;&lt;/td&gt;&lt;td&gt;&amp;gt; 1 EZ più cara, &amp;lt; 1 più economica&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Prezzo futuro&lt;/td&gt;&lt;td&gt;P&lt;sub&gt;t&lt;/sub&gt; = P&lt;sub&gt;t−1&lt;/sub&gt; (1 + ΔP)&lt;/td&gt;&lt;td&gt;da inflazione a livello&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Rate of change&lt;/td&gt;&lt;td&gt;ΔE&lt;sub&gt;R&lt;/sub&gt; ≈ ΔE + π&lt;sub&gt;EZ&lt;/sub&gt; − π&lt;sub&gt;US&lt;/sub&gt;&lt;/td&gt;&lt;td&gt;positivo = perde competitiveness&lt;/td&gt;&lt;/tr&gt;
+  &lt;/table&gt;&lt;/div&gt;
+
+  &lt;div class=&quot;quiz&quot;&gt;
+    &lt;h3&gt;Autoverifica&lt;/h3&gt;
+    &lt;div class=&quot;q&quot;&gt;&lt;p&gt;Nell&#x27;Esercizio A l&#x27;euro si apprezza del 5,14% ma E&lt;sub&gt;R&lt;/sub&gt; sale solo del 4,2% circa. Perché meno?&lt;/p&gt;&lt;details&gt;&lt;summary&gt;Scopri la risposta&lt;/summary&gt;&lt;div&gt;&lt;p&gt;Perché l&#x27;inflazione EZ è più bassa di quella USA di 0,9 punti: questo recupera una parte della perdita dovuta al cambio.&lt;/p&gt;&lt;/div&gt;&lt;/details&gt;&lt;/div&gt;
+    &lt;div class=&quot;q&quot;&gt;&lt;p&gt;Nell&#x27;Esercizio B il calcolo in levels dà −10,98% e quello con i rates −11,33%. Perché, e quale è esatto?&lt;/p&gt;&lt;details&gt;&lt;summary&gt;Scopri la risposta&lt;/summary&gt;&lt;div&gt;&lt;p&gt;Il calcolo in levels è esatto; quello additivo è un&#x27;approssimazione, meno precisa con variazioni ampie.&lt;/p&gt;&lt;/div&gt;&lt;/details&gt;&lt;/div&gt;
+    &lt;div class=&quot;q&quot;&gt;&lt;p&gt;Nell&#x27;Esercizio A si può dire che nel 2025 l&#x27;EZ è più cara degli USA perché E&lt;sub&gt;R&lt;/sub&gt; = 1,16 &amp;gt; 1?&lt;/p&gt;&lt;details&gt;&lt;summary&gt;Scopri la risposta&lt;/summary&gt;&lt;div&gt;&lt;p&gt;No. I prezzi sono indici con base 100 scelta per convenzione, quindi il livello di E&lt;sub&gt;R&lt;/sub&gt; non è un confronto tra prezzi effettivi. Si può commentare solo la variazione.&lt;/p&gt;&lt;/div&gt;&lt;/details&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section class=&quot;part&quot; id=&quot;more&quot; data-spy style=&quot;border-bottom:0&quot;&gt;
+  &lt;span class=&quot;partno&quot;&gt;Fonti esterne&lt;/span&gt;
+  &lt;h2&gt;Per approfondire&lt;/h2&gt;
+  &lt;p class=&quot;lead&quot;&gt;Le slide citano per nome un solo riferimento, il Big Mac Index. Qui sotto ci sono quello, le fonti probabili dei dati dell&#x27;Esercizio A e alcune letture utili.&lt;/p&gt;
+  &lt;p&gt;Tutto in questa sezione viene dal web e non dalle slide. Ho controllato i dati tramite la ricerca web, senza aprire integralmente i documenti.&lt;/p&gt;
+
+  &lt;h3&gt;Citato nelle slide&lt;/h3&gt;
+  &lt;div class=&quot;cards&quot;&gt;
+    &lt;div class=&quot;card&quot;&gt;
+      &lt;h4&gt;Big Mac Index&lt;/h4&gt;
+      &lt;p class=&quot;who&quot;&gt;The Economist, dal settembre 1986 &lt;span class=&quot;tag&quot;&gt;slide 4&lt;/span&gt; &lt;span class=&quot;tag x&quot;&gt;fonte esterna&lt;/span&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;strong&gt;Che cosa contiene:&lt;/strong&gt; prezzi del Big Mac nei vari paesi, cambio implicito e sopra/sottovalutazione delle valute. Il repository ha dati e codice di calcolo, con un indice grezzo e uno aggiustato per il PIL pro capite.&lt;/p&gt;
+      &lt;p&gt;&lt;strong&gt;Perché conta:&lt;/strong&gt; è l&#x27;esempio della slide 4 e permette di rifare il calcolo su altri paesi e anni. Il dataset è il posto giusto per verificare i valori di luglio 2021: la ricerca web non mi ha permesso di confermare €4,27 e $5,65.&lt;/p&gt;
+      &lt;p&gt;&lt;a href=&quot;https://github.com/TheEconomist/big-mac-data&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Dati e codice su GitHub&lt;/a&gt; · &lt;a href=&quot;https://www.economist.com/big-mac-index&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Pagina di The Economist&lt;/a&gt; (non è comparsa nei risultati di ricerca: indirizzo da verificare) · &lt;a href=&quot;https://en.wikipedia.org/wiki/Big_Mac_Index&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Voce di Wikipedia&lt;/a&gt;&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;h3&gt;Da dove possono venire i dati dell&#x27;Esercizio A&lt;/h3&gt;
+  &lt;p&gt;Le slide non indicano la fonte dei dati: questi abbinamenti sono una mia ipotesi.&lt;/p&gt;
+  &lt;div class=&quot;cards&quot;&gt;
+    &lt;div class=&quot;card&quot;&gt;
+      &lt;h4&gt;Euro area annual inflation, agosto 2025&lt;/h4&gt;
+      &lt;p class=&quot;who&quot;&gt;Eurostat, Euro indicators, 17 settembre 2025 &lt;span class=&quot;tag x&quot;&gt;fonte esterna&lt;/span&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;strong&gt;Che cosa contiene:&lt;/strong&gt; il dato definitivo dell&#x27;inflazione HICP (l&#x27;indice armonizzato europeo) dell&#x27;eurozona: 2,0%, contro una stima flash del 2,1%.&lt;/p&gt;
+      &lt;p&gt;&lt;strong&gt;Perché conta:&lt;/strong&gt; coincide con il 2,0% della slide 8 e mostra la differenza tra stima preliminare e dato finale.&lt;/p&gt;
+      &lt;p&gt;&lt;a href=&quot;https://ec.europa.eu/eurostat/web/products-euro-indicators/w/2-17092025-ap&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Comunicato Eurostat&lt;/a&gt; · &lt;a href=&quot;https://ec.europa.eu/eurostat/en/web/products-euro-indicators/w/2-02092025-ap&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Stima flash&lt;/a&gt;&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;card&quot;&gt;
+      &lt;h4&gt;Consumer prices up 2.9 percent, agosto 2024 - agosto 2025&lt;/h4&gt;
+      &lt;p class=&quot;who&quot;&gt;U.S. Bureau of Labor Statistics, The Economics Daily &lt;span class=&quot;tag x&quot;&gt;fonte esterna&lt;/span&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;strong&gt;Che cosa contiene:&lt;/strong&gt; la variazione a 12 mesi del Consumer Price Index americano.&lt;/p&gt;
+      &lt;p&gt;&lt;strong&gt;Perché conta:&lt;/strong&gt; coincide con il 2,9% della slide 8. HICP e CPI non sono costruiti in modo identico, quindi il confronto tra i due è buono ma non perfetto.&lt;/p&gt;
+      &lt;p&gt;&lt;a href=&quot;https://www.bls.gov/opub/ted/2025/consumer-prices-up-2-9-percent-from-august-2024-to-august-2025.htm&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Pagina del BLS&lt;/a&gt;&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;card&quot;&gt;
+      &lt;h4&gt;US dollar/Euro, serie mensile&lt;/h4&gt;
+      &lt;p class=&quot;who&quot;&gt;Banca Centrale Europea, ECB Data Portal, serie EXR.M.USD.EUR.SP00.A &lt;span class=&quot;tag x&quot;&gt;fonte esterna&lt;/span&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;strong&gt;Che cosa contiene:&lt;/strong&gt; la media mensile del cambio dollaro/euro, dal 1999.&lt;/p&gt;
+      &lt;p&gt;&lt;strong&gt;Perché conta:&lt;/strong&gt; usa la stessa quotazione del corso (USD per 1 EUR) ed è il posto giusto per controllare 1,11618 e 1,1736. I due valori restano da confermare: la ricerca ha restituito solo singoli cambi giornalieri di settembre 2025, intorno a 1,17.&lt;/p&gt;
+      &lt;p&gt;&lt;a href=&quot;https://data.ecb.europa.eu/data/datasets/EXR/EXR.M.USD.EUR.SP00.A&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Serie sul Data Portal&lt;/a&gt;&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;h3&gt;Letture utili, non citate nelle slide&lt;/h3&gt;
+  &lt;div class=&quot;cards&quot;&gt;
+    &lt;div class=&quot;card&quot;&gt;
+      &lt;h4&gt;The Purchasing Power Parity Puzzle&lt;/h4&gt;
+      &lt;p class=&quot;who&quot;&gt;Kenneth Rogoff, &lt;em&gt;Journal of Economic Literature&lt;/em&gt;, 34(2), 1996, pp. 647-668 &lt;span class=&quot;tag x&quot;&gt;fonte esterna&lt;/span&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;strong&gt;Che cosa contiene:&lt;/strong&gt; la rassegna classica sulla PPP come ancora di lungo periodo. Il &quot;puzzle&quot; è conciliare l&#x27;enorme volatilità di breve periodo dei real exchange rate con la lentezza con cui gli shock si riassorbono.&lt;/p&gt;
+      &lt;p&gt;&lt;strong&gt;Perché conta:&lt;/strong&gt; approfondisce il &quot;PPP performs poorly in the real world&quot; della slide 5.&lt;/p&gt;
+      &lt;p&gt;&lt;a href=&quot;https://ideas.repec.org/a/aea/jeclit/v34y1996i2p647-668.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Scheda su IDEAS/RePEc&lt;/a&gt; · &lt;a href=&quot;https://web.williams.edu/Economics/macro/rogoff.pdf&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;PDF&lt;/a&gt;&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;card&quot;&gt;
+      &lt;h4&gt;Burgernomics: A Big Mac Guide to Purchasing Power Parity&lt;/h4&gt;
+      &lt;p class=&quot;who&quot;&gt;Michael R. Pakko e Patricia S. Pollard, &lt;em&gt;Federal Reserve Bank of St. Louis Review&lt;/em&gt;, 85(6), 2003, pp. 9-28 &lt;span class=&quot;tag x&quot;&gt;fonte esterna&lt;/span&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;strong&gt;Che cosa contiene:&lt;/strong&gt; usa il Big Mac per spiegare i principi della PPP e confronta l&#x27;indice con misure di prezzo più ampie. Alcuni cataloghi indicano le pagine 9-27.&lt;/p&gt;
+      &lt;p&gt;&lt;strong&gt;Perché conta:&lt;/strong&gt; spiega in modo accessibile perché la &quot;McParity&quot; spesso non vale, e collega le slide 4 e 5.&lt;/p&gt;
+      &lt;p&gt;&lt;a href=&quot;https://ideas.repec.org/a/fip/fedlrv/y2003inovp9-28nv.85no.6.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Scheda su IDEAS/RePEc&lt;/a&gt;&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;card&quot;&gt;
+      &lt;h4&gt;Harmonised competitiveness indicators&lt;/h4&gt;
+      &lt;p class=&quot;who&quot;&gt;Banca Centrale Europea, ECB Data Portal &lt;span class=&quot;tag x&quot;&gt;fonte esterna&lt;/span&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;strong&gt;Che cosa contiene:&lt;/strong&gt; misure di competitiveness di prezzo e di costo dei paesi dell&#x27;euro, coerenti con il real effective exchange rate dell&#x27;euro verso 40 partner commerciali.&lt;/p&gt;
+      &lt;p&gt;&lt;strong&gt;Perché conta:&lt;/strong&gt; è la versione ufficiale di E&lt;sub&gt;R&lt;/sub&gt; con molti partner, e ha lo stesso verso: sale = meno competitiveness.&lt;/p&gt;
+      &lt;p&gt;&lt;a href=&quot;https://data.ecb.europa.eu/key-figures/ecb-interest-rates-and-exchange-rates/harmonised-competitiveness-indicators&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Pagina della BCE&lt;/a&gt;&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;note&quot;&gt;
+    &lt;span class=&quot;lbl&quot;&gt;Altri materiali del corso&lt;/span&gt;
+    &lt;p&gt;Da questa sessione non ho potuto elencare la cartella &lt;code&gt;corso/&lt;/code&gt;, e i pochi nomi di file che ho provato non esistono. Nessun contenuto di questa pagina viene quindi da altri file del corso. I collegamenti con il resto del programma, come optimum currency area e asymmetric shock, sono &lt;span class=&quot;tag i&quot;&gt;integrazione&lt;/span&gt;: verificali su lezioni e programma.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+&lt;/main&gt;
+
+&lt;footer class=&quot;wrap&quot;&gt;
+  &lt;p&gt;Riassunto scritto da Claude a partire dalle slide: controlla sempre sul materiale.&lt;/p&gt;
+&lt;/footer&gt;
+
+&lt;script&gt;
+(function(){
+  &#x27;use strict&#x27;;
+  document.documentElement.classList.add(&#x27;js&#x27;);
+  var $=function(s,r){return (r||document).querySelector(s)};
+  var $$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+  var reduce=window.matchMedia&amp;&amp;matchMedia(&#x27;(prefers-reduced-motion: reduce)&#x27;).matches;
+  function n(x,d){if(Math.abs(x)&lt;Math.pow(10,-d)/2)x=0;return x.toFixed(d).replace(&#x27;.&#x27;,&#x27;,&#x27;).replace(&#x27;-&#x27;,&#x27;−&#x27;)}
+  function sg(x,d){return (x&gt;=0?&#x27;+&#x27;:&#x27;&#x27;)+n(x,d)}
+  function clamp(x,a,b){return Math.max(a,Math.min(b,x))}
+
+  /* collegamenti interni: niente cambi di URL, così funzionano anche in sandbox */
+  document.addEventListener(&#x27;click&#x27;,function(e){
+    var a=e.target.closest?e.target.closest(&#x27;a&#x27;):null;
+    if(!a)return;
+    var h=a.getAttribute(&#x27;href&#x27;);
+    if(!h||h.charAt(0)!==&#x27;#&#x27;)return;
+    var t=document.getElementById(h.slice(1));
+    if(!t)return;
+    e.preventDefault();
+    t.scrollIntoView({behavior:reduce?&#x27;auto&#x27;:&#x27;smooth&#x27;,block:&#x27;start&#x27;});
+    t.setAttribute(&#x27;tabindex&#x27;,&#x27;-1&#x27;);
+    t.focus({preventScroll:true});
+  });
+
+  /* evidenzia la sezione corrente */
+  var links=$$(&#x27;.bar a&#x27;);
+  if(&#x27;IntersectionObserver&#x27; in window){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(en){
+        if(!en.isIntersecting)return;
+        links.forEach(function(l){
+          if(l.getAttribute(&#x27;href&#x27;)===&#x27;#&#x27;+en.target.id){
+            l.setAttribute(&#x27;aria-current&#x27;,&#x27;true&#x27;);
+            if(l.parentNode.parentNode.scrollTo)l.parentNode.parentNode.scrollTo({left:l.parentNode.offsetLeft-20,behavior:reduce?&#x27;auto&#x27;:&#x27;smooth&#x27;});
+          }else l.removeAttribute(&#x27;aria-current&#x27;);
+        });
+      });
+    },{rootMargin:&#x27;-35% 0px -60% 0px&#x27;});
+    $$(&#x27;[data-spy]&#x27;).forEach(function(s){io.observe(s)});
+  }
+
+  /* linguette */
+  var tabUid=0;
+  $$(&#x27;.tabs&#x27;).forEach(function(box){
+    var tabs=$$(&#x27;:scope &gt; .tablist &gt; button&#x27;,box),pans=$$(&#x27;:scope &gt; .panel&#x27;,box);
+    $(&#x27;:scope &gt; .tablist&#x27;,box).setAttribute(&#x27;role&#x27;,&#x27;tablist&#x27;);
+    function sel(i,foc){
+      tabs.forEach(function(t,j){t.setAttribute(&#x27;aria-selected&#x27;,j===i?&#x27;true&#x27;:&#x27;false&#x27;);t.tabIndex=j===i?0:-1});
+      pans.forEach(function(p,j){p.hidden=j!==i});
+      if(foc)tabs[i].focus();
+    }
+    tabs.forEach(function(t,i){
+      var id=&#x27;tb&#x27;+(++tabUid);
+      t.id=id;t.setAttribute(&#x27;role&#x27;,&#x27;tab&#x27;);t.type=&#x27;button&#x27;;
+      if(pans[i]){pans[i].setAttribute(&#x27;role&#x27;,&#x27;tabpanel&#x27;);pans[i].setAttribute(&#x27;aria-labelledby&#x27;,id)}
+      t.addEventListener(&#x27;click&#x27;,function(){sel(i)});
+      t.addEventListener(&#x27;keydown&#x27;,function(e){
+        if(e.key===&#x27;ArrowRight&#x27;){e.preventDefault();sel((i+1)%tabs.length,true)}
+        if(e.key===&#x27;ArrowLeft&#x27;){e.preventDefault();sel((i-1+tabs.length)%tabs.length,true)}
+      });
+    });
+    sel(0);
+  });
+
+  /* passi da scorrere */
+  function barsArb(svg,a,b){
+    var W=function(v){return v/140*380};
+    svg.innerHTML=
+      &#x27;&lt;text x=&quot;10&quot; y=&quot;20&quot;&gt;Bene i venduto nell\&#x27;EZ, in dollari: $&#x27;+a+&#x27;&lt;/text&gt;&#x27;+
+      &#x27;&lt;rect x=&quot;10&quot; y=&quot;28&quot; height=&quot;28&quot; rx=&quot;3&quot; width=&quot;&#x27;+W(a)+&#x27;&quot; style=&quot;fill:var(--mid)&quot;/&gt;&#x27;+
+      &#x27;&lt;text x=&quot;10&quot; y=&quot;84&quot;&gt;Bene i venduto negli USA: $&#x27;+b+&#x27;&lt;/text&gt;&#x27;+
+      &#x27;&lt;rect x=&quot;10&quot; y=&quot;92&quot; height=&quot;28&quot; rx=&quot;3&quot; width=&quot;&#x27;+W(b)+&#x27;&quot; style=&quot;fill:var(--deep)&quot;/&gt;&#x27;+
+      &#x27;&lt;text x=&quot;10&quot; y=&quot;150&quot; style=&quot;font-weight:600&quot;&gt;&#x27;+(b-a&gt;0?&#x27;Margine di arbitrage: $&#x27;+(b-a)+&#x27; per unità&#x27;:&#x27;Margine di arbitrage: zero, la law of one price vale&#x27;)+&#x27;&lt;/text&gt;&#x27;;
+  }
+  $$(&#x27;.stepper&#x27;).forEach(function(st){
+    var items=$$(&#x27;:scope &gt; ol &gt; li&#x27;,st),i=0;
+    var prev=$(&#x27;.prev&#x27;,st),next=$(&#x27;.next&#x27;,st),cnt=$(&#x27;.count&#x27;,st),arb=$(&#x27;[data-arb]&#x27;,st.parentNode);
+    function go(k){
+      i=clamp(k,0,items.length-1);
+      items.forEach(function(el,j){el.classList.toggle(&#x27;on&#x27;,j===i)});
+      if(cnt)cnt.textContent=&#x27;Passo &#x27;+(i+1)+&#x27; di &#x27;+items.length;
+      if(prev)prev.disabled=i===0;
+      if(next)next.disabled=i===items.length-1;
+      if(arb&amp;&amp;items[i].dataset.a)barsArb(arb,+items[i].dataset.a,+items[i].dataset.b);
+    }
+    if(prev)prev.addEventListener(&#x27;click&#x27;,function(){go(i-1)});
+    if(next)next.addEventListener(&#x27;click&#x27;,function(){go(i+1)});
+    go(0);
+  });
+
+  /* simulatori con cursori */
+  function sim(id,render){
+    var r=document.getElementById(id);
+    if(!r)return;
+    var ins=$$(&#x27;input[type=range]&#x27;,r);
+    function go(){
+      var v={};
+      ins.forEach(function(el){
+        v[el.dataset.k]=+el.value;
+        var o=$(&#x27;[data-o=&quot;&#x27;+el.dataset.k+&#x27;&quot;]&#x27;,r);
+        if(o)o.textContent=(el.dataset.p||&#x27;&#x27;)+n(+el.value,+(el.dataset.d||0))+(el.dataset.u||&#x27;&#x27;);
+      });
+      render(v,r);
+    }
+    ins.forEach(function(el){el.addEventListener(&#x27;input&#x27;,go)});
+    $$(&#x27;[data-preset]&#x27;,r).forEach(function(b){
+      b.addEventListener(&#x27;click&#x27;,function(){
+        var p=JSON.parse(b.dataset.preset);
+        ins.forEach(function(el){if(p[el.dataset.k]!==undefined)el.value=p[el.dataset.k]});
+        go();
+      });
+    });
+    go();
+  }
+
+  /* parte 1: convertitore */
+  sim(&#x27;sim-e&#x27;,function(v,r){
+    var W=function(x,m){return x/m*380};
+    var d=100*v.E,e=100/v.E,ref=10+W(118,160);
+    $(&#x27;svg&#x27;,r).innerHTML=
+      &#x27;&lt;text x=&quot;10&quot; y=&quot;20&quot;&gt;€100 valgono $&#x27;+n(d,2)+&#x27;&lt;/text&gt;&#x27;+
+      &#x27;&lt;rect x=&quot;10&quot; y=&quot;28&quot; height=&quot;28&quot; rx=&quot;3&quot; width=&quot;&#x27;+W(d,160)+&#x27;&quot; style=&quot;fill:var(--mid)&quot;/&gt;&#x27;+
+      &#x27;&lt;path class=&quot;ln dash&quot; d=&quot;M&#x27;+ref+&#x27; 24V60&quot;/&gt;&#x27;+
+      &#x27;&lt;text x=&quot;10&quot; y=&quot;90&quot;&gt;$100 valgono €&#x27;+n(e,2)+&#x27;&lt;/text&gt;&#x27;+
+      &#x27;&lt;rect x=&quot;10&quot; y=&quot;98&quot; height=&quot;28&quot; rx=&quot;3&quot; width=&quot;&#x27;+W(e,160)+&#x27;&quot; style=&quot;fill:var(--deep)&quot;/&gt;&#x27;+
+      &#x27;&lt;path class=&quot;ln dash&quot; d=&quot;M&#x27;+(10+W(100/1.18,160))+&#x27; 94V130&quot;/&gt;&#x27;+
+      &#x27;&lt;text class=&quot;sm&quot; x=&quot;10&quot; y=&quot;150&quot;&gt;Tratteggio: il valore con E = 1,18&lt;/text&gt;&#x27;;
+    var o=$(&#x27;.readout&#x27;,r),s;
+    if(v.E&gt;1.18)s=&#x27;Con E più alto un euro compra più dollari: rispetto a 1,18 l\&#x27;euro si è &lt;b&gt;apprezzato&lt;/b&gt; (appreciation) e il dollaro si è deprezzato.&#x27;;
+    else if(v.E&lt;1.18)s=&#x27;Con E più basso un euro compra meno dollari: rispetto a 1,18 l\&#x27;euro si è &lt;b&gt;deprezzato&lt;/b&gt; (depreciation) e il dollaro si è apprezzato.&#x27;;
+    else s=&#x27;E = 1,18: è il market exchange rate della slide sul Big Mac. Sposta il cursore per vedere che cosa succede.&#x27;;
+    o.innerHTML=s;
+  });
+
+  /* parte 2: Big Mac */
+  sim(&#x27;sim-mac&#x27;,function(v,r){
+    var usd=v.pe*v.E,eur=v.pu/v.E,ppp=v.pu/v.pe,er=usd/v.pu,val=(v.E/ppp-1)*100;
+    var m=Math.max(usd,v.pu,6),W=function(x){return x/m*380};
+    var L=function(x){return 20+(clamp(x,.6,2.2)-.6)/1.6*360};
+    var lab=function(x){return clamp(L(x),62,338)};
+    $(&#x27;svg&#x27;,r).innerHTML=
+      &#x27;&lt;text x=&quot;10&quot; y=&quot;18&quot;&gt;Big Mac EZ: €&#x27;+n(v.pe,2)+&#x27; × &#x27;+n(v.E,2)+&#x27; = $&#x27;+n(usd,2)+&#x27;&lt;/text&gt;&#x27;+
+      &#x27;&lt;rect x=&quot;10&quot; y=&quot;26&quot; height=&quot;24&quot; rx=&quot;3&quot; width=&quot;&#x27;+W(usd)+&#x27;&quot; style=&quot;fill:var(--mid)&quot;/&gt;&#x27;+
+      &#x27;&lt;text x=&quot;10&quot; y=&quot;74&quot;&gt;Big Mac USA: $&#x27;+n(v.pu,2)+&#x27;&lt;/text&gt;&#x27;+
+      &#x27;&lt;rect x=&quot;10&quot; y=&quot;82&quot; height=&quot;24&quot; rx=&quot;3&quot; width=&quot;&#x27;+W(v.pu)+&#x27;&quot; style=&quot;fill:var(--deep)&quot;/&gt;&#x27;+
+      &#x27;&lt;path class=&quot;ax&quot; d=&quot;M20 164H380&quot;/&gt;&#x27;+
+      &#x27;&lt;path d=&quot;M&#x27;+L(v.E)+&#x27; 154V174&quot; stroke=&quot;var(--accent)&quot; stroke-width=&quot;3&quot;/&gt;&#x27;+
+      &#x27;&lt;text x=&quot;&#x27;+lab(v.E)+&#x27;&quot; y=&quot;146&quot; text-anchor=&quot;middle&quot; style=&quot;fill:var(--accent);font-weight:600&quot;&gt;mercato &#x27;+n(v.E,2)+&#x27;&lt;/text&gt;&#x27;+
+      &#x27;&lt;path d=&quot;M&#x27;+L(ppp)+&#x27; 154V174&quot; stroke=&quot;var(--deep)&quot; stroke-width=&quot;3&quot;/&gt;&#x27;+
+      &#x27;&lt;text x=&quot;&#x27;+lab(ppp)+&#x27;&quot; y=&quot;194&quot; text-anchor=&quot;middle&quot; style=&quot;fill:var(--deep);font-weight:600&quot;&gt;PPP &#x27;+n(ppp,2)+&#x27;&lt;/text&gt;&#x27;;
+    var w;
+    if(Math.abs(val)&lt;0.5)w=&#x27;Il market exchange rate coincide quasi con quello di PPP: il Big Mac costa lo stesso nei due paesi.&#x27;;
+    else if(val&lt;0)w=&#x27;Il mercato dà meno dollari per euro di quanti ne servirebbero per la PPP: l\&#x27;euro è &lt;b&gt;undervalued&lt;/b&gt; del &#x27;+n(-val,1)+&#x27;% e il Big Mac costa meno nell\&#x27;EZ.&#x27;;
+    else w=&#x27;Il mercato dà più dollari per euro di quanti ne servirebbero per la PPP: l\&#x27;euro è &lt;b&gt;overvalued&lt;/b&gt; del &#x27;+n(val,1)+&#x27;% e il Big Mac costa di più nell\&#x27;EZ.&#x27;;
+    $(&#x27;.readout&#x27;,r).innerHTML=&#x27;E di PPP = &#x27;+n(v.pu,2)+&#x27; / &#x27;+n(v.pe,2)+&#x27; = &lt;b&gt;&#x27;+n(ppp,2)+&#x27;&lt;/b&gt;. In euro il Big Mac USA costa €&#x27;+n(eur,2)+&#x27;. E&lt;sub&gt;R&lt;/sub&gt; = &lt;b&gt;&#x27;+n(er,3)+&#x27;&lt;/b&gt;. &#x27;+w;
+  });
+
+  /* parte 3: real exchange rate */
+  sim(&#x27;sim-er&#x27;,function(v,r){
+    var er=v.pe*v.E/v.pu,L=function(x){return 200+Math.log(clamp(x,.55,1/.55))/Math.log(1/.55)*185};
+    var x=L(er),lx=clamp(x,50,350);
+    var tick=function(t){return &#x27;&lt;path class=&quot;ln&quot; d=&quot;M&#x27;+L(t)+&#x27; 80V94&quot;/&gt;&lt;text class=&quot;sm&quot; x=&quot;&#x27;+L(t)+&#x27;&quot; y=&quot;112&quot; text-anchor=&quot;middle&quot;&gt;&#x27;+n(t,2)+&#x27;&lt;/text&gt;&#x27;};
+    $(&#x27;svg&#x27;,r).innerHTML=
+      &#x27;&lt;rect x=&quot;15&quot; y=&quot;62&quot; width=&quot;185&quot; height=&quot;18&quot; style=&quot;fill:var(--gain);opacity:.28&quot;/&gt;&#x27;+
+      &#x27;&lt;rect x=&quot;200&quot; y=&quot;62&quot; width=&quot;185&quot; height=&quot;18&quot; style=&quot;fill:var(--loss);opacity:.28&quot;/&gt;&#x27;+
+      &#x27;&lt;text class=&quot;sm&quot; x=&quot;15&quot; y=&quot;54&quot;&gt;EZ più economica&lt;/text&gt;&lt;text class=&quot;sm&quot; x=&quot;385&quot; y=&quot;54&quot; text-anchor=&quot;end&quot;&gt;EZ più cara&lt;/text&gt;&#x27;+
+      tick(.6)+tick(.8)+tick(1)+tick(1.25)+tick(1.6)+
+      &#x27;&lt;path d=&quot;M&#x27;+x+&#x27; 56V90&quot; stroke=&quot;var(--ink)&quot; stroke-width=&quot;3&quot;/&gt;&#x27;+
+      &#x27;&lt;text x=&quot;&#x27;+lx+&#x27;&quot; y=&quot;24&quot; text-anchor=&quot;middle&quot; style=&quot;font:500 20px var(--serif);fill:var(--ink)&quot;&gt;E&lt;tspan dy=&quot;4&quot; font-size=&quot;13&quot;&gt;R&lt;/tspan&gt;&lt;tspan dy=&quot;-4&quot;&gt; = &#x27;+n(er,3)+&#x27;&lt;/tspan&gt;&lt;/text&gt;&#x27;;
+    var s;
+    if(Math.abs(er-1)&lt;.005)s=&#x27;E&lt;sub&gt;R&lt;/sub&gt; ≈ 1: la PPP vale. Il basket costa lo stesso nei due paesi, misurato nella stessa valuta.&#x27;;
+    else if(er&gt;1)s=&#x27;E&lt;sub&gt;R&lt;/sub&gt; &amp;gt; 1: il basket EZ costa il &#x27;+n((er-1)*100,1)+&#x27;% in più di quello USA. Un basket EZ &quot;vale&quot; &#x27;+n(er,2)+&#x27; basket USA: l\&#x27;EZ è &lt;b&gt;meno competitiva&lt;/b&gt; sui prezzi.&#x27;;
+    else s=&#x27;E&lt;sub&gt;R&lt;/sub&gt; &amp;lt; 1: il basket EZ costa il &#x27;+n((1-er)*100,1)+&#x27;% in meno di quello USA. Un basket EZ &quot;vale&quot; &#x27;+n(er,2)+&#x27; basket USA: l\&#x27;EZ è &lt;b&gt;più competitiva&lt;/b&gt; sui prezzi.&#x27;;
+    $(&#x27;.readout&#x27;,r).innerHTML=s;
+  });
+
+  /* grafico a cascata per la scomposizione */
+  function wf(svg,dE,a,b){
+    var items=[[&#x27;ΔE&#x27;,dE],[&#x27;+ π EZ&#x27;,a],[&#x27;− π US&#x27;,-b]],sum=dE+a-b,cum=[0,dE,dE+a,sum];
+    var M=Math.max(Math.abs(cum[1]),Math.abs(cum[2]),Math.abs(cum[3]),4)*1.1;
+    var Y=function(v){return 110-v/M*80},h=&#x27;&lt;path class=&quot;ax&quot; d=&quot;M15 110H385&quot;/&gt;&#x27;,c=0;
+    var col=function(v){return v&gt;=0?&#x27;var(--loss)&#x27;:&#x27;var(--gain)&#x27;};
+    items.forEach(function(it,i){
+      var x=25+i*90,t=Y(Math.max(c,c+it[1])),bt=Y(Math.min(c,c+it[1])),ht=Math.max(bt-t,1.5);
+      h+=&#x27;&lt;rect x=&quot;&#x27;+x+&#x27;&quot; y=&quot;&#x27;+t+&#x27;&quot; width=&quot;70&quot; height=&quot;&#x27;+ht+&#x27;&quot; rx=&quot;2&quot; style=&quot;fill:&#x27;+col(it[1])+&#x27;;opacity:.72&quot;/&gt;&#x27;;
+      h+=&#x27;&lt;text x=&quot;&#x27;+(x+35)+&#x27;&quot; y=&quot;&#x27;+(it[1]&gt;=0?t-6:t+ht+16)+&#x27;&quot; text-anchor=&quot;middle&quot;&gt;&#x27;+sg(it[1],2)+&#x27;&lt;/text&gt;&#x27;;
+      c+=it[1];
+      h+=&#x27;&lt;path class=&quot;ln dash&quot; d=&quot;M&#x27;+(x+70)+&#x27; &#x27;+Y(c)+&#x27;H&#x27;+(x+90)+&#x27;&quot;/&gt;&#x27;;
+      h+=&#x27;&lt;text class=&quot;sm&quot; x=&quot;&#x27;+(x+35)+&#x27;&quot; y=&quot;224&quot; text-anchor=&quot;middle&quot;&gt;&#x27;+it[0]+&#x27;&lt;/text&gt;&#x27;;
+    });
+    var x=295,t=Y(Math.max(0,sum)),bt=Y(Math.min(0,sum)),ht=Math.max(bt-t,1.5);
+    h+=&#x27;&lt;rect x=&quot;&#x27;+x+&#x27;&quot; y=&quot;&#x27;+t+&#x27;&quot; width=&quot;70&quot; height=&quot;&#x27;+ht+&#x27;&quot; rx=&quot;2&quot; style=&quot;fill:&#x27;+col(sum)+&#x27;&quot;/&gt;&#x27;;
+    h+=&#x27;&lt;text x=&quot;&#x27;+(x+35)+&#x27;&quot; y=&quot;&#x27;+(sum&gt;=0?t-6:t+ht+16)+&#x27;&quot; text-anchor=&quot;middle&quot; style=&quot;font-weight:600&quot;&gt;&#x27;+sg(sum,2)+&#x27;&lt;/text&gt;&#x27;;
+    h+=&#x27;&lt;text class=&quot;sm&quot; x=&quot;&#x27;+(x+35)+&#x27;&quot; y=&quot;224&quot; text-anchor=&quot;middle&quot; style=&quot;font-weight:600;fill:var(--ink)&quot;&gt;ΔE&lt;tspan dy=&quot;3&quot; font-size=&quot;10&quot;&gt;R&lt;/tspan&gt;&lt;/text&gt;&#x27;;
+    svg.innerHTML=h;
+  }
+  $$(&#x27;svg[data-wf]&#x27;).forEach(function(s){
+    var p=s.dataset.wf.split(&#x27;,&#x27;).map(Number);wf(s,p[0],p[1],p[2]);
+  });
+  sim(&#x27;sim-wf&#x27;,function(v,r){
+    wf($(&#x27;svg&#x27;,r),v.dE,v.a,v.b);
+    var ap=v.dE+v.a-v.b,ex=((1+v.dE/100)*(1+v.a/100)/(1+v.b/100)-1)*100;
+    var s=Math.abs(ap)&lt;.005?&#x27;E&lt;sub&gt;R&lt;/sub&gt; non cambia: competitiveness invariata.&#x27;:(ap&gt;0?&#x27;E&lt;sub&gt;R&lt;/sub&gt; sale: real appreciation, l\&#x27;EZ &lt;b&gt;perde&lt;/b&gt; competitiveness.&#x27;:&#x27;E&lt;sub&gt;R&lt;/sub&gt; scende: real depreciation, l\&#x27;EZ &lt;b&gt;guadagna&lt;/b&gt; competitiveness.&#x27;);
+    $(&#x27;.readout&#x27;,r).innerHTML=&#x27;Approssimazione: &lt;b&gt;&#x27;+sg(ap,2)+&#x27;%&lt;/b&gt;. Calcolo esatto: &lt;b&gt;&#x27;+sg(ex,2)+&#x27;%&lt;/b&gt;. Scarto: &#x27;+n(Math.abs(ap-ex),2)+&#x27; punti. &#x27;+s;
+  });
+
+  /* parte 4: log contro tasso */
+  (function(){
+    var X=function(x){return 40+(x+.3)/.6*350},Y=function(y){return 215-(y+.36)/.66*205},pts=&#x27;&#x27;;
+    for(var i=-30;i&lt;=30;i++){var u=i/100;pts+=(i===-30?&#x27;M&#x27;:&#x27;L&#x27;)+X(u).toFixed(1)+&#x27; &#x27;+Y(Math.log(1+u)).toFixed(1)}
+    sim(&#x27;sim-log&#x27;,function(v,r){
+      var x=v.x/100,l=Math.log(1+x);
+      $(&#x27;svg&#x27;,r).innerHTML=
+        &#x27;&lt;path class=&quot;ax&quot; d=&quot;M40 &#x27;+Y(0)+&#x27;H390M&#x27;+X(0)+&#x27; 10V215&quot;/&gt;&#x27;+
+        &#x27;&lt;text class=&quot;sm&quot; x=&quot;388&quot; y=&quot;&#x27;+(Y(0)+18)+&#x27;&quot; text-anchor=&quot;end&quot;&gt;+30%&lt;/text&gt;&lt;text class=&quot;sm&quot; x=&quot;42&quot; y=&quot;&#x27;+(Y(0)-8)+&#x27;&quot;&gt;−30%&lt;/text&gt;&#x27;+
+        &#x27;&lt;path d=&quot;M&#x27;+X(-.3)+&#x27; &#x27;+Y(-.3)+&#x27;L&#x27;+X(.3)+&#x27; &#x27;+Y(.3)+&#x27;&quot; fill=&quot;none&quot; stroke=&quot;var(--ink2)&quot; stroke-width=&quot;2&quot; stroke-dasharray=&quot;6 5&quot;/&gt;&#x27;+
+        &#x27;&lt;path d=&quot;&#x27;+pts+&#x27;&quot; fill=&quot;none&quot; stroke=&quot;var(--deep)&quot; stroke-width=&quot;3&quot;/&gt;&#x27;+
+        &#x27;&lt;text x=&quot;50&quot; y=&quot;26&quot; style=&quot;fill:var(--deep);font-weight:600&quot;&gt;linea piena: log(1 + x)&lt;/text&gt;&#x27;+
+        &#x27;&lt;text class=&quot;sm&quot; x=&quot;50&quot; y=&quot;45&quot;&gt;tratteggio: x (il tasso di crescita)&lt;/text&gt;&#x27;+
+        &#x27;&lt;path d=&quot;M&#x27;+X(x)+&#x27; &#x27;+Y(x)+&#x27;L&#x27;+X(x)+&#x27; &#x27;+Y(l)+&#x27;&quot; stroke=&quot;var(--accent)&quot; stroke-width=&quot;4&quot;/&gt;&#x27;+
+        &#x27;&lt;circle cx=&quot;&#x27;+X(x)+&#x27;&quot; cy=&quot;&#x27;+Y(l)+&#x27;&quot; r=&quot;5&quot; style=&quot;fill:var(--accent)&quot;/&gt;&#x27;;
+      $(&#x27;.readout&#x27;,r).innerHTML=&#x27;Tasso x = &lt;b&gt;&#x27;+sg(v.x,1)+&#x27;%&lt;/b&gt;, log(1 + x) = &lt;b&gt;&#x27;+sg(l*100,2)+&#x27;%&lt;/b&gt;, scarto &lt;b&gt;&#x27;+n(Math.abs(v.x-l*100),2)+&#x27;&lt;/b&gt; punti. Intorno al 5% lo scarto è di circa 0,1 punti, poi cresce in fretta.&#x27;;
+    });
+  })();
+})();
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+"></iframe></body></html>

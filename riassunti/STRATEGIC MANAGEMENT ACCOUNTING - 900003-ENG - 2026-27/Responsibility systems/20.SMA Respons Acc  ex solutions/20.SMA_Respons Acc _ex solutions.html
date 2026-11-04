@@ -1,0 +1,928 @@
+<!doctype html><html lang="it"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>Riassunto · 20.SMA_Respons Acc _ex solutions.pdf</title><link rel="icon" href="data:,">
+<style>html,body{margin:0;height:100%}body{display:flex;flex-direction:column}iframe{flex:1;border:0;width:100%}</style>
+</head><body><nav style="font:14px/1.4 system-ui,sans-serif;padding:6px 12px;text-align:right"><a href="../../../../riassunti/STRATEGIC%20MANAGEMENT%20ACCOUNTING%20-%20900003-ENG%20-%202026-27/Responsibility%20systems/20.SMA%20Respons%20Acc%20%20ex%20solutions/20.SMA_Respons%20Acc%20_ex%20solutions.en.html" style="color:inherit;margin-right:.8em;">English</a><a href="../../../../riassunti/STRATEGIC%20MANAGEMENT%20ACCOUNTING%20-%20900003-ENG%20-%202026-27/Responsibility%20systems/20.SMA%20Respons%20Acc%20%20ex%20solutions/20.SMA_Respons%20Acc%20_ex%20solutions.html" style="color:inherit;margin-right:.8em;font-weight:700">Italiano</a></nav><iframe sandbox="allow-scripts allow-popups allow-popups-to-escape-sandbox" title="Riassunto · 20.SMA_Respons Acc _ex solutions.pdf"
+srcdoc="&lt;!doctype html&gt;
+&lt;html lang=&quot;it&quot;&gt;
+&lt;head&gt;&lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src &#x27;none&#x27;; script-src &#x27;unsafe-inline&#x27;; style-src &#x27;unsafe-inline&#x27;; font-src &#x27;self&#x27;; img-src data:; form-action &#x27;none&#x27;; base-uri &#x27;none&#x27;&quot;&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+&lt;title&gt;Responsibility Accounting Systems: esercizi svolti, ROI, residual income, transfer pricing&lt;/title&gt;
+&lt;style&gt;
+@font-face{font-family:&quot;Newsreader&quot;;src:url(&quot;../../../../static/fonts/newsreader-latin-wght-normal.woff2&quot;) format(&quot;woff2&quot;);font-weight:200 800;font-style:normal;font-display:swap}
+@font-face{font-family:&quot;IBM Plex Sans&quot;;src:url(&quot;../../../../static/fonts/ibm-plex-sans-latin-wght-normal.woff2&quot;) format(&quot;woff2&quot;);font-weight:100 700;font-style:normal;font-display:swap}
+:root{
+  color-scheme:light dark;
+  --paper:oklch(97% .012 80);--ink:oklch(21% .014 60);--rule:oklch(86% .014 75);--acc:oklch(50% .15 35);
+  --mut:oklch(42% .02 60);--card:oklch(99% .006 80);
+  --serif:&quot;Newsreader&quot;,Georgia,&quot;Times New Roman&quot;,serif;--sans:&quot;IBM Plex Sans&quot;,system-ui,-apple-system,&quot;Segoe UI&quot;,sans-serif;
+}
+.sage{--c:oklch(40% .09 150);--bg:oklch(94.5% .028 150)}
+.ochre{--c:oklch(43% .095 85);--bg:oklch(94.5% .045 85)}
+.slate{--c:oklch(43% .09 250);--bg:oklch(94.5% .02 250)}
+.brick{--c:oklch(44% .13 25);--bg:oklch(94.5% .028 25)}
+.terra{--c:oklch(50% .15 35);--bg:oklch(94.5% .03 35)}
+@media (prefers-color-scheme:dark){
+  :root{--paper:oklch(20% .012 60);--ink:oklch(92% .012 80);--rule:oklch(36% .014 70);--acc:oklch(74% .13 40);--mut:oklch(76% .015 75);--card:oklch(24% .012 60)}
+  .sage{--c:oklch(80% .09 150);--bg:oklch(28% .03 150)}
+  .ochre{--c:oklch(82% .1 85);--bg:oklch(29% .04 85)}
+  .slate{--c:oklch(80% .08 250);--bg:oklch(28% .03 250)}
+  .brick{--c:oklch(79% .11 25);--bg:oklch(29% .04 25)}
+  .terra{--c:oklch(76% .13 35);--bg:oklch(29% .04 35)}
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1.0625rem/1.6 var(--sans)}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:500;line-height:1.15;margin:0;text-wrap:balance}
+h3{font-size:clamp(1.45rem,3.4vw,1.85rem);margin:2.75rem 0 .6rem;scroll-margin-top:4rem}
+h4{font-size:1.2rem;margin:1.6rem 0 .4rem;font-weight:600}
+p{margin:.65rem 0}
+a{color:var(--acc);text-underline-offset:.15em}
+b,strong{font-weight:600}
+:focus-visible{outline:3px solid var(--acc);outline-offset:2px;border-radius:3px}
+.wrap{max-width:68rem;margin:0 auto;padding:0 clamp(1rem,4vw,2.25rem)}
+.prose{max-width:44rem}
+.t{font-style:italic;font-weight:600}
+.num{font-variant-numeric:tabular-nums}
+
+/* barra */
+nav.top{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--rule)}
+nav.top ul{display:flex;gap:.25rem;margin:0 auto;max-width:68rem;padding:.3rem clamp(.5rem,3vw,1.75rem);list-style:none;overflow-x:auto;scrollbar-width:none}
+nav.top a{display:block;padding:.4rem .65rem;font-size:.875rem;color:var(--mut);text-decoration:none;white-space:nowrap;border-radius:3px}
+nav.top a:hover{color:var(--ink)}
+nav.top a[aria-current=true]{color:var(--acc);font-weight:600;box-shadow:inset 0 -2px 0 var(--acc)}
+
+/* apertura */
+header.hero{padding:clamp(2.5rem,7vw,5rem) 0 1.5rem}
+.kicker{font-size:.8125rem;letter-spacing:.06em;text-transform:uppercase;color:var(--acc);font-weight:600;margin:0}
+h1{font-size:clamp(2.6rem,7.6vw,5.2rem);font-weight:400;letter-spacing:-.015em;margin:.6rem 0 .8rem}
+.lede{font:400 clamp(1.25rem,2.6vw,1.55rem)/1.35 var(--serif);max-width:40rem;margin:0}
+.meta{color:var(--mut);font-size:.9rem;margin-top:1rem}
+#mappa{scroll-margin-top:3.5rem}
+.mapgrid{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:clamp(1.5rem,4vw,3.5rem);align-items:start;padding-bottom:3rem}
+.mapgrid svg{width:100%;height:auto;display:block}
+@media (max-width:50rem){.mapgrid{grid-template-columns:minmax(0,1fr)}}
+.legend{list-style:none;padding:0;margin:.8rem 0}
+.legend li{padding:.65rem 0;border-top:1px solid var(--rule);font-size:.95rem}
+.node rect{fill:var(--bg);stroke:var(--c);stroke-width:1.5;transition:stroke-width .15s}
+.node:hover rect,.node:focus-visible rect{stroke-width:3.5}
+.node:focus-visible{outline:none}
+.node text{text-anchor:middle}
+.nt{font:600 18px var(--serif);fill:var(--c)}
+.ns{font:400 14.5px var(--sans);fill:var(--ink)}
+.edge{fill:none;stroke:var(--mut);stroke-width:1.4}
+.edge.dot{stroke-dasharray:3 5}
+.el{font:400 13.5px var(--sans);fill:var(--mut)}
+
+/* provenienza */
+.tag{display:inline-block;font:600 .6875rem/1.5 var(--sans);letter-spacing:.03em;text-transform:uppercase;padding:0 .4rem;border-radius:3px;white-space:nowrap;vertical-align:.1em;text-decoration:none}
+.tag.s{background:var(--bg,oklch(90% .02 80));color:var(--c,var(--ink))}
+.tag.a{border:1px dashed var(--mut);color:var(--mut)}
+.tag.w{background:var(--ink);color:var(--paper)}
+a.tag.w:hover{background:var(--acc)}
+.added{border:1px dashed var(--mut);border-radius:6px;padding:.9rem 1.1rem;margin:1.1rem 0;max-width:44rem}
+.added&gt;:first-child{margin-top:0}.added&gt;:last-child{margin-bottom:0}
+.quirk{font-size:.95rem;background:var(--bg);padding:.75rem 1rem;border-radius:6px;margin:1rem 0;max-width:44rem}
+
+/* parti */
+.part{padding:0 0 3.5rem}
+.band{background:var(--bg);padding:clamp(1.8rem,5vw,3rem) 0 clamp(1.4rem,4vw,2.2rem);margin-bottom:1.5rem}
+.band .n{font:300 1rem var(--serif);color:var(--c);margin:0 0 .3rem;letter-spacing:.02em}
+.band h2{font-size:clamp(2rem,5.4vw,3.3rem);font-weight:400;color:var(--c);scroll-margin-top:4rem}
+.band p{max-width:42rem;margin:.6rem 0 0;font:400 1.2rem/1.35 var(--serif)}
+
+/* formule */
+.formula{display:flex;flex-wrap:wrap;gap:.5rem .7rem;align-items:center;justify-content:center;background:var(--card);border:1px solid var(--rule);border-radius:6px;padding:1rem;margin:1rem 0;max-width:44rem;font:400 1.1rem/1.25 var(--serif);text-align:center}
+.formula b{color:var(--c);font-weight:600}
+.frac{display:inline-grid;text-align:center}
+.frac&gt;span:first-child{border-bottom:1.5px solid currentColor;padding:0 .35rem .15rem}
+.frac&gt;span:last-child{padding:.15rem .35rem 0}
+
+/* tabelle */
+.tbl{overflow-x:auto;margin:1rem 0}
+table{border-collapse:collapse;font-size:.95rem;min-width:100%}
+caption{text-align:left;color:var(--mut);font-size:.875rem;padding-bottom:.35rem}
+th,td{padding:.42rem .7rem;border-bottom:1px solid var(--rule);text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+th:first-child,td:first-child{text-align:left}
+td.wrap-cell,th.wrap-cell{white-space:normal;text-align:left;min-width:11rem}
+thead th{font-weight:600;border-bottom:1.5px solid var(--ink)}
+tbody th{font-weight:400}
+td.given{color:var(--mut)}
+td.miss{font-weight:600;color:var(--mut)}
+td.done{color:var(--c);font-weight:600}
+td.now{background:var(--bg);color:var(--c);font-weight:700;box-shadow:inset 0 0 0 2px var(--c)}
+tr.key td,tr.key th{font-weight:600}
+
+/* figure */
+figure{margin:1.3rem 0}
+figure svg{display:block;width:100%;height:auto}
+figcaption{font-size:.875rem;color:var(--mut);margin-top:.45rem}
+.split{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,21rem),1fr));gap:1.25rem clamp(1.5rem,4vw,3rem);align-items:start}
+.ax{stroke:var(--mut);stroke-width:1}
+.grid{stroke:var(--rule);stroke-width:1}
+.lab{font:400 14px var(--sans);fill:var(--mut)}
+.val{font:600 15px var(--sans);fill:var(--ink)}
+.cc{fill:var(--c)}
+.cs{stroke:var(--c)}
+.bgf{fill:var(--bg)}
+
+/* controlli */
+.lab-panel{background:var(--bg);border-radius:8px;padding:1.1rem 1.25rem;margin:1.2rem 0}
+.lab-panel h4{margin-top:0;color:var(--c)}
+.ctl{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:0 .75rem;margin:.75rem 0;font-size:.95rem}
+.ctl output{font-weight:600;font-variant-numeric:tabular-nums}
+.ctl input{grid-column:1/-1;width:100%;accent-color:var(--c);height:1.75rem;margin:0}
+.readout{display:grid;grid-template-columns:repeat(auto-fit,minmax(8.5rem,1fr));gap:.6rem;margin:.9rem 0}
+.readout div{background:var(--card);border-radius:5px;padding:.5rem .7rem;font-size:.82rem;color:var(--mut)}
+.readout b{display:block;font:500 1.4rem/1.2 var(--serif);color:var(--ink);font-variant-numeric:tabular-nums}
+.verdict{font:500 1.12rem/1.35 var(--serif);margin:.6rem 0 0}
+button{font:600 .9rem var(--sans);color:var(--c,var(--acc));background:var(--card);border:1.5px solid var(--c,var(--acc));border-radius:5px;padding:.5rem .9rem;min-height:2.6rem;cursor:pointer}
+button:hover:not(:disabled){background:var(--c,var(--acc));color:var(--paper)}
+button:disabled{opacity:.45;cursor:default}
+.btns{display:flex;flex-wrap:wrap;gap:.5rem;margin:.75rem 0;align-items:center}
+.count{font-size:.875rem;color:var(--mut)}
+.stepnote{min-height:5.2rem;background:var(--card);border-radius:5px;padding:.7rem .95rem;margin:.6rem 0}
+.stepnote p{margin:0}
+
+/* linguette */
+[role=tablist]{display:flex;flex-wrap:wrap;gap:0 .2rem;border-bottom:1.5px solid var(--rule);margin-top:1.2rem}
+[role=tab]{background:none;border:0;border-bottom:3px solid transparent;border-radius:0;margin-bottom:-1.5px;color:var(--mut);padding:.55rem .8rem}
+[role=tab]:hover:not(:disabled){background:var(--bg);color:var(--c)}
+[role=tab][aria-selected=true]{color:var(--c);border-bottom-color:var(--c)}
+[role=tabpanel]{padding:.5rem 0}
+
+/* schede e autoverifica */
+details{border-top:1px solid var(--rule)}
+details:last-of-type{border-bottom:1px solid var(--rule)}
+summary{cursor:pointer;padding:.7rem 0;font-weight:500;list-style-position:outside;margin-left:1.1rem}
+details&gt;div{padding:0 0 .9rem 1.1rem}
+details&gt;div&gt;:first-child{margin-top:0}
+.check{margin-top:2.75rem;max-width:48rem}
+.check h3{margin:0 0 .75rem;color:var(--c)}
+.check summary::marker{color:var(--c)}
+.check details&gt;div{color:var(--ink)}
+
+/* approfondire */
+.refs{list-style:none;padding:0;margin:1rem 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,22rem),1fr));gap:0 clamp(1.5rem,4vw,3rem)}
+.refs li{border-top:1px solid var(--rule);padding:1rem 0}
+.refs h4{margin:0 0 .25rem;font-size:1.15rem}
+.refs p{margin:.35rem 0;font-size:.96rem}
+.bib{color:var(--mut);font-size:.875rem}
+footer{border-top:1px solid var(--rule);padding:1.75rem 0 2.5rem;color:var(--mut);font-size:.95rem}
+
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+@media print{nav.top{display:none}[role=tabpanel][hidden]{display:block!important}.band{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;nav class=&quot;top&quot; aria-label=&quot;Sezioni&quot;&gt;
+&lt;ul id=&quot;nav&quot;&gt;
+&lt;li&gt;&lt;a href=&quot;#mappa&quot;&gt;Mappa&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#contesto&quot;&gt;Contesto&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#roi&quot;&gt;ROI&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#ri&quot;&gt;Residual income&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#tp&quot;&gt;Transfer pricing&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#ripasso&quot;&gt;Ripasso&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#fonti&quot;&gt;Per approfondire&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;div class=&quot;wrap&quot;&gt;
+&lt;header class=&quot;hero&quot;&gt;
+&lt;p class=&quot;kicker&quot;&gt;Università degli Studi di Bergamo · Dipartimento di Scienze Aziendali&lt;/p&gt;
+&lt;h1&gt;Responsibility Accounting Systems&lt;/h1&gt;
+&lt;p class=&quot;lede&quot;&gt;Tre esercizi svolti per imparare a giudicare una divisione aziendale con ROI e residual income, e a capire quando due divisioni riescono a mettersi d&#x27;accordo su un transfer price.&lt;/p&gt;
+&lt;p class=&quot;meta&quot;&gt;Dal file &lt;code&gt;20.SMA_Respons Acc _ex solutions.pdf&lt;/code&gt;: 12 slide, tutte di esercizi e soluzioni. Numeri nel formato delle slide: virgola per le migliaia, punto per i decimali.&lt;/p&gt;
+&lt;/header&gt;
+
+&lt;section id=&quot;mappa&quot; class=&quot;mapgrid&quot; aria-label=&quot;Mappa concettuale&quot;&gt;
+&lt;svg viewBox=&quot;0 0 530 650&quot; role=&quot;group&quot; aria-label=&quot;Mappa concettuale cliccabile degli argomenti&quot;&gt;
+  &lt;path class=&quot;edge&quot; d=&quot;M170 84 110 150M350 84 407 150M110 218V290M407 218V290M210 218 310 290M210 184H310&quot;/&gt;
+  &lt;path class=&quot;edge&quot; d=&quot;M390 50H520V464H390&quot;/&gt;
+  &lt;path class=&quot;edge dot&quot; d=&quot;M260 188V430&quot;/&gt;
+  &lt;path class=&quot;edge&quot; d=&quot;M210 498 130 570M310 498 392 570&quot;/&gt;
+  &lt;text class=&quot;el&quot; x=&quot;126&quot; y=&quot;114&quot; text-anchor=&quot;end&quot;&gt;un tasso&lt;/text&gt;
+  &lt;text class=&quot;el&quot; x=&quot;392&quot; y=&quot;114&quot;&gt;un importo&lt;/text&gt;
+  &lt;text class=&quot;el&quot; x=&quot;260&quot; y=&quot;158&quot; text-anchor=&quot;middle&quot;&gt;stessi dati,&lt;/text&gt;
+  &lt;text class=&quot;el&quot; x=&quot;260&quot; y=&quot;175&quot; text-anchor=&quot;middle&quot;&gt;due verdetti&lt;/text&gt;
+  &lt;rect x=&quot;212&quot; y=&quot;286&quot; width=&quot;96&quot; height=&quot;62&quot; fill=&quot;var(--paper)&quot;/&gt;
+  &lt;text class=&quot;el&quot; x=&quot;260&quot; y=&quot;302&quot; text-anchor=&quot;middle&quot;&gt;cambia il&lt;/text&gt;
+  &lt;text class=&quot;el&quot; x=&quot;260&quot; y=&quot;319&quot; text-anchor=&quot;middle&quot;&gt;profitto, quindi&lt;/text&gt;
+  &lt;text class=&quot;el&quot; x=&quot;260&quot; y=&quot;336&quot; text-anchor=&quot;middle&quot;&gt;ROI e RI&lt;/text&gt;
+  &lt;text class=&quot;el&quot; x=&quot;512&quot; y=&quot;402&quot; text-anchor=&quot;end&quot;&gt;scambi tra divisioni&lt;/text&gt;
+  &lt;a class=&quot;node sage&quot; href=&quot;#contesto&quot;&gt;&lt;rect x=&quot;130&quot; y=&quot;16&quot; width=&quot;260&quot; height=&quot;68&quot; rx=&quot;7&quot;/&gt;&lt;text class=&quot;nt&quot; x=&quot;260&quot; y=&quot;45&quot;&gt;Responsibility accounting&lt;/text&gt;&lt;text class=&quot;ns&quot; x=&quot;260&quot; y=&quot;68&quot;&gt;chi risponde di che cosa&lt;/text&gt;&lt;/a&gt;
+  &lt;a class=&quot;node ochre&quot; href=&quot;#roi&quot;&gt;&lt;rect x=&quot;10&quot; y=&quot;150&quot; width=&quot;200&quot; height=&quot;68&quot; rx=&quot;7&quot;/&gt;&lt;text class=&quot;nt&quot; x=&quot;110&quot; y=&quot;179&quot;&gt;ROI&lt;/text&gt;&lt;text class=&quot;ns&quot; x=&quot;110&quot; y=&quot;202&quot;&gt;margin × turnover&lt;/text&gt;&lt;/a&gt;
+  &lt;a class=&quot;node slate&quot; href=&quot;#ri&quot;&gt;&lt;rect x=&quot;310&quot; y=&quot;150&quot; width=&quot;195&quot; height=&quot;68&quot; rx=&quot;7&quot;/&gt;&lt;text class=&quot;nt&quot; x=&quot;407&quot; y=&quot;179&quot;&gt;Residual income&lt;/text&gt;&lt;text class=&quot;ns&quot; x=&quot;407&quot; y=&quot;202&quot;&gt;profitto oltre il minimo&lt;/text&gt;&lt;/a&gt;
+  &lt;a class=&quot;node ochre&quot; href=&quot;#ex1&quot;&gt;&lt;rect x=&quot;10&quot; y=&quot;290&quot; width=&quot;200&quot; height=&quot;68&quot; rx=&quot;7&quot;/&gt;&lt;text class=&quot;nt&quot; x=&quot;110&quot; y=&quot;319&quot;&gt;Ex 1&lt;/text&gt;&lt;text class=&quot;ns&quot; x=&quot;110&quot; y=&quot;342&quot;&gt;ricostruire la tabella&lt;/text&gt;&lt;/a&gt;
+  &lt;a class=&quot;node slate&quot; href=&quot;#ex2&quot;&gt;&lt;rect x=&quot;310&quot; y=&quot;290&quot; width=&quot;195&quot; height=&quot;68&quot; rx=&quot;7&quot;/&gt;&lt;text class=&quot;nt&quot; x=&quot;407&quot; y=&quot;319&quot;&gt;Ex 2&lt;/text&gt;&lt;text class=&quot;ns&quot; x=&quot;407&quot; y=&quot;342&quot;&gt;Osaka contro Yokohama&lt;/text&gt;&lt;/a&gt;
+  &lt;a class=&quot;node brick&quot; href=&quot;#tp&quot;&gt;&lt;rect x=&quot;130&quot; y=&quot;430&quot; width=&quot;260&quot; height=&quot;68&quot; rx=&quot;7&quot;/&gt;&lt;text class=&quot;nt&quot; x=&quot;260&quot; y=&quot;459&quot;&gt;Transfer pricing&lt;/text&gt;&lt;text class=&quot;ns&quot; x=&quot;260&quot; y=&quot;482&quot;&gt;il prezzo tra divisioni&lt;/text&gt;&lt;/a&gt;
+  &lt;a class=&quot;node brick&quot; href=&quot;#ex3&quot; data-open=&quot;tab-a&quot;&gt;&lt;rect x=&quot;10&quot; y=&quot;570&quot; width=&quot;240&quot; height=&quot;68&quot; rx=&quot;7&quot;/&gt;&lt;text class=&quot;nt&quot; x=&quot;130&quot; y=&quot;599&quot;&gt;Ex 3 · caso A&lt;/text&gt;&lt;text class=&quot;ns&quot; x=&quot;130&quot; y=&quot;622&quot;&gt;no idle capacity: no range&lt;/text&gt;&lt;/a&gt;
+  &lt;a class=&quot;node brick&quot; href=&quot;#ex3&quot; data-open=&quot;tab-b&quot;&gt;&lt;rect x=&quot;280&quot; y=&quot;570&quot; width=&quot;225&quot; height=&quot;68&quot; rx=&quot;7&quot;/&gt;&lt;text class=&quot;nt&quot; x=&quot;392&quot; y=&quot;599&quot;&gt;Ex 3 · caso B&lt;/text&gt;&lt;text class=&quot;ns&quot; x=&quot;392&quot; y=&quot;622&quot;&gt;idle capacity: $60–$74&lt;/text&gt;&lt;/a&gt;
+&lt;/svg&gt;
+&lt;div&gt;
+&lt;h2 style=&quot;font-size:1.7rem&quot;&gt;Come usare questa pagina&lt;/h2&gt;
+&lt;p&gt;Ogni riquadro della mappa porta alla sua sezione. Le slide contengono solo esercizi: la teoria che danno per scontata è ricostruita qui e segnata come tale, così sai sempre da dove viene ciò che leggi.&lt;/p&gt;
+&lt;ul class=&quot;legend&quot;&gt;
+&lt;li class=&quot;ochre&quot;&gt;&lt;span class=&quot;tag s&quot;&gt;Slide 3&lt;/span&gt; Viene dalle slide, con il numero di pagina del PDF.&lt;/li&gt;
+&lt;li&gt;&lt;span class=&quot;tag a&quot;&gt;Aggiunta&lt;/span&gt; Spiegazione mia per chiarire ciò che le slide non dicono. Non è materiale del docente: confrontala con le lezioni di teoria.&lt;/li&gt;
+&lt;li&gt;&lt;span class=&quot;tag w&quot;&gt;Fonte esterna&lt;/span&gt; Viene dal web, con il suo link.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p class=&quot;quirk ochre&quot;&gt;&lt;b&gt;Altri file di &lt;code&gt;corso/&lt;/code&gt;: non consultati.&lt;/b&gt; In questa sessione non ho potuto elencare la cartella e i percorsi provati a tentativi non esistevano. Quindi nessun contenuto qui viene dalle lezioni di teoria o dal programma, e i collegamenti con le altre lezioni restano da fare.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+&lt;/div&gt;
+
+&lt;main&gt;
+&lt;section class=&quot;part sage&quot; aria-labelledby=&quot;contesto&quot;&gt;
+&lt;div class=&quot;band&quot;&gt;&lt;div class=&quot;wrap&quot;&gt;&lt;p class=&quot;n&quot;&gt;Parte 1&lt;/p&gt;&lt;h2 id=&quot;contesto&quot; tabindex=&quot;-1&quot;&gt;Il contesto che le slide danno per scontato&lt;/h2&gt;&lt;p&gt;Se un&#x27;azienda delega le decisioni alle divisioni, deve poter giudicare chi le guida.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;wrap&quot;&gt;
+&lt;div class=&quot;prose&quot;&gt;
+&lt;p&gt;Il titolo delle slide è &lt;span class=&quot;t&quot;&gt;Responsibility Accounting Systems&lt;/span&gt;, ma nessuna slide lo definisce. Il termine indica un sistema contabile che raccoglie i risultati per area di responsabilità, in modo che ogni manager sia valutato su ciò che può davvero controllare. &lt;span class=&quot;tag a&quot;&gt;Aggiunta&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Ogni area si chiama &lt;span class=&quot;t&quot;&gt;responsibility centre&lt;/span&gt; (centro di responsabilità). Il suo tipo dipende da quali grandezze il manager governa, e questo decide con quale misura va giudicato.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div data-tabs&gt;
+&lt;div role=&quot;tablist&quot; aria-label=&quot;Tipi di responsibility centre&quot;&gt;
+&lt;button role=&quot;tab&quot; id=&quot;tab-cost&quot; aria-controls=&quot;p-cost&quot;&gt;Cost centre&lt;/button&gt;
+&lt;button role=&quot;tab&quot; id=&quot;tab-profit&quot; aria-controls=&quot;p-profit&quot;&gt;Profit centre&lt;/button&gt;
+&lt;button role=&quot;tab&quot; id=&quot;tab-inv&quot; aria-controls=&quot;p-inv&quot;&gt;Investment centre&lt;/button&gt;
+&lt;/div&gt;
+&lt;div role=&quot;tabpanel&quot; id=&quot;p-cost&quot; aria-labelledby=&quot;tab-cost&quot; class=&quot;prose&quot;&gt;&lt;p&gt;&lt;b&gt;Cost centre&lt;/b&gt; (centro di costo): il manager controlla i costi, non i ricavi né gli investimenti. Esempio: un reparto amministrativo. Si giudica confrontando i costi con il budget. &lt;span class=&quot;tag a&quot;&gt;Aggiunta&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;
+&lt;div role=&quot;tabpanel&quot; id=&quot;p-profit&quot; aria-labelledby=&quot;tab-profit&quot; class=&quot;prose&quot;&gt;&lt;p&gt;&lt;b&gt;Profit centre&lt;/b&gt; (centro di profitto): il manager controlla costi e ricavi. Si giudica sul profitto. È la situazione descritta nell&#x27;Ex 3, dove i manager «are evaluated based on their divisional profits» &lt;span class=&quot;tag s&quot;&gt;Slide 7&lt;/span&gt;: per questo un transfer price basso o alto fa la differenza per loro.&lt;/p&gt;&lt;/div&gt;
+&lt;div role=&quot;tabpanel&quot; id=&quot;p-inv&quot; aria-labelledby=&quot;tab-inv&quot; class=&quot;prose&quot;&gt;&lt;p&gt;&lt;b&gt;Investment centre&lt;/b&gt; (centro di investimento): il manager controlla costi, ricavi e capitale investito. Si giudica con misure che mettono il profitto in rapporto agli asset: ROI e residual income. Le divisioni di Ex 1 e Ex 2 si leggono così, perché per loro sono dati gli &lt;span class=&quot;t&quot;&gt;operating assets&lt;/span&gt;. &lt;span class=&quot;tag a&quot;&gt;Aggiunta&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;figure style=&quot;max-width:44rem&quot;&gt;
+&lt;svg viewBox=&quot;0 0 520 190&quot; role=&quot;img&quot; aria-label=&quot;Tabella visiva: il cost centre controlla i costi; il profit centre costi e ricavi; l&#x27;investment centre costi, ricavi e asset.&quot;&gt;
+  &lt;g class=&quot;lab&quot;&gt;&lt;text x=&quot;240&quot; y=&quot;20&quot; text-anchor=&quot;middle&quot;&gt;Costi&lt;/text&gt;&lt;text x=&quot;340&quot; y=&quot;20&quot; text-anchor=&quot;middle&quot;&gt;Ricavi&lt;/text&gt;&lt;text x=&quot;440&quot; y=&quot;20&quot; text-anchor=&quot;middle&quot;&gt;Asset&lt;/text&gt;&lt;/g&gt;
+  &lt;g class=&quot;val&quot;&gt;&lt;text x=&quot;0&quot; y=&quot;58&quot;&gt;Cost centre&lt;/text&gt;&lt;text x=&quot;0&quot; y=&quot;110&quot;&gt;Profit centre&lt;/text&gt;&lt;text x=&quot;0&quot; y=&quot;162&quot;&gt;Investment centre&lt;/text&gt;&lt;/g&gt;
+  &lt;g class=&quot;bgf cs&quot; stroke-width=&quot;1.5&quot;&gt;&lt;rect x=&quot;195&quot; y=&quot;34&quot; width=&quot;90&quot; height=&quot;38&quot; rx=&quot;4&quot;/&gt;&lt;rect x=&quot;195&quot; y=&quot;86&quot; width=&quot;90&quot; height=&quot;38&quot; rx=&quot;4&quot;/&gt;&lt;rect x=&quot;295&quot; y=&quot;86&quot; width=&quot;90&quot; height=&quot;38&quot; rx=&quot;4&quot;/&gt;&lt;rect x=&quot;195&quot; y=&quot;138&quot; width=&quot;90&quot; height=&quot;38&quot; rx=&quot;4&quot;/&gt;&lt;rect x=&quot;295&quot; y=&quot;138&quot; width=&quot;90&quot; height=&quot;38&quot; rx=&quot;4&quot;/&gt;&lt;rect x=&quot;395&quot; y=&quot;138&quot; width=&quot;90&quot; height=&quot;38&quot; rx=&quot;4&quot;/&gt;&lt;/g&gt;
+  &lt;g fill=&quot;none&quot; class=&quot;grid&quot; stroke-dasharray=&quot;3 4&quot;&gt;&lt;rect x=&quot;295&quot; y=&quot;34&quot; width=&quot;90&quot; height=&quot;38&quot; rx=&quot;4&quot;/&gt;&lt;rect x=&quot;395&quot; y=&quot;34&quot; width=&quot;90&quot; height=&quot;38&quot; rx=&quot;4&quot;/&gt;&lt;rect x=&quot;395&quot; y=&quot;86&quot; width=&quot;90&quot; height=&quot;38&quot; rx=&quot;4&quot;/&gt;&lt;/g&gt;
+&lt;/svg&gt;
+&lt;figcaption&gt;Riquadri pieni: ciò che il manager controlla e di cui risponde. &lt;span class=&quot;tag a&quot;&gt;Aggiunta&lt;/span&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;section class=&quot;check&quot; aria-label=&quot;Autoverifica parte 1&quot;&gt;
+&lt;h3&gt;Autoverifica&lt;/h3&gt;
+&lt;details&gt;&lt;summary&gt;Il responsabile di uno stabilimento decide come produrre, ma prezzi e investimenti sono decisi altrove. Che centro guida?&lt;/summary&gt;&lt;div&gt;&lt;p&gt;Un cost centre: risponde solo dei costi. Giudicarlo sul profitto significherebbe valutarlo su prezzi che non controlla.&lt;/p&gt;&lt;/div&gt;&lt;/details&gt;
+&lt;details&gt;&lt;summary&gt;Perché ROI e residual income non si possono usare per un cost centre?&lt;/summary&gt;&lt;div&gt;&lt;p&gt;Entrambi richiedono il profitto e gli asset della divisione. Un cost centre non ha ricavi propri e il suo manager non decide sul capitale.&lt;/p&gt;&lt;/div&gt;&lt;/details&gt;
+&lt;details&gt;&lt;summary&gt;Perché nell&#x27;Ex 3 conta che i manager siano valutati sul profitto di divisione?&lt;/summary&gt;&lt;div&gt;&lt;p&gt;Perché ciascuno accetta un trasferimento interno solo se non riduce il proprio profitto. Da lì nascono il prezzo minimo del venditore e il prezzo massimo del compratore.&lt;/p&gt;&lt;/div&gt;&lt;/details&gt;
+&lt;/section&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+&lt;section class=&quot;part ochre&quot; aria-labelledby=&quot;roi&quot;&gt;
+&lt;div class=&quot;band&quot;&gt;&lt;div class=&quot;wrap&quot;&gt;&lt;p class=&quot;n&quot;&gt;Parte 2 · Slide 2, 3, 5&lt;/p&gt;&lt;h2 id=&quot;roi&quot; tabindex=&quot;-1&quot;&gt;ROI: margin × turnover&lt;/h2&gt;&lt;p&gt;Lo stesso rendimento si può ottenere guadagnando molto su ogni vendita, oppure vendendo molto con pochi asset.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;wrap&quot;&gt;
+&lt;div class=&quot;prose&quot;&gt;
+&lt;p&gt;&lt;span class=&quot;t&quot;&gt;Return on investment&lt;/span&gt; (ROI, rendimento del capitale investito) dice quanti dollari di profitto operativo genera ogni dollaro di asset. La slide 5 lo scrive come prodotto di due rapporti:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;formula&quot; role=&quot;math&quot; aria-label=&quot;ROI uguale net operating income su sales, per sales su average operating assets&quot;&gt;
+&lt;b&gt;ROI&lt;/b&gt; = &lt;span class=&quot;frac&quot;&gt;&lt;span&gt;Net operating income&lt;/span&gt;&lt;span&gt;Sales&lt;/span&gt;&lt;/span&gt; × &lt;span class=&quot;frac&quot;&gt;&lt;span&gt;Sales&lt;/span&gt;&lt;span&gt;Average operating assets&lt;/span&gt;&lt;/span&gt; = &lt;b&gt;margin × turnover&lt;/b&gt;
+&lt;/div&gt;
+&lt;div class=&quot;split&quot;&gt;
+&lt;div&gt;
+&lt;h4&gt;Le quattro grandezze&lt;/h4&gt;
+&lt;p&gt;&lt;span class=&quot;t&quot;&gt;Sales&lt;/span&gt;: i ricavi di vendita della divisione.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;t&quot;&gt;Net operating income&lt;/span&gt; (NOI, reddito operativo): il profitto prima di interessi e imposte. &lt;span class=&quot;tag a&quot;&gt;Aggiunta&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;t&quot;&gt;Average operating assets&lt;/span&gt; (asset operativi medi): gli asset usati nella gestione, come cassa, crediti, scorte e impianti. È una media perché il profitto matura lungo tutto il periodo: di solito (inizio + fine periodo) ÷ 2. &lt;span class=&quot;tag a&quot;&gt;Aggiunta&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;t&quot;&gt;Margin&lt;/span&gt; (margine sulle vendite) = NOI ÷ sales. &lt;span class=&quot;t&quot;&gt;Turnover&lt;/span&gt; (rotazione degli asset) = sales ÷ average operating assets. &lt;span class=&quot;tag s&quot;&gt;Slide 3&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;h4&gt;Perché scomporlo&lt;/h4&gt;
+&lt;p&gt;Le sales si elidono, quindi il prodotto equivale a NOI ÷ asset. La scomposizione non cambia il risultato: mostra &lt;em&gt;da dove&lt;/em&gt; viene.&lt;/p&gt;
+&lt;p&gt;Di conseguenza indica tre leve: aumentare le sales, ridurre i costi (entrambe alzano NOI), ridurre gli asset impiegati. &lt;span class=&quot;tag a&quot;&gt;Aggiunta&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Se conosci due delle tre grandezze margin, turnover e ROI, trovi sempre la terza. L&#x27;Ex 1 si regge tutto su questo.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;lab-panel&quot;&gt;
+&lt;h4&gt;Laboratorio: margin e turnover&lt;/h4&gt;
+&lt;p&gt;Sposta il punto. Ogni curva unisce le combinazioni con lo stesso ROI, e le divisioni dell&#x27;Ex 1 sono già segnate.&lt;/p&gt;
+&lt;div class=&quot;split&quot;&gt;
+&lt;figure style=&quot;margin:0&quot;&gt;
+&lt;svg id=&quot;roiChart&quot; viewBox=&quot;0 0 520 350&quot; role=&quot;img&quot; aria-label=&quot;Grafico con turnover in ascissa e margin in ordinata. Alpha e Bravo stanno sulla curva ROI 20%, Charlie sulla curva ROI 14%.&quot;&gt;&lt;/svg&gt;
+&lt;/figure&gt;
+&lt;div&gt;
+&lt;div class=&quot;ctl&quot;&gt;&lt;label for=&quot;mSl&quot;&gt;Margin&lt;/label&gt;&lt;output id=&quot;mOut&quot; for=&quot;mSl&quot;&gt;6%&lt;/output&gt;&lt;input id=&quot;mSl&quot; type=&quot;range&quot; min=&quot;1&quot; max=&quot;12&quot; step=&quot;0.5&quot; value=&quot;6&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;ctl&quot;&gt;&lt;label for=&quot;tSl&quot;&gt;Turnover&lt;/label&gt;&lt;output id=&quot;tOut&quot; for=&quot;tSl&quot;&gt;3&lt;/output&gt;&lt;input id=&quot;tSl&quot; type=&quot;range&quot; min=&quot;0.5&quot; max=&quot;6&quot; step=&quot;0.25&quot; value=&quot;3&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;readout&quot; aria-live=&quot;polite&quot;&gt;
+&lt;div&gt;ROI&lt;b id=&quot;rOut&quot;&gt;18%&lt;/b&gt;&lt;/div&gt;
+&lt;div&gt;Sales con asset di $1,000,000&lt;b id=&quot;sOut&quot;&gt;$3,000,000&lt;/b&gt;&lt;/div&gt;
+&lt;div&gt;NOI risultante&lt;b id=&quot;nOut&quot;&gt;$180,000&lt;/b&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p class=&quot;verdict&quot; id=&quot;roiMsg&quot;&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;ex1&quot; tabindex=&quot;-1&quot;&gt;Ex 1: ricostruire la tabella&lt;/h3&gt;
+&lt;div class=&quot;prose&quot;&gt;&lt;p&gt;Un distributore di martial arts products ha tre divisioni e una tabella con dei buchi: il compito è completarla. &lt;span class=&quot;tag s&quot;&gt;Slide 2–3&lt;/span&gt; Scorri i passi: l&#x27;ordine conta, perché ogni cella si ricava da quelle già note. Prima di premere Avanti, prova a dire tu quale formula serve.&lt;/p&gt;&lt;/div&gt;
+&lt;div class=&quot;tbl&quot; tabindex=&quot;0&quot; role=&quot;region&quot; aria-label=&quot;Tabella dell&#x27;esercizio 1&quot;&gt;
+&lt;table id=&quot;ex1t&quot;&gt;
+&lt;thead&gt;&lt;tr&gt;&lt;th scope=&quot;col&quot;&gt;&lt;/th&gt;&lt;th scope=&quot;col&quot;&gt;Alpha&lt;/th&gt;&lt;th scope=&quot;col&quot;&gt;Bravo&lt;/th&gt;&lt;th scope=&quot;col&quot;&gt;Charlie&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;Sales&lt;/th&gt;&lt;td data-c=&quot;as&quot; class=&quot;miss&quot;&gt;?&lt;/td&gt;&lt;td class=&quot;given&quot;&gt;$11,500,000&lt;/td&gt;&lt;td data-c=&quot;cs&quot; class=&quot;miss&quot;&gt;?&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;Net operating income&lt;/th&gt;&lt;td data-c=&quot;an&quot; class=&quot;miss&quot;&gt;?&lt;/td&gt;&lt;td class=&quot;given&quot;&gt;$920,000&lt;/td&gt;&lt;td class=&quot;given&quot;&gt;$210,000&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;Average operating assets&lt;/th&gt;&lt;td class=&quot;given&quot;&gt;$800,000&lt;/td&gt;&lt;td data-c=&quot;ba&quot; class=&quot;miss&quot;&gt;?&lt;/td&gt;&lt;td data-c=&quot;ca&quot; class=&quot;miss&quot;&gt;?&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;Margin&lt;/th&gt;&lt;td class=&quot;given&quot;&gt;4%&lt;/td&gt;&lt;td data-c=&quot;bm&quot; class=&quot;miss&quot;&gt;?&lt;/td&gt;&lt;td class=&quot;given&quot;&gt;7%&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;Turnover&lt;/th&gt;&lt;td class=&quot;given&quot;&gt;5&lt;/td&gt;&lt;td data-c=&quot;bt&quot; class=&quot;miss&quot;&gt;?&lt;/td&gt;&lt;td data-c=&quot;ct&quot; class=&quot;miss&quot;&gt;?&lt;/td&gt;&lt;/tr&gt;
+&lt;tr class=&quot;key&quot;&gt;&lt;th scope=&quot;row&quot;&gt;ROI&lt;/th&gt;&lt;td data-c=&quot;ar&quot; class=&quot;miss&quot;&gt;?&lt;/td&gt;&lt;td class=&quot;given&quot;&gt;20%&lt;/td&gt;&lt;td class=&quot;given&quot;&gt;14%&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div class=&quot;stepnote&quot; id=&quot;ex1n&quot; aria-live=&quot;polite&quot;&gt;&lt;p&gt;Premi Avanti per risolvere la prima cella. In grigio i dati, in tinta le celle trovate.&lt;/p&gt;&lt;/div&gt;
+&lt;div class=&quot;btns&quot;&gt;&lt;button id=&quot;ex1p&quot; type=&quot;button&quot; disabled&gt;Indietro&lt;/button&gt;&lt;button id=&quot;ex1f&quot; type=&quot;button&quot;&gt;Avanti&lt;/button&gt;&lt;button id=&quot;ex1a&quot; type=&quot;button&quot;&gt;Mostra tutto&lt;/button&gt;&lt;span class=&quot;count&quot; id=&quot;ex1c&quot;&gt;Passo 0 di 9&lt;/span&gt;&lt;/div&gt;
+
+&lt;div class=&quot;prose&quot;&gt;
+&lt;h4&gt;Che cosa ricavarne&lt;/h4&gt;
+&lt;p&gt;Alpha e Bravo hanno lo stesso ROI del 20% con strategie opposte: Alpha ha low margin e high turnover, Bravo il contrario. &lt;span class=&quot;tag s&quot;&gt;Slide 3&lt;/span&gt; Il ROI da solo non basta a capire come una divisione lavora: un calo di margin in Alpha pesa molto, perché è moltiplicato per 5.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;section class=&quot;check&quot; aria-label=&quot;Autoverifica parte 2&quot;&gt;
+&lt;h3&gt;Autoverifica&lt;/h3&gt;
+&lt;details&gt;&lt;summary&gt;Sales $2,000,000, NOI $150,000, asset medi $1,000,000. Quanto valgono margin, turnover e ROI?&lt;/summary&gt;&lt;div&gt;&lt;p&gt;Margin 150,000 ÷ 2,000,000 = 7.5%. Turnover 2,000,000 ÷ 1,000,000 = 2. ROI 7.5% × 2 = 15%.&lt;/p&gt;&lt;/div&gt;&lt;/details&gt;
+&lt;details&gt;&lt;summary&gt;ROI 18%, margin 6%, sales $3,000,000. Trova turnover, asset e NOI.&lt;/summary&gt;&lt;div&gt;&lt;p&gt;Turnover 18% ÷ 6% = 3. Asset 3,000,000 ÷ 3 = $1,000,000. NOI 6% × 3,000,000 = $180,000. Controllo: 180,000 ÷ 1,000,000 = 18%.&lt;/p&gt;&lt;/div&gt;&lt;/details&gt;
+&lt;details&gt;&lt;summary&gt;Charlie vuole un ROI del 20% tenendo fermi sales e margin. Di quanto deve ridurre gli asset?&lt;/summary&gt;&lt;div&gt;&lt;p&gt;Servono asset di 210,000 ÷ 20% = $1,050,000. Sono $450,000 in meno rispetto a $1,500,000, con turnover che sale a circa 2.86.&lt;/p&gt;&lt;/div&gt;&lt;/details&gt;
+&lt;details&gt;&lt;summary&gt;Alpha e Bravo hanno lo stesso ROI. Sono quindi uguali?&lt;/summary&gt;&lt;div&gt;&lt;p&gt;No. Hanno lo stesso risultato con modelli diversi, e anche la dimensione differisce: asset di $800,000 contro $4,600,000.&lt;/p&gt;&lt;/div&gt;&lt;/details&gt;
+&lt;/section&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+&lt;section class=&quot;part slate&quot; aria-labelledby=&quot;ri&quot;&gt;
+&lt;div class=&quot;band&quot;&gt;&lt;div class=&quot;wrap&quot;&gt;&lt;p class=&quot;n&quot;&gt;Parte 3 · Slide 4–6&lt;/p&gt;&lt;h2 id=&quot;ri&quot; tabindex=&quot;-1&quot;&gt;Residual income: il profitto oltre il minimo&lt;/h2&gt;&lt;p&gt;Il ROI è una percentuale, il residual income è un importo. Sugli stessi dati possono dare classifiche opposte.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;wrap&quot;&gt;
+&lt;div class=&quot;prose&quot;&gt;
+&lt;p&gt;&lt;span class=&quot;t&quot;&gt;Residual income&lt;/span&gt; (RI, reddito residuo) è il NOI che resta dopo aver coperto il rendimento minimo che l&#x27;azienda pretende sugli asset. Quel rendimento è la &lt;span class=&quot;t&quot;&gt;minimum required rate of return&lt;/span&gt; (tasso minimo richiesto). &lt;span class=&quot;tag s&quot;&gt;Slide 6&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;formula&quot; role=&quot;math&quot; aria-label=&quot;Residual income uguale net operating income meno tasso minimo per average operating assets&quot;&gt;
+&lt;b&gt;Residual income&lt;/b&gt; = Net operating income − (minimum required rate × average operating assets)
+&lt;/div&gt;
+&lt;div class=&quot;prose&quot;&gt;&lt;p&gt;Una forma equivalente rende chiaro il legame con il ROI: &lt;b&gt;RI = (ROI − tasso minimo) × asset&lt;/b&gt;. Il RI è positivo solo se il ROI supera il minimo, e pesa quello scarto per la dimensione della divisione. &lt;span class=&quot;tag a&quot;&gt;Aggiunta&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;ex2&quot; tabindex=&quot;-1&quot;&gt;Ex 2: Tan Corporation, Osaka contro Yokohama&lt;/h3&gt;
+&lt;div class=&quot;prose&quot;&gt;&lt;p&gt;Tan Corporation of Japan ha due divisioni regionali. Si chiede margin, turnover e ROI di ciascuna, poi il RI con tasso minimo del 15%. &lt;span class=&quot;tag s&quot;&gt;Slide 4–6&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;
+&lt;div class=&quot;tbl&quot; tabindex=&quot;0&quot; role=&quot;region&quot; aria-label=&quot;Dati e soluzione dell&#x27;esercizio 2&quot;&gt;
+&lt;table&gt;
+&lt;thead&gt;&lt;tr&gt;&lt;th scope=&quot;col&quot;&gt;&lt;/th&gt;&lt;th scope=&quot;col&quot;&gt;Osaka&lt;/th&gt;&lt;th scope=&quot;col&quot;&gt;Yokohama&lt;/th&gt;&lt;th scope=&quot;col&quot; class=&quot;wrap-cell&quot;&gt;Come si calcola&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;Sales&lt;/th&gt;&lt;td class=&quot;given&quot;&gt;$3,000,000&lt;/td&gt;&lt;td class=&quot;given&quot;&gt;$9,000,000&lt;/td&gt;&lt;td class=&quot;wrap-cell&quot;&gt;dato&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;Net operating income&lt;/th&gt;&lt;td class=&quot;given&quot;&gt;$210,000&lt;/td&gt;&lt;td class=&quot;given&quot;&gt;$720,000&lt;/td&gt;&lt;td class=&quot;wrap-cell&quot;&gt;dato&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;Average operating assets&lt;/th&gt;&lt;td class=&quot;given&quot;&gt;$1,000,000&lt;/td&gt;&lt;td class=&quot;given&quot;&gt;$4,000,000&lt;/td&gt;&lt;td class=&quot;wrap-cell&quot;&gt;dato&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;Margin&lt;/th&gt;&lt;td&gt;7%&lt;/td&gt;&lt;td&gt;8%&lt;/td&gt;&lt;td class=&quot;wrap-cell&quot;&gt;NOI ÷ sales&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;Turnover&lt;/th&gt;&lt;td&gt;3&lt;/td&gt;&lt;td&gt;2.25&lt;/td&gt;&lt;td class=&quot;wrap-cell&quot;&gt;sales ÷ asset&lt;/td&gt;&lt;/tr&gt;
+&lt;tr class=&quot;key&quot;&gt;&lt;th scope=&quot;row&quot;&gt;ROI&lt;/th&gt;&lt;td class=&quot;done&quot;&gt;21%&lt;/td&gt;&lt;td&gt;18%&lt;/td&gt;&lt;td class=&quot;wrap-cell&quot;&gt;margin × turnover&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;Rendimento minimo&lt;/th&gt;&lt;td&gt;$150,000&lt;/td&gt;&lt;td&gt;$600,000&lt;/td&gt;&lt;td class=&quot;wrap-cell&quot;&gt;15% × asset&lt;/td&gt;&lt;/tr&gt;
+&lt;tr class=&quot;key&quot;&gt;&lt;th scope=&quot;row&quot;&gt;Residual income&lt;/th&gt;&lt;td&gt;$60,000&lt;/td&gt;&lt;td class=&quot;done&quot;&gt;$120,000&lt;/td&gt;&lt;td class=&quot;wrap-cell&quot;&gt;NOI − rendimento minimo&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div class=&quot;prose&quot;&gt;
+&lt;h4&gt;Il punto che la soluzione lascia a te&lt;/h4&gt;
+&lt;p&gt;Le slide fermano i calcoli qui, ma il risultato è la vera lezione: &lt;b&gt;il ROI premia Osaka, il RI premia Yokohama&lt;/b&gt;. &lt;span class=&quot;tag a&quot;&gt;Aggiunta&lt;/span&gt; Non è una contraddizione, perché le due misure rispondono a domande diverse. Osaka è più efficiente su ogni dollaro; Yokohama crea più dollari sopra il minimo, ma ha quattro volte gli asset. Il RI doppio non prova quindi che sia gestita meglio. &lt;a class=&quot;tag w&quot; href=&quot;https://contabilidad.uprrp.edu/wp-content/uploads/2019/01/Cap%c3%adtulo-13-Performance-Measurement-on-Decentralized-Organizations.pdf&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Fonte esterna: dispensa UPR&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;lab-panel&quot;&gt;
+&lt;h4&gt;Laboratorio: quanto dipende dal tasso minimo?&lt;/h4&gt;
+&lt;p&gt;Il sorpasso tra le due divisioni dipende dal tasso scelto. Il 15% viene dalle slide; gli altri valori sono una variazione didattica.&lt;/p&gt;
+&lt;div class=&quot;split&quot;&gt;
+&lt;figure style=&quot;margin:0&quot;&gt;&lt;svg id=&quot;riChart&quot; viewBox=&quot;0 0 520 350&quot; role=&quot;img&quot; aria-label=&quot;Residual income di Osaka e Yokohama in funzione del tasso minimo. Le rette si incrociano al 17%; Yokohama si azzera al 18%, Osaka al 21%.&quot;&gt;&lt;/svg&gt;&lt;/figure&gt;
+&lt;div&gt;
+&lt;div class=&quot;ctl&quot;&gt;&lt;label for=&quot;rSl&quot;&gt;Minimum required rate&lt;/label&gt;&lt;output id=&quot;rrOut&quot; for=&quot;rSl&quot;&gt;15%&lt;/output&gt;&lt;input id=&quot;rSl&quot; type=&quot;range&quot; min=&quot;5&quot; max=&quot;25&quot; step=&quot;0.5&quot; value=&quot;15&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;readout&quot; aria-live=&quot;polite&quot;&gt;
+&lt;div&gt;RI Osaka&lt;b id=&quot;oOut&quot;&gt;$60,000&lt;/b&gt;&lt;/div&gt;
+&lt;div&gt;RI Yokohama&lt;b id=&quot;yOut&quot;&gt;$120,000&lt;/b&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p class=&quot;verdict&quot; id=&quot;riMsg&quot;&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;prose&quot;&gt;
+&lt;h4&gt;Perché esiste il RI: il problema del manager giudicato sul ROI&lt;/h4&gt;
+&lt;p&gt;Un manager giudicato sul ROI tende a rifiutare un progetto che abbasserebbe il suo ROI, anche se il progetto supera il minimo richiesto dall&#x27;azienda. Giudicato sul RI, lo accetta, perché ogni dollaro sopra il minimo fa salire la sua misura. &lt;span class=&quot;tag a&quot;&gt;Aggiunta&lt;/span&gt; &lt;a class=&quot;tag w&quot; href=&quot;https://www.accaglobal.com/gb/en/student/exam-support-resources/professional-exams-study-resources/p5/technical-articles/divisional-performance-management.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Fonte esterna: ACCA&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;lab-panel&quot;&gt;
+&lt;h4&gt;Laboratorio: arriva un progetto a Osaka&lt;/h4&gt;
+&lt;p&gt;Esempio inventato per lo studio, non nelle slide: Osaka può investire altri $200,000. Scegli il rendimento del progetto.&lt;/p&gt;
+&lt;div class=&quot;ctl&quot;&gt;&lt;label for=&quot;pSl&quot;&gt;Rendimento del progetto&lt;/label&gt;&lt;output id=&quot;pOut&quot; for=&quot;pSl&quot;&gt;17%&lt;/output&gt;&lt;input id=&quot;pSl&quot; type=&quot;range&quot; min=&quot;5&quot; max=&quot;30&quot; step=&quot;0.5&quot; value=&quot;17&quot;&gt;&lt;/div&gt;
+&lt;figure style=&quot;margin:.5rem 0&quot;&gt;&lt;svg id=&quot;pStrip&quot; viewBox=&quot;0 0 520 74&quot; role=&quot;img&quot; aria-label=&quot;Fasce di rendimento: sotto il 15% rifiutano tutti, tra 15% e 21% l&#x27;azienda lo vorrebbe ma il manager giudicato sul ROI lo rifiuta, sopra il 21% accettano tutti.&quot;&gt;
+  &lt;rect x=&quot;10&quot; y=&quot;26&quot; width=&quot;208&quot; height=&quot;22&quot; fill=&quot;var(--rule)&quot;/&gt;&lt;rect x=&quot;218&quot; y=&quot;26&quot; width=&quot;125&quot; height=&quot;22&quot; class=&quot;cc&quot; opacity=&quot;.45&quot;/&gt;&lt;rect x=&quot;343&quot; y=&quot;26&quot; width=&quot;167&quot; height=&quot;22&quot; fill=&quot;var(--rule)&quot;/&gt;
+  &lt;text class=&quot;lab&quot; x=&quot;218&quot; y=&quot;66&quot; text-anchor=&quot;middle&quot;&gt;15%&lt;/text&gt;&lt;text class=&quot;lab&quot; x=&quot;343&quot; y=&quot;66&quot; text-anchor=&quot;middle&quot;&gt;21%&lt;/text&gt;
+  &lt;text class=&quot;lab&quot; x=&quot;114&quot; y=&quot;17&quot; text-anchor=&quot;middle&quot;&gt;tutti no&lt;/text&gt;&lt;text class=&quot;lab&quot; x=&quot;280&quot; y=&quot;17&quot; text-anchor=&quot;middle&quot;&gt;conflitto&lt;/text&gt;&lt;text class=&quot;lab&quot; x=&quot;426&quot; y=&quot;17&quot; text-anchor=&quot;middle&quot;&gt;tutti sì&lt;/text&gt;
+  &lt;path id=&quot;pMark&quot; d=&quot;M0 22V52&quot; stroke=&quot;var(--ink)&quot; stroke-width=&quot;3&quot;/&gt;
+&lt;/svg&gt;&lt;/figure&gt;
+&lt;div class=&quot;readout&quot; aria-live=&quot;polite&quot;&gt;
+&lt;div&gt;ROI Osaka con il progetto (ora 21%)&lt;b id=&quot;pRoi&quot;&gt;&lt;/b&gt;&lt;/div&gt;
+&lt;div&gt;RI Osaka con il progetto (ora $60,000)&lt;b id=&quot;pRi&quot;&gt;&lt;/b&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p class=&quot;verdict&quot; id=&quot;pMsg&quot;&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;tbl&quot; tabindex=&quot;0&quot; role=&quot;region&quot; aria-label=&quot;Confronto ROI e residual income&quot;&gt;
+&lt;table&gt;
+&lt;caption&gt;Confronto &lt;span class=&quot;tag a&quot;&gt;Aggiunta&lt;/span&gt;&lt;/caption&gt;
+&lt;thead&gt;&lt;tr&gt;&lt;th scope=&quot;col&quot;&gt;&lt;/th&gt;&lt;th scope=&quot;col&quot; class=&quot;wrap-cell&quot;&gt;ROI&lt;/th&gt;&lt;th scope=&quot;col&quot; class=&quot;wrap-cell&quot;&gt;Residual income&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;Unità&lt;/th&gt;&lt;td class=&quot;wrap-cell&quot;&gt;percentuale&lt;/td&gt;&lt;td class=&quot;wrap-cell&quot;&gt;importo in dollari&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;Confronta divisioni di taglia diversa?&lt;/th&gt;&lt;td class=&quot;wrap-cell&quot;&gt;sì, è un rapporto&lt;/td&gt;&lt;td class=&quot;wrap-cell&quot;&gt;male, favorisce le più grandi&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;Allinea il manager all&#x27;azienda?&lt;/th&gt;&lt;td class=&quot;wrap-cell&quot;&gt;non sempre: rifiuta progetti sopra il minimo ma sotto il suo ROI&lt;/td&gt;&lt;td class=&quot;wrap-cell&quot;&gt;sì, accetta tutto ciò che supera il minimo&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;Serve un tasso minimo?&lt;/th&gt;&lt;td class=&quot;wrap-cell&quot;&gt;no per calcolarlo&lt;/td&gt;&lt;td class=&quot;wrap-cell&quot;&gt;sì, e il risultato ne dipende&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+
+&lt;section class=&quot;check&quot; aria-label=&quot;Autoverifica parte 3&quot;&gt;
+&lt;h3&gt;Autoverifica&lt;/h3&gt;
+&lt;details&gt;&lt;summary&gt;Rifai il RI di Ex 2 con un tasso minimo del 20%.&lt;/summary&gt;&lt;div&gt;&lt;p&gt;Osaka: 210,000 − 20% × 1,000,000 = $10,000. Yokohama: 720,000 − 20% × 4,000,000 = −$80,000. La classifica si inverte.&lt;/p&gt;&lt;/div&gt;&lt;/details&gt;
+&lt;details&gt;&lt;summary&gt;Verifica il RI di Osaka con la forma (ROI − tasso minimo) × asset.&lt;/summary&gt;&lt;div&gt;&lt;p&gt;(21% − 15%) × 1,000,000 = $60,000, come a slide 6. Per Yokohama: (18% − 15%) × 4,000,000 = $120,000.&lt;/p&gt;&lt;/div&gt;&lt;/details&gt;
+&lt;details&gt;&lt;summary&gt;Yokohama può investire in un progetto che rende il 17%, con minimo al 15%. Cosa fa il manager giudicato sul ROI? E quello giudicato sul RI?&lt;/summary&gt;&lt;div&gt;&lt;p&gt;Il primo rifiuta: 17% è sotto il suo 18% e abbasserebbe il ROI. Il secondo accetta: 17% supera il 15% e il RI sale. L&#x27;azienda, che chiede il 15%, preferisce il secondo comportamento.&lt;/p&gt;&lt;/div&gt;&lt;/details&gt;
+&lt;details&gt;&lt;summary&gt;Quale divisione è gestita meglio, in base ai soli dati di Ex 2?&lt;/summary&gt;&lt;div&gt;&lt;p&gt;I dati non bastano per dirlo. Osaka ha il ROI più alto, Yokohama il RI più alto ma con asset quadrupli. Una conclusione richiederebbe confronti con budget, settore e storia della divisione.&lt;/p&gt;&lt;/div&gt;&lt;/details&gt;
+&lt;/section&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+&lt;section class=&quot;part brick&quot; aria-labelledby=&quot;tp&quot;&gt;
+&lt;div class=&quot;band&quot;&gt;&lt;div class=&quot;wrap&quot;&gt;&lt;p class=&quot;n&quot;&gt;Parte 4 · Slide 7–12&lt;/p&gt;&lt;h2 id=&quot;tp&quot; tabindex=&quot;-1&quot;&gt;Transfer pricing: il prezzo tra divisioni&lt;/h2&gt;&lt;p&gt;Un accordo è possibile solo se il minimo del venditore non supera il massimo del compratore.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;wrap&quot;&gt;
+&lt;div class=&quot;split&quot;&gt;
+&lt;div&gt;
+&lt;p&gt;Il &lt;span class=&quot;t&quot;&gt;transfer price&lt;/span&gt; (prezzo di trasferimento) è il prezzo a cui una divisione vende a un&#x27;altra della stessa azienda. Per l&#x27;azienda nel suo insieme è una partita di giro: ciò che una divisione guadagna, l&#x27;altra lo spende. Però sposta il profitto di ciascuna, e quindi il giudizio sui due manager. &lt;span class=&quot;tag a&quot;&gt;Aggiunta&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Nell&#x27;Ex 3 la Division X può vendere fuori o alla Division Y, che ora compra da un &lt;span class=&quot;t&quot;&gt;outside supplier&lt;/span&gt; (fornitore esterno). &lt;span class=&quot;tag s&quot;&gt;Slide 7&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;figure style=&quot;margin:0&quot;&gt;
+&lt;svg viewBox=&quot;0 0 520 210&quot; role=&quot;img&quot; aria-label=&quot;Division X vende a outside customers o a Division Y al transfer price; Division Y può comprare invece da un outside supplier.&quot;&gt;
+  &lt;defs&gt;&lt;marker id=&quot;ar&quot; viewBox=&quot;0 0 10 10&quot; refX=&quot;9&quot; refY=&quot;5&quot; markerWidth=&quot;7&quot; markerHeight=&quot;7&quot; orient=&quot;auto-start-reverse&quot;&gt;&lt;path d=&quot;M0 0 10 5 0 10z&quot; fill=&quot;var(--mut)&quot;/&gt;&lt;/marker&gt;&lt;/defs&gt;
+  &lt;g class=&quot;bgf cs&quot; stroke-width=&quot;1.5&quot;&gt;&lt;rect x=&quot;20&quot; y=&quot;82&quot; width=&quot;140&quot; height=&quot;60&quot; rx=&quot;6&quot;/&gt;&lt;rect x=&quot;360&quot; y=&quot;82&quot; width=&quot;140&quot; height=&quot;60&quot; rx=&quot;6&quot;/&gt;&lt;/g&gt;
+  &lt;g fill=&quot;none&quot; stroke=&quot;var(--rule)&quot; stroke-width=&quot;1.5&quot;&gt;&lt;rect x=&quot;20&quot; y=&quot;4&quot; width=&quot;140&quot; height=&quot;44&quot; rx=&quot;6&quot;/&gt;&lt;rect x=&quot;360&quot; y=&quot;4&quot; width=&quot;140&quot; height=&quot;44&quot; rx=&quot;6&quot;/&gt;&lt;/g&gt;
+  &lt;g class=&quot;edge&quot; marker-end=&quot;url(#ar)&quot;&gt;&lt;path d=&quot;M90 82V50&quot; marker-end=&quot;url(#ar)&quot;/&gt;&lt;path d=&quot;M430 50V80&quot; marker-end=&quot;url(#ar)&quot;/&gt;&lt;path d=&quot;M162 112H358&quot; marker-end=&quot;url(#ar)&quot;/&gt;&lt;/g&gt;
+  &lt;text class=&quot;val&quot; x=&quot;90&quot; y=&quot;118&quot; text-anchor=&quot;middle&quot;&gt;Division X&lt;/text&gt;&lt;text class=&quot;val&quot; x=&quot;430&quot; y=&quot;118&quot; text-anchor=&quot;middle&quot;&gt;Division Y&lt;/text&gt;
+  &lt;text class=&quot;lab&quot; x=&quot;90&quot; y=&quot;31&quot; text-anchor=&quot;middle&quot;&gt;outside customers&lt;/text&gt;&lt;text class=&quot;lab&quot; x=&quot;430&quot; y=&quot;31&quot; text-anchor=&quot;middle&quot;&gt;outside supplier&lt;/text&gt;
+  &lt;text class=&quot;val cc&quot; x=&quot;260&quot; y=&quot;102&quot; text-anchor=&quot;middle&quot;&gt;transfer price&lt;/text&gt;
+  &lt;text class=&quot;lab&quot; x=&quot;260&quot; y=&quot;132&quot; text-anchor=&quot;middle&quot;&gt;40,000 unità&lt;/text&gt;
+  &lt;text class=&quot;lab&quot; x=&quot;90&quot; y=&quot;170&quot; text-anchor=&quot;middle&quot;&gt;vende, capacity&lt;/text&gt;&lt;text class=&quot;lab&quot; x=&quot;90&quot; y=&quot;188&quot; text-anchor=&quot;middle&quot;&gt;200,000 unità&lt;/text&gt;
+  &lt;text class=&quot;lab&quot; x=&quot;430&quot; y=&quot;170&quot; text-anchor=&quot;middle&quot;&gt;compra e usa&lt;/text&gt;&lt;text class=&quot;lab&quot; x=&quot;430&quot; y=&quot;188&quot; text-anchor=&quot;middle&quot;&gt;in produzione&lt;/text&gt;
+&lt;/svg&gt;
+&lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;h4&gt;La formula: il minimo del venditore&lt;/h4&gt;
+&lt;div class=&quot;formula&quot; role=&quot;math&quot; aria-label=&quot;Transfer price maggiore o uguale al costo variabile unitario più il contribution margin totale sulle vendite perse diviso le unità trasferite&quot;&gt;
+Transfer price ≥ &lt;b&gt;Variable cost per unit&lt;/b&gt; + &lt;span class=&quot;frac&quot;&gt;&lt;span&gt;Total contribution margin on lost sales&lt;/span&gt;&lt;span&gt;Number of units transferred&lt;/span&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;prose&quot;&gt;
+&lt;p&gt;X deve coprire ciò che paga in più per produrre, più ciò che perde togliendo unità ai clienti esterni. &lt;span class=&quot;tag s&quot;&gt;Slide 8&lt;/span&gt; Il &lt;span class=&quot;t&quot;&gt;contribution margin&lt;/span&gt; (margine di contribuzione) è prezzo di vendita meno variable cost.&lt;/p&gt;
+&lt;p&gt;Le vendite perse dipendono dalla &lt;span class=&quot;t&quot;&gt;idle capacity&lt;/span&gt; (capacità produttiva inutilizzata): se X ne ha abbastanza, non rinuncia a nessun cliente e il secondo termine vale zero. &lt;span class=&quot;tag s&quot;&gt;Slide 10&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;h4&gt;Il tetto: il massimo del compratore&lt;/h4&gt;
+&lt;div class=&quot;formula&quot; role=&quot;math&quot; aria-label=&quot;Transfer price minore o uguale al costo di acquisto dal fornitore esterno&quot;&gt;
+Transfer price ≤ &lt;b&gt;Cost of buying from outside supplier&lt;/b&gt;
+&lt;/div&gt;
+&lt;div class=&quot;quirk&quot;&gt;&lt;b&gt;Attenzione ai refusi nelle slide.&lt;/b&gt; Alle slide 9 e 11 la formula mostra «£» al posto di «≤»: sembra un problema di carattere del file, non una sterlina. La slide 12 dice «as shown below», ma sotto non c&#x27;è nulla: il range si ricava dalle slide 10 e 11. Il grafico del caso B qui sotto è una mia ricostruzione.&lt;/div&gt;
+
+&lt;h3 id=&quot;ex3&quot; tabindex=&quot;-1&quot;&gt;Ex 3: due casi, due esiti&lt;/h3&gt;
+&lt;div class=&quot;tbl&quot; tabindex=&quot;0&quot; role=&quot;region&quot; aria-label=&quot;Dati dell&#x27;esercizio 3&quot;&gt;
+&lt;table&gt;
+&lt;caption&gt;Dati &lt;span class=&quot;tag s&quot;&gt;Slide 7&lt;/span&gt;&lt;/caption&gt;
+&lt;thead&gt;&lt;tr&gt;&lt;th scope=&quot;col&quot;&gt;&lt;/th&gt;&lt;th scope=&quot;col&quot;&gt;Caso A&lt;/th&gt;&lt;th scope=&quot;col&quot;&gt;Caso B&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;X: capacity (unità)&lt;/th&gt;&lt;td&gt;200,000&lt;/td&gt;&lt;td&gt;200,000&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;X: unità vendute all&#x27;esterno&lt;/th&gt;&lt;td&gt;200,000&lt;/td&gt;&lt;td&gt;160,000&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;X: prezzo di vendita esterno&lt;/th&gt;&lt;td&gt;$90&lt;/td&gt;&lt;td&gt;$75&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;X: variable cost per unit&lt;/th&gt;&lt;td&gt;$70&lt;/td&gt;&lt;td&gt;$60&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;X: fixed cost per unit (su capacity)&lt;/th&gt;&lt;td&gt;$13&lt;/td&gt;&lt;td&gt;$8&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;Y: unità necessarie&lt;/th&gt;&lt;td&gt;40,000&lt;/td&gt;&lt;td&gt;40,000&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;Y: prezzo dell&#x27;outside supplier&lt;/th&gt;&lt;td&gt;$86&lt;/td&gt;&lt;td&gt;$74&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;Variable selling cost evitabile sulle vendite interne&lt;/th&gt;&lt;td&gt;$3&lt;/td&gt;&lt;td&gt;$0&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+
+&lt;div data-tabs&gt;
+&lt;div role=&quot;tablist&quot; aria-label=&quot;Casi dell&#x27;esercizio 3&quot;&gt;
+&lt;button role=&quot;tab&quot; id=&quot;tab-a&quot; aria-controls=&quot;p-a&quot;&gt;Caso A: nessuna idle capacity&lt;/button&gt;
+&lt;button role=&quot;tab&quot; id=&quot;tab-b&quot; aria-controls=&quot;p-b&quot;&gt;Caso B: idle capacity&lt;/button&gt;
+&lt;/div&gt;
+&lt;div role=&quot;tabpanel&quot; id=&quot;p-a&quot; aria-labelledby=&quot;tab-a&quot;&gt;
+&lt;div class=&quot;split&quot;&gt;
+&lt;div&gt;
+&lt;p&gt;&lt;b&gt;1a. Minimo di X.&lt;/b&gt; &lt;span class=&quot;tag s&quot;&gt;Slide 8&lt;/span&gt; X lavora a piena capacity: ognuna delle 40,000 unità trasferite toglie una vendita esterna. Il contribution margin perso è $90 − $70 = $20 per unità, e sulle vendite interne X risparmia $3.&lt;/p&gt;
+&lt;div class=&quot;formula&quot;&gt;TP ≥ ($70 − $3) + &lt;span class=&quot;frac&quot;&gt;&lt;span&gt;$20 × 40,000&lt;/span&gt;&lt;span&gt;40,000&lt;/span&gt;&lt;/span&gt; = $67 + $20 = &lt;b&gt;$87&lt;/b&gt;&lt;/div&gt;
+&lt;p&gt;&lt;b&gt;1b. Massimo di Y.&lt;/b&gt; &lt;span class=&quot;tag s&quot;&gt;Slide 9&lt;/span&gt; Y compra fuori a $86, quindi non pagherà di più: TP ≤ &lt;b&gt;$86&lt;/b&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;1c. Range.&lt;/b&gt; &lt;span class=&quot;tag s&quot;&gt;Slide 9&lt;/span&gt; Non esiste: $87 supera $86, le richieste sono incompatibili e il trasferimento non avviene.&lt;/p&gt;
+&lt;/div&gt;
+&lt;figure style=&quot;margin:0&quot;&gt;
+&lt;svg viewBox=&quot;0 0 520 150&quot; role=&quot;img&quot; aria-label=&quot;Linea dei prezzi: Y accetta fino a 86 dollari, X accetta da 87 dollari. Tra le due zone resta un buco di un dollaro.&quot;&gt;
+  &lt;path class=&quot;ax&quot; d=&quot;M20 125H500&quot;/&gt;
+  &lt;rect x=&quot;20&quot; y=&quot;62&quot; width=&quot;310&quot; height=&quot;18&quot; fill=&quot;var(--rule)&quot;/&gt;&lt;rect x=&quot;346&quot; y=&quot;32&quot; width=&quot;154&quot; height=&quot;18&quot; class=&quot;cc&quot; opacity=&quot;.5&quot;/&gt;
+  &lt;text class=&quot;lab&quot; x=&quot;330&quot; y=&quot;74&quot; text-anchor=&quot;end&quot; dx=&quot;-6&quot;&gt;Y accetta fino a $86&lt;/text&gt;&lt;text class=&quot;lab&quot; x=&quot;346&quot; y=&quot;24&quot;&gt;X accetta da $87&lt;/text&gt;
+  &lt;path class=&quot;cs&quot; stroke-width=&quot;1.5&quot; stroke-dasharray=&quot;3 3&quot; d=&quot;M330 62V125M346 50V125&quot;/&gt;
+  &lt;text class=&quot;val&quot; x=&quot;326&quot; y=&quot;144&quot; text-anchor=&quot;end&quot;&gt;$86&lt;/text&gt;&lt;text class=&quot;val&quot; x=&quot;350&quot; y=&quot;144&quot;&gt;$87&lt;/text&gt;
+&lt;/svg&gt;
+&lt;figcaption&gt;Il buco è di $1, ma basta a bloccare l&#x27;accordo. Il buco è ingrandito per renderlo visibile. &lt;span class=&quot;tag a&quot;&gt;Aggiunta&lt;/span&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;div class=&quot;added&quot;&gt;&lt;p&gt;&lt;b&gt;E per l&#x27;azienda è un bene?&lt;/b&gt; &lt;span class=&quot;tag a&quot;&gt;Aggiunta&lt;/span&gt; Sì. Senza trasferimento, per ogni unità X incassa un contribution margin di $20 e Y spende $86: netto −$66. Con il trasferimento, l&#x27;azienda spende solo il costo interno di $67: netto −$67. Il mancato accordo le fa risparmiare $1 × 40,000 = $40,000.&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div role=&quot;tabpanel&quot; id=&quot;p-b&quot; aria-labelledby=&quot;tab-b&quot;&gt;
+&lt;div class=&quot;split&quot;&gt;
+&lt;div&gt;
+&lt;p&gt;&lt;b&gt;2a. Minimo di X.&lt;/b&gt; &lt;span class=&quot;tag s&quot;&gt;Slide 10&lt;/span&gt; X vende 160,000 unità su 200,000: la idle capacity di 40,000 copre esattamente Y. Nessuna vendita persa, nessun risparmio sui costi.&lt;/p&gt;
+&lt;div class=&quot;formula&quot;&gt;TP ≥ $60 + &lt;span class=&quot;frac&quot;&gt;&lt;span&gt;$0&lt;/span&gt;&lt;span&gt;40,000&lt;/span&gt;&lt;/span&gt; = &lt;b&gt;$60&lt;/b&gt;&lt;/div&gt;
+&lt;p&gt;&lt;b&gt;2b. Massimo di Y.&lt;/b&gt; &lt;span class=&quot;tag s&quot;&gt;Slide 11&lt;/span&gt; Y compra fuori a $74, quindi TP ≤ &lt;b&gt;$74&lt;/b&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;2c. Range.&lt;/b&gt; &lt;span class=&quot;tag s&quot;&gt;Slide 12&lt;/span&gt; Da $60 a $74: le richieste sono compatibili e un trasferimento «hopefully will take place». La parola è prudente perché un range rende possibile l&#x27;accordo, non lo garantisce: restano negoziazione e rapporti tra manager. &lt;span class=&quot;tag a&quot;&gt;Aggiunta&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;figure style=&quot;margin:0&quot;&gt;
+&lt;svg viewBox=&quot;0 0 520 150&quot; role=&quot;img&quot; aria-label=&quot;Linea dei prezzi: X accetta da 60 dollari, Y accetta fino a 74 dollari. Tra 60 e 74 le due zone si sovrappongono.&quot;&gt;
+  &lt;path class=&quot;ax&quot; d=&quot;M20 125H500&quot;/&gt;
+  &lt;rect x=&quot;116&quot; y=&quot;20&quot; width=&quot;168&quot; height=&quot;105&quot; class=&quot;cc&quot; opacity=&quot;.14&quot;/&gt;
+  &lt;rect x=&quot;116&quot; y=&quot;32&quot; width=&quot;384&quot; height=&quot;18&quot; class=&quot;cc&quot; opacity=&quot;.5&quot;/&gt;&lt;rect x=&quot;20&quot; y=&quot;62&quot; width=&quot;264&quot; height=&quot;18&quot; fill=&quot;var(--rule)&quot;/&gt;
+  &lt;text class=&quot;lab&quot; x=&quot;124&quot; y=&quot;24&quot;&gt;X accetta da $60&lt;/text&gt;&lt;text class=&quot;lab&quot; x=&quot;30&quot; y=&quot;98&quot;&gt;Y accetta fino a $74&lt;/text&gt;
+  &lt;text class=&quot;val&quot; x=&quot;116&quot; y=&quot;144&quot; text-anchor=&quot;middle&quot;&gt;$60&lt;/text&gt;&lt;text class=&quot;val&quot; x=&quot;284&quot; y=&quot;144&quot; text-anchor=&quot;middle&quot;&gt;$74&lt;/text&gt;
+  &lt;text class=&quot;val cc&quot; x=&quot;200&quot; y=&quot;114&quot; text-anchor=&quot;middle&quot;&gt;range&lt;/text&gt;
+&lt;/svg&gt;
+&lt;figcaption&gt;La fascia colorata è il range acceptable. Slide 12 lo annuncia ma non lo disegna: ricostruzione mia.&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;div class=&quot;added&quot;&gt;&lt;p&gt;&lt;b&gt;Quanto vale l&#x27;accordo?&lt;/b&gt; &lt;span class=&quot;tag a&quot;&gt;Aggiunta&lt;/span&gt; Ogni unità costa all&#x27;azienda $60 anziché $74: risparmio di $14 × 40,000 = $560,000. Il transfer price non cambia questa cifra, decide solo come si divide tra X e Y.&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;added&quot;&gt;&lt;p&gt;&lt;b&gt;La trappola dei fixed costs.&lt;/b&gt; &lt;span class=&quot;tag a&quot;&gt;Aggiunta&lt;/span&gt; I $13 e gli $8 di fixed cost per unit sono nei dati ma nessuna soluzione li usa. I costi fissi restano uguali che il trasferimento avvenga o no, quindi non sono rilevanti per la decisione.&lt;/p&gt;&lt;/div&gt;
+
+&lt;div class=&quot;lab-panel&quot;&gt;
+&lt;h4&gt;Simulatore di negoziazione&lt;/h4&gt;
+&lt;p&gt;Parti da un caso delle slide, poi cambia i dati. Capacity 200,000 e fabbisogno di Y 40,000 restano fissi. &lt;span class=&quot;tag a&quot;&gt;Variazione didattica&lt;/span&gt;&lt;/p&gt;
+&lt;div class=&quot;btns&quot;&gt;&lt;button type=&quot;button&quot; id=&quot;preA&quot;&gt;Carica caso A&lt;/button&gt;&lt;button type=&quot;button&quot; id=&quot;preB&quot;&gt;Carica caso B&lt;/button&gt;&lt;/div&gt;
+&lt;div class=&quot;split&quot;&gt;
+&lt;div&gt;
+&lt;div class=&quot;ctl&quot;&gt;&lt;label for=&quot;sU&quot;&gt;Unità vendute all&#x27;esterno&lt;/label&gt;&lt;output id=&quot;oU&quot; for=&quot;sU&quot;&gt;&lt;/output&gt;&lt;input id=&quot;sU&quot; type=&quot;range&quot; min=&quot;160000&quot; max=&quot;200000&quot; step=&quot;5000&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;ctl&quot;&gt;&lt;label for=&quot;sP&quot;&gt;Prezzo esterno di X&lt;/label&gt;&lt;output id=&quot;oP&quot; for=&quot;sP&quot;&gt;&lt;/output&gt;&lt;input id=&quot;sP&quot; type=&quot;range&quot; min=&quot;60&quot; max=&quot;110&quot; step=&quot;1&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;ctl&quot;&gt;&lt;label for=&quot;sV&quot;&gt;Variable cost per unit&lt;/label&gt;&lt;output id=&quot;oV&quot; for=&quot;sV&quot;&gt;&lt;/output&gt;&lt;input id=&quot;sV&quot; type=&quot;range&quot; min=&quot;40&quot; max=&quot;90&quot; step=&quot;1&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;ctl&quot;&gt;&lt;label for=&quot;sS&quot;&gt;Costo evitabile sulle vendite interne&lt;/label&gt;&lt;output id=&quot;oS&quot; for=&quot;sS&quot;&gt;&lt;/output&gt;&lt;input id=&quot;sS&quot; type=&quot;range&quot; min=&quot;0&quot; max=&quot;10&quot; step=&quot;1&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;ctl&quot;&gt;&lt;label for=&quot;sB&quot;&gt;Prezzo dell&#x27;outside supplier&lt;/label&gt;&lt;output id=&quot;oB&quot; for=&quot;sB&quot;&gt;&lt;/output&gt;&lt;input id=&quot;sB&quot; type=&quot;range&quot; min=&quot;50&quot; max=&quot;110&quot; step=&quot;1&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;ctl&quot;&gt;&lt;label for=&quot;sT&quot;&gt;&lt;b&gt;Transfer price proposto&lt;/b&gt;&lt;/label&gt;&lt;output id=&quot;oT&quot; for=&quot;sT&quot;&gt;&lt;/output&gt;&lt;input id=&quot;sT&quot; type=&quot;range&quot; min=&quot;30&quot; max=&quot;120&quot; step=&quot;0.5&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;figure style=&quot;margin:0&quot;&gt;&lt;svg id=&quot;tpLine&quot; viewBox=&quot;0 0 520 140&quot; role=&quot;img&quot; aria-label=&quot;Linea dei prezzi con il minimo di X, il massimo di Y e il transfer price proposto. I valori sono riportati anche nel testo accanto.&quot;&gt;&lt;/svg&gt;&lt;/figure&gt;
+&lt;p class=&quot;num&quot; id=&quot;tpTrace&quot; style=&quot;font-size:.92rem&quot;&gt;&lt;/p&gt;
+&lt;div class=&quot;readout&quot; aria-live=&quot;polite&quot;&gt;
+&lt;div&gt;Se si trasferisce: X&lt;b id=&quot;dX&quot;&gt;&lt;/b&gt;&lt;/div&gt;
+&lt;div&gt;Se si trasferisce: Y&lt;b id=&quot;dY&quot;&gt;&lt;/b&gt;&lt;/div&gt;
+&lt;div&gt;Se si trasferisce: azienda&lt;b id=&quot;dC&quot;&gt;&lt;/b&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p class=&quot;verdict&quot; id=&quot;tpMsg&quot;&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;section class=&quot;check&quot; aria-label=&quot;Autoverifica parte 4&quot;&gt;
+&lt;h3&gt;Autoverifica&lt;/h3&gt;
+&lt;details&gt;&lt;summary&gt;Caso A, ma X vende 190,000 unità fuori. Qual è il range?&lt;/summary&gt;&lt;div&gt;&lt;p&gt;Idle capacity 10,000, quindi vendite perse 30,000. Minimo: $67 + ($20 × 30,000) ÷ 40,000 = $67 + $15 = $82. Massimo: $86. Range da $82 a $86: l&#x27;accordo diventa possibile.&lt;/p&gt;&lt;/div&gt;&lt;/details&gt;
+&lt;details&gt;&lt;summary&gt;Caso B, con transfer price di $70. Quanto guadagna ciascuno?&lt;/summary&gt;&lt;div&gt;&lt;p&gt;X: ($70 − $60) × 40,000 = $400,000. Y: ($74 − $70) × 40,000 = $160,000. Totale $560,000, il risparmio complessivo dell&#x27;azienda.&lt;/p&gt;&lt;/div&gt;&lt;/details&gt;
+&lt;details&gt;&lt;summary&gt;Caso B, ma l&#x27;outside supplier scende a $58. Che cosa succede?&lt;/summary&gt;&lt;div&gt;&lt;p&gt;Minimo $60, massimo $58: nessun range. Y compra fuori, ed è giusto anche per l&#x27;azienda, che spende $2 in meno per unità.&lt;/p&gt;&lt;/div&gt;&lt;/details&gt;
+&lt;details&gt;&lt;summary&gt;Nel caso A, il direttore generale dovrebbe imporre il trasferimento?&lt;/summary&gt;&lt;div&gt;&lt;p&gt;No. Costerebbe all&#x27;azienda $40,000 in più. Qui il mancato accordo tra i manager coincide con l&#x27;interesse dell&#x27;azienda.&lt;/p&gt;&lt;/div&gt;&lt;/details&gt;
+&lt;details&gt;&lt;summary&gt;Nel caso B, il prezzo esterno di X è $75 e Y paga fuori $74. Perché X accetta meno di $75?&lt;/summary&gt;&lt;div&gt;&lt;p&gt;Perché quelle 40,000 unità non toglierebbero nessuna vendita a $75: senza Y quella capacity resterebbe ferma. Conta il costo incrementale, $60, non il prezzo di listino.&lt;/p&gt;&lt;/div&gt;&lt;/details&gt;
+&lt;/section&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+&lt;section class=&quot;part terra&quot; aria-labelledby=&quot;ripasso&quot;&gt;
+&lt;div class=&quot;band&quot;&gt;&lt;div class=&quot;wrap&quot;&gt;&lt;p class=&quot;n&quot;&gt;Parte 5&lt;/p&gt;&lt;h2 id=&quot;ripasso&quot; tabindex=&quot;-1&quot;&gt;Ripasso prima della prova&lt;/h2&gt;&lt;p&gt;Le formule in una schermata, e gli errori più facili da fare con questi esercizi.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;wrap&quot;&gt;
+&lt;div class=&quot;tbl&quot; tabindex=&quot;0&quot; role=&quot;region&quot; aria-label=&quot;Formulario&quot;&gt;
+&lt;table&gt;
+&lt;thead&gt;&lt;tr&gt;&lt;th scope=&quot;col&quot;&gt;Grandezza&lt;/th&gt;&lt;th scope=&quot;col&quot; class=&quot;wrap-cell&quot;&gt;Formula&lt;/th&gt;&lt;th scope=&quot;col&quot; class=&quot;wrap-cell&quot;&gt;Dove&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;Margin&lt;/th&gt;&lt;td class=&quot;wrap-cell&quot;&gt;NOI ÷ sales&lt;/td&gt;&lt;td class=&quot;wrap-cell&quot;&gt;Slide 3&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;Turnover&lt;/th&gt;&lt;td class=&quot;wrap-cell&quot;&gt;sales ÷ average operating assets&lt;/td&gt;&lt;td class=&quot;wrap-cell&quot;&gt;Slide 3&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;ROI&lt;/th&gt;&lt;td class=&quot;wrap-cell&quot;&gt;margin × turnover = NOI ÷ average operating assets&lt;/td&gt;&lt;td class=&quot;wrap-cell&quot;&gt;Slide 5&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;Residual income&lt;/th&gt;&lt;td class=&quot;wrap-cell&quot;&gt;NOI − (tasso minimo × average operating assets)&lt;/td&gt;&lt;td class=&quot;wrap-cell&quot;&gt;Slide 6&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;TP minimo del venditore&lt;/th&gt;&lt;td class=&quot;wrap-cell&quot;&gt;variable cost + (contribution margin sulle vendite perse ÷ unità trasferite)&lt;/td&gt;&lt;td class=&quot;wrap-cell&quot;&gt;Slide 8&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;TP massimo del compratore&lt;/th&gt;&lt;td class=&quot;wrap-cell&quot;&gt;costo di acquisto dall&#x27;esterno&lt;/td&gt;&lt;td class=&quot;wrap-cell&quot;&gt;Slide 9&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;h4&gt;Errori tipici &lt;span class=&quot;tag a&quot;&gt;Aggiunta&lt;/span&gt;&lt;/h4&gt;
+&lt;details&gt;&lt;summary&gt;Usare gli asset di fine periodo invece della media&lt;/summary&gt;&lt;div&gt;&lt;p&gt;Il denominatore è average operating assets. Negli esercizi di queste slide la media è già data: non va calcolata.&lt;/p&gt;&lt;/div&gt;&lt;/details&gt;
+&lt;details&gt;&lt;summary&gt;Dedurre il risparmio di $3 dal contribution margin perso&lt;/summary&gt;&lt;div&gt;&lt;p&gt;Nel caso A il margine perso resta $90 − $70 = $20, perché sulle vendite esterne il costo intero si paga. I $3 si tolgono solo dal variable cost dell&#x27;unità trasferita.&lt;/p&gt;&lt;/div&gt;&lt;/details&gt;
+&lt;details&gt;&lt;summary&gt;Includere i fixed costs nel prezzo minimo&lt;/summary&gt;&lt;div&gt;&lt;p&gt;$13 e $8 non cambiano con il trasferimento, quindi restano fuori dalla formula.&lt;/p&gt;&lt;/div&gt;&lt;/details&gt;
+&lt;details&gt;&lt;summary&gt;Dividere per le vendite perse anziché per le unità trasferite&lt;/summary&gt;&lt;div&gt;&lt;p&gt;Il denominatore è sempre il numero di unità trasferite. Conta quando la idle capacity è solo parziale: le vendite perse sono meno delle unità trasferite.&lt;/p&gt;&lt;/div&gt;&lt;/details&gt;
+&lt;details&gt;&lt;summary&gt;Concludere dal RI che la divisione più ricca è la migliore&lt;/summary&gt;&lt;div&gt;&lt;p&gt;Il RI è un importo e cresce con la dimensione. Tra divisioni di taglia diversa va letto insieme al ROI.&lt;/p&gt;&lt;/div&gt;&lt;/details&gt;
+&lt;section class=&quot;check&quot; aria-label=&quot;Autoverifica parte 5&quot;&gt;
+&lt;h3&gt;Autoverifica finale&lt;/h3&gt;
+&lt;details&gt;&lt;summary&gt;Sales $5,000,000, NOI $400,000, asset medi $2,000,000, tasso minimo 12%. Calcola margin, turnover, ROI e RI.&lt;/summary&gt;&lt;div&gt;&lt;p&gt;Margin 8%, turnover 2.5, ROI 20%. RI = 400,000 − 12% × 2,000,000 = $160,000.&lt;/p&gt;&lt;/div&gt;&lt;/details&gt;
+&lt;details&gt;&lt;summary&gt;X ha 10,000 unità di idle capacity e Y ne chiede 20,000. Variable cost $30, prezzo esterno $50, outside supplier $42. Qual è il range?&lt;/summary&gt;&lt;div&gt;&lt;p&gt;Vendite perse 10,000, contribution margin $20. Minimo: $30 + ($20 × 10,000) ÷ 20,000 = $40. Massimo: $42. Range da $40 a $42, quindi il trasferimento può avvenire.&lt;/p&gt;&lt;/div&gt;&lt;/details&gt;
+&lt;/section&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+&lt;section class=&quot;part slate&quot; aria-labelledby=&quot;fonti&quot;&gt;
+&lt;div class=&quot;band&quot;&gt;&lt;div class=&quot;wrap&quot;&gt;&lt;p class=&quot;n&quot;&gt;Fonti esterne&lt;/p&gt;&lt;h2 id=&quot;fonti&quot; tabindex=&quot;-1&quot;&gt;Per approfondire&lt;/h2&gt;&lt;p&gt;Tutto ciò che segue viene dal web, non dalle slide.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;wrap&quot;&gt;
+&lt;div class=&quot;prose&quot;&gt;
+&lt;p&gt;&lt;b&gt;Le slide non citano autori, studi, norme o siti.&lt;/b&gt; L&#x27;unico rimando è il riquadro «Page 524» a slide 7, che fa pensare a un manuale senza nominarlo. Le voci qui sotto sono quindi una mia selezione sui temi delle slide, non una bibliografia del docente. Le descrizioni si basano su ciò che è emerso dalle ricerche: non ho letto i testi per intero.&lt;/p&gt;
+&lt;/div&gt;
+&lt;ul class=&quot;refs&quot;&gt;
+&lt;li&gt;&lt;h4&gt;Il manuale probabile: &lt;i&gt;Managerial Accounting&lt;/i&gt;&lt;/h4&gt;
+&lt;p class=&quot;bib&quot;&gt;Garrison, Noreen, Brewer. McGraw-Hill. Ultima edizione trovata: 18ª, 2024.&lt;/p&gt;
+&lt;p&gt;Manuale diffuso di contabilità direzionale, che tratta ROI, residual income e transfer pricing nel capitolo sulle organizzazioni decentrate. Il riquadro «Page 524» e la traccia di Tan Corporation, che circola online come esercizio di manuale, mi fanno pensare a questo testo, ma &lt;b&gt;nessuna fonte lo conferma: è una mia ipotesi&lt;/b&gt;. Chiedi conferma al docente o guarda il programma.&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;tag w&quot; href=&quot;https://bookstore.uu.edu/ebook/9781265618520&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Fonte esterna: scheda 18ª ed.&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;h4&gt;Outline dell&#x27;editore sulla decentralizzazione&lt;/h4&gt;
+&lt;p class=&quot;bib&quot;&gt;McGraw-Hill, &lt;i&gt;Introduction to Managerial Accounting&lt;/i&gt; (Folk, Garrison, Noreen), capitolo 10.&lt;/p&gt;
+&lt;p&gt;Scaletta di un capitolo che copre ROI, residual income e transfer prices. Utile come sommario della teoria che queste slide danno per scontata, anche se riguarda un&#x27;edizione vecchia.&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;tag w&quot; href=&quot;https://highered.mheducation.com/sites/0072422246/student_view0/chapter10/chapter_outline.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Fonte esterna: McGraw-Hill&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;h4&gt;Donaldson Brown, «padre» del ROI&lt;/h4&gt;
+&lt;p class=&quot;bib&quot;&gt;Hagley Museum and Library, &lt;i&gt;The Father of ROI: Donaldson Brown&lt;/i&gt;.&lt;/p&gt;
+&lt;p&gt;Racconta come Brown, alla DuPont, combinò utili, capitale circolante e investimenti in un&#x27;unica misura che chiamò return on investment. Conta perché spiega da dove viene la scomposizione usata in Ex 1 e Ex 2. Le date dell&#x27;invenzione variano tra le fonti (1912 o 1914).&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;tag w&quot; href=&quot;https://www.hagley.org/librarynews/father-roi-donaldson-brown&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Fonte esterna: Hagley&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;h4&gt;David Solomons e il residual income&lt;/h4&gt;
+&lt;p class=&quot;bib&quot;&gt;Solomons, &lt;i&gt;Divisional Performance: Measurement and Control&lt;/i&gt;, citato come Irwin, 1968, in un capitolo Springer.&lt;/p&gt;
+&lt;p&gt;Solomons propose il residual income per valutare separatamente il centro di investimento e il suo manager. La data della prima edizione non è confermata dalle ricerche: controllala prima di citarla.&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;tag w&quot; href=&quot;https://link.springer.com/chapter/10.1007/978-1-4899-7138-8_17&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Fonte esterna: Springer&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;h4&gt;Articoli tecnici ACCA&lt;/h4&gt;
+&lt;p class=&quot;bib&quot;&gt;ACCA: &lt;i&gt;Decentralisation and the need for performance measurement&lt;/i&gt;, &lt;i&gt;Divisional performance management&lt;/i&gt;, &lt;i&gt;Transfer pricing&lt;/i&gt;.&lt;/p&gt;
+&lt;p&gt;Materiale per gli esami ACCA, un&#x27;associazione professionale di contabili. Spiega che ROI e RI possono incoraggiare decisioni dysfunctional (che danneggiano l&#x27;azienda) e che, con asset a net book value (valore contabile netto), migliorano man mano che gli asset invecchiano. Conta perché aggiunge limiti che queste slide non toccano.&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;tag w&quot; href=&quot;https://www.accaglobal.com/gb/en/student/exam-support-resources/fundamentals-exams-study-resources/f5/technical-articles/performance-measurement.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Fonte esterna: decentralisation&lt;/a&gt; &lt;a class=&quot;tag w&quot; href=&quot;https://www.accaglobal.com/gb/en/student/exam-support-resources/professional-exams-study-resources/p5/technical-articles/divisional-performance-management.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Fonte esterna: divisional&lt;/a&gt; &lt;a class=&quot;tag w&quot; href=&quot;https://www.accaglobal.com/gb/en/student/exam-support-resources/fundamentals-exams-study-resources/f5/technical-articles/trans-pricing.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Fonte esterna: transfer pricing&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;h4&gt;Dispensa universitaria sul capitolo&lt;/h4&gt;
+&lt;p class=&quot;bib&quot;&gt;Universidad de Puerto Rico (dominio uprrp.edu), &lt;i&gt;Capítulo 13: Performance Measurement on Decentralized Organizations&lt;/i&gt;, PDF in spagnolo.&lt;/p&gt;
+&lt;p&gt;Esercizi svolti con la stessa scomposizione ROI = margin × turnover. Avverte che il residual income non serve a confrontare divisioni di dimensione diversa, cioè il punto chiave di Ex 2.&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;tag w&quot; href=&quot;https://contabilidad.uprrp.edu/wp-content/uploads/2019/01/Cap%c3%adtulo-13-Performance-Measurement-on-Decentralized-Organizations.pdf&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Fonte esterna: PDF&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;h4&gt;Manuale aperto sul residual income&lt;/h4&gt;
+&lt;p class=&quot;bib&quot;&gt;&lt;i&gt;Managerial Accounting&lt;/i&gt; (Saylor), sezione 11.5.&lt;/p&gt;
+&lt;p&gt;Spiegazione gratuita del RI come misura per valutare le divisioni, dentro un capitolo sulle organizzazioni decentrate. Utile per altri esempi da svolgere.&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;tag w&quot; href=&quot;https://saylordotorg.github.io/text_managerial-accounting/s15-05-using-residual-income-ri-to-ev.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Fonte esterna: Saylor&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;h4&gt;Hirshleifer, 1956&lt;/h4&gt;
+&lt;p class=&quot;bib&quot;&gt;J. Hirshleifer, «On the Economics of Transfer Pricing», &lt;i&gt;Journal of Business&lt;/i&gt;, 29(3), pp. 172–184.&lt;/p&gt;
+&lt;p&gt;La prima formalizzazione economica del problema: il prezzo ottimo è legato al costo marginale del venditore. Conta perché è la radice teorica di una formula che parte dal variable cost.&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;tag w&quot; href=&quot;https://econpapers.repec.org/RePEc:ucp:jnlbus:v:29:y:1956:p:172&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Fonte esterna: EconPapers&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;h4&gt;Rassegna sul transfer pricing&lt;/h4&gt;
+&lt;p class=&quot;bib&quot;&gt;A. Gavious, &lt;i&gt;Transfer Pricing: A Review&lt;/i&gt;.&lt;/p&gt;
+&lt;p&gt;Ripercorre gli sviluppi del tema a partire da Hirshleifer. Da leggere per vedere quanto il problema si complica rispetto al caso dell&#x27;Ex 3.&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;tag w&quot; href=&quot;https://tzin.bgu.ac.il/~ariehg/review.htm&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Fonte esterna: review&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;h4&gt;OECD Transfer Pricing Guidelines&lt;/h4&gt;
+&lt;p class=&quot;bib&quot;&gt;OECD, edizione 2022, pubblicata il 20 gennaio 2022. Prima versione approvata nel 1995.&lt;/p&gt;
+&lt;p&gt;La guida internazionale sull&#x27;&lt;span class=&quot;t&quot;&gt;arm&#x27;s length principle&lt;/span&gt; (le transazioni tra imprese associate vanno valutate come tra parti indipendenti). Conta perché mostra l&#x27;altra faccia del tema: l&#x27;Ex 3 guarda agli incentivi interni, mentre tra Paesi diversi il transfer price ha anche rilievo fiscale.&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;tag w&quot; href=&quot;https://www.oecd-ilibrary.org/taxation/oecd-transfer-pricing-guidelines-for-multinational-enterprises-and-tax-administrations-2022_02d2274c-en&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Fonte esterna: OECD&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+&lt;/main&gt;
+
+&lt;div class=&quot;wrap&quot;&gt;&lt;footer&gt;Riassunto scritto da Claude a partire dalle slide: controlla sempre sul materiale.&lt;/footer&gt;&lt;/div&gt;
+&lt;script&gt;
+(function(){
+&#x27;use strict&#x27;;
+var $=function(id){return document.getElementById(id)};
+var SVGNS=&#x27;http://www.w3.org/2000/svg&#x27;;
+function el(parent,name,attrs,text){
+  var n=document.createElementNS(SVGNS,name);
+  for(var k in attrs){n.setAttribute(k,attrs[k])}
+  if(text!==undefined){n.textContent=text}
+  parent.appendChild(n);return n;
+}
+function usd(v){var a=Math.abs(Math.round(v)).toLocaleString(&#x27;en-US&#x27;);return (v&lt;0?&#x27;−$&#x27;:&#x27;$&#x27;)+a}
+function sgn(v){return (v&gt;0?&#x27;+&#x27;:&#x27;&#x27;)+usd(v)}
+function pct(v,d){return (+v.toFixed(d===undefined?2:d))+&#x27;%&#x27;}
+function price(v){return &#x27;$&#x27;+(+v.toFixed(2))}
+
+/* linguette */
+document.querySelectorAll(&#x27;[data-tabs]&#x27;).forEach(function(root){
+  var tabs=[].slice.call(root.querySelectorAll(&#x27;[role=tab]&#x27;));
+  var panels=tabs.map(function(t){return $(t.getAttribute(&#x27;aria-controls&#x27;))});
+  function sel(i,focus){
+    tabs.forEach(function(t,j){var on=i===j;t.setAttribute(&#x27;aria-selected&#x27;,on?&#x27;true&#x27;:&#x27;false&#x27;);t.tabIndex=on?0:-1;panels[j].hidden=!on});
+    if(focus){tabs[i].focus()}
+  }
+  tabs.forEach(function(t,i){
+    t.type=&#x27;button&#x27;;
+    t.addEventListener(&#x27;click&#x27;,function(){sel(i)});
+    t.addEventListener(&#x27;keydown&#x27;,function(e){
+      var n=null;
+      if(e.key===&#x27;ArrowRight&#x27;){n=(i+1)%tabs.length}
+      else if(e.key===&#x27;ArrowLeft&#x27;){n=(i-1+tabs.length)%tabs.length}
+      else if(e.key===&#x27;Home&#x27;){n=0}
+      else if(e.key===&#x27;End&#x27;){n=tabs.length-1}
+      if(n!==null){e.preventDefault();sel(n,true)}
+    });
+  });
+  sel(0);
+});
+
+/* link interni: niente cambio di URL, funziona anche in una sandbox */
+document.addEventListener(&#x27;click&#x27;,function(e){
+  var a=e.target.closest&amp;&amp;e.target.closest(&#x27;a[href^=&quot;#&quot;]&#x27;);
+  if(!a){return}
+  var target=$(a.getAttribute(&#x27;href&#x27;).slice(1));
+  if(!target){return}
+  e.preventDefault();
+  var open=a.getAttribute(&#x27;data-open&#x27;);
+  if(open&amp;&amp;$(open)){$(open).click()}
+  target.scrollIntoView();
+  if(target.getAttribute(&#x27;tabindex&#x27;)!==null){target.focus({preventScroll:true})}
+});
+
+/* voce corrente nella barra */
+if(&#x27;IntersectionObserver&#x27; in window){
+  var nav=$(&#x27;nav&#x27;);
+  var links={};
+  nav.querySelectorAll(&#x27;a&#x27;).forEach(function(a){links[a.getAttribute(&#x27;href&#x27;).slice(1)]=a});
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(en){
+      if(!en.isIntersecting){return}
+      var id=en.target.getAttribute(&#x27;data-spy&#x27;);
+      Object.keys(links).forEach(function(k){links[k].removeAttribute(&#x27;aria-current&#x27;)});
+      links[id].setAttribute(&#x27;aria-current&#x27;,&#x27;true&#x27;);
+      nav.scrollTo({left:links[id].offsetLeft-24});
+    });
+  },{rootMargin:&#x27;-25% 0px -70% 0px&#x27;});
+  Object.keys(links).forEach(function(id){
+    var t=$(id);if(!t){return}
+    var box=t.closest(&#x27;section&#x27;)||t;
+    box.setAttribute(&#x27;data-spy&#x27;,id);io.observe(box);
+  });
+}
+
+/* Ex 1 passo per passo */
+var S=[
+ {c:&#x27;as&#x27;,v:&#x27;$4,000,000&#x27;,t:&#x27;&lt;b&gt;Alpha, sales.&lt;/b&gt; Turnover = sales ÷ asset, quindi sales = 5 × $800,000 = $4,000,000.&#x27;},
+ {c:&#x27;an&#x27;,v:&#x27;$160,000&#x27;,t:&#x27;&lt;b&gt;Alpha, NOI.&lt;/b&gt; Margin = NOI ÷ sales, quindi NOI = 4% × $4,000,000 = $160,000.&#x27;},
+ {c:&#x27;ar&#x27;,v:&#x27;20%&#x27;,t:&#x27;&lt;b&gt;Alpha, ROI.&lt;/b&gt; Margin × turnover = 4% × 5 = 20%.&#x27;},
+ {c:&#x27;bm&#x27;,v:&#x27;8%&#x27;,t:&#x27;&lt;b&gt;Bravo, margin.&lt;/b&gt; $920,000 ÷ $11,500,000 = 8%.&#x27;},
+ {c:&#x27;bt&#x27;,v:&#x27;2.5&#x27;,t:&#x27;&lt;b&gt;Bravo, turnover.&lt;/b&gt; ROI ÷ margin = 20% ÷ 8% = 2.5.&#x27;},
+ {c:&#x27;ba&#x27;,v:&#x27;$4,600,000&#x27;,t:&#x27;&lt;b&gt;Bravo, asset.&lt;/b&gt; Sales ÷ turnover = $11,500,000 ÷ 2.5 = $4,600,000. Controllo: $920,000 ÷ $4,600,000 = 20%.&#x27;},
+ {c:&#x27;cs&#x27;,v:&#x27;$3,000,000&#x27;,t:&#x27;&lt;b&gt;Charlie, sales.&lt;/b&gt; NOI ÷ margin = $210,000 ÷ 7% = $3,000,000.&#x27;},
+ {c:&#x27;ct&#x27;,v:&#x27;2&#x27;,t:&#x27;&lt;b&gt;Charlie, turnover.&lt;/b&gt; ROI ÷ margin = 14% ÷ 7% = 2.&#x27;},
+ {c:&#x27;ca&#x27;,v:&#x27;$1,500,000&#x27;,t:&#x27;&lt;b&gt;Charlie, asset.&lt;/b&gt; Sales ÷ turnover = $3,000,000 ÷ 2 = $1,500,000. Tabella completa, come a slide 3.&#x27;}
+];
+var pos=0,intro=$(&#x27;ex1n&#x27;).innerHTML;
+function draw1(){
+  S.forEach(function(s,i){
+    var td=document.querySelector(&#x27;[data-c=&quot;&#x27;+s.c+&#x27;&quot;]&#x27;);
+    var known=i&lt;pos;
+    td.textContent=known?s.v:&#x27;?&#x27;;
+    td.className=!known?&#x27;miss&#x27;:(i===pos-1?&#x27;now&#x27;:&#x27;done&#x27;);
+  });
+  $(&#x27;ex1n&#x27;).innerHTML=pos===0?intro:&#x27;&lt;p&gt;&#x27;+S[pos-1].t+&#x27;&lt;/p&gt;&#x27;;
+  $(&#x27;ex1c&#x27;).textContent=&#x27;Passo &#x27;+pos+&#x27; di &#x27;+S.length;
+  $(&#x27;ex1p&#x27;).disabled=pos===0;
+  $(&#x27;ex1f&#x27;).disabled=pos===S.length;
+  $(&#x27;ex1a&#x27;).textContent=pos===S.length?&#x27;Ricomincia&#x27;:&#x27;Mostra tutto&#x27;;
+}
+$(&#x27;ex1f&#x27;).addEventListener(&#x27;click&#x27;,function(){pos=Math.min(pos+1,S.length);draw1()});
+$(&#x27;ex1p&#x27;).addEventListener(&#x27;click&#x27;,function(){pos=Math.max(pos-1,0);draw1()});
+$(&#x27;ex1a&#x27;).addEventListener(&#x27;click&#x27;,function(){pos=pos===S.length?0:S.length;draw1()});
+
+/* grafico ROI */
+var rc=$(&#x27;roiChart&#x27;);
+var X=function(t){return 60+t*(440/6)},Y=function(m){return 300-m*(270/12)};
+for(var i=0;i&lt;=6;i++){
+  el(rc,&#x27;path&#x27;,{&#x27;class&#x27;:&#x27;grid&#x27;,d:&#x27;M&#x27;+X(i)+&#x27; &#x27;+Y(0)+&#x27;V&#x27;+Y(12)});
+  el(rc,&#x27;text&#x27;,{&#x27;class&#x27;:&#x27;lab&#x27;,x:X(i),y:320,&#x27;text-anchor&#x27;:&#x27;middle&#x27;},String(i));
+}
+for(var j=0;j&lt;=12;j+=3){
+  el(rc,&#x27;path&#x27;,{&#x27;class&#x27;:&#x27;grid&#x27;,d:&#x27;M&#x27;+X(0)+&#x27; &#x27;+Y(j)+&#x27;H&#x27;+X(6)});
+  el(rc,&#x27;text&#x27;,{&#x27;class&#x27;:&#x27;lab&#x27;,x:52,y:Y(j)+5,&#x27;text-anchor&#x27;:&#x27;end&#x27;},j+&#x27;%&#x27;);
+}
+el(rc,&#x27;path&#x27;,{&#x27;class&#x27;:&#x27;ax&#x27;,d:&#x27;M&#x27;+X(0)+&#x27; &#x27;+Y(12)+&#x27;V&#x27;+Y(0)+&#x27;H&#x27;+X(6)});
+el(rc,&#x27;text&#x27;,{&#x27;class&#x27;:&#x27;lab&#x27;,x:X(6),y:343,&#x27;text-anchor&#x27;:&#x27;end&#x27;},&#x27;turnover&#x27;);
+el(rc,&#x27;text&#x27;,{&#x27;class&#x27;:&#x27;lab&#x27;,x:60,y:18},&#x27;margin&#x27;);
+function iso(R){
+  var d=&#x27;&#x27;,first=true;
+  for(var t=Math.max(R/12,.5);t&lt;=6.001;t+=.05){
+    d+=(first?&#x27;M&#x27;:&#x27;L&#x27;)+X(t).toFixed(1)+&#x27; &#x27;+Y(R/t).toFixed(1);first=false;
+  }
+  return d;
+}
+el(rc,&#x27;path&#x27;,{d:iso(20),fill:&#x27;none&#x27;,&#x27;class&#x27;:&#x27;cs&#x27;,&#x27;stroke-width&#x27;:1.5,opacity:.55});
+el(rc,&#x27;path&#x27;,{d:iso(14),fill:&#x27;none&#x27;,&#x27;class&#x27;:&#x27;cs&#x27;,&#x27;stroke-width&#x27;:1.5,opacity:.55});
+el(rc,&#x27;text&#x27;,{&#x27;class&#x27;:&#x27;lab&#x27;,x:X(1.85),y:Y(11),dx:6},&#x27;ROI 20%&#x27;);
+el(rc,&#x27;text&#x27;,{&#x27;class&#x27;:&#x27;lab&#x27;,x:X(1.1),y:Y(11),&#x27;text-anchor&#x27;:&#x27;end&#x27;,dx:-6},&#x27;ROI 14%&#x27;);
+var isoU=el(rc,&#x27;path&#x27;,{fill:&#x27;none&#x27;,stroke:&#x27;var(--acc)&#x27;,&#x27;stroke-width&#x27;:2,&#x27;stroke-dasharray&#x27;:&#x27;5 4&#x27;});
+[[&#x27;Alpha&#x27;,5,4,0,-12,&#x27;middle&#x27;],[&#x27;Bravo&#x27;,2.5,8,9,-5,&#x27;start&#x27;],[&#x27;Charlie&#x27;,2,7,-9,14,&#x27;end&#x27;]].forEach(function(p){
+  el(rc,&#x27;circle&#x27;,{cx:X(p[1]),cy:Y(p[2]),r:6,&#x27;class&#x27;:&#x27;cc&#x27;});
+  el(rc,&#x27;text&#x27;,{&#x27;class&#x27;:&#x27;val&#x27;,x:X(p[1])+p[3],y:Y(p[2])+p[4],&#x27;text-anchor&#x27;:p[5]},p[0]);
+});
+var uDot=el(rc,&#x27;circle&#x27;,{r:8,fill:&#x27;var(--acc)&#x27;,stroke:&#x27;var(--paper)&#x27;,&#x27;stroke-width&#x27;:2});
+function drawRoi(){
+  var m=+$(&#x27;mSl&#x27;).value,t=+$(&#x27;tSl&#x27;).value,R=m*t;
+  $(&#x27;mOut&#x27;).textContent=pct(m);$(&#x27;tOut&#x27;).textContent=+t.toFixed(2);
+  $(&#x27;rOut&#x27;).textContent=pct(R);
+  var sales=t*1e6;$(&#x27;sOut&#x27;).textContent=usd(sales);$(&#x27;nOut&#x27;).textContent=usd(sales*m/100);
+  uDot.setAttribute(&#x27;cx&#x27;,X(t));uDot.setAttribute(&#x27;cy&#x27;,Y(m));
+  isoU.setAttribute(&#x27;d&#x27;,iso(R));
+  var msg;
+  if(Math.abs(R-20)&lt;.001){msg=&#x27;Sei sulla curva di Alpha e Bravo: stesso ROI, combinazione diversa.&#x27;}
+  else if(Math.abs(R-14)&lt;.001){msg=&#x27;Sei sulla curva di Charlie.&#x27;}
+  else if(R&gt;20){msg=&#x27;Meglio di Alpha e Bravo: ROI sopra il 20%.&#x27;}
+  else if(R&gt;14){msg=&#x27;Tra Charlie e la coppia Alpha e Bravo.&#x27;}
+  else{msg=&#x27;Sotto Charlie: ROI inferiore al 14%.&#x27;}
+  $(&#x27;roiMsg&#x27;).textContent=msg;
+}
+$(&#x27;mSl&#x27;).addEventListener(&#x27;input&#x27;,drawRoi);$(&#x27;tSl&#x27;).addEventListener(&#x27;input&#x27;,drawRoi);
+
+/* grafico RI */
+var ri=$(&#x27;riChart&#x27;);
+var XR=function(r){return 70+(r-5)*(430/20)},YR=function(v){return 310-((v+300000)/900000)*280};
+[5,10,15,20,25].forEach(function(r){
+  el(ri,&#x27;path&#x27;,{&#x27;class&#x27;:&#x27;grid&#x27;,d:&#x27;M&#x27;+XR(r)+&#x27; &#x27;+YR(600000)+&#x27;V&#x27;+YR(-300000)});
+  el(ri,&#x27;text&#x27;,{&#x27;class&#x27;:&#x27;lab&#x27;,x:XR(r),y:330,&#x27;text-anchor&#x27;:&#x27;middle&#x27;},r+&#x27;%&#x27;);
+});
+[-300000,0,300000,600000].forEach(function(v){
+  el(ri,&#x27;path&#x27;,{&#x27;class&#x27;:v===0?&#x27;ax&#x27;:&#x27;grid&#x27;,d:&#x27;M&#x27;+XR(5)+&#x27; &#x27;+YR(v)+&#x27;H&#x27;+XR(25)});
+  el(ri,&#x27;text&#x27;,{&#x27;class&#x27;:&#x27;lab&#x27;,x:62,y:YR(v)+5,&#x27;text-anchor&#x27;:&#x27;end&#x27;},(v&lt;0?&#x27;−$&#x27;:&#x27;$&#x27;)+Math.abs(v/1000)+&#x27;k&#x27;);
+});
+el(ri,&#x27;text&#x27;,{&#x27;class&#x27;:&#x27;lab&#x27;,x:XR(25),y:348,&#x27;text-anchor&#x27;:&#x27;end&#x27;},&#x27;minimum required rate&#x27;);
+function riO(r){return 210000-1000000*r/100}
+function riY(r){return 720000-4000000*r/100}
+el(ri,&#x27;path&#x27;,{d:&#x27;M&#x27;+XR(5)+&#x27; &#x27;+YR(riO(5))+&#x27;L&#x27;+XR(25)+&#x27; &#x27;+YR(riO(25)),fill:&#x27;none&#x27;,stroke:&#x27;var(--acc)&#x27;,&#x27;stroke-width&#x27;:2.5});
+el(ri,&#x27;path&#x27;,{d:&#x27;M&#x27;+XR(5)+&#x27; &#x27;+YR(riY(5))+&#x27;L&#x27;+XR(25)+&#x27; &#x27;+YR(riY(25)),fill:&#x27;none&#x27;,&#x27;class&#x27;:&#x27;cs&#x27;,&#x27;stroke-width&#x27;:2.5});
+el(ri,&#x27;text&#x27;,{&#x27;class&#x27;:&#x27;val&#x27;,x:XR(7),y:YR(riO(7))+22,fill:&#x27;var(--acc)&#x27;,style:&#x27;fill:var(--acc)&#x27;},&#x27;Osaka&#x27;);
+el(ri,&#x27;text&#x27;,{&#x27;class&#x27;:&#x27;val cc&#x27;,x:XR(8.5),y:YR(riY(8.5))-10},&#x27;Yokohama&#x27;);
+el(ri,&#x27;circle&#x27;,{cx:XR(17),cy:YR(40000),r:5,fill:&#x27;none&#x27;,stroke:&#x27;var(--ink)&#x27;,&#x27;stroke-width&#x27;:1.5});
+el(ri,&#x27;text&#x27;,{&#x27;class&#x27;:&#x27;lab&#x27;,x:XR(17)+8,y:YR(40000)-10},&#x27;sorpasso al 17%&#x27;);
+var rLine=el(ri,&#x27;path&#x27;,{stroke:&#x27;var(--ink)&#x27;,&#x27;stroke-width&#x27;:1.5,&#x27;stroke-dasharray&#x27;:&#x27;3 3&#x27;});
+var rO=el(ri,&#x27;circle&#x27;,{r:6,fill:&#x27;var(--acc)&#x27;}),rY=el(ri,&#x27;circle&#x27;,{r:6,&#x27;class&#x27;:&#x27;cc&#x27;});
+function drawRi(){
+  var r=+$(&#x27;rSl&#x27;).value,o=riO(r),y=riY(r);
+  $(&#x27;rrOut&#x27;).textContent=pct(r);$(&#x27;oOut&#x27;).textContent=usd(o);$(&#x27;yOut&#x27;).textContent=usd(y);
+  rLine.setAttribute(&#x27;d&#x27;,&#x27;M&#x27;+XR(r)+&#x27; &#x27;+YR(600000)+&#x27;V&#x27;+YR(-300000));
+  rO.setAttribute(&#x27;cx&#x27;,XR(r));rO.setAttribute(&#x27;cy&#x27;,YR(o));
+  rY.setAttribute(&#x27;cx&#x27;,XR(r));rY.setAttribute(&#x27;cy&#x27;,YR(y));
+  var m;
+  if(r&lt;17){m=&#x27;Yokohama è avanti: a tassi bassi pesa la dimensione.&#x27;}
+  else if(r===17){m=&#x27;Pareggio: entrambe a $40,000.&#x27;}
+  else if(r&lt;18){m=&#x27;Osaka è avanti: a tassi alti gli asset di Yokohama costano molto.&#x27;}
+  else if(r===18){m=&#x27;Yokohama a zero: il suo ROI del 18% copre appena il minimo. Osaka è avanti.&#x27;}
+  else if(r&lt;21){m=&#x27;Yokohama sotto il minimo, Osaka ancora positiva.&#x27;}
+  else if(r===21){m=&#x27;Osaka a zero: il suo ROI del 21% copre appena il minimo. Yokohama è negativa.&#x27;}
+  else{m=&#x27;Entrambe sotto il minimo: ROI inferiore al tasso richiesto.&#x27;}
+  $(&#x27;riMsg&#x27;).textContent=m;
+}
+$(&#x27;rSl&#x27;).addEventListener(&#x27;input&#x27;,drawRi);
+
+/* progetto a Osaka */
+function drawP(){
+  var p=+$(&#x27;pSl&#x27;).value,inv=200000,gain=inv*p/100;
+  $(&#x27;pOut&#x27;).textContent=pct(p);
+  $(&#x27;pRoi&#x27;).textContent=pct((210000+gain)/(1000000+inv)*100,2);
+  $(&#x27;pRi&#x27;).textContent=usd(60000+gain-inv*.15);
+  var x=10+(p-5)*(500/25);
+  $(&#x27;pMark&#x27;).setAttribute(&#x27;d&#x27;,&#x27;M&#x27;+x+&#x27; 22V52&#x27;);
+  var m;
+  if(p&lt;15){m=&#x27;Sotto il minimo: lo rifiutano tutti, ed è giusto.&#x27;}
+  else if(p===15){m=&#x27;Esattamente al minimo: il RI non cambia, il ROI scende. All\&#x27;azienda è indifferente.&#x27;}
+  else if(p&lt;21){m=&#x27;Conflitto: all\&#x27;azienda conviene, il RI sale, ma il ROI di Osaka scende. Giudicato sul ROI, il manager lo rifiuta.&#x27;}
+  else if(p===21){m=&#x27;Pari al ROI attuale: il ROI non cambia, il RI sale. Il manager giudicato sul ROI è indifferente.&#x27;}
+  else{m=&#x27;Sale tutto: ROI e RI concordano, lo accettano tutti.&#x27;}
+  $(&#x27;pMsg&#x27;).textContent=m;
+}
+$(&#x27;pSl&#x27;).addEventListener(&#x27;input&#x27;,drawP);
+
+/* transfer price */
+var line=$(&#x27;tpLine&#x27;),NEED=40000,CAP=200000;
+var LX=function(v){return 20+(v-30)*(480/90)};
+el(line,&#x27;path&#x27;,{&#x27;class&#x27;:&#x27;ax&#x27;,d:&#x27;M20 112H500&#x27;});
+[30,50,70,90,110].forEach(function(v){
+  el(line,&#x27;path&#x27;,{&#x27;class&#x27;:&#x27;ax&#x27;,d:&#x27;M&#x27;+LX(v)+&#x27; 108V116&#x27;});
+  el(line,&#x27;text&#x27;,{&#x27;class&#x27;:&#x27;lab&#x27;,x:LX(v),y:132,&#x27;text-anchor&#x27;:&#x27;middle&#x27;},&#x27;$&#x27;+v);
+});
+var band=el(line,&#x27;rect&#x27;,{y:14,height:98,&#x27;class&#x27;:&#x27;cc&#x27;,opacity:.14});
+var bX=el(line,&#x27;rect&#x27;,{y:40,height:16,&#x27;class&#x27;:&#x27;cc&#x27;,opacity:.55});
+var bY=el(line,&#x27;rect&#x27;,{y:72,height:16,fill:&#x27;var(--rule)&#x27;});
+var tX=el(line,&#x27;text&#x27;,{&#x27;class&#x27;:&#x27;lab&#x27;,y:34});
+var tY=el(line,&#x27;text&#x27;,{&#x27;class&#x27;:&#x27;lab&#x27;,y:104});
+var mT=el(line,&#x27;path&#x27;,{stroke:&#x27;var(--ink)&#x27;,&#x27;stroke-width&#x27;:2.5});
+function drawTp(){
+  var U=+$(&#x27;sU&#x27;).value,P=+$(&#x27;sP&#x27;).value,V=+$(&#x27;sV&#x27;).value,Sv=+$(&#x27;sS&#x27;).value,B=+$(&#x27;sB&#x27;).value,T=+$(&#x27;sT&#x27;).value;
+  $(&#x27;oU&#x27;).textContent=U.toLocaleString(&#x27;en-US&#x27;);$(&#x27;oP&#x27;).textContent=&#x27;$&#x27;+P;$(&#x27;oV&#x27;).textContent=&#x27;$&#x27;+V;$(&#x27;oS&#x27;).textContent=&#x27;$&#x27;+Sv;$(&#x27;oB&#x27;).textContent=&#x27;$&#x27;+B;$(&#x27;oT&#x27;).textContent=price(T);
+  var idle=CAP-U,lost=Math.max(0,NEED-idle),cm=Math.max(0,P-V);
+  var min=(V-Sv)+cm*lost/NEED,max=B;
+  var xMin=LX(Math.min(min,120)),xMax=LX(Math.min(max,120));
+  bX.setAttribute(&#x27;x&#x27;,xMin);bX.setAttribute(&#x27;width&#x27;,Math.max(0,500-xMin));
+  bY.setAttribute(&#x27;x&#x27;,20);bY.setAttribute(&#x27;width&#x27;,Math.max(0,xMax-20));
+  var ok=min&lt;=max;
+  band.setAttribute(&#x27;x&#x27;,xMin);band.setAttribute(&#x27;width&#x27;,ok?xMax-xMin:0);
+  tX.textContent=&#x27;X accetta da &#x27;+price(min);
+  tX.setAttribute(&#x27;x&#x27;,xMin&gt;320?500:xMin);tX.setAttribute(&#x27;text-anchor&#x27;,xMin&gt;320?&#x27;end&#x27;:&#x27;start&#x27;);
+  tY.textContent=&#x27;Y accetta fino a &#x27;+price(max);
+  tY.setAttribute(&#x27;x&#x27;,20);
+  mT.setAttribute(&#x27;d&#x27;,&#x27;M&#x27;+LX(T)+&#x27; 14V112&#x27;);
+  $(&#x27;tpTrace&#x27;).textContent=&#x27;Idle capacity &#x27;+idle.toLocaleString(&#x27;en-US&#x27;)+&#x27;, vendite perse &#x27;+lost.toLocaleString(&#x27;en-US&#x27;)+&#x27;. TP ≥ ($&#x27;+V+&#x27; − $&#x27;+Sv+&#x27;) + ($&#x27;+cm+&#x27; × &#x27;+lost.toLocaleString(&#x27;en-US&#x27;)+&#x27;) ÷ 40,000 = &#x27;+price(min)+&#x27;. TP ≤ $&#x27;+B+&#x27;.&#x27;;
+  var dX=(T-min)*NEED,dY=(max-T)*NEED,dC=(max-min)*NEED;
+  $(&#x27;dX&#x27;).textContent=sgn(dX);$(&#x27;dY&#x27;).textContent=sgn(dY);$(&#x27;dC&#x27;).textContent=sgn(dC);
+  var m;
+  if(!ok){m=&#x27;Nessun range: il minimo di X supera il massimo di Y. Nessun prezzo soddisfa entrambi, e all\&#x27;azienda conviene che il trasferimento non avvenga.&#x27;}
+  else if(T&lt;min){m=&#x27;Range da &#x27;+price(min)+&#x27; a &#x27;+price(max)+&#x27;. Con questo prezzo X perde e rifiuta.&#x27;}
+  else if(T&gt;max){m=&#x27;Range da &#x27;+price(min)+&#x27; a &#x27;+price(max)+&#x27;. Con questo prezzo Y spende più che fuori e rifiuta.&#x27;}
+  else{m=&#x27;Accordo possibile: range da &#x27;+price(min)+&#x27; a &#x27;+price(max)+&#x27;. Il prezzo decide solo come X e Y si dividono il vantaggio.&#x27;}
+  $(&#x27;tpMsg&#x27;).textContent=m;
+}
+function loadCase(c){
+  $(&#x27;sU&#x27;).value=c[0];$(&#x27;sP&#x27;).value=c[1];$(&#x27;sV&#x27;).value=c[2];$(&#x27;sS&#x27;).value=c[3];$(&#x27;sB&#x27;).value=c[4];$(&#x27;sT&#x27;).value=c[5];drawTp();
+}
+$(&#x27;preA&#x27;).addEventListener(&#x27;click&#x27;,function(){loadCase([200000,90,70,3,86,86.5])});
+$(&#x27;preB&#x27;).addEventListener(&#x27;click&#x27;,function(){loadCase([160000,75,60,0,74,67])});
+[&#x27;sU&#x27;,&#x27;sP&#x27;,&#x27;sV&#x27;,&#x27;sS&#x27;,&#x27;sB&#x27;,&#x27;sT&#x27;].forEach(function(id){$(id).addEventListener(&#x27;input&#x27;,drawTp)});
+
+draw1();drawRoi();drawRi();drawP();loadCase([200000,90,70,3,86,86.5]);
+})();
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+"></iframe></body></html>
