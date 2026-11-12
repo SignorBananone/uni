@@ -1,0 +1,739 @@
+<!doctype html><html lang="it"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>Riassunto · Module 2_ 07_migration and development.pdf</title><link rel="icon" href="data:,">
+<style>html,body{margin:0;height:100%}body{display:flex;flex-direction:column}iframe{flex:1;border:0;width:100%}</style>
+</head><body><nav style="font:14px/1.4 system-ui,sans-serif;padding:6px 12px;text-align:right"><a href="../../../../riassunti/CHALLENGES%20IN%20A%20WORLD%20IN%20TRANSITION%20-%20EN1%20-%20179001-EN1%20-%202026-27/Material%20Mod2%20-%20Prof%20Lomazzi/Module%202%20%2007%20migration%20and%20development/Module%202_%2007_migration%20and%20development.en.html" style="color:inherit;margin-right:.8em;">English</a><a href="../../../../riassunti/CHALLENGES%20IN%20A%20WORLD%20IN%20TRANSITION%20-%20EN1%20-%20179001-EN1%20-%202026-27/Material%20Mod2%20-%20Prof%20Lomazzi/Module%202%20%2007%20migration%20and%20development/Module%202_%2007_migration%20and%20development.html" style="color:inherit;margin-right:.8em;font-weight:700">Italiano</a></nav><iframe sandbox="allow-scripts allow-popups allow-popups-to-escape-sandbox" title="Riassunto · Module 2_ 07_migration and development.pdf"
+srcdoc="&lt;!doctype html&gt;
+&lt;html lang=&quot;it&quot;&gt;
+&lt;head&gt;&lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src &#x27;none&#x27;; script-src &#x27;unsafe-inline&#x27;; style-src &#x27;unsafe-inline&#x27;; font-src &#x27;self&#x27;; img-src data:; form-action &#x27;none&#x27;; base-uri &#x27;none&#x27;&quot;&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+&lt;title&gt;Migration &amp;amp; Development — canvas di studio (Mod. 2, lez. 7)&lt;/title&gt;
+&lt;style&gt;
+@font-face{font-family:&quot;Newsreader&quot;;src:url(&quot;../../../../static/fonts/newsreader-latin-wght-normal.woff2&quot;) format(&quot;woff2&quot;);font-weight:200 800;font-style:normal;font-display:swap}
+@font-face{font-family:&quot;IBM Plex Sans&quot;;src:url(&quot;../../../../static/fonts/ibm-plex-sans-latin-wght-normal.woff2&quot;) format(&quot;woff2&quot;);font-weight:100 700;font-style:normal;font-display:swap}
+:root{
+  --paper:oklch(97% 0.012 80);--ink:oklch(21% 0.014 60);--ink2:oklch(42% 0.014 60);
+  --rule:oklch(86% 0.014 75);--accent:oklch(50% 0.15 35);--accent-bg:oklch(93% 0.04 35);
+  --card:oklch(99% 0.006 80);
+  --salvia:oklch(46% 0.08 150);--salvia-bg:oklch(94% 0.03 150);
+  --ocra:oklch(50% 0.11 85);--ocra-bg:oklch(95% 0.045 85);
+  --ardesia:oklch(45% 0.07 250);--ardesia-bg:oklch(94% 0.025 250);
+  --mattone:oklch(46% 0.13 25);--mattone-bg:oklch(94% 0.03 25);
+  --serif:&quot;Newsreader&quot;,Georgia,&quot;Times New Roman&quot;,serif;
+  --sans:&quot;IBM Plex Sans&quot;,system-ui,-apple-system,&quot;Segoe UI&quot;,Roboto,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root{
+  --paper:oklch(19% 0.012 60);--ink:oklch(92% 0.012 80);--ink2:oklch(74% 0.012 75);
+  --rule:oklch(34% 0.014 70);--accent:oklch(70% 0.13 35);--accent-bg:oklch(28% 0.05 35);
+  --card:oklch(22% 0.012 60);
+  --salvia:oklch(75% 0.08 150);--salvia-bg:oklch(26% 0.03 150);
+  --ocra:oklch(78% 0.1 85);--ocra-bg:oklch(27% 0.035 85);
+  --ardesia:oklch(76% 0.06 250);--ardesia-bg:oklch(26% 0.03 250);
+  --mattone:oklch(74% 0.11 25);--mattone-bg:oklch(27% 0.04 25);
+}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1.02rem/1.62 var(--sans);-webkit-font-smoothing:antialiased}
+main{max-width:980px;margin:0 auto;padding:0 1.2rem 3rem}
+h1,h2,h3,h4{font-family:var(--serif);line-height:1.15;margin:0 0 .5em;font-weight:600}
+h1{font-size:clamp(2.2rem,6vw,3.8rem);font-weight:500;letter-spacing:-.01em}
+h2{font-size:clamp(1.7rem,4vw,2.4rem);font-weight:500}
+h3{font-size:1.35rem;margin-top:1.6em}
+h4{font-size:1.1rem}
+p{margin:.6em 0}
+a{color:var(--accent)}
+em.t,.term{font-style:normal;font-weight:600;color:var(--accent)}
+.gloss{font-style:normal;font-weight:600;border-bottom:1px dotted currentColor}
+small,.muted{color:var(--ink2)}
+hr{border:0;border-top:1px solid var(--rule);margin:2rem 0}
+header.hero{padding:3.5rem 0 1.5rem;border-bottom:1px solid var(--rule)}
+.kicker{font:600 .78rem/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.lede{font-family:var(--serif);font-size:1.3rem;line-height:1.45;color:var(--ink2);max-width:46ch}
+.meta{display:flex;flex-wrap:wrap;gap:.4rem 1.2rem;font-size:.88rem;color:var(--ink2);margin-top:1rem}
+nav.toc{position:sticky;top:0;z-index:5;background:color-mix(in oklch,var(--paper) 92%,transparent);backdrop-filter:blur(6px);border-bottom:1px solid var(--rule);margin:0 -1.2rem;padding:.5rem 1.2rem;display:flex;gap:.4rem;overflow-x:auto;scrollbar-width:none}
+nav.toc a{flex:none;text-decoration:none;font-size:.82rem;padding:.25rem .6rem;border-radius:99px;color:var(--ink2);border:1px solid var(--rule)}
+nav.toc a:hover,nav.toc a.on{color:var(--paper);background:var(--accent);border-color:var(--accent)}
+section.part{padding:2.8rem 0 1rem;border-bottom:1px solid var(--rule);--c:var(--accent);--cb:var(--accent-bg)}
+.salvia{--c:var(--salvia);--cb:var(--salvia-bg)}
+.ocra{--c:var(--ocra);--cb:var(--ocra-bg)}
+.ardesia{--c:var(--ardesia);--cb:var(--ardesia-bg)}
+.mattone{--c:var(--mattone);--cb:var(--mattone-bg)}
+.partno{display:inline-block;font:600 .78rem/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--c);border-top:3px solid var(--c);padding-top:.5rem;margin-bottom:.6rem}
+section.part h2{color:var(--ink)}
+section.part h3{color:var(--c)}
+.src{display:inline-block;font-size:.72rem;font-weight:600;letter-spacing:.04em;padding:.08rem .45rem;border-radius:4px;vertical-align:middle;background:var(--cb);color:var(--c);margin-left:.3rem;white-space:nowrap}
+.ext{background:var(--accent-bg);color:var(--accent)}
+.ext::before{content:&quot;↗ &quot;}
+.box{background:var(--card);border:1px solid var(--rule);border-radius:12px;padding:1rem 1.2rem;margin:1rem 0}
+.box.tint{background:var(--cb);border-color:transparent}
+.def{border-left:4px solid var(--c);background:var(--cb);padding:.9rem 1.1rem;border-radius:0 10px 10px 0;margin:1rem 0}
+.def .lab{font:600 .75rem/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--c);margin-bottom:.4rem}
+.def q{font-family:var(--serif);font-size:1.08rem;quotes:&quot;“&quot; &quot;”&quot;}
+.note{font-size:.9rem;border:1px dashed var(--rule);border-radius:10px;padding:.7rem 1rem;color:var(--ink2);margin:1rem 0}
+.note b{color:var(--ink)}
+.grid{display:grid;gap:1rem}
+@media(min-width:720px){.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}}
+.stat{background:var(--card);border:1px solid var(--rule);border-radius:12px;padding:1rem}
+.stat .n{font-family:var(--serif);font-size:2.2rem;font-weight:500;color:var(--c);line-height:1}
+.stat .l{font-size:.86rem;color:var(--ink2);margin-top:.4rem}
+details{background:var(--card);border:1px solid var(--rule);border-radius:10px;margin:.6rem 0;overflow:hidden}
+details&gt;summary{cursor:pointer;padding:.75rem 1rem;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:1rem}
+details&gt;summary::-webkit-details-marker{display:none}
+details&gt;summary::after{content:&quot;+&quot;;font-family:var(--serif);font-size:1.3rem;line-height:1;color:var(--c,var(--accent))}
+details[open]&gt;summary::after{content:&quot;–&quot;}
+details&gt;div{padding:0 1rem 1rem}
+.tabs{margin:1rem 0}
+.tablist{display:flex;flex-wrap:wrap;gap:.3rem;border-bottom:1px solid var(--rule)}
+.tablist button{font:500 .9rem var(--sans);background:none;border:0;border-bottom:3px solid transparent;padding:.55rem .8rem;color:var(--ink2);cursor:pointer}
+.tablist button[aria-selected=true]{color:var(--c);border-bottom-color:var(--c)}
+.tabpanel{padding:1rem 0}
+.tabpanel[hidden]{display:none}
+button.btn{font:600 .85rem var(--sans);background:var(--c,var(--accent));color:var(--paper);border:0;border-radius:99px;padding:.5rem 1rem;cursor:pointer}
+button.btn.ghost{background:none;color:var(--c);border:1px solid var(--c)}
+button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+input[type=range]{width:100%;accent-color:var(--c,var(--accent))}
+label.rng{display:block;font-size:.88rem;margin:.6rem 0 .1rem}
+label.rng output{font-weight:600;color:var(--c)}
+svg{max-width:100%;height:auto;display:block}
+svg text{font-family:var(--sans);fill:var(--ink)}
+.formula{font-family:var(--serif);font-size:1.25rem;text-align:center;padding:1rem;background:var(--card);border:1px solid var(--rule);border-radius:12px;margin:1rem 0}
+.frac{display:inline-flex;flex-direction:column;vertical-align:middle;text-align:center;margin:0 .3rem}
+.frac&gt;span:first-child{border-bottom:1px solid var(--ink);padding:0 .3rem}
+.steps{margin:1rem 0}
+.step{display:none}.step.on{display:block}
+.stepnav{display:flex;align-items:center;gap:.6rem;margin-top:.8rem}
+.dots{display:flex;gap:.3rem}
+.dots i{width:9px;height:9px;border-radius:50%;background:var(--rule)}
+.dots i.on{background:var(--c)}
+.quiz{background:var(--cb);border-radius:14px;padding:1.1rem 1.2rem;margin:2rem 0 1rem}
+.quiz h4{margin-bottom:.8rem}
+.quiz h4::before{content:&quot;✎ &quot;;color:var(--c)}
+.qa{border-top:1px solid color-mix(in oklch,var(--c) 25%,transparent);padding:.7rem 0}
+.qa .ans{display:none;margin-top:.5rem;padding:.6rem .8rem;border-radius:8px;background:var(--card);font-size:.95rem}
+.qa.open .ans{display:block}
+.qa button{margin-top:.3rem}
+.choice{display:flex;flex-wrap:wrap;gap:.4rem;margin:.6rem 0}
+.choice button{font:500 .85rem var(--sans);border:1px solid var(--rule);background:var(--card);color:var(--ink);border-radius:8px;padding:.4rem .7rem;cursor:pointer}
+.choice button.ok{background:var(--salvia-bg);border-color:var(--salvia);color:var(--salvia)}
+.choice button.ko{background:var(--mattone-bg);border-color:var(--mattone);color:var(--mattone)}
+.fb{font-size:.92rem;min-height:1.4em}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0}
+th,td{border-bottom:1px solid var(--rule);padding:.5rem .4rem;text-align:left;vertical-align:top}
+th{font-weight:600;color:var(--c)}
+.tscroll{overflow-x:auto}
+.mapnode{cursor:pointer}
+.mapnode:hover rect,.mapnode:focus rect{stroke-width:3}
+.ref{border-top:1px solid var(--rule);padding:1rem 0}
+.ref h4{margin-bottom:.2rem}
+.ref .why{font-size:.93rem}
+footer{max-width:980px;margin:0 auto;padding:2rem 1.2rem 3rem;color:var(--ink2);font-size:.9rem;border-top:1px solid var(--rule)}
+.pill{display:inline-block;font-size:.78rem;border:1px solid var(--rule);border-radius:99px;padding:.1rem .55rem;margin:.1rem;color:var(--ink2)}
+.outcome{font-family:var(--serif);font-size:1.25rem;color:var(--c);margin:.3rem 0}
+@media(max-width:600px){body{font-size:.98rem}.lede{font-size:1.12rem}}
+@media print{nav.toc{display:none}.qa .ans{display:block}}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;main&gt;
+
+&lt;header class=&quot;hero&quot; id=&quot;top&quot;&gt;
+  &lt;div class=&quot;kicker&quot;&gt;Challenges in a world in transition · Modulo 2 · Lezione 7&lt;/div&gt;
+  &lt;h1&gt;Migration &amp;amp; Development&lt;/h1&gt;
+  &lt;p class=&quot;lede&quot;&gt;Chi si sposta, perché, come lo misuriamo — e che parole usare quando a spingere è l’ambiente o il clima.&lt;/p&gt;
+  &lt;div class=&quot;meta&quot;&gt;&lt;span&gt;Prof.ssa Vera Lomazzi · Università degli Studi di Bergamo&lt;/span&gt;&lt;span&gt;Fonte: &lt;i&gt;Module 2_ 07_migration and development.pdf&lt;/i&gt; (14 slide)&lt;/span&gt;&lt;/div&gt;
+&lt;/header&gt;
+
+&lt;nav class=&quot;toc&quot; aria-label=&quot;Indice&quot;&gt;
+  &lt;a href=&quot;#mappa&quot;&gt;Mappa&lt;/a&gt;&lt;a href=&quot;#s1&quot;&gt;1 · Perché si migra&lt;/a&gt;&lt;a href=&quot;#s2&quot;&gt;2 · Misurare&lt;/a&gt;&lt;a href=&quot;#s3&quot;&gt;3 · Definizioni&lt;/a&gt;&lt;a href=&quot;#s4&quot;&gt;4 · “Climate refugees”?&lt;/a&gt;&lt;a href=&quot;#s5&quot;&gt;5 · Dati sui disastri&lt;/a&gt;&lt;a href=&quot;#s6&quot;&gt;6 · Relocation o no?&lt;/a&gt;&lt;a href=&quot;#s7&quot;&gt;7 · Che fare?&lt;/a&gt;&lt;a href=&quot;#fonti&quot;&gt;Per approfondire&lt;/a&gt;
+&lt;/nav&gt;
+
+&lt;section id=&quot;mappa&quot; style=&quot;padding:2.2rem 0 1rem&quot;&gt;
+  &lt;div class=&quot;kicker&quot;&gt;Mappa concettuale&lt;/div&gt;
+  &lt;h2&gt;La lezione in un colpo d’occhio&lt;/h2&gt;
+  &lt;p class=&quot;muted&quot;&gt;Tocca un riquadro per saltare alla sezione. Le frecce dicono come un tema porta al successivo.&lt;/p&gt;
+  &lt;svg viewBox=&quot;0 0 900 470&quot; role=&quot;img&quot; aria-label=&quot;Mappa concettuale della lezione&quot;&gt;
+    &lt;defs&gt;&lt;marker id=&quot;ar&quot; viewBox=&quot;0 0 10 10&quot; refX=&quot;9&quot; refY=&quot;5&quot; markerWidth=&quot;7&quot; markerHeight=&quot;7&quot; orient=&quot;auto&quot;&gt;&lt;path d=&quot;M0 0L10 5L0 10z&quot; fill=&quot;var(--ink2)&quot;/&gt;&lt;/marker&gt;&lt;/defs&gt;
+    &lt;g stroke=&quot;var(--ink2)&quot; stroke-width=&quot;1.4&quot; fill=&quot;none&quot; marker-end=&quot;url(#ar)&quot;&gt;
+      &lt;path d=&quot;M215 95 C300 95 320 95 345 95&quot;/&gt;
+      &lt;path d=&quot;M555 95 C620 95 640 95 665 95&quot;/&gt;
+      &lt;path d=&quot;M450 130 C450 170 450 180 450 205&quot;/&gt;
+      &lt;path d=&quot;M560 240 C620 240 640 240 665 240&quot;/&gt;
+      &lt;path d=&quot;M450 275 C450 320 450 330 450 350&quot;/&gt;
+      &lt;path d=&quot;M770 275 C770 330 700 380 560 385&quot;/&gt;
+      &lt;path d=&quot;M340 240 C290 240 260 240 235 240&quot;/&gt;
+    &lt;/g&gt;
+    &lt;g font-size=&quot;12&quot; fill=&quot;var(--ink2)&quot; text-anchor=&quot;middle&quot;&gt;
+      &lt;text x=&quot;280&quot; y=&quot;86&quot;&gt;driver&lt;/text&gt;
+      &lt;text x=&quot;610&quot; y=&quot;86&quot;&gt;…e conteggi&lt;/text&gt;
+      &lt;text x=&quot;505&quot; y=&quot;172&quot;&gt;quali parole?&lt;/text&gt;
+      &lt;text x=&quot;612&quot; y=&quot;231&quot;&gt;dati&lt;/text&gt;
+      &lt;text x=&quot;505&quot; y=&quot;320&quot;&gt;risposte&lt;/text&gt;
+      &lt;text x=&quot;700&quot; y=&quot;345&quot;&gt;chi resta?&lt;/text&gt;
+      &lt;text x=&quot;288&quot; y=&quot;231&quot;&gt;termine da evitare&lt;/text&gt;
+    &lt;/g&gt;
+    &lt;g class=&quot;mapnode&quot; data-go=&quot;s1&quot; tabindex=&quot;0&quot; role=&quot;link&quot; aria-label=&quot;Sezione 1&quot;&gt;
+      &lt;rect x=&quot;20&quot; y=&quot;60&quot; width=&quot;195&quot; height=&quot;70&quot; rx=&quot;12&quot; fill=&quot;var(--salvia-bg)&quot; stroke=&quot;var(--salvia)&quot; stroke-width=&quot;1.5&quot;/&gt;
+      &lt;text x=&quot;117&quot; y=&quot;90&quot; text-anchor=&quot;middle&quot; font-weight=&quot;600&quot;&gt;1 · Perché si migra&lt;/text&gt;&lt;text x=&quot;117&quot; y=&quot;110&quot; text-anchor=&quot;middle&quot; font-size=&quot;12&quot;&gt;intersectionality, drivers&lt;/text&gt;&lt;/g&gt;
+    &lt;g class=&quot;mapnode&quot; data-go=&quot;s2&quot; tabindex=&quot;0&quot; role=&quot;link&quot; aria-label=&quot;Sezione 2&quot;&gt;
+      &lt;rect x=&quot;345&quot; y=&quot;60&quot; width=&quot;210&quot; height=&quot;70&quot; rx=&quot;12&quot; fill=&quot;var(--ocra-bg)&quot; stroke=&quot;var(--ocra)&quot; stroke-width=&quot;1.5&quot;/&gt;
+      &lt;text x=&quot;450&quot; y=&quot;90&quot; text-anchor=&quot;middle&quot; font-weight=&quot;600&quot;&gt;2 · Misurare la migrazione&lt;/text&gt;&lt;text x=&quot;450&quot; y=&quot;110&quot; text-anchor=&quot;middle&quot; font-size=&quot;12&quot;&gt;stock, flow, net migration rate&lt;/text&gt;&lt;/g&gt;
+    &lt;g class=&quot;mapnode&quot; data-go=&quot;s2&quot; tabindex=&quot;0&quot; role=&quot;link&quot; aria-label=&quot;Sezione 2, Migration Data Portal&quot;&gt;
+      &lt;rect x=&quot;665&quot; y=&quot;60&quot; width=&quot;215&quot; height=&quot;70&quot; rx=&quot;12&quot; fill=&quot;var(--card)&quot; stroke=&quot;var(--ocra)&quot; stroke-width=&quot;1.5&quot; stroke-dasharray=&quot;4 3&quot;/&gt;
+      &lt;text x=&quot;772&quot; y=&quot;90&quot; text-anchor=&quot;middle&quot; font-weight=&quot;600&quot;&gt;Migration Data Portal&lt;/text&gt;&lt;text x=&quot;772&quot; y=&quot;110&quot; text-anchor=&quot;middle&quot; font-size=&quot;12&quot;&gt;280,6 mln migranti (2020)&lt;/text&gt;&lt;/g&gt;
+    &lt;g class=&quot;mapnode&quot; data-go=&quot;s3&quot; tabindex=&quot;0&quot; role=&quot;link&quot; aria-label=&quot;Sezione 3&quot;&gt;
+      &lt;rect x=&quot;340&quot; y=&quot;205&quot; width=&quot;220&quot; height=&quot;70&quot; rx=&quot;12&quot; fill=&quot;var(--ardesia-bg)&quot; stroke=&quot;var(--ardesia)&quot; stroke-width=&quot;1.5&quot;/&gt;
+      &lt;text x=&quot;450&quot; y=&quot;235&quot; text-anchor=&quot;middle&quot; font-weight=&quot;600&quot;&gt;3 · Definizioni (IOM)&lt;/text&gt;&lt;text x=&quot;450&quot; y=&quot;255&quot; text-anchor=&quot;middle&quot; font-size=&quot;12&quot;&gt;environmental ⊃ climate migration&lt;/text&gt;&lt;/g&gt;
+    &lt;g class=&quot;mapnode&quot; data-go=&quot;s4&quot; tabindex=&quot;0&quot; role=&quot;link&quot; aria-label=&quot;Sezione 4&quot;&gt;
+      &lt;rect x=&quot;20&quot; y=&quot;205&quot; width=&quot;215&quot; height=&quot;70&quot; rx=&quot;12&quot; fill=&quot;var(--mattone-bg)&quot; stroke=&quot;var(--mattone)&quot; stroke-width=&quot;1.5&quot;/&gt;
+      &lt;text x=&quot;127&quot; y=&quot;235&quot; text-anchor=&quot;middle&quot; font-weight=&quot;600&quot;&gt;4 · “Climate refugees”?&lt;/text&gt;&lt;text x=&quot;127&quot; y=&quot;255&quot; text-anchor=&quot;middle&quot; font-size=&quot;12&quot;&gt;perché è fuorviante&lt;/text&gt;&lt;/g&gt;
+    &lt;g class=&quot;mapnode&quot; data-go=&quot;s5&quot; tabindex=&quot;0&quot; role=&quot;link&quot; aria-label=&quot;Sezione 5&quot;&gt;
+      &lt;rect x=&quot;665&quot; y=&quot;205&quot; width=&quot;215&quot; height=&quot;70&quot; rx=&quot;12&quot; fill=&quot;var(--ocra-bg)&quot; stroke=&quot;var(--ocra)&quot; stroke-width=&quot;1.5&quot;/&gt;
+      &lt;text x=&quot;772&quot; y=&quot;235&quot; text-anchor=&quot;middle&quot; font-weight=&quot;600&quot;&gt;5 · Disaster displacement&lt;/text&gt;&lt;text x=&quot;772&quot; y=&quot;255&quot; text-anchor=&quot;middle&quot; font-size=&quot;12&quot;&gt;IDMC 2013–2022, IDP&lt;/text&gt;&lt;/g&gt;
+    &lt;g class=&quot;mapnode&quot; data-go=&quot;s6&quot; tabindex=&quot;0&quot; role=&quot;link&quot; aria-label=&quot;Sezione 6&quot;&gt;
+      &lt;rect x=&quot;340&quot; y=&quot;350&quot; width=&quot;220&quot; height=&quot;70&quot; rx=&quot;12&quot; fill=&quot;var(--salvia-bg)&quot; stroke=&quot;var(--salvia)&quot; stroke-width=&quot;1.5&quot;/&gt;
+      &lt;text x=&quot;450&quot; y=&quot;380&quot; text-anchor=&quot;middle&quot; font-weight=&quot;600&quot;&gt;6 · Relocation (or not?)&lt;/text&gt;&lt;text x=&quot;450&quot; y=&quot;400&quot; text-anchor=&quot;middle&quot; font-size=&quot;12&quot;&gt;planned relocation, trapped&lt;/text&gt;&lt;/g&gt;
+    &lt;g class=&quot;mapnode&quot; data-go=&quot;s7&quot; tabindex=&quot;0&quot; role=&quot;link&quot; aria-label=&quot;Sezione 7&quot;&gt;
+      &lt;rect x=&quot;20&quot; y=&quot;350&quot; width=&quot;215&quot; height=&quot;70&quot; rx=&quot;12&quot; fill=&quot;var(--ardesia-bg)&quot; stroke=&quot;var(--ardesia)&quot; stroke-width=&quot;1.5&quot;/&gt;
+      &lt;text x=&quot;127&quot; y=&quot;380&quot; text-anchor=&quot;middle&quot; font-weight=&quot;600&quot;&gt;7 · Climate migrants:&lt;/text&gt;&lt;text x=&quot;127&quot; y=&quot;400&quot; text-anchor=&quot;middle&quot; font-size=&quot;12&quot;&gt;what to do? (video)&lt;/text&gt;&lt;/g&gt;
+    &lt;path d=&quot;M340 385 C300 385 270 385 240 385&quot; stroke=&quot;var(--ink2)&quot; stroke-width=&quot;1.4&quot; fill=&quot;none&quot; marker-end=&quot;url(#ar)&quot;/&gt;
+    &lt;text x=&quot;290&quot; y=&quot;376&quot; font-size=&quot;12&quot; fill=&quot;var(--ink2)&quot; text-anchor=&quot;middle&quot;&gt;policy&lt;/text&gt;
+  &lt;/svg&gt;
+&lt;/section&gt;
+
+&lt;!-- ============ 1 ============ --&gt;
+&lt;section class=&quot;part salvia&quot; id=&quot;s1&quot;&gt;
+  &lt;div class=&quot;partno&quot;&gt;Parte 1&lt;/div&gt;
+  &lt;h2&gt;Da dove veniamo, e perché si migra&lt;/h2&gt;
+
+  &lt;h3&gt;Il ponte con la lezione precedente &lt;span class=&quot;src&quot;&gt;slide 2&lt;/span&gt;&lt;/h3&gt;
+  &lt;p&gt;La lezione scorsa ha trattato l’&lt;span class=&quot;term&quot;&gt;intersectionality&lt;/span&gt; (intersezionalità): l’idea che le disuguaglianze non si sommano semplicemente, ma &lt;b&gt;si intrecciano&lt;/b&gt; e producono svantaggi specifici quando più condizioni si sovrappongono. Le quattro dimensioni richiamate sono &lt;i&gt;poverty&lt;/i&gt;, &lt;i&gt;gender&lt;/i&gt;, &lt;i&gt;age&lt;/i&gt; e &lt;i&gt;migration background&lt;/i&gt; (avere un vissuto o un’origine migratoria).&lt;/p&gt;
+  &lt;svg viewBox=&quot;0 0 600 250&quot; role=&quot;img&quot; aria-label=&quot;Quattro cerchi sovrapposti: poverty, gender, age, migration background&quot;&gt;
+    &lt;g fill-opacity=&quot;.28&quot; stroke-width=&quot;1.5&quot;&gt;
+      &lt;circle cx=&quot;240&quot; cy=&quot;105&quot; r=&quot;80&quot; fill=&quot;var(--salvia)&quot; stroke=&quot;var(--salvia)&quot;/&gt;
+      &lt;circle cx=&quot;360&quot; cy=&quot;105&quot; r=&quot;80&quot; fill=&quot;var(--ocra)&quot; stroke=&quot;var(--ocra)&quot;/&gt;
+      &lt;circle cx=&quot;240&quot; cy=&quot;160&quot; r=&quot;80&quot; fill=&quot;var(--ardesia)&quot; stroke=&quot;var(--ardesia)&quot;/&gt;
+      &lt;circle cx=&quot;360&quot; cy=&quot;160&quot; r=&quot;80&quot; fill=&quot;var(--mattone)&quot; stroke=&quot;var(--mattone)&quot;/&gt;
+    &lt;/g&gt;
+    &lt;g font-size=&quot;14&quot; font-weight=&quot;600&quot; text-anchor=&quot;middle&quot;&gt;
+      &lt;text x=&quot;185&quot; y=&quot;70&quot;&gt;Poverty&lt;/text&gt;&lt;text x=&quot;415&quot; y=&quot;70&quot;&gt;Gender&lt;/text&gt;&lt;text x=&quot;185&quot; y=&quot;210&quot;&gt;Age&lt;/text&gt;&lt;text x=&quot;415&quot; y=&quot;205&quot;&gt;Migration&lt;/text&gt;&lt;text x=&quot;415&quot; y=&quot;222&quot;&gt;background&lt;/text&gt;
+    &lt;/g&gt;
+    &lt;text x=&quot;300&quot; y=&quot;137&quot; text-anchor=&quot;middle&quot; font-size=&quot;12&quot; font-weight=&quot;600&quot;&gt;svantaggio&lt;/text&gt;
+    &lt;text x=&quot;300&quot; y=&quot;152&quot; text-anchor=&quot;middle&quot; font-size=&quot;12&quot; font-weight=&quot;600&quot;&gt;intrecciato&lt;/text&gt;
+  &lt;/svg&gt;
+  &lt;p&gt;Perché serve qui? Perché nella migrazione legata all’ambiente &lt;b&gt;chi ha meno risorse&lt;/b&gt; (spesso donne, anziani, poveri) è anche chi ha meno possibilità di spostarsi: lo ritroveremo nei &lt;a href=&quot;#s6&quot;&gt;&lt;i&gt;trapped populations&lt;/i&gt;&lt;/a&gt;. Si noti anche che le statistiche ufficiali (&lt;a href=&quot;#s2&quot;&gt;parte 2&lt;/a&gt;) scompongono i migranti proprio per genere ed età.&lt;/p&gt;
+  &lt;p class=&quot;note&quot;&gt;&lt;b&gt;Nota:&lt;/b&gt; il termine &lt;i&gt;intersectionality&lt;/i&gt; si deve alla giurista Kimberlé Crenshaw (1989); è un’informazione di contesto, non presente nelle slide. Non è stato possibile aprire gli altri file della cartella &lt;code&gt;corso/&lt;/code&gt; in questa sessione, quindi il collegamento si basa solo sulla slide 2 “Last time”.&lt;/p&gt;
+
+  &lt;h3&gt;“Why?” — la domanda dei fenicotteri &lt;span class=&quot;src&quot;&gt;slide 3&lt;/span&gt;&lt;/h3&gt;
+  &lt;p&gt;La slide mostra uno stormo di fenicotteri e chiede soltanto &lt;i&gt;Why?&lt;/i&gt;. Gli animali migrano per seguire cibo, acqua, clima favorevole, luoghi di riproduzione: si muovono quando &lt;b&gt;l’ambiente in cui stanno non basta più&lt;/b&gt; o un altro luogo offre di più. Anche per gli esseri umani lo spostamento è una risposta a condizioni di vita, ma con una differenza cruciale: le persone decidono dentro vincoli economici, politici, giuridici e sociali.&lt;/p&gt;
+  &lt;p&gt;Gli studi sulle migrazioni parlano di &lt;span class=&quot;term&quot;&gt;drivers&lt;/span&gt; (fattori che spingono o attirano). Un modo classico di pensarli è la coppia &lt;span class=&quot;gloss&quot;&gt;push factors&lt;/span&gt; (ciò che spinge via dal luogo d’origine) e &lt;span class=&quot;gloss&quot;&gt;pull factors&lt;/span&gt; (ciò che attira verso la destinazione). Esplora le cinque famiglie di driver:&lt;/p&gt;
+
+  &lt;div class=&quot;tabs&quot; data-tabs&gt;
+    &lt;div class=&quot;tablist&quot; role=&quot;tablist&quot;&gt;
+      &lt;button role=&quot;tab&quot; aria-selected=&quot;true&quot;&gt;Economici&lt;/button&gt;&lt;button role=&quot;tab&quot; aria-selected=&quot;false&quot;&gt;Politici&lt;/button&gt;&lt;button role=&quot;tab&quot; aria-selected=&quot;false&quot;&gt;Sociali&lt;/button&gt;&lt;button role=&quot;tab&quot; aria-selected=&quot;false&quot;&gt;Demografici&lt;/button&gt;&lt;button role=&quot;tab&quot; aria-selected=&quot;false&quot;&gt;Ambientali&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;tabpanel&quot; role=&quot;tabpanel&quot;&gt;&lt;b&gt;Push:&lt;/b&gt; disoccupazione, salari bassi, povertà. &lt;b&gt;Pull:&lt;/b&gt; lavoro, salari più alti, opportunità. È il driver più studiato e quello che collega direttamente migrazione e &lt;i&gt;development&lt;/i&gt; (sviluppo).&lt;/div&gt;
+    &lt;div class=&quot;tabpanel&quot; role=&quot;tabpanel&quot; hidden&gt;&lt;b&gt;Push:&lt;/b&gt; conflitti, persecuzioni, instabilità. &lt;b&gt;Pull:&lt;/b&gt; sicurezza, diritti, stabilità istituzionale. Da qui nasce la migrazione &lt;i&gt;forced&lt;/i&gt; (forzata) e la figura giuridica del &lt;i&gt;refugee&lt;/i&gt;.&lt;/div&gt;
+    &lt;div class=&quot;tabpanel&quot; role=&quot;tabpanel&quot; hidden&gt;&lt;b&gt;Push/Pull:&lt;/b&gt; famiglia, reti di connazionali già emigrati, istruzione, discriminazioni (qui torna l’intersezionalità).&lt;/div&gt;
+    &lt;div class=&quot;tabpanel&quot; role=&quot;tabpanel&quot; hidden&gt;&lt;b&gt;Push/Pull:&lt;/b&gt; popolazioni giovani e in crescita da un lato, società che invecchiano e cercano manodopera dall’altro.&lt;/div&gt;
+    &lt;div class=&quot;tabpanel&quot; role=&quot;tabpanel&quot; hidden&gt;&lt;b&gt;Push:&lt;/b&gt; disastri improvvisi (alluvioni, cicloni, terremoti) o cambiamenti lenti (siccità, desertificazione, innalzamento del mare). È il tema centrale di questa lezione: vedi la &lt;a href=&quot;#s3&quot;&gt;parte 3&lt;/a&gt;.&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;box tint&quot;&gt;&lt;b&gt;Idea chiave:&lt;/b&gt; i driver raramente agiscono da soli. Una siccità (ambientale) riduce il raccolto (economico), aumenta le tensioni (politico) e chi parte va dove ha parenti (sociale). Per questo le definizioni IOM dicono che l’ambiente è la causa &lt;i&gt;“predominantly”&lt;/i&gt; o &lt;i&gt;“a major cause… although not necessarily the sole one”&lt;/i&gt;.&lt;/div&gt;
+  &lt;p class=&quot;note&quot;&gt;&lt;b&gt;Nota:&lt;/b&gt; la tassonomia push/pull e le cinque famiglie di driver sono una spiegazione di contesto aggiunta qui per rispondere alla domanda “Why?”; le slide non le elencano.&lt;/p&gt;
+
+  &lt;div class=&quot;quiz&quot;&gt;
+    &lt;h4&gt;Autoverifica · Parte 1&lt;/h4&gt;
+    &lt;div class=&quot;qa&quot;&gt;&lt;p&gt;1. Quali quattro dimensioni dell’intersezionalità sono richiamate all’inizio della lezione?&lt;/p&gt;&lt;button class=&quot;btn ghost&quot;&gt;Mostra risposta&lt;/button&gt;&lt;div class=&quot;ans&quot;&gt;Poverty, gender, age, migration background.&lt;/div&gt;&lt;/div&gt;
+    &lt;div class=&quot;qa&quot;&gt;&lt;p&gt;2. Perché è difficile dire che una persona migra “solo” per ragioni ambientali?&lt;/p&gt;&lt;button class=&quot;btn ghost&quot;&gt;Mostra risposta&lt;/button&gt;&lt;div class=&quot;ans&quot;&gt;Perché i driver si intrecciano: un problema ambientale agisce attraverso economia, politica e reti sociali. Infatti le definizioni IOM parlano di causa “predominante” o “principale ma non necessariamente unica”.&lt;/div&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;!-- ============ 2 ============ --&gt;
+&lt;section class=&quot;part ocra&quot; id=&quot;s2&quot;&gt;
+  &lt;div class=&quot;partno&quot;&gt;Parte 2&lt;/div&gt;
+  &lt;h2&gt;Misurare la migrazione&lt;/h2&gt;
+
+  &lt;h3&gt;Il Migration Data Portal &lt;span class=&quot;src&quot;&gt;slide 4&lt;/span&gt;&lt;/h3&gt;
+  &lt;p&gt;Lo strumento usato in tutta la lezione è il &lt;span class=&quot;term&quot;&gt;Migration Data Portal&lt;/span&gt; (“The bigger picture”), gestito dal Global Migration Data Analysis Centre (&lt;b&gt;GMDAC&lt;/b&gt;) dell’&lt;b&gt;IOM&lt;/b&gt; (International Organization for Migration, l’agenzia ONU per le migrazioni). Raccoglie dati di altre fonti internazionali (UN DESA, UNHCR, IDMC…) in cruscotti interattivi, schede tematiche, sezioni sui quadri internazionali (&lt;i&gt;SDGs and GCM&lt;/i&gt;) e indicatori di governance (MGI).&lt;/p&gt;
+  &lt;p&gt;La pagina di apertura nella slide insiste su un punto: &lt;i&gt;“Migration is a cross-cutting issue in the 2030 Agenda, relevant to all of the Sustainable Development Goals (SDGs)”&lt;/i&gt;. &lt;span class=&quot;gloss&quot;&gt;Cross-cutting&lt;/span&gt; significa “trasversale”: la migrazione non ha un obiettivo proprio, ma tocca povertà (SDG 1), salute, istruzione, lavoro, disuguaglianze (SDG 10), clima (SDG 13)… Ecco il legame &lt;b&gt;migration ↔ development&lt;/b&gt; del titolo.&lt;/p&gt;
+  &lt;p class=&quot;note&quot;&gt;&lt;b&gt;Sigle:&lt;/b&gt; &lt;b&gt;SDGs&lt;/b&gt; = i 17 Obiettivi di sviluppo sostenibile dell’Agenda 2030 ONU (2015). &lt;b&gt;GCM&lt;/b&gt; = &lt;i&gt;Global Compact for Safe, Orderly and Regular Migration&lt;/i&gt; (2018), primo accordo intergovernativo globale, non vincolante, sulle migrazioni. Vedi &lt;a href=&quot;#fonti&quot;&gt;Per approfondire&lt;/a&gt;.&lt;/p&gt;
+
+  &lt;h3&gt;I numeri generali (metà 2020) &lt;span class=&quot;src&quot;&gt;slide 5 · UN DESA 2020&lt;/span&gt;&lt;/h3&gt;
+  &lt;div class=&quot;grid g4&quot;&gt;
+    &lt;div class=&quot;stat&quot;&gt;&lt;div class=&quot;n&quot;&gt;280,6 mln&lt;/div&gt;&lt;div class=&quot;l&quot;&gt;international migrants nel mondo&lt;/div&gt;&lt;/div&gt;
+    &lt;div class=&quot;stat&quot;&gt;&lt;div class=&quot;n&quot;&gt;48,1%&lt;/div&gt;&lt;div class=&quot;l&quot;&gt;donne sullo &lt;i&gt;stock&lt;/i&gt; di migranti&lt;/div&gt;&lt;/div&gt;
+    &lt;div class=&quot;stat&quot;&gt;&lt;div class=&quot;n&quot;&gt;14,6%&lt;/div&gt;&lt;div class=&quot;l&quot;&gt;migranti con 19 anni o meno&lt;/div&gt;&lt;/div&gt;
+    &lt;div class=&quot;stat&quot;&gt;&lt;div class=&quot;n&quot;&gt;12,2%&lt;/div&gt;&lt;div class=&quot;l&quot;&gt;migranti con 65 anni o più&lt;/div&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;p&gt;Un &lt;span class=&quot;term&quot;&gt;international migrant&lt;/span&gt; è, nella statistica ONU, chi vive in un Paese diverso da quello di nascita (o di cittadinanza). Il numero è uno &lt;span class=&quot;term&quot;&gt;stock&lt;/span&gt;: una “fotografia” di quante persone si trovano in quella condizione in un istante (metà 2020), non quante si sono spostate nell’anno.&lt;/p&gt;
+  &lt;figure class=&quot;box&quot; style=&quot;margin:1rem 0&quot;&gt;
+    &lt;svg id=&quot;waffle&quot; viewBox=&quot;0 0 600 175&quot; role=&quot;img&quot; aria-label=&quot;Composizione per età dello stock di migranti 2020&quot;&gt;&lt;/svg&gt;
+    &lt;figcaption class=&quot;muted&quot; style=&quot;font-size:.88rem&quot;&gt;Composizione per età su 100 migranti (dati slide 5): ≤19 anni ≈ 15, 20–64 anni ≈ 73 (ricavato per differenza), ≥65 anni ≈ 12. Passa il mouse o tocca i quadrati.&lt;/figcaption&gt;
+    &lt;div id=&quot;waffleOut&quot; class=&quot;fb&quot; style=&quot;margin-top:.4rem&quot;&gt;&lt;/div&gt;
+  &lt;/figure&gt;
+  &lt;p&gt;Proporzioni da notare: le donne sono quasi la metà (48,1%), quindi la migrazione &lt;b&gt;non&lt;/b&gt; è un fenomeno solo maschile; la grande maggioranza è in età lavorativa (circa 73%, per differenza), il che spiega perché la migrazione è legata allo sviluppo economico. Per dare una scala: 281 milioni sono circa il &lt;b&gt;3,6%&lt;/b&gt; della popolazione mondiale &lt;span class=&quot;src ext&quot;&gt;&lt;a href=&quot;https://www.pewresearch.org/short-reads/2022/12/16/key-facts-about-recent-trends-in-global-migration/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;fonte esterna: Pew Research su dati UN DESA&lt;/a&gt;&lt;/span&gt; — erano 173 milioni nel 2000 e 221 nel 2010 &lt;span class=&quot;src ext&quot;&gt;&lt;a href=&quot;https://namibia.un.org/sites/default/files/2021-01/International_Migration_2020_Highlights_Ten_key_messages.pdf&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;fonte esterna: UN DESA, Highlights 2020&lt;/a&gt;&lt;/span&gt;.&lt;/p&gt;
+
+  &lt;h3&gt;Come si osserva la migrazione: quattro indicatori &lt;span class=&quot;src&quot;&gt;slide 6&lt;/span&gt;&lt;/h3&gt;
+  &lt;div class=&quot;tscroll&quot;&gt;&lt;table&gt;
+    &lt;tr&gt;&lt;th&gt;Indicatore&lt;/th&gt;&lt;th&gt;Che cosa misura&lt;/th&gt;&lt;th&gt;Tipo&lt;/th&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;&lt;b&gt;Net migration rate&lt;/b&gt;&lt;/td&gt;&lt;td&gt;Saldo tra chi entra e chi esce, in rapporto alla popolazione (per 1.000 abitanti)&lt;/td&gt;&lt;td&gt;flow netto (saldo)&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;&lt;b&gt;Migration inflow&lt;/b&gt;&lt;/td&gt;&lt;td&gt;Quante persone entrano in un Paese in un periodo&lt;/td&gt;&lt;td&gt;flow lordo&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;&lt;b&gt;Types of migration&lt;/b&gt;&lt;/td&gt;&lt;td&gt;Distinzione per motivo, in particolare &lt;i&gt;forced migration&lt;/i&gt; (migrazione forzata: conflitti, persecuzioni, disastri)&lt;/td&gt;&lt;td&gt;classificazione&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;&lt;b&gt;Refugees in host country&lt;/b&gt;&lt;/td&gt;&lt;td&gt;Quanti rifugiati ospita ogni Paese&lt;/td&gt;&lt;td&gt;stock&lt;/td&gt;&lt;/tr&gt;
+  &lt;/table&gt;&lt;/div&gt;
+  &lt;p&gt;Distinguere &lt;span class=&quot;term&quot;&gt;stock&lt;/span&gt; (quanti ci sono, a una data) e &lt;span class=&quot;term&quot;&gt;flow&lt;/span&gt; (quanti si spostano, in un periodo) è fondamentale: lo ritroveremo con i dati sui disastri, dove i due numeri sono molto diversi.&lt;/p&gt;
+
+  &lt;h4&gt;Il net migration rate: prova tu&lt;/h4&gt;
+  &lt;div class=&quot;formula&quot;&gt;NMR = &lt;span class=&quot;frac&quot;&gt;&lt;span&gt;Immigrati − Emigrati&lt;/span&gt;&lt;span&gt;Popolazione&lt;/span&gt;&lt;/span&gt; × 1000&lt;/div&gt;
+  &lt;p&gt;Il risultato si legge come “migranti netti ogni 1.000 abitanti” (di solito in media annua). Positivo = il Paese &lt;b&gt;guadagna&lt;/b&gt; popolazione per migrazione; negativo = la &lt;b&gt;perde&lt;/b&gt;. Muovi i cursori (Paese immaginario):&lt;/p&gt;
+  &lt;div class=&quot;box&quot;&gt;
+    &lt;label class=&quot;rng&quot;&gt;Immigrati nell’anno: &lt;output id=&quot;oI&quot;&gt;&lt;/output&gt;&lt;/label&gt;&lt;input type=&quot;range&quot; id=&quot;rI&quot; min=&quot;0&quot; max=&quot;500000&quot; step=&quot;5000&quot; value=&quot;180000&quot;&gt;
+    &lt;label class=&quot;rng&quot;&gt;Emigrati nell’anno: &lt;output id=&quot;oE&quot;&gt;&lt;/output&gt;&lt;/label&gt;&lt;input type=&quot;range&quot; id=&quot;rE&quot; min=&quot;0&quot; max=&quot;500000&quot; step=&quot;5000&quot; value=&quot;120000&quot;&gt;
+    &lt;label class=&quot;rng&quot;&gt;Popolazione: &lt;output id=&quot;oP&quot;&gt;&lt;/output&gt;&lt;/label&gt;&lt;input type=&quot;range&quot; id=&quot;rP&quot; min=&quot;1000000&quot; max=&quot;60000000&quot; step=&quot;500000&quot; value=&quot;10000000&quot;&gt;
+    &lt;svg id=&quot;nmrBar&quot; viewBox=&quot;0 0 600 70&quot; aria-hidden=&quot;true&quot;&gt;&lt;/svg&gt;
+    &lt;p class=&quot;outcome&quot; id=&quot;nmrOut&quot;&gt;&lt;/p&gt;
+    &lt;p class=&quot;muted&quot; id=&quot;nmrTxt&quot; style=&quot;font-size:.9rem&quot;&gt;&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;p class=&quot;note&quot;&gt;&lt;b&gt;Attenzione:&lt;/b&gt; un NMR vicino a zero &lt;b&gt;non&lt;/b&gt; significa che nessuno si muove: entrate e uscite grandi possono compensarsi. Per questo il portale affianca l’&lt;i&gt;inflow&lt;/i&gt;. La definizione ONU usata nei dataset (media annua su periodi, per 1.000 abitanti) è descritta da Our World in Data &lt;span class=&quot;src ext&quot;&gt;&lt;a href=&quot;https://ourworldindata.org/grapher/net-migration&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;fonte esterna&lt;/a&gt;&lt;/span&gt;.&lt;/p&gt;
+
+  &lt;div class=&quot;quiz&quot;&gt;
+    &lt;h4&gt;Autoverifica · Parte 2&lt;/h4&gt;
+    &lt;div class=&quot;qa&quot;&gt;&lt;p&gt;1. 280,6 milioni è uno stock o un flow? Perché conta?&lt;/p&gt;&lt;button class=&quot;btn ghost&quot;&gt;Mostra risposta&lt;/button&gt;&lt;div class=&quot;ans&quot;&gt;Uno stock: quante persone vivono fuori dal Paese di nascita a metà 2020. Non dice quante si sono spostate nell’anno (flow), quindi non va confrontato direttamente con dati di flusso.&lt;/div&gt;&lt;/div&gt;
+    &lt;div class=&quot;qa&quot;&gt;&lt;p&gt;2. Un Paese ha 50.000 immigrati, 70.000 emigrati e 4 milioni di abitanti. Qual è il NMR?&lt;/p&gt;&lt;button class=&quot;btn ghost&quot;&gt;Mostra risposta&lt;/button&gt;&lt;div class=&quot;ans&quot;&gt;(50.000 − 70.000) / 4.000.000 × 1000 = &lt;b&gt;−5 per mille&lt;/b&gt;: il Paese perde popolazione per migrazione.&lt;/div&gt;&lt;/div&gt;
+    &lt;div class=&quot;qa&quot;&gt;&lt;p&gt;3. Cosa vuol dire che la migrazione è “cross-cutting” nell’Agenda 2030?&lt;/p&gt;&lt;button class=&quot;btn ghost&quot;&gt;Mostra risposta&lt;/button&gt;&lt;div class=&quot;ans&quot;&gt;Che riguarda trasversalmente tutti gli SDGs (povertà, lavoro, salute, disuguaglianze, clima…) invece di essere un obiettivo isolato.&lt;/div&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;!-- ============ 3 ============ --&gt;
+&lt;section class=&quot;part ardesia&quot; id=&quot;s3&quot;&gt;
+  &lt;div class=&quot;partno&quot;&gt;Parte 3&lt;/div&gt;
+  &lt;h2&gt;Le parole giuste: environmental e climate migration&lt;/h2&gt;
+  &lt;p&gt;Il cuore della lezione è &lt;b&gt;terminologico&lt;/b&gt;. Tutte le definizioni vengono dall’IOM, in particolare dal &lt;i&gt;Glossary on Migration&lt;/i&gt; (2019). Le parole contano perché da esse dipendono &lt;b&gt;diritti, protezione e dati&lt;/b&gt;: se una categoria non esiste giuridicamente, nessuno ha l’obbligo di proteggerla, e se non la si definisce non la si può contare.&lt;/p&gt;
+
+  &lt;div class=&quot;tabs&quot; data-tabs&gt;
+    &lt;div class=&quot;tablist&quot; role=&quot;tablist&quot;&gt;
+      &lt;button role=&quot;tab&quot; aria-selected=&quot;true&quot;&gt;Environmental migration&lt;/button&gt;&lt;button role=&quot;tab&quot; aria-selected=&quot;false&quot;&gt;Climate migration&lt;/button&gt;&lt;button role=&quot;tab&quot; aria-selected=&quot;false&quot;&gt;Environmentally displaced person&lt;/button&gt;&lt;button role=&quot;tab&quot; aria-selected=&quot;false&quot;&gt;Disaster displacement&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;tabpanel&quot; role=&quot;tabpanel&quot;&gt;
+      &lt;div class=&quot;def&quot;&gt;&lt;div class=&quot;lab&quot;&gt;Definizione · IOM 2019 · slide 7&lt;/div&gt;&lt;q&gt;Movement of persons or groups of persons [&lt;b&gt;environmental migrants&lt;/b&gt;] who, predominantly for reasons of sudden or progressive changes in the environment that adversely affect their lives or living conditions, are forced to leave their places of habitual residence, or choose to do so, either temporarily or permanently, and who move within or outside their country of origin or habitual residence.&lt;/q&gt;&lt;/div&gt;
+      &lt;p&gt;&lt;span class=&quot;term&quot;&gt;Environmental migration&lt;/span&gt; = migrazione ambientale. Gli elementi da memorizzare:&lt;/p&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;b&gt;predominantly&lt;/b&gt;: l’ambiente è la causa prevalente, non necessariamente l’unica;&lt;/li&gt;
+        &lt;li&gt;&lt;b&gt;sudden or progressive&lt;/b&gt;: cambiamenti improvvisi (&lt;i&gt;sudden-onset&lt;/i&gt;, es. alluvione) o graduali (&lt;i&gt;slow-onset&lt;/i&gt;, es. desertificazione);&lt;/li&gt;
+        &lt;li&gt;&lt;b&gt;forced … or choose to do so&lt;/b&gt;: comprende sia chi è costretto sia chi sceglie;&lt;/li&gt;
+        &lt;li&gt;&lt;b&gt;temporarily or permanently&lt;/b&gt;; &lt;b&gt;within or outside&lt;/b&gt; the country: copre anche la migrazione interna.&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;tabpanel&quot; role=&quot;tabpanel&quot; hidden&gt;
+      &lt;div class=&quot;def&quot;&gt;&lt;div class=&quot;lab&quot;&gt;Definizione · IOM 2019 · slide 8&lt;/div&gt;&lt;q&gt;The movement of a person or groups of persons who, predominantly for reasons of sudden or progressive change in the environment &lt;b&gt;due to climate change&lt;/b&gt;, are obliged to leave their habitual place of residence, or choose to do so, either temporarily or permanently, within a State or across an international border.&lt;/q&gt;&lt;/div&gt;
+      &lt;p&gt;&lt;span class=&quot;term&quot;&gt;Climate migration&lt;/span&gt; = migrazione climatica. È una &lt;b&gt;subcategory&lt;/b&gt; (sottocategoria) della environmental migration: stessa struttura, ma il cambiamento ambientale è dovuto al &lt;i&gt;climate change&lt;/i&gt;. Un terremoto o un’eruzione vulcanica possono causare environmental migration, ma &lt;b&gt;non&lt;/b&gt; climate migration.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;tabpanel&quot; role=&quot;tabpanel&quot; hidden&gt;
+      &lt;div class=&quot;def&quot;&gt;&lt;div class=&quot;lab&quot;&gt;Definizione · IOM 2011:34 in IOM 2014:13 · slide 10&lt;/div&gt;&lt;q&gt;Persons who are displaced within their country of habitual residence or who have crossed an international border and for whom environmental degradation, deterioration or destruction is a major cause of their displacement, although not necessarily the sole one.&lt;/q&gt;&lt;/div&gt;
+      &lt;p&gt;&lt;span class=&quot;term&quot;&gt;Environmentally displaced person&lt;/span&gt; = persona sfollata per cause ambientali. Qui si passa dalla &lt;i&gt;migration&lt;/i&gt; al &lt;span class=&quot;term&quot;&gt;displacement&lt;/span&gt; (sfollamento): l’accento è sul carattere &lt;b&gt;forzato&lt;/b&gt; dello spostamento. Torna l’idea della multicausalità: &lt;i&gt;“major cause … not necessarily the sole one”&lt;/i&gt;.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;tabpanel&quot; role=&quot;tabpanel&quot; hidden&gt;
+      &lt;div class=&quot;def&quot;&gt;&lt;div class=&quot;lab&quot;&gt;Definizione · The Nansen Protection Agenda 2015 · slide 10&lt;/div&gt;&lt;q&gt;Situations where people are forced or obliged to leave their homes or places of habitual residence, in particular as a result of or in order to avoid the effects of disasters triggered by natural hazards. Such displacement may take the form of spontaneous flight or an evacuation ordered or enforced by authorities. Such displacement can occur within a country, or across international borders.&lt;/q&gt;&lt;/div&gt;
+      &lt;p&gt;&lt;span class=&quot;term&quot;&gt;Disaster displacement&lt;/span&gt; = sfollamento da disastri. Tre novità: (1) conta anche chi parte &lt;b&gt;per evitare&lt;/b&gt; gli effetti (evacuazione preventiva); (2) il disastro è innescato da &lt;span class=&quot;gloss&quot;&gt;natural hazards&lt;/span&gt; (pericoli naturali: un &lt;i&gt;hazard&lt;/i&gt; diventa &lt;i&gt;disaster&lt;/i&gt; quando colpisce persone vulnerabili); (3) può essere &lt;i&gt;spontaneous flight&lt;/i&gt; (fuga spontanea) o evacuazione ordinata dalle autorità.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;h3&gt;Come stanno insieme&lt;/h3&gt;
+  &lt;svg viewBox=&quot;0 0 700 330&quot; role=&quot;img&quot; aria-label=&quot;Diagramma di insiemi: environmental migration contiene climate migration; il displacement è la parte forzata&quot;&gt;
+    &lt;rect x=&quot;10&quot; y=&quot;10&quot; width=&quot;680&quot; height=&quot;310&quot; rx=&quot;18&quot; fill=&quot;var(--card)&quot; stroke=&quot;var(--rule)&quot;/&gt;
+    &lt;text x=&quot;30&quot; y=&quot;38&quot; font-size=&quot;13&quot; fill=&quot;var(--ink2)&quot;&gt;Tutta la mobilità umana&lt;/text&gt;
+    &lt;ellipse cx=&quot;350&quot; cy=&quot;175&quot; rx=&quot;300&quot; ry=&quot;130&quot; fill=&quot;var(--ardesia-bg)&quot; stroke=&quot;var(--ardesia)&quot; stroke-width=&quot;2&quot;/&gt;
+    &lt;text x=&quot;110&quot; y=&quot;100&quot; font-size=&quot;15&quot; font-weight=&quot;600&quot; fill=&quot;var(--ardesia)&quot;&gt;Environmental migration&lt;/text&gt;
+    &lt;text x=&quot;110&quot; y=&quot;118&quot; font-size=&quot;12&quot; fill=&quot;var(--ink2)&quot;&gt;causa prevalente: cambiamento ambientale&lt;/text&gt;
+    &lt;ellipse cx=&quot;420&quot; cy=&quot;195&quot; rx=&quot;170&quot; ry=&quot;90&quot; fill=&quot;var(--ocra-bg)&quot; stroke=&quot;var(--ocra)&quot; stroke-width=&quot;2&quot;/&gt;
+    &lt;text x=&quot;340&quot; y=&quot;150&quot; font-size=&quot;15&quot; font-weight=&quot;600&quot; fill=&quot;var(--ocra)&quot;&gt;Climate migration&lt;/text&gt;
+    &lt;text x=&quot;340&quot; y=&quot;167&quot; font-size=&quot;12&quot; fill=&quot;var(--ink2)&quot;&gt;sottocategoria: dovuto al climate change&lt;/text&gt;
+    &lt;path d=&quot;M110 175 L640 175&quot; stroke=&quot;var(--mattone)&quot; stroke-width=&quot;1.5&quot; stroke-dasharray=&quot;6 4&quot;/&gt;
+    &lt;text x=&quot;120&quot; y=&quot;200&quot; font-size=&quot;13&quot; font-weight=&quot;600&quot; fill=&quot;var(--mattone)&quot;&gt;↓ parte “forced” = displacement&lt;/text&gt;
+    &lt;text x=&quot;120&quot; y=&quot;218&quot; font-size=&quot;12&quot; fill=&quot;var(--ink2)&quot;&gt;environmentally displaced persons,&lt;/text&gt;
+    &lt;text x=&quot;120&quot; y=&quot;234&quot; font-size=&quot;12&quot; fill=&quot;var(--ink2)&quot;&gt;disaster displacement&lt;/text&gt;
+    &lt;text x=&quot;120&quot; y=&quot;160&quot; font-size=&quot;13&quot; font-weight=&quot;600&quot; fill=&quot;var(--salvia)&quot;&gt;↑ parte “by choice”&lt;/text&gt;
+    &lt;text x=&quot;420&quot; y=&quot;250&quot; font-size=&quot;11&quot; fill=&quot;var(--ink2)&quot; text-anchor=&quot;middle&quot;&gt;es. sfollati per un ciclone&lt;/text&gt;
+    &lt;text x=&quot;420&quot; y=&quot;265&quot; font-size=&quot;11&quot; fill=&quot;var(--ink2)&quot; text-anchor=&quot;middle&quot;&gt;aggravato dal riscaldamento&lt;/text&gt;
+    &lt;text x=&quot;180&quot; y=&quot;290&quot; font-size=&quot;11&quot; fill=&quot;var(--ink2)&quot;&gt;es. sfollati per un terremoto (non climatico)&lt;/text&gt;
+  &lt;/svg&gt;
+  &lt;p class=&quot;muted&quot; style=&quot;font-size:.88rem&quot;&gt;Schema didattico: la linea forced/choice è in realtà un &lt;b&gt;continuum&lt;/b&gt;, non un confine netto. Inoltre il &lt;i&gt;disaster displacement&lt;/i&gt; include disastri naturali non legati all’ambiente “degradato” (es. terremoti).&lt;/p&gt;
+
+  &lt;div class=&quot;tscroll&quot;&gt;&lt;table&gt;
+    &lt;tr&gt;&lt;th&gt;Termine&lt;/th&gt;&lt;th&gt;Causa&lt;/th&gt;&lt;th&gt;Forzato?&lt;/th&gt;&lt;th&gt;Dove&lt;/th&gt;&lt;th&gt;Fonte&lt;/th&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Environmental migration&lt;/td&gt;&lt;td&gt;cambiamenti ambientali improvvisi o graduali (prevalente)&lt;/td&gt;&lt;td&gt;forzato &lt;b&gt;o&lt;/b&gt; scelto&lt;/td&gt;&lt;td&gt;interno o internazionale&lt;/td&gt;&lt;td&gt;IOM 2019&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Climate migration&lt;/td&gt;&lt;td&gt;come sopra, ma &lt;b&gt;dovuti al climate change&lt;/b&gt;&lt;/td&gt;&lt;td&gt;obbligato &lt;b&gt;o&lt;/b&gt; scelto&lt;/td&gt;&lt;td&gt;interno o internazionale&lt;/td&gt;&lt;td&gt;IOM 2019&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Environmentally displaced person&lt;/td&gt;&lt;td&gt;degrado/distruzione ambientale come causa &lt;b&gt;principale&lt;/b&gt;&lt;/td&gt;&lt;td&gt;sì (displaced)&lt;/td&gt;&lt;td&gt;interno o internazionale&lt;/td&gt;&lt;td&gt;IOM 2011/2014&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Disaster displacement&lt;/td&gt;&lt;td&gt;disastri innescati da &lt;b&gt;natural hazards&lt;/b&gt; (anche per evitarli)&lt;/td&gt;&lt;td&gt;sì (forced/obliged)&lt;/td&gt;&lt;td&gt;interno o internazionale&lt;/td&gt;&lt;td&gt;Nansen 2015&lt;/td&gt;&lt;/tr&gt;
+  &lt;/table&gt;&lt;/div&gt;
+
+  &lt;h3&gt;Classifica il caso&lt;/h3&gt;
+  &lt;p&gt;Per ogni scenario scegli il termine &lt;b&gt;più preciso&lt;/b&gt;.&lt;/p&gt;
+  &lt;div class=&quot;box&quot;&gt;&lt;p&gt;&lt;b&gt;A.&lt;/b&gt; Dopo anni di siccità sempre più frequenti legate al riscaldamento globale, una famiglia di agricoltori decide di trasferirsi nella capitale del proprio Paese.&lt;/p&gt;
+    &lt;div class=&quot;choice&quot; data-choice&gt;&lt;button data-ok data-fb=&quot;Spostamento scelto, interno, legato a un cambiamento progressivo dovuto al clima: climate migration (e quindi anche environmental migration).&quot;&gt;Climate migration&lt;/button&gt;&lt;button data-fb=&quot;Non c’è un disastro improvviso né evacuazione: è una scelta di fronte a un cambiamento lento.&quot;&gt;Disaster displacement&lt;/button&gt;&lt;button data-fb=&quot;Termine da evitare (parte 4) e comunque non attraversa confini né è perseguitata.&quot;&gt;Climate refugee&lt;/button&gt;&lt;/div&gt;&lt;p class=&quot;fb&quot;&gt;&lt;/p&gt;&lt;/div&gt;
+  &lt;div class=&quot;box&quot;&gt;&lt;p&gt;&lt;b&gt;B.&lt;/b&gt; Le autorità ordinano l’evacuazione di una valle prima dell’arrivo di un ciclone; gli abitanti tornano due settimane dopo.&lt;/p&gt;
+    &lt;div class=&quot;choice&quot; data-choice&gt;&lt;button data-fb=&quot;La definizione IOM copre anche questo, ma non coglie il carattere forzato e preventivo.&quot;&gt;Environmental migration&lt;/button&gt;&lt;button data-ok data-fb=&quot;Esatto: evacuazione ordinata dalle autorità “in order to avoid the effects of disasters” — anche se temporanea.&quot;&gt;Disaster displacement&lt;/button&gt;&lt;button data-fb=&quot;Non c’è alcuna ricollocazione permanente pianificata: tornano a casa.&quot;&gt;Planned relocation&lt;/button&gt;&lt;/div&gt;&lt;p class=&quot;fb&quot;&gt;&lt;/p&gt;&lt;/div&gt;
+  &lt;div class=&quot;box&quot;&gt;&lt;p&gt;&lt;b&gt;C.&lt;/b&gt; Un terremoto distrugge una città; molti abitanti si rifugiano oltre il confine nel Paese vicino.&lt;/p&gt;
+    &lt;div class=&quot;choice&quot; data-choice&gt;&lt;button data-fb=&quot;Un terremoto non è dovuto al cambiamento climatico.&quot;&gt;Climate migration&lt;/button&gt;&lt;button data-ok data-fb=&quot;Sì: disastro innescato da un natural hazard, sfollamento attraverso un confine internazionale (cross-border).&quot;&gt;Disaster displacement&lt;/button&gt;&lt;button data-fb=&quot;Il terremoto non è una persecuzione: la Convenzione del 1951 non si applica automaticamente.&quot;&gt;Refugees (Convenzione 1951)&lt;/button&gt;&lt;/div&gt;&lt;p class=&quot;fb&quot;&gt;&lt;/p&gt;&lt;/div&gt;
+
+  &lt;div class=&quot;quiz&quot;&gt;
+    &lt;h4&gt;Autoverifica · Parte 3&lt;/h4&gt;
+    &lt;div class=&quot;qa&quot;&gt;&lt;p&gt;1. Qual è l’unica differenza tra environmental e climate migration?&lt;/p&gt;&lt;button class=&quot;btn ghost&quot;&gt;Mostra risposta&lt;/button&gt;&lt;div class=&quot;ans&quot;&gt;La causa del cambiamento ambientale: nella climate migration è il climate change. Per questo è una sottocategoria.&lt;/div&gt;&lt;/div&gt;
+    &lt;div class=&quot;qa&quot;&gt;&lt;p&gt;2. Le definizioni IOM includono anche chi “sceglie” di partire. Perché è importante?&lt;/p&gt;&lt;button class=&quot;btn ghost&quot;&gt;Mostra risposta&lt;/button&gt;&lt;div class=&quot;ans&quot;&gt;Perché gran parte della mobilità ambientale non è nettamente forzata: è una risposta (anche di adattamento) a condizioni che peggiorano. Escluderla renderebbe invisibile la maggior parte del fenomeno.&lt;/div&gt;&lt;/div&gt;
+    &lt;div class=&quot;qa&quot;&gt;&lt;p&gt;3. Cosa aggiunge la definizione di disaster displacement del Nansen Protection Agenda?&lt;/p&gt;&lt;button class=&quot;btn ghost&quot;&gt;Mostra risposta&lt;/button&gt;&lt;div class=&quot;ans&quot;&gt;Che conta anche lo spostamento per &lt;i&gt;evitare&lt;/i&gt; gli effetti del disastro, che può essere fuga spontanea o evacuazione ordinata dalle autorità, interna o oltre confine.&lt;/div&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;!-- ============ 4 ============ --&gt;
+&lt;section class=&quot;part mattone&quot; id=&quot;s4&quot;&gt;
+  &lt;div class=&quot;partno&quot;&gt;Parte 4&lt;/div&gt;
+  &lt;h2&gt;“Climate refugees”: perché non dirlo&lt;/h2&gt;
+  &lt;div class=&quot;def&quot;&gt;&lt;div class=&quot;lab&quot;&gt;Slide 9&lt;/div&gt;Su &lt;b&gt;climate refugees&lt;/b&gt; o &lt;b&gt;environmental refugees&lt;/b&gt; c’è un &lt;i&gt;“growing consensus among concerned agencies, including IOM and UNHCR, that the use of these terms is to be avoided”&lt;/i&gt;. Sono termini &lt;b&gt;misleading&lt;/b&gt; (fuorvianti).&lt;/div&gt;
+  &lt;p&gt;Il termine è diffusissimo nei media, eppure le agenzie ONU lo evitano. Scorri i tre motivi indicati nella slide:&lt;/p&gt;
+
+  &lt;div class=&quot;steps&quot; data-steps&gt;
+    &lt;div class=&quot;step box&quot;&gt;&lt;h4&gt;① La migrazione ambientale è soprattutto &lt;i&gt;interna&lt;/i&gt;&lt;/h4&gt;&lt;p&gt;La maggior parte delle persone che si spostano per ragioni ambientali resta nel proprio Paese. Un &lt;i&gt;refugee&lt;/i&gt;, per definizione giuridica, ha invece &lt;b&gt;attraversato un confine&lt;/b&gt;. Chiamarle “rifugiati” sposta l’attenzione sugli arrivi internazionali e nasconde la parte principale del fenomeno (vedi i dati sugli &lt;i&gt;internal displacements&lt;/i&gt; nella &lt;a href=&quot;#s5&quot;&gt;parte 5&lt;/a&gt;).&lt;/p&gt;&lt;/div&gt;
+    &lt;div class=&quot;step box&quot;&gt;&lt;h4&gt;② Non è necessariamente &lt;i&gt;forzata&lt;/i&gt;&lt;/h4&gt;&lt;p&gt;Come visto nelle definizioni IOM, molti scelgono di partire (“or choose to do so”), spesso in anticipo, come strategia di adattamento. “Rifugiato” evoca solo la fuga forzata.&lt;/p&gt;&lt;/div&gt;
+    &lt;div class=&quot;step box&quot;&gt;&lt;h4&gt;③ Potrebbe indebolire il regime di protezione dei rifugiati&lt;/h4&gt;&lt;p&gt;Lo status di &lt;span class=&quot;term&quot;&gt;refugee&lt;/span&gt; è definito dalla &lt;b&gt;Convenzione di Ginevra del 1951&lt;/b&gt;: chi è fuori dal proprio Paese per un fondato timore di &lt;b&gt;persecuzione&lt;/b&gt; per razza, religione, nazionalità, appartenenza a un gruppo sociale o opinione politica. Il clima non “perseguita”. Allargare il termine senza base legale rischia di annacquare una protezione già fragile, o di spingere a rinegoziarla al ribasso.&lt;/p&gt;
+      &lt;p class=&quot;muted&quot; style=&quot;font-size:.9rem&quot;&gt;I cinque motivi di persecuzione e il riferimento alla Convenzione sono contesto aggiunto &lt;span class=&quot;src ext&quot;&gt;&lt;a href=&quot;https://www.unhcr.org/about-unhcr/overview/1951-refugee-convention&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;fonte esterna: UNHCR&lt;/a&gt;&lt;/span&gt;.&lt;/p&gt;&lt;/div&gt;
+    &lt;div class=&quot;step box&quot;&gt;&lt;h4&gt;E allora come si dice?&lt;/h4&gt;&lt;p&gt;UNHCR suggerisce &lt;i&gt;“persons displaced in the context of disasters and climate change”&lt;/i&gt; &lt;span class=&quot;src ext&quot;&gt;&lt;a href=&quot;https://www.unhcr.org/en-ie/climate-change-and-disasters.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;fonte esterna: UNHCR&lt;/a&gt;&lt;/span&gt;. Lo stesso UNHCR riconosce che in alcuni casi una domanda di asilo può essere valida, ad esempio quando gli effetti del clima &lt;b&gt;si intrecciano con conflitti e violenza&lt;/b&gt;. In pratica: usa i termini della &lt;a href=&quot;#s3&quot;&gt;parte 3&lt;/a&gt;.&lt;/p&gt;&lt;/div&gt;
+    &lt;div class=&quot;stepnav&quot;&gt;&lt;button class=&quot;btn ghost&quot; data-prev&gt;← Indietro&lt;/button&gt;&lt;div class=&quot;dots&quot;&gt;&lt;/div&gt;&lt;button class=&quot;btn&quot; data-next&gt;Avanti →&lt;/button&gt;&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;svg viewBox=&quot;0 0 700 170&quot; role=&quot;img&quot; aria-label=&quot;Confronto tra rifugiato e persona sfollata per ragioni ambientali&quot;&gt;
+    &lt;rect x=&quot;10&quot; y=&quot;10&quot; width=&quot;330&quot; height=&quot;150&quot; rx=&quot;14&quot; fill=&quot;var(--card)&quot; stroke=&quot;var(--mattone)&quot;/&gt;
+    &lt;rect x=&quot;360&quot; y=&quot;10&quot; width=&quot;330&quot; height=&quot;150&quot; rx=&quot;14&quot; fill=&quot;var(--card)&quot; stroke=&quot;var(--ardesia)&quot;/&gt;
+    &lt;text x=&quot;30&quot; y=&quot;40&quot; font-size=&quot;15&quot; font-weight=&quot;600&quot; fill=&quot;var(--mattone)&quot;&gt;Refugee (Conv. 1951)&lt;/text&gt;
+    &lt;g font-size=&quot;13&quot;&gt;&lt;text x=&quot;30&quot; y=&quot;68&quot;&gt;• causa: persecuzione (5 motivi)&lt;/text&gt;&lt;text x=&quot;30&quot; y=&quot;92&quot;&gt;• ha attraversato un confine&lt;/text&gt;&lt;text x=&quot;30&quot; y=&quot;116&quot;&gt;• status giuridico vincolante&lt;/text&gt;&lt;text x=&quot;30&quot; y=&quot;140&quot;&gt;• diritto al non-refoulement&lt;/text&gt;&lt;/g&gt;
+    &lt;text x=&quot;380&quot; y=&quot;40&quot; font-size=&quot;15&quot; font-weight=&quot;600&quot; fill=&quot;var(--ardesia)&quot;&gt;Environmental migrant / displaced&lt;/text&gt;
+    &lt;g font-size=&quot;13&quot;&gt;&lt;text x=&quot;380&quot; y=&quot;68&quot;&gt;• causa: ambiente / clima / disastri&lt;/text&gt;&lt;text x=&quot;380&quot; y=&quot;92&quot;&gt;• per lo più interno&lt;/text&gt;&lt;text x=&quot;380&quot; y=&quot;116&quot;&gt;• forzato o scelto&lt;/text&gt;&lt;text x=&quot;380&quot; y=&quot;140&quot;&gt;• nessuno status internazionale ad hoc&lt;/text&gt;&lt;/g&gt;
+  &lt;/svg&gt;
+  &lt;p class=&quot;muted&quot; style=&quot;font-size:.88rem&quot;&gt;Il &lt;i&gt;non-refoulement&lt;/i&gt; (divieto di respingere qualcuno verso un Paese dove rischia persecuzione) è contesto aggiunto, non presente nelle slide.&lt;/p&gt;
+
+  &lt;div class=&quot;quiz&quot;&gt;
+    &lt;h4&gt;Autoverifica · Parte 4&lt;/h4&gt;
+    &lt;div class=&quot;qa&quot;&gt;&lt;p&gt;1. Elenca i tre motivi per cui IOM e UNHCR evitano “climate refugee”.&lt;/p&gt;&lt;button class=&quot;btn ghost&quot;&gt;Mostra risposta&lt;/button&gt;&lt;div class=&quot;ans&quot;&gt;(1) la migrazione ambientale è per lo più interna; (2) non è necessariamente forzata; (3) il termine potrebbe indebolire il regime giuridico internazionale di protezione dei rifugiati.&lt;/div&gt;&lt;/div&gt;
+    &lt;div class=&quot;qa&quot;&gt;&lt;p&gt;2. Una persona attraversa un confine dopo un’alluvione: è un rifugiato ai sensi della Convenzione 1951?&lt;/p&gt;&lt;button class=&quot;btn ghost&quot;&gt;Mostra risposta&lt;/button&gt;&lt;div class=&quot;ans&quot;&gt;Di norma no: l’alluvione non è una persecuzione. È una persona in &lt;i&gt;cross-border disaster displacement&lt;/i&gt;. Potrebbe esserlo se, ad esempio, il disastro si intreccia con persecuzioni o conflitti.&lt;/div&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;!-- ============ 5 ============ --&gt;
+&lt;section class=&quot;part ocra&quot; id=&quot;s5&quot;&gt;
+  &lt;div class=&quot;partno&quot;&gt;Parte 5&lt;/div&gt;
+  &lt;h2&gt;Quanti sono? I dati sul disaster displacement&lt;/h2&gt;
+
+  &lt;h3&gt;Internal displacements due to disaster, 2013–2022 &lt;span class=&quot;src&quot;&gt;slide 11 · IDMC 2023&lt;/span&gt;&lt;/h3&gt;
+  &lt;p&gt;Il grafico (fonte: &lt;b&gt;IDMC&lt;/b&gt;, Internal Displacement Monitoring Centre, rielaborato da IOM GMDAC) conta i &lt;span class=&quot;term&quot;&gt;new internal displacements&lt;/span&gt;: nuovi spostamenti forzati &lt;b&gt;all’interno&lt;/b&gt; dei Paesi causati da disastri, anno per anno. È un &lt;b&gt;flow&lt;/b&gt;. Muovi il cursore per esplorarlo.&lt;/p&gt;
+  &lt;div class=&quot;box&quot;&gt;
+    &lt;svg id=&quot;disChart&quot; viewBox=&quot;0 0 640 300&quot; role=&quot;img&quot; aria-label=&quot;Grafico a barre degli sfollamenti interni da disastri 2013-2022&quot;&gt;&lt;/svg&gt;
+    &lt;label class=&quot;rng&quot;&gt;Anno: &lt;output id=&quot;oY&quot;&gt;&lt;/output&gt;&lt;/label&gt;
+    &lt;input type=&quot;range&quot; id=&quot;rY&quot; min=&quot;0&quot; max=&quot;9&quot; value=&quot;9&quot; step=&quot;1&quot;&gt;
+    &lt;p style=&quot;margin:.6rem 0 .2rem&quot;&gt;&lt;label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;cAvg&quot;&gt; mostra la media 2013–2022&lt;/label&gt;&lt;/p&gt;
+    &lt;p class=&quot;outcome&quot; id=&quot;yOut&quot;&gt;&lt;/p&gt;&lt;p class=&quot;muted&quot; id=&quot;yTxt&quot; style=&quot;font-size:.92rem&quot;&gt;&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;p&gt;Cosa leggere: il dato oscilla (dipende da quanti grandi eventi capitano in un anno), ma la tendenza recente è &lt;b&gt;in crescita&lt;/b&gt;: 2019, 2020 e 2022 sono i tre anni più alti, con il massimo di &lt;b&gt;32,6 milioni&lt;/b&gt; nel 2022. Secondo IDMC l’aumento del 2022 è legato soprattutto al terzo anno consecutivo di &lt;i&gt;La Niña&lt;/i&gt; (es. le alluvioni in Pakistan) &lt;span class=&quot;src ext&quot;&gt;&lt;a href=&quot;https://www.weforum.org/agenda/2023/06/internally-displaced-people-conflict-disasters&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;fonte esterna: WEF su GRID 2023&lt;/a&gt;&lt;/span&gt;.&lt;/p&gt;
+  &lt;p class=&quot;note&quot;&gt;&lt;b&gt;Attenzione:&lt;/b&gt; un &lt;i&gt;displacement&lt;/i&gt; non è una persona. La stessa persona sfollata due volte nello stesso anno conta due volte; e i flow non dicono quanti sono &lt;i&gt;ancora&lt;/i&gt; sfollati a fine anno (lo stock: circa 8,7 milioni di persone a fine 2022 per disastri, secondo IDMC &lt;span class=&quot;src ext&quot;&gt;&lt;a href=&quot;https://www.downtoearth.org.in/climate-change/unusually-long-la-ni-a-displaced-record-number-of-people-in-2022-89247&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;fonte esterna: Down To Earth su GRID 2023&lt;/a&gt;&lt;/span&gt;). Inoltre gli sfollamenti da eventi lenti (siccità, innalzamento del mare) sono in gran parte non contati.&lt;/p&gt;
+
+  &lt;h3&gt;Internally displaced persons due to disasters &lt;span class=&quot;src&quot;&gt;slide 12 · IDMC 2023&lt;/span&gt;&lt;/h3&gt;
+  &lt;p&gt;Un &lt;span class=&quot;term&quot;&gt;IDP&lt;/span&gt; (&lt;i&gt;internally displaced person&lt;/i&gt;, sfollato interno) è chi è stato costretto a lasciare la propria casa ma &lt;b&gt;non ha attraversato un confine&lt;/b&gt;. La mappa della slide mostra lo &lt;b&gt;stock&lt;/b&gt; di IDP per disastri nel 2022: cerchi più grandi = più persone. I Paesi con i valori più alti:&lt;/p&gt;
+  &lt;svg viewBox=&quot;0 0 600 210&quot; role=&quot;img&quot; aria-label=&quot;Paesi con più sfollati interni per disastri, 2022&quot;&gt;
+    &lt;g font-size=&quot;13&quot;&gt;
+      &lt;text x=&quot;10&quot; y=&quot;35&quot;&gt;Afghanistan&lt;/text&gt;&lt;rect x=&quot;120&quot; y=&quot;20&quot; width=&quot;440&quot; height=&quot;22&quot; rx=&quot;4&quot; fill=&quot;var(--ocra)&quot;/&gt;&lt;text x=&quot;565&quot; y=&quot;36&quot; text-anchor=&quot;end&quot; fill=&quot;var(--paper)&quot; font-weight=&quot;600&quot;&gt;2,2 mln&lt;/text&gt;
+      &lt;text x=&quot;10&quot; y=&quot;75&quot;&gt;Pakistan&lt;/text&gt;&lt;rect x=&quot;120&quot; y=&quot;60&quot; width=&quot;230&quot; height=&quot;22&quot; rx=&quot;4&quot; fill=&quot;var(--ocra)&quot; fill-opacity=&quot;.75&quot;/&gt;&lt;text x=&quot;358&quot; y=&quot;76&quot;&gt;≈ 1,1 mln&lt;/text&gt;
+      &lt;text x=&quot;10&quot; y=&quot;115&quot;&gt;Nigeria&lt;/text&gt;&lt;rect x=&quot;120&quot; y=&quot;100&quot; width=&quot;190&quot; height=&quot;22&quot; rx=&quot;4&quot; fill=&quot;var(--ocra)&quot; fill-opacity=&quot;.65&quot;/&gt;&lt;text x=&quot;318&quot; y=&quot;116&quot;&gt;≈ 0,9 mln&lt;/text&gt;
+      &lt;text x=&quot;10&quot; y=&quot;155&quot;&gt;Etiopia&lt;/text&gt;&lt;rect x=&quot;120&quot; y=&quot;140&quot; width=&quot;155&quot; height=&quot;22&quot; rx=&quot;4&quot; fill=&quot;var(--ocra)&quot; fill-opacity=&quot;.55&quot;/&gt;&lt;text x=&quot;283&quot; y=&quot;156&quot;&gt;≈ 0,75 mln&lt;/text&gt;
+      &lt;text x=&quot;10&quot; y=&quot;195&quot;&gt;Sud Sudan&lt;/text&gt;&lt;rect x=&quot;120&quot; y=&quot;180&quot; width=&quot;140&quot; height=&quot;22&quot; rx=&quot;4&quot; fill=&quot;var(--ocra)&quot; fill-opacity=&quot;.45&quot;/&gt;&lt;text x=&quot;268&quot; y=&quot;196&quot;&gt;≈ 0,7 mln&lt;/text&gt;
+    &lt;/g&gt;
+  &lt;/svg&gt;
+  &lt;p class=&quot;muted&quot; style=&quot;font-size:.88rem&quot;&gt;Solo il valore dell’Afghanistan (2,2 milioni) è scritto nella slide; gli altri sono stime lette a occhio dalla lunghezza delle barre. Molti cerchi grandi sono nel Sud del mondo (Asia meridionale, Africa orientale e occidentale, Sud-est asiatico): sono Paesi molto esposti ai rischi e con meno risorse per prevenirli — il nesso con &lt;i&gt;development&lt;/i&gt;. Dati interattivi: &lt;a href=&quot;https://www.migrationdataportal.org/international-data?i=idp_stock_disaster&amp;amp;t=2022&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Migration Data Portal (link nella slide)&lt;/a&gt;.&lt;/p&gt;
+
+  &lt;div class=&quot;quiz&quot;&gt;
+    &lt;h4&gt;Autoverifica · Parte 5&lt;/h4&gt;
+    &lt;div class=&quot;qa&quot;&gt;&lt;p&gt;1. 32,6 milioni di “internal displacements” nel 2022 significa 32,6 milioni di persone sfollate a fine anno?&lt;/p&gt;&lt;button class=&quot;btn ghost&quot;&gt;Mostra risposta&lt;/button&gt;&lt;div class=&quot;ans&quot;&gt;No. È un flow di eventi di spostamento nell’anno (una persona può contare più volte; molti tornano presto). Lo stock di sfollati a fine anno è molto più basso.&lt;/div&gt;&lt;/div&gt;
+    &lt;div class=&quot;qa&quot;&gt;&lt;p&gt;2. Che differenza c’è tra un IDP e un refugee?&lt;/p&gt;&lt;button class=&quot;btn ghost&quot;&gt;Mostra risposta&lt;/button&gt;&lt;div class=&quot;ans&quot;&gt;L’IDP resta nel proprio Paese (nessun confine attraversato) ed è protetto dal proprio Stato; il refugee ha attraversato un confine per sfuggire a persecuzione e gode di uno status internazionale.&lt;/div&gt;&lt;/div&gt;
+    &lt;div class=&quot;qa&quot;&gt;&lt;p&gt;3. Perché i dati sulla migrazione ambientale sono probabilmente sottostimati?&lt;/p&gt;&lt;button class=&quot;btn ghost&quot;&gt;Mostra risposta&lt;/button&gt;&lt;div class=&quot;ans&quot;&gt;Perché gli spostamenti dovuti a processi lenti (siccità, degrado, innalzamento del mare) sono difficili da attribuire a una causa e da contare; i dati IDMC coprono soprattutto disastri improvvisi.&lt;/div&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;!-- ============ 6 ============ --&gt;
+&lt;section class=&quot;part salvia&quot; id=&quot;s6&quot;&gt;
+  &lt;div class=&quot;partno&quot;&gt;Parte 6&lt;/div&gt;
+  &lt;h2&gt;Relocation (or not?)&lt;/h2&gt;
+  &lt;p&gt;Due situazioni opposte: chi viene &lt;b&gt;spostato in modo organizzato&lt;/b&gt; dallo Stato e chi &lt;b&gt;non riesce a spostarsi&lt;/b&gt;.&lt;/p&gt;
+
+  &lt;h3&gt;Planned relocation &lt;span class=&quot;src&quot;&gt;slide 13 · IOM 2019; Georgetown, UNHCR, IOM 2017&lt;/span&gt;&lt;/h3&gt;
+  &lt;div class=&quot;def&quot;&gt;&lt;div class=&quot;lab&quot;&gt;Definizione&lt;/div&gt;Nel contesto di disastri o degrado ambientale (anche dovuti al climate change), un &lt;q&gt;planned process in which persons or groups of persons move or are assisted to move away from their homes …, are settled in a new location, and provided with the conditions for rebuilding their lives.&lt;/q&gt;&lt;/div&gt;
+  &lt;p&gt;&lt;span class=&quot;term&quot;&gt;Planned relocation&lt;/span&gt; = ricollocazione pianificata. Si svolge di solito &lt;b&gt;dentro i confini nazionali&lt;/b&gt;, sotto l’&lt;b&gt;autorità dello Stato&lt;/b&gt;, ed è un processo &lt;b&gt;lungo&lt;/b&gt;. Scorri le fasi:&lt;/p&gt;
+  &lt;div class=&quot;steps&quot; data-steps&gt;
+    &lt;div class=&quot;step box&quot;&gt;&lt;h4&gt;1 · Decidere&lt;/h4&gt;&lt;p&gt;Lo Stato valuta che restare è troppo rischioso (es. zona costiera che verrà sommersa, area franosa). La ricollocazione è una misura di ultima istanza, perché sradica comunità.&lt;/p&gt;&lt;/div&gt;
+    &lt;div class=&quot;step box&quot;&gt;&lt;h4&gt;2 · Spostarsi (o essere assistiti)&lt;/h4&gt;&lt;p&gt;Le persone &lt;i&gt;“move or are assisted to move”&lt;/i&gt;: lasciano le case o i luoghi di residenza temporanea.&lt;/p&gt;&lt;/div&gt;
+    &lt;div class=&quot;step box&quot;&gt;&lt;h4&gt;3 · Insediarsi&lt;/h4&gt;&lt;p&gt;&lt;i&gt;“Settled in a new location”&lt;/i&gt;: terra, abitazioni, servizi nel nuovo sito.&lt;/p&gt;&lt;/div&gt;
+    &lt;div class=&quot;step box&quot;&gt;&lt;h4&gt;4 · Ricostruire&lt;/h4&gt;&lt;p&gt;&lt;i&gt;“Provided with the conditions for rebuilding their lives”&lt;/i&gt;: lavoro, scuola, reti sociali — non basta un tetto.&lt;/p&gt;&lt;/div&gt;
+    &lt;div class=&quot;step box&quot;&gt;&lt;h4&gt;5 · Fine del processo&lt;/h4&gt;&lt;p&gt;Il processo dura finché le persone ricollocate &lt;i&gt;“are incorporated into all aspects of life in the new setting and no longer have needs or vulnerabilities stemming from the Planned Relocation”&lt;/i&gt;. È il criterio d’uscita: non il trasloco, ma l’assenza di vulnerabilità residue.&lt;/p&gt;&lt;/div&gt;
+    &lt;div class=&quot;stepnav&quot;&gt;&lt;button class=&quot;btn ghost&quot; data-prev&gt;← Indietro&lt;/button&gt;&lt;div class=&quot;dots&quot;&gt;&lt;/div&gt;&lt;button class=&quot;btn&quot; data-next&gt;Avanti →&lt;/button&gt;&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;h3&gt;Trapped populations &lt;span class=&quot;src&quot;&gt;slide 13 · IOM 2019&lt;/span&gt;&lt;/h3&gt;
+  &lt;div class=&quot;def&quot;&gt;&lt;div class=&quot;lab&quot;&gt;Definizione&lt;/div&gt;Popolazioni &lt;q&gt;who do not migrate, yet are situated in areas under threat, […] at risk of becoming ‘trapped’ or having to stay behind, where they will be more vulnerable to environmental shocks and impoverishment.&lt;/q&gt;&lt;/div&gt;
+  &lt;p&gt;&lt;span class=&quot;term&quot;&gt;Trapped populations&lt;/span&gt; = popolazioni intrappolate. È il rovescio del discorso sulla migrazione: &lt;b&gt;spostarsi costa&lt;/b&gt; (denaro, informazioni, reti, documenti, salute). Proprio la crisi ambientale erode queste risorse, quindi i più poveri e vulnerabili — torna l’intersezionalità: anziani, donne con carichi di cura, persone con disabilità — rischiano di &lt;b&gt;non poter partire&lt;/b&gt;. Il concetto è stato reso noto dal rapporto britannico &lt;i&gt;Foresight&lt;/i&gt; (2011) &lt;span class=&quot;src ext&quot;&gt;&lt;a href=&quot;https://assets.publishing.service.gov.uk/media/5a7cda5240f0b65b3de0b8e0/11-1115-migration-and-global-environmental-change-summary.pdf&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;fonte esterna&lt;/a&gt;&lt;/span&gt;.&lt;/p&gt;
+
+  &lt;h4&gt;Esplora: risorse e pressione ambientale&lt;/h4&gt;
+  &lt;p&gt;Modello didattico semplificato (non nelle slide): sposta i cursori per vedere quale esito di mobilità è più probabile.&lt;/p&gt;
+  &lt;div class=&quot;box&quot;&gt;
+    &lt;label class=&quot;rng&quot;&gt;Pressione ambientale: &lt;output id=&quot;oPr&quot;&gt;&lt;/output&gt;&lt;/label&gt;&lt;input type=&quot;range&quot; id=&quot;rPr&quot; min=&quot;0&quot; max=&quot;100&quot; value=&quot;70&quot;&gt;
+    &lt;label class=&quot;rng&quot;&gt;Risorse della famiglia (reddito, reti, informazioni): &lt;output id=&quot;oRe&quot;&gt;&lt;/output&gt;&lt;/label&gt;&lt;input type=&quot;range&quot; id=&quot;rRe&quot; min=&quot;0&quot; max=&quot;100&quot; value=&quot;20&quot;&gt;
+    &lt;svg id=&quot;mob&quot; viewBox=&quot;0 0 600 300&quot; role=&quot;img&quot; aria-label=&quot;Piano pressione ambientale per risorse con quattro esiti&quot;&gt;&lt;/svg&gt;
+    &lt;p class=&quot;outcome&quot; id=&quot;mobOut&quot;&gt;&lt;/p&gt;&lt;p id=&quot;mobTxt&quot; class=&quot;muted&quot; style=&quot;font-size:.92rem&quot;&gt;&lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;quiz&quot;&gt;
+    &lt;h4&gt;Autoverifica · Parte 6&lt;/h4&gt;
+    &lt;div class=&quot;qa&quot;&gt;&lt;p&gt;1. Quando si considera concluso un processo di planned relocation?&lt;/p&gt;&lt;button class=&quot;btn ghost&quot;&gt;Mostra risposta&lt;/button&gt;&lt;div class=&quot;ans&quot;&gt;Quando le persone sono integrate in tutti gli aspetti della vita nel nuovo luogo e non hanno più bisogni o vulnerabilità derivanti dalla ricollocazione.&lt;/div&gt;&lt;/div&gt;
+    &lt;div class=&quot;qa&quot;&gt;&lt;p&gt;2. Perché i più poveri possono essere “trapped” anziché migrare?&lt;/p&gt;&lt;button class=&quot;btn ghost&quot;&gt;Mostra risposta&lt;/button&gt;&lt;div class=&quot;ans&quot;&gt;Perché migrare richiede risorse (soldi, reti, informazioni, salute) che lo stress ambientale stesso riduce; chi non le ha resta in aree minacciate, sempre più esposto a shock e impoverimento.&lt;/div&gt;&lt;/div&gt;
+    &lt;div class=&quot;qa&quot;&gt;&lt;p&gt;3. Il titolo della slide è “Relocation (or not?)”. Che dilemma esprime?&lt;/p&gt;&lt;button class=&quot;btn ghost&quot;&gt;Mostra risposta&lt;/button&gt;&lt;div class=&quot;ans&quot;&gt;Ricollocare protegge da rischi ma sradica comunità e va pianificato a lungo; non ricollocare può lasciare popolazioni intrappolate in aree pericolose. Entrambe le scelte hanno costi.&lt;/div&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;!-- ============ 7 ============ --&gt;
+&lt;section class=&quot;part ardesia&quot; id=&quot;s7&quot;&gt;
+  &lt;div class=&quot;partno&quot;&gt;Parte 7&lt;/div&gt;
+  &lt;h2&gt;Climate migrants: what to do?&lt;/h2&gt;
+  &lt;p&gt;La lezione si chiude con un video di &lt;i&gt;The Economist&lt;/i&gt;, &lt;b&gt;“Climate migrants: what to do?”&lt;/b&gt; &lt;span class=&quot;src&quot;&gt;slide 14&lt;/span&gt;: &lt;a href=&quot;https://www.youtube.com/watch?v=A3AuCQml7IQ&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;youtube.com/watch?v=A3AuCQml7IQ&lt;/a&gt;. Il contenuto del video non è riassunto nelle slide; qui sotto le domande-guida per guardarlo collegandolo alla lezione.&lt;/p&gt;
+  &lt;details&gt;&lt;summary&gt;Chi sono, in base ai termini corretti, le persone mostrate?&lt;/summary&gt;&lt;div&gt;Prova a classificarle: climate migration (scelta), disaster displacement (forzato), trapped populations (chi resta). Nota se il video usa “refugees” e se è un uso preciso.&lt;/div&gt;&lt;/details&gt;
+  &lt;details&gt;&lt;summary&gt;Dove vanno? Dentro o fuori dal Paese?&lt;/summary&gt;&lt;div&gt;Ricorda che la mobilità ambientale è prevalentemente interna (spesso verso le città), contro l’immagine mediatica di “ondate” internazionali.&lt;/div&gt;&lt;/details&gt;
+  &lt;details&gt;&lt;summary&gt;Migrare è un problema o una soluzione?&lt;/summary&gt;&lt;div&gt;Una tesi diffusa nella letteratura (es. Foresight 2011, Nansen Protection Agenda) è che la migrazione possa essere una forma di &lt;span class=&quot;term&quot;&gt;adaptation&lt;/span&gt; (adattamento) al cambiamento climatico: diversifica i redditi, riduce l’esposizione, manda rimesse a chi resta. Il problema nasce quando è forzata, irregolare o impossibile. &lt;span class=&quot;src ext&quot;&gt;&lt;a href=&quot;https://disasterdisplacement.org/wp-content/uploads/2023/09/FINAL_PROTECTION_AGENDA_c.pdf&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;fonte esterna&lt;/a&gt;&lt;/span&gt;&lt;/div&gt;&lt;/details&gt;
+  &lt;details&gt;&lt;summary&gt;Quali politiche sono possibili?&lt;/summary&gt;&lt;div&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;b&gt;Ridurre i driver&lt;/b&gt;: prevenzione dei disastri, early warning, adattamento nei luoghi d’origine (GCM, Obiettivo 2) &lt;span class=&quot;src ext&quot;&gt;&lt;a href=&quot;https://www.preventionweb.net/quick/55169&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;fonte esterna&lt;/a&gt;&lt;/span&gt;;&lt;/li&gt;
+      &lt;li&gt;&lt;b&gt;Proteggere chi si sposta&lt;/b&gt;, anche oltre confine, con misure umanitarie (Nansen Protection Agenda);&lt;/li&gt;
+      &lt;li&gt;&lt;b&gt;Pianificare le ricollocazioni&lt;/b&gt; quando restare è insostenibile (planned relocation);&lt;/li&gt;
+      &lt;li&gt;&lt;b&gt;Sostenere chi non può partire&lt;/b&gt; (trapped populations), anche rendendo possibili percorsi di migrazione regolare.&lt;/li&gt;
+    &lt;/ul&gt;&lt;/div&gt;&lt;/details&gt;
+
+  &lt;h3&gt;Migration &amp;amp; development: il filo che lega tutto&lt;/h3&gt;
+  &lt;svg viewBox=&quot;0 0 700 220&quot; role=&quot;img&quot; aria-label=&quot;Ciclo tra ambiente, sviluppo e migrazione&quot;&gt;
+    &lt;defs&gt;&lt;marker id=&quot;ar2&quot; viewBox=&quot;0 0 10 10&quot; refX=&quot;9&quot; refY=&quot;5&quot; markerWidth=&quot;7&quot; markerHeight=&quot;7&quot; orient=&quot;auto&quot;&gt;&lt;path d=&quot;M0 0L10 5L0 10z&quot; fill=&quot;var(--ardesia)&quot;/&gt;&lt;/marker&gt;&lt;/defs&gt;
+    &lt;g stroke=&quot;var(--ardesia)&quot; stroke-width=&quot;1.6&quot; fill=&quot;none&quot; marker-end=&quot;url(#ar2)&quot;&gt;
+      &lt;path d=&quot;M200 70 C280 30 400 30 480 70&quot;/&gt;&lt;path d=&quot;M540 140 C470 200 300 200 190 150&quot;/&gt;&lt;path d=&quot;M110 150 C80 130 80 100 110 85&quot;/&gt;
+    &lt;/g&gt;
+    &lt;g font-size=&quot;14&quot; font-weight=&quot;600&quot; text-anchor=&quot;middle&quot;&gt;
+      &lt;rect x=&quot;40&quot; y=&quot;70&quot; width=&quot;170&quot; height=&quot;70&quot; rx=&quot;12&quot; fill=&quot;var(--salvia-bg)&quot; stroke=&quot;var(--salvia)&quot;/&gt;&lt;text x=&quot;125&quot; y=&quot;100&quot;&gt;Basso sviluppo&lt;/text&gt;&lt;text x=&quot;125&quot; y=&quot;120&quot; font-size=&quot;12&quot; font-weight=&quot;400&quot;&gt;+ esposizione ai rischi&lt;/text&gt;
+      &lt;rect x=&quot;490&quot; y=&quot;70&quot; width=&quot;170&quot; height=&quot;70&quot; rx=&quot;12&quot; fill=&quot;var(--mattone-bg)&quot; stroke=&quot;var(--mattone)&quot;/&gt;&lt;text x=&quot;575&quot; y=&quot;100&quot;&gt;Shock ambientale&lt;/text&gt;&lt;text x=&quot;575&quot; y=&quot;120&quot; font-size=&quot;12&quot; font-weight=&quot;400&quot;&gt;disastro / slow-onset&lt;/text&gt;
+    &lt;/g&gt;
+    &lt;g font-size=&quot;12&quot; fill=&quot;var(--ink2)&quot; text-anchor=&quot;middle&quot;&gt;
+      &lt;text x=&quot;340&quot; y=&quot;30&quot;&gt;vulnerabilità: il disastro colpisce di più&lt;/text&gt;
+      &lt;text x=&quot;360&quot; y=&quot;212&quot;&gt;mobilità: displacement, migrazione, o trapped&lt;/text&gt;
+      &lt;text x=&quot;40&quot; y=&quot;190&quot; text-anchor=&quot;start&quot;&gt;la mobilità può ridurre o aggravare&lt;/text&gt;&lt;text x=&quot;40&quot; y=&quot;205&quot; text-anchor=&quot;start&quot;&gt;la vulnerabilità (adattamento vs impoverimento)&lt;/text&gt;
+    &lt;/g&gt;
+  &lt;/svg&gt;
+  &lt;p class=&quot;muted&quot; style=&quot;font-size:.88rem&quot;&gt;Schema di sintesi elaborato per questo riassunto a partire dai temi delle slide.&lt;/p&gt;
+
+  &lt;div class=&quot;quiz&quot;&gt;
+    &lt;h4&gt;Autoverifica finale&lt;/h4&gt;
+    &lt;div class=&quot;qa&quot;&gt;&lt;p&gt;1. In due righe: perché questa lezione si intitola “Migration &amp;amp; Development”?&lt;/p&gt;&lt;button class=&quot;btn ghost&quot;&gt;Mostra risposta&lt;/button&gt;&lt;div class=&quot;ans&quot;&gt;Perché la migrazione è trasversale a tutti gli SDGs e perché i Paesi meno sviluppati sono i più esposti a disastri e cambiamenti ambientali: la mobilità ne è conseguenza (displacement), possibile strategia di adattamento o assente (trapped).&lt;/div&gt;&lt;/div&gt;
+    &lt;div class=&quot;qa&quot;&gt;&lt;p&gt;2. Un giornale titola: “Milioni di rifugiati climatici in arrivo in Europa”. Quali errori contiene secondo la lezione?&lt;/p&gt;&lt;button class=&quot;btn ghost&quot;&gt;Mostra risposta&lt;/button&gt;&lt;div class=&quot;ans&quot;&gt;“Rifugiati climatici” è un termine fuorviante (nessuna base giuridica, mobilità non necessariamente forzata); la mobilità ambientale è soprattutto interna e non diretta verso l’Europa; inoltre confonde flussi e stock.&lt;/div&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;!-- ============ FONTI ============ --&gt;
+&lt;section class=&quot;part&quot; id=&quot;fonti&quot;&gt;
+  &lt;div class=&quot;partno&quot;&gt;Per approfondire&lt;/div&gt;
+  &lt;h2&gt;Autori, rapporti e siti citati nelle slide&lt;/h2&gt;
+  &lt;p&gt;Per ciascun riferimento delle slide: che cos’è e perché conta. Tutte le descrizioni sono &lt;span class=&quot;src ext&quot; style=&quot;margin:0&quot;&gt;fonte esterna&lt;/span&gt; trovate con ricerca web (novembre 2026): verifica sempre sulla pagina originale.&lt;/p&gt;
+
+  &lt;div class=&quot;ref&quot;&gt;&lt;h4&gt;IOM (2019), &lt;i&gt;Glossary on Migration&lt;/i&gt;, International Migration Law n. 34&lt;/h4&gt;&lt;p class=&quot;muted&quot; style=&quot;margin:0&quot;&gt;Citato nelle slide 7, 8, 13&lt;/p&gt;
+    &lt;p class=&quot;why&quot;&gt;Terza edizione (giugno 2019, curata da A. Sironi, C. Bauloz, M. Emmanuel) del glossario IOM, avviato nel 2004 e aggiornato nel 2011; circa 250 pagine. Introduce tra gli altri “climate migration” e “disaster displacement” e chiarisce che “migrant” è un termine ombrello non definito dal diritto internazionale. &lt;b&gt;Perché conta:&lt;/b&gt; è la fonte di quasi tutte le definizioni della lezione e il riferimento comune per un lessico condiviso. &lt;span class=&quot;src ext&quot;&gt;&lt;a href=&quot;https://publications.iom.int/system/files/pdf/iml_34_glossary.pdf&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;PDF IOM&lt;/a&gt;&lt;/span&gt; &lt;span class=&quot;src ext&quot;&gt;&lt;a href=&quot;https://iran.un.org/en/node/87697&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;scheda ONU&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;
+
+  &lt;div class=&quot;ref&quot;&gt;&lt;h4&gt;IOM (2011, 2014) — glossario e &lt;i&gt;IOM Outlook on Migration, Environment and Climate Change&lt;/i&gt;&lt;/h4&gt;&lt;p class=&quot;muted&quot; style=&quot;margin:0&quot;&gt;Citato nella slide 10 (“IOM, 2011:34 in IOM, 2014:13”)&lt;/p&gt;
+    &lt;p class=&quot;why&quot;&gt;Il rapporto del 2014 fa il punto su migrazione, ambiente e clima e nota che non esiste una definizione giuridica concordata di “environmental migrants”, mettendo in guardia dall’assumere che la mobilità ambientale sia sempre forzata. Da qui la definizione di “environmentally displaced person” (ripresa dal glossario IOM 2011). &lt;b&gt;Perché conta:&lt;/b&gt; mostra come IOM ha costruito le sue categorie “di lavoro” senza creare nuovi status legali. &lt;span class=&quot;src ext&quot;&gt;&lt;a href=&quot;https://www.un-ilibrary.org/environment-and-climate-change/iom-outlook-on-migration-environment-and-climate-change_14b2ac9d-en&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;UN iLibrary&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;
+
+  &lt;div class=&quot;ref&quot;&gt;&lt;h4&gt;UN DESA (2020), &lt;i&gt;International Migrant Stock&lt;/i&gt; / &lt;i&gt;International Migration 2020 Highlights&lt;/i&gt;&lt;/h4&gt;&lt;p class=&quot;muted&quot; style=&quot;margin:0&quot;&gt;Citato nella slide 5&lt;/p&gt;
+    &lt;p class=&quot;why&quot;&gt;Stime ONU dello stock di migranti internazionali: 281 milioni nel 2020 (280.598.105 secondo il portale), contro 173 milioni nel 2000 e 221 nel 2010; circa il 3,6% della popolazione mondiale. Il Covid-19 ha rallentato la crescita di circa 2 milioni. &lt;b&gt;Perché conta:&lt;/b&gt; è la fonte ufficiale dei “general figures” e della scomposizione per sesso ed età. &lt;span class=&quot;src ext&quot;&gt;&lt;a href=&quot;https://namibia.un.org/sites/default/files/2021-01/International_Migration_2020_Highlights_Ten_key_messages.pdf&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Highlights 2020 (PDF)&lt;/a&gt;&lt;/span&gt; &lt;span class=&quot;src ext&quot;&gt;&lt;a href=&quot;https://migrationdataportal.org/themes/international-migrant-stock&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;tema sul portale&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;
+
+  &lt;div class=&quot;ref&quot;&gt;&lt;h4&gt;Migration Data Portal (IOM GMDAC)&lt;/h4&gt;&lt;p class=&quot;muted&quot; style=&quot;margin:0&quot;&gt;Slide 4, 6, 11, 12&lt;/p&gt;
+    &lt;p class=&quot;why&quot;&gt;Portale lanciato nel dicembre 2017, gestito dal Global Migration Data Analysis Centre dell’IOM; aggrega dati da UN DESA, UNICEF, IDMC ecc. La sua pagina sulla migrazione ambientale sottolinea che quantificarla è difficile (cause multiple, problemi di metodo, mancanza di standard) e che per i fenomeni lenti l’evidenza è soprattutto da casi di studio. &lt;b&gt;Perché conta:&lt;/b&gt; è lo strumento per esplorare da sé gli indicatori della lezione (net migration rate, rifugiati, IDP). &lt;span class=&quot;src ext&quot;&gt;&lt;a href=&quot;https://www.migrationdataportal.org/about&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;About&lt;/a&gt;&lt;/span&gt; &lt;span class=&quot;src ext&quot;&gt;&lt;a href=&quot;https://migrationdataportal.org/themes/environmental_migration&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Environmental migration&lt;/a&gt;&lt;/span&gt; · link dalle slide: &lt;a href=&quot;https://www.migrationdataportal.org/international-data?i=netmigrate&amp;amp;t=2021&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;net migration rate&lt;/a&gt;, &lt;a href=&quot;https://www.migrationdataportal.org/international-data?i=refug_host&amp;amp;t=2022&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;refugees in host country&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;
+
+  &lt;div class=&quot;ref&quot;&gt;&lt;h4&gt;IDMC (2023), &lt;i&gt;Global Report on Internal Displacement&lt;/i&gt; (GRID 2023)&lt;/h4&gt;&lt;p class=&quot;muted&quot; style=&quot;margin:0&quot;&gt;Slide 11, 12&lt;/p&gt;
+    &lt;p class=&quot;why&quot;&gt;Rapporto annuale dell’Internal Displacement Monitoring Centre, pubblicato a maggio 2023: 32,6 milioni di nuovi sfollamenti interni da disastri nel 2022 (circa +41% rispetto alla media del decennio precedente), trainati dal terzo anno di La Niña; stock di circa 8,7 milioni di persone ancora sfollate per disastri a fine 2022. Segnala che gli sfollamenti da eventi lenti restano in gran parte non contati. &lt;b&gt;Perché conta:&lt;/b&gt; è la fonte primaria dei dati sul disaster displacement. &lt;span class=&quot;src ext&quot;&gt;&lt;a href=&quot;https://www.internal-displacement.org/global-report/grid2023/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;IDMC GRID 2023&lt;/a&gt;&lt;/span&gt; &lt;span class=&quot;src ext&quot;&gt;&lt;a href=&quot;https://www.weforum.org/agenda/2023/06/internally-displaced-people-conflict-disasters&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;sintesi WEF&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;
+
+  &lt;div class=&quot;ref&quot;&gt;&lt;h4&gt;The Nansen Initiative (2015), &lt;i&gt;Agenda for the Protection of Cross-Border Displaced Persons in the Context of Disasters and Climate Change&lt;/i&gt;&lt;/h4&gt;&lt;p class=&quot;muted&quot; style=&quot;margin:0&quot;&gt;Slide 10 (“The Nansen Protection Agenda, 2015”)&lt;/p&gt;
+    &lt;p class=&quot;why&quot;&gt;Iniziativa lanciata da Norvegia e Svizzera nel 2012; la Protection Agenda, non vincolante, è stata approvata da 109 delegazioni a Ginevra nell’ottobre 2015. Raccoglie buone pratiche su protezione umanitaria degli sfollati oltre confine, gestione del rischio nei Paesi d’origine e migrazione come adattamento. Dal 2016 la porta avanti la Platform on Disaster Displacement. &lt;b&gt;Perché conta:&lt;/b&gt; è la fonte della definizione di disaster displacement e il principale quadro per chi attraversa confini a causa di disastri. &lt;span class=&quot;src ext&quot;&gt;&lt;a href=&quot;https://disasterdisplacement.org/wp-content/uploads/2023/09/FINAL_PROTECTION_AGENDA_c.pdf&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Protection Agenda (PDF)&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;
+
+  &lt;div class=&quot;ref&quot;&gt;&lt;h4&gt;Georgetown University, UNHCR, IOM (2017), &lt;i&gt;A Toolbox: Planning Relocations to Protect People from Disasters and Environmental Change&lt;/i&gt;&lt;/h4&gt;&lt;p class=&quot;muted&quot; style=&quot;margin:0&quot;&gt;Slide 13&lt;/p&gt;
+    &lt;p class=&quot;why&quot;&gt;Guida pratica (luglio 2017) per Stati e altri attori che valutano ricollocazioni; completa le &lt;i&gt;Guidance&lt;/i&gt; del 2015 e indica cinque elementi trasversali: quadro giuridico, bisogni e impatti sulle persone, informazione e consultazione, questioni fondiarie, monitoraggio e accountability. &lt;b&gt;Perché conta:&lt;/b&gt; è la fonte della definizione di planned relocation e del criterio di “fine processo”. &lt;span class=&quot;src ext&quot;&gt;&lt;a href=&quot;https://www.refworld.org/node/118118&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Refworld&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;
+
+  &lt;div class=&quot;ref&quot;&gt;&lt;h4&gt;UNHCR — &lt;i&gt;Climate change and disaster displacement&lt;/i&gt;; Convenzione di Ginevra del 1951&lt;/h4&gt;&lt;p class=&quot;muted&quot; style=&quot;margin:0&quot;&gt;Slide 9 (UNHCR citato come agenzia)&lt;/p&gt;
+    &lt;p class=&quot;why&quot;&gt;UNHCR non usa “climate refugee” e preferisce “persons displaced in the context of disasters and climate change”, perché il termine non ha base nel diritto internazionale; riconosce però che domande di asilo possono essere valide quando clima e conflitti si intrecciano (Legal Considerations, 2020). La Convenzione del 1951 (con il Protocollo del 1967) contiene la definizione universale di rifugiato all’art. 1(A)(2). &lt;b&gt;Perché conta:&lt;/b&gt; spiega il terzo motivo della slide 9. &lt;span class=&quot;src ext&quot;&gt;&lt;a href=&quot;https://www.unhcr.org/en-ie/climate-change-and-disasters.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;UNHCR clima&lt;/a&gt;&lt;/span&gt; &lt;span class=&quot;src ext&quot;&gt;&lt;a href=&quot;https://www.unhcr.org/about-unhcr/overview/1951-refugee-convention&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Convenzione 1951&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;
+
+  &lt;div class=&quot;ref&quot;&gt;&lt;h4&gt;Global Compact for Safe, Orderly and Regular Migration (GCM, 2018)&lt;/h4&gt;&lt;p class=&quot;muted&quot; style=&quot;margin:0&quot;&gt;Slide 4 (“SDGs and GCM”)&lt;/p&gt;
+    &lt;p class=&quot;why&quot;&gt;Adottato a dicembre 2018 (A/RES/73/195). L’Obiettivo 2, “minimizzare i fattori negativi e strutturali che costringono le persone a lasciare il Paese d’origine”, include disastri e cambiamento climatico (early warning, piani di evacuazione) e richiama la Nansen Protection Agenda. &lt;b&gt;Perché conta:&lt;/b&gt; è il quadro politico globale in cui il portale colloca i dati. &lt;span class=&quot;src ext&quot;&gt;&lt;a href=&quot;https://www.preventionweb.net/quick/55169&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;PreventionWeb&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;
+
+  &lt;div class=&quot;ref&quot;&gt;&lt;h4&gt;UK Government Office for Science, Foresight (2011), &lt;i&gt;Migration and Global Environmental Change&lt;/i&gt;&lt;/h4&gt;&lt;p class=&quot;muted&quot; style=&quot;margin:0&quot;&gt;Non citato nelle slide: aggiunto perché è all’origine del concetto di trapped populations&lt;/p&gt;
+    &lt;p class=&quot;why&quot;&gt;Rapporto guidato da Richard Black: sostiene che il cambiamento ambientale può impedire di migrare, non solo costringere a farlo, perché migrare richiede capitale; e che la migrazione può essere parte della soluzione come adattamento. &lt;span class=&quot;src ext&quot;&gt;&lt;a href=&quot;https://assets.publishing.service.gov.uk/media/5a7cda5240f0b65b3de0b8e0/11-1115-migration-and-global-environmental-change-summary.pdf&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Sintesi (PDF gov.uk)&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;
+
+  &lt;div class=&quot;ref&quot;&gt;&lt;h4&gt;The Economist, video “Climate migrants: what to do?”&lt;/h4&gt;&lt;p class=&quot;muted&quot; style=&quot;margin:0&quot;&gt;Slide 14&lt;/p&gt;
+    &lt;p class=&quot;why&quot;&gt;Link fornito dalle slide: &lt;a href=&quot;https://www.youtube.com/watch?v=A3AuCQml7IQ&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;YouTube&lt;/a&gt;. La ricerca web non ha restituito una scheda del video con questo titolo, quindi non ne riassumo il contenuto; temi affini compaiono nel briefing dell’Economist &lt;i&gt;“The surprising upside of climate migration”&lt;/i&gt; (luglio 2023) &lt;span class=&quot;src ext&quot;&gt;&lt;a href=&quot;https://shows.acast.com/theintelligencepodcast/episodes/hot-to-trot-the-up-sides-of-climate-migration&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;podcast correlato&lt;/a&gt;&lt;/span&gt;.&lt;/p&gt;&lt;/div&gt;
+&lt;/section&gt;
+
+&lt;/main&gt;
+&lt;footer&gt;
+  &lt;p&gt;&lt;b&gt;Riassunto scritto da Claude a partire dalle slide: controlla sempre sul materiale.&lt;/b&gt;&lt;/p&gt;
+  &lt;p&gt;Le etichette colorate “slide n” indicano il contenuto preso dalle slide; le etichette &lt;span class=&quot;src ext&quot; style=&quot;margin:0&quot;&gt;fonte esterna&lt;/span&gt; indicano informazioni trovate sul web, con link. Le note tratteggiate segnalano spiegazioni di contesto aggiunte.&lt;/p&gt;
+  &lt;p&gt;&lt;a href=&quot;#top&quot;&gt;↑ Torna all’inizio&lt;/a&gt;&lt;/p&gt;
+&lt;/footer&gt;
+
+&lt;script&gt;
+(function(){
+  var $=function(s,r){return (r||document).querySelector(s)},$$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+  var fmt=function(n){return Math.round(n).toLocaleString(&#x27;it-IT&#x27;)};
+  var NS=&#x27;http://www.w3.org/2000/svg&#x27;;
+  function el(tag,attrs,txt){var e=document.createElementNS(NS,tag);for(var k in attrs)e.setAttribute(k,attrs[k]);if(txt!=null)e.textContent=txt;return e}
+
+  // mappa concettuale
+  $$(&#x27;.mapnode&#x27;).forEach(function(n){
+    function go(){var t=document.getElementById(n.getAttribute(&#x27;data-go&#x27;));if(t)t.scrollIntoView({behavior:&#x27;smooth&#x27;})}
+    n.addEventListener(&#x27;click&#x27;,go);
+    n.addEventListener(&#x27;keydown&#x27;,function(e){if(e.key===&#x27;Enter&#x27;||e.key===&#x27; &#x27;){e.preventDefault();go()}});
+  });
+
+  // linguette
+  $$(&#x27;[data-tabs]&#x27;).forEach(function(t){
+    var bs=$$(&#x27;[role=tab]&#x27;,t),ps=$$(&#x27;[role=tabpanel]&#x27;,t);
+    bs.forEach(function(b,i){b.addEventListener(&#x27;click&#x27;,function(){
+      bs.forEach(function(x,j){x.setAttribute(&#x27;aria-selected&#x27;,i===j)});
+      ps.forEach(function(p,j){p.hidden=i!==j});
+    })});
+  });
+
+  // autoverifica
+  $$(&#x27;.qa&#x27;).forEach(function(q){var b=$(&#x27;button&#x27;,q);if(b)b.addEventListener(&#x27;click&#x27;,function(){
+    q.classList.toggle(&#x27;open&#x27;);b.textContent=q.classList.contains(&#x27;open&#x27;)?&#x27;Nascondi risposta&#x27;:&#x27;Mostra risposta&#x27;})});
+
+  // scelte multiple
+  $$(&#x27;[data-choice]&#x27;).forEach(function(c){
+    var fb=c.parentNode.querySelector(&#x27;.fb&#x27;);
+    $$(&#x27;button&#x27;,c).forEach(function(b){b.addEventListener(&#x27;click&#x27;,function(){
+      $$(&#x27;button&#x27;,c).forEach(function(x){x.classList.remove(&#x27;ok&#x27;,&#x27;ko&#x27;)});
+      var ok=b.hasAttribute(&#x27;data-ok&#x27;);b.classList.add(ok?&#x27;ok&#x27;:&#x27;ko&#x27;);
+      if(fb)fb.innerHTML=(ok?&#x27;✓ &#x27;:&#x27;✗ &#x27;)+(b.getAttribute(&#x27;data-fb&#x27;)||&#x27;&#x27;);
+    })});
+  });
+
+  // passi
+  $$(&#x27;[data-steps]&#x27;).forEach(function(s){
+    var st=$$(&#x27;.step&#x27;,s),i=0,dots=$(&#x27;.dots&#x27;,s),prev=$(&#x27;[data-prev]&#x27;,s),next=$(&#x27;[data-next]&#x27;,s);
+    st.forEach(function(){dots.appendChild(document.createElement(&#x27;i&#x27;))});
+    function show(){st.forEach(function(x,j){x.classList.toggle(&#x27;on&#x27;,j===i)});$$(&#x27;i&#x27;,dots).forEach(function(x,j){x.classList.toggle(&#x27;on&#x27;,j===i)});prev.disabled=i===0;next.disabled=i===st.length-1}
+    prev.addEventListener(&#x27;click&#x27;,function(){if(i&gt;0){i--;show()}});
+    next.addEventListener(&#x27;click&#x27;,function(){if(i&lt;st.length-1){i++;show()}});
+    show();
+  });
+
+  // waffle età
+  var w=$(&#x27;#waffle&#x27;);
+  if(w){
+    var groups=[{n:15,l:&#x27;≤ 19 anni&#x27;,v:&#x27;14,6%&#x27;,c:&#x27;var(--salvia)&#x27;},{n:73,l:&#x27;20–64 anni&#x27;,v:&#x27;≈ 73,2% (per differenza)&#x27;,c:&#x27;var(--ocra)&#x27;},{n:12,l:&#x27;≥ 65 anni&#x27;,v:&#x27;12,2%&#x27;,c:&#x27;var(--ardesia)&#x27;}];
+    var k=0,out=$(&#x27;#waffleOut&#x27;);
+    groups.forEach(function(g){for(var j=0;j&lt;g.n;j++){
+      var col=Math.floor(k/4),row=k%4;
+      var r=el(&#x27;rect&#x27;,{x:10+col*23,y:10+row*23,width:19,height:19,rx:4,fill:g.c,tabindex:0});
+      r.appendChild(el(&#x27;title&#x27;,{},g.l+&#x27;: &#x27;+g.v));
+      (function(g){var f=function(){out.textContent=g.l+&#x27; — &#x27;+g.v+&#x27; dello stock di migranti internazionali (2020)&#x27;};r.addEventListener(&#x27;mouseenter&#x27;,f);r.addEventListener(&#x27;focus&#x27;,f);r.addEventListener(&#x27;click&#x27;,f)})(g);
+      w.appendChild(r);k++}});
+    var lx=10;groups.forEach(function(g){w.appendChild(el(&#x27;rect&#x27;,{x:lx,y:118,width:14,height:14,rx:3,fill:g.c}));w.appendChild(el(&#x27;text&#x27;,{x:lx+20,y:130,&#x27;font-size&#x27;:13},g.l+&#x27; · &#x27;+g.v));lx+=g.n===73?260:150});
+    w.appendChild(el(&#x27;text&#x27;,{x:10,y:160,&#x27;font-size&#x27;:12,fill:&#x27;var(--ink2)&#x27;},&#x27;Ogni quadrato ≈ 1% dello stock di 280,6 milioni ≈ 2,8 milioni di persone&#x27;));
+  }
+
+  // calcolatore NMR
+  var rI=$(&#x27;#rI&#x27;);
+  if(rI){
+    var rE=$(&#x27;#rE&#x27;),rP=$(&#x27;#rP&#x27;),bar=$(&#x27;#nmrBar&#x27;);
+    function upd(){
+      var I=+rI.value,E=+rE.value,P=+rP.value,n=(I-E)/P*1000;
+      $(&#x27;#oI&#x27;).textContent=fmt(I);$(&#x27;#oE&#x27;).textContent=fmt(E);$(&#x27;#oP&#x27;).textContent=fmt(P);
+      $(&#x27;#nmrOut&#x27;).textContent=&#x27;NMR = &#x27;+(n&gt;0?&#x27;+&#x27;:&#x27;&#x27;)+n.toFixed(1).replace(&#x27;.&#x27;,&#x27;,&#x27;)+&#x27; ‰&#x27;;
+      $(&#x27;#nmrTxt&#x27;).textContent=n&gt;0.05?&#x27;Saldo positivo: ogni 1.000 abitanti il Paese guadagna circa &#x27;+n.toFixed(1).replace(&#x27;.&#x27;,&#x27;,&#x27;)+&#x27; persone per migrazione (Paese di immigrazione netta).&#x27;:n&lt;-0.05?&#x27;Saldo negativo: ogni 1.000 abitanti il Paese perde circa &#x27;+Math.abs(n).toFixed(1).replace(&#x27;.&#x27;,&#x27;,&#x27;)+&#x27; persone (Paese di emigrazione netta).&#x27;:&#x27;Saldo quasi nullo: entrate e uscite si compensano, ma i movimenti lordi possono essere grandi.&#x27;;
+      while(bar.firstChild)bar.removeChild(bar.firstChild);
+      var cap=Math.max(-50,Math.min(50,n)),cx=300,wd=cap/50*280;
+      bar.appendChild(el(&#x27;line&#x27;,{x1:20,x2:580,y1:30,y2:30,stroke:&#x27;var(--rule)&#x27;,&#x27;stroke-width&#x27;:2}));
+      bar.appendChild(el(&#x27;line&#x27;,{x1:cx,x2:cx,y1:12,y2:48,stroke:&#x27;var(--ink2)&#x27;}));
+      bar.appendChild(el(&#x27;rect&#x27;,{x:wd&lt;0?cx+wd:cx,y:20,width:Math.abs(wd),height:20,rx:4,fill:n&lt;0?&#x27;var(--mattone)&#x27;:&#x27;var(--salvia)&#x27;}));
+      bar.appendChild(el(&#x27;text&#x27;,{x:20,y:64,&#x27;font-size&#x27;:11,fill:&#x27;var(--ink2)&#x27;},&#x27;−50 ‰  emigrazione netta&#x27;));
+      bar.appendChild(el(&#x27;text&#x27;,{x:580,y:64,&#x27;font-size&#x27;:11,&#x27;text-anchor&#x27;:&#x27;end&#x27;,fill:&#x27;var(--ink2)&#x27;},&#x27;immigrazione netta  +50 ‰&#x27;));
+    }
+    [rI,rE,rP].forEach(function(r){r.addEventListener(&#x27;input&#x27;,upd)});upd();
+  }
+
+  // grafico disastri
+  var dc=$(&#x27;#disChart&#x27;);
+  if(dc){
+    var yrs=[2013,2014,2015,2016,2017,2018,2019,2020,2021,2022],vals=[22.1,19.1,19.2,24.4,18.6,17.5,25.3,31,23.7,32.6];
+    var avg=vals.reduce(function(a,b){return a+b},0)/vals.length;
+    var rY=$(&#x27;#rY&#x27;),cAvg=$(&#x27;#cAvg&#x27;),X0=50,Y0=250,H=220,MAX=40,bw=40,gap=57;
+    var Y=function(v){return Y0-v/MAX*H};
+    function draw(){
+      while(dc.firstChild)dc.removeChild(dc.firstChild);
+      var s=+rY.value;
+      [0,10,20,30,40].forEach(function(t){dc.appendChild(el(&#x27;line&#x27;,{x1:X0,x2:625,y1:Y(t),y2:Y(t),stroke:&#x27;var(--rule)&#x27;}));dc.appendChild(el(&#x27;text&#x27;,{x:X0-8,y:Y(t)+4,&#x27;font-size&#x27;:11,&#x27;text-anchor&#x27;:&#x27;end&#x27;,fill:&#x27;var(--ink2)&#x27;},t))});
+      dc.appendChild(el(&#x27;text&#x27;,{x:X0-8,y:14,&#x27;font-size&#x27;:11,&#x27;text-anchor&#x27;:&#x27;end&#x27;,fill:&#x27;var(--ink2)&#x27;},&#x27;mln&#x27;));
+      yrs.forEach(function(y,i){
+        var x=X0+12+i*gap,on=i===s;
+        var r=el(&#x27;rect&#x27;,{x:x,y:Y(vals[i]),width:bw,height:Y0-Y(vals[i]),rx:3,fill:on?&#x27;var(--accent)&#x27;:&#x27;var(--ocra)&#x27;,&#x27;fill-opacity&#x27;:on?1:.55,style:&#x27;cursor:pointer&#x27;});
+        r.addEventListener(&#x27;click&#x27;,function(){rY.value=i;draw()});
+        dc.appendChild(r);
+        dc.appendChild(el(&#x27;text&#x27;,{x:x+bw/2,y:Y(vals[i])-6,&#x27;font-size&#x27;:11,&#x27;text-anchor&#x27;:&#x27;middle&#x27;,&#x27;font-weight&#x27;:on?700:400},String(vals[i]).replace(&#x27;.&#x27;,&#x27;,&#x27;)));
+        dc.appendChild(el(&#x27;text&#x27;,{x:x+bw/2,y:Y0+18,&#x27;font-size&#x27;:11,&#x27;text-anchor&#x27;:&#x27;middle&#x27;,fill:&#x27;var(--ink2)&#x27;},y));
+      });
+      if(cAvg.checked){dc.appendChild(el(&#x27;line&#x27;,{x1:X0,x2:625,y1:Y(avg),y2:Y(avg),stroke:&#x27;var(--mattone)&#x27;,&#x27;stroke-width&#x27;:2,&#x27;stroke-dasharray&#x27;:&#x27;6 4&#x27;}));dc.appendChild(el(&#x27;text&#x27;,{x:620,y:Y(avg)-6,&#x27;font-size&#x27;:11,&#x27;text-anchor&#x27;:&#x27;end&#x27;,fill:&#x27;var(--mattone)&#x27;,&#x27;font-weight&#x27;:600},&#x27;media &#x27;+avg.toFixed(1).replace(&#x27;.&#x27;,&#x27;,&#x27;)+&#x27; mln&#x27;))}
+      dc.appendChild(el(&#x27;text&#x27;,{x:X0,y:292,&#x27;font-size&#x27;:10,fill:&#x27;var(--ink2)&#x27;},&#x27;Dati: IDMC 2023, via IOM GMDAC (slide 11)&#x27;));
+      var v=vals[s],d=s&gt;0?(v-vals[s-1])/vals[s-1]*100:null,da=(v-avg)/avg*100;
+      $(&#x27;#oY&#x27;).textContent=yrs[s];
+      $(&#x27;#yOut&#x27;).textContent=yrs[s]+&#x27;: &#x27;+String(v).replace(&#x27;.&#x27;,&#x27;,&#x27;)+&#x27; milioni di nuovi sfollamenti interni&#x27;;
+      $(&#x27;#yTxt&#x27;).textContent=(d===null?&#x27;Primo anno della serie. &#x27;:&#x27;Rispetto all’anno prima: &#x27;+(d&gt;0?&#x27;+&#x27;:&#x27;&#x27;)+d.toFixed(1).replace(&#x27;.&#x27;,&#x27;,&#x27;)+&#x27;%. &#x27;)+&#x27;Rispetto alla media 2013–2022 (&#x27;+avg.toFixed(1).replace(&#x27;.&#x27;,&#x27;,&#x27;)+&#x27; mln): &#x27;+(da&gt;0?&#x27;+&#x27;:&#x27;&#x27;)+da.toFixed(1).replace(&#x27;.&#x27;,&#x27;,&#x27;)+&#x27;%.&#x27;;
+    }
+    rY.addEventListener(&#x27;input&#x27;,draw);cAvg.addEventListener(&#x27;change&#x27;,draw);draw();
+  }
+
+  // piano mobilità
+  var mob=$(&#x27;#mob&#x27;);
+  if(mob){
+    var rPr=$(&#x27;#rPr&#x27;),rRe=$(&#x27;#rRe&#x27;);
+    var MX=function(p){return 60+p/100*520},MY=function(r){return 260-r/100*240};
+    var zones=[
+      {x1:0,x2:35,y1:0,y2:100,c:&#x27;var(--salvia)&#x27;,t:&#x27;Restare (scelta)&#x27;},
+      {x1:35,x2:85,y1:45,y2:100,c:&#x27;var(--ocra)&#x27;,t:&#x27;Migrare come adattamento&#x27;},
+      {x1:35,x2:85,y1:0,y2:45,c:&#x27;var(--mattone)&#x27;,t:&#x27;Trapped&#x27;},
+      {x1:85,x2:100,y1:0,y2:100,c:&#x27;var(--ardesia)&#x27;,t:&#x27;Displacement&#x27;}];
+    function zone(p,r){return p&lt;35?0:p&gt;=85?3:r&gt;=45?1:2}
+    var txt=[&#x27;La pressione è contenuta: si resta per scelta (voluntary immobility). L’adattamento avviene sul posto.&#x27;,
+      &#x27;Pressione crescente ma risorse sufficienti: spostarsi (spesso internamente, spesso in anticipo, magari solo alcuni membri della famiglia) è una strategia di adattamento — environmental o climate migration “by choice”.&#x27;,
+      &#x27;Pressione alta e poche risorse: la famiglia vorrebbe o dovrebbe partire ma non può. È una trapped population: sempre più esposta a shock e impoverimento.&#x27;,
+      &#x27;Pressione estrema (disastro): ci si sposta in modo forzato o si viene evacuati, a prescindere dalle risorse — disaster displacement. Chi ha meno risorse rischia di restare sfollato più a lungo.&#x27;];
+    function upd2(){
+      var p=+rPr.value,r=+rRe.value,z=zone(p,r);
+      $(&#x27;#oPr&#x27;).textContent=p+&#x27;/100&#x27;;$(&#x27;#oRe&#x27;).textContent=r+&#x27;/100&#x27;;
+      while(mob.firstChild)mob.removeChild(mob.firstChild);
+      zones.forEach(function(q,i){
+        mob.appendChild(el(&#x27;rect&#x27;,{x:MX(q.x1),y:MY(q.y2),width:MX(q.x2)-MX(q.x1),height:MY(q.y1)-MY(q.y2),fill:q.c,&#x27;fill-opacity&#x27;:i===z?.32:.12,stroke:q.c,&#x27;stroke-opacity&#x27;:.5}));
+        var cx=(MX(q.x1)+MX(q.x2))/2,cy=(MY(q.y1)+MY(q.y2))/2;
+        if(i===3){var t=el(&#x27;text&#x27;,{x:cx,y:cy,&#x27;font-size&#x27;:12,&#x27;font-weight&#x27;:600,&#x27;text-anchor&#x27;:&#x27;middle&#x27;,transform:&#x27;rotate(-90 &#x27;+cx+&#x27; &#x27;+cy+&#x27;)&#x27;},q.t);mob.appendChild(t)}
+        else mob.appendChild(el(&#x27;text&#x27;,{x:cx,y:cy+4,&#x27;font-size&#x27;:13,&#x27;font-weight&#x27;:600,&#x27;text-anchor&#x27;:&#x27;middle&#x27;},q.t));
+      });
+      mob.appendChild(el(&#x27;text&#x27;,{x:320,y:290,&#x27;font-size&#x27;:12,&#x27;text-anchor&#x27;:&#x27;middle&#x27;,fill:&#x27;var(--ink2)&#x27;},&#x27;pressione ambientale →&#x27;));
+      mob.appendChild(el(&#x27;text&#x27;,{x:20,y:140,&#x27;font-size&#x27;:12,&#x27;text-anchor&#x27;:&#x27;middle&#x27;,fill:&#x27;var(--ink2)&#x27;,transform:&#x27;rotate(-90 20 140)&#x27;},&#x27;risorse →&#x27;));
+      mob.appendChild(el(&#x27;circle&#x27;,{cx:MX(p),cy:MY(r),r:9,fill:&#x27;var(--accent)&#x27;,stroke:&#x27;var(--paper)&#x27;,&#x27;stroke-width&#x27;:3}));
+      $(&#x27;#mobOut&#x27;).textContent=zones[z].t;$(&#x27;#mobTxt&#x27;).textContent=txt[z];
+    }
+    [rPr,rRe].forEach(function(x){x.addEventListener(&#x27;input&#x27;,upd2)});upd2();
+  }
+
+  // evidenzia sezione nel menu
+  var links=$$(&#x27;nav.toc a&#x27;);
+  if(&#x27;IntersectionObserver&#x27; in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.classList.toggle(&#x27;on&#x27;,a.getAttribute(&#x27;href&#x27;)===&#x27;#&#x27;+e.target.id)})}})},{rootMargin:&#x27;-40% 0px -55% 0px&#x27;});
+    $$(&#x27;section[id]&#x27;).forEach(function(s){io.observe(s)});
+  }
+})();
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+"></iframe></body></html>
